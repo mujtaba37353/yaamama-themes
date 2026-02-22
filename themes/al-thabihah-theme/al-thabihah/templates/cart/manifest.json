@@ -1,0 +1,33 @@
+{
+    "template": "cart",
+    "slots": {
+        "page-title": "Page title for Cart",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "cart-main": "Main content area for the cart page",
+        "breadcrumbs": "Breadcrumbs navigation",
+        "bc-current": "Current page breadcrumb",
+        "cart-title": "Main cart page title",
+        "empty-cart": "Empty cart message container",
+        "cart-container": "Main grid container for cart layout",
+        "cart-items-col": "Column for cart items",
+        "cart-items-list": "List container for cart items",
+        "cart-summary-col": "Column for order summary",
+        "summary-card": "Order summary card",
+        "summary-title": "Title for order summary",
+        "summary-subtotal": "Subtotal row",
+        "summary-tax": "Tax row",
+        "summary-total": "Total row",
+        "checkout-btn": "Proceed to checkout button",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script",
+        "products-script": "Products data script",
+        "favorite-script": "Favorite functionality script",
+        "cart-script": "Cart page logic script"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/cart.js"
+    ]
+}

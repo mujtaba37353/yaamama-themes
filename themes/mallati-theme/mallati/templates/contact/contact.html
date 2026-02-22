@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mallati - مولاتي</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+
+  <link rel="stylesheet" href="./contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main class="y-u-p-t-0">
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 contact-grid">
+        <div class="contact-card">
+          <h2 class="y-u-text-xl y-u-text-bold y-u-color-primary">أرسل رسالة</h2>
+          <p class="y-u-text-muted">أرسل رسالة إلينا وسنرد عليك في أسرع وقت ممكن.</p>
+          <form class="y-u-grid y-u-gap-16" action="#" method="post">
+            <div class="y-c-field">
+              <label class="y-c-label" for="name">الاسم الكامل</label>
+              <input class="y-c-input" id="name" name="name" type="text" placeholder="اكتب اسمك" required />
+            </div>
+            <div class="y-c-field">
+              <label class="y-c-label" for="email">البريد الإلكتروني</label>
+              <input class="y-c-input" id="email" name="email" type="email" placeholder="example@mail.com" required />
+            </div>
+            <div class="y-c-field">
+              <label class="y-c-label" for="subject">الموضوع</label>
+              <input class="y-c-input" id="subject" name="subject" type="text" placeholder="موضوع الرسالة" />
+            </div>
+            <div class="y-c-field">
+              <label class="y-c-label" for="message">نص الرسالة</label>
+              <textarea class="y-c-textarea" id="message" name="message" rows="5" placeholder="اكتب رسالتك هنا"
+                required></textarea>
+              <p class="y-c-help">سنرد خلال 24 ساعة عمل.</p>
+            </div>
+            <button type="submit" class="y-c-btn--primary y-u-w-full">
+              إرسال الرسالة
+            </button>
+          </form>
+        </div>
+
+        <div class="info-card">
+          <h2 class="y-u-text-xl y-u-text-bold y-u-color-primary">معلومات التواصل</h2>
+          <ul class="contact-list">
+            <li>
+              <img src="../../assets/address-primary.svg" alt="location" />
+              <span>الرياض، المملكة العربية السعودية</span>
+            </li>
+            <li>
+              <img src="../../assets/email-primary.svg" alt="email" />
+              <a href="mailto:support@nafhat.com">support@nafhat.com</a>
+            </li>
+            <li>
+              <img src="../../assets/phone-primary.svg" alt="phone" />
+              <a href="tel:+966500000000">+966 50 000 0000</a>
+            </li>
+            <li class="socials">
+              <a aria-label="Instagram" href="#"><img src="../../assets/instagrame.svg" alt=""></a>
+              <a aria-label="facebook" href="#"><img src="../../assets/facebook.svg" alt=""></a>
+              <a aria-label="Snapchat" href="#"><img src="../../assets/snapchat.svg" alt=""></a>
+            </li>
+          </ul>
+
+          <div class="map">
+            <iframe title="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.006470365758!2d46.675296!3d24.713551!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f042f4f9b7a23%3A0x9af0b5a24b!2sRiyadh!5e0!3m2!1sar!2ssa!4v1688570000000"
+              width="100%" height="240" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+
+
+</body>
+
+</html>

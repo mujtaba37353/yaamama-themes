@@ -1,0 +1,9 @@
+p {
+  font-size: var(--y-font-size-lg);
+}
+
+@media (max-width: 820px) {
+  p {
+    font-size: var(--y-font-size-2xl);
+  }
+}

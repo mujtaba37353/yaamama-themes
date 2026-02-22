@@ -1,0 +1,79 @@
+.y-l-login-page {
+    width: 100%;
+    max-width: var(--y-max-width-default);
+    padding: var(--y-spacing-lg);
+    box-sizing: border-box;
+}
+
+.y-l-login-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--y-spacing-2xl);
+    align-items: flex-start;
+
+}
+
+.y-c-auth-card {
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+/* Responsive login grid */
+@media (max-width: 768px) {
+    .y-l-login-grid {
+        grid-template-columns: 1fr;
+        gap: var(--y-spacing-lg);
+    }
+}
+
+.y-c-auth-card__title {
+    color: var(--y-color-primary);
+}
+
+/* Additional login-specific styles */
+.y-c-signup-link {
+    text-align: center;
+    margin-top: var(--y-spacing-xl);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+}
+
+.y-c-signup-link a {
+    color: var(--y-color-primary);
+    text-decoration: none;
+    font-weight: var(--y-font-weight-semibold);
+    transition: var(--y-transition-default);
+}
+
+.y-c-signup-link a:hover {
+    color: var(--y-color-primary-hover);
+    text-decoration: underline;
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 768px) {
+    .y-l-login-page {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-auth-card {
+        padding: var(--y-spacing-xl);
+    }
+
+    .y-l-social-login {
+        margin-top: var(--y-spacing-lg);
+    }
+
+    .y-c-auth-card__title {
+        font-size: var(--y-font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-auth-card {
+        padding: var(--y-spacing-lg);
+    }
+
+    .y-c-auth-card__title {
+        font-size: var(--y-font-size-lg);
+    }
+}

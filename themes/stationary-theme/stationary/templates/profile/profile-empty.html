@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stationary</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/products.css">
+
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/status-popup.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/empty.css" />
+  <link rel="stylesheet" href="../layout/layout.css" />
+  <link rel="stylesheet" href="profile.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+
+  <main>
+    <section class="panner panner-image  y-u-m-b-0 container y-u-max-w-1200">
+      <h1 class="y-u-text-center"> حسابي</h1>
+    </section>
+    <section class="breadcrumbs container y-u-max-w-1200 y-u-m-b-0 ">
+      <a href="../layout/index.html">الرئيسية</a>
+      <p>حسابي</p>
+    </section>
+    <section class="profile-section">
+      <div class="container y-u-max-w-1200">
+
+        <input type="radio" name="profile-tab" id="tab-profile" checked>
+        <input type="radio" name="profile-tab" id="tab-addresses">
+        <input type="radio" name="profile-tab" id="tab-favorites">
+        <input type="radio" name="profile-tab" id="tab-orders">
+        <input type="radio" name="profile-tab" id="tab-notifications">
+
+        <div class="sidbar">
+          <div class="top">
+            <div class="content">
+              <span>أهلاً،</span>
+              <p>محمد حسين الهاشمي</p>
+            </div>
+          </div>
+          <div class="links">
+            <label for="tab-profile">البيانات الشخصية</label>
+            <label for="tab-addresses">عنواني</label>
+            <label for="tab-favorites">المفضلة</label>
+            <label for="tab-orders">الطلبات</label>
+            <label for="tab-notifications">الإشعارات</label>
+            <a class="logout-link" href="../signup/signup.html">تسجيل الخروج</a>
+          </div>
+        </div>
+        <div class="content">
+          <div class="profile tab-content">
+            <form action="">
+              <label for="name">الاسم بالكامل</label>
+              <input type="text" id="name" name="name" value="محمد حسين الهاشمي">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email" value="mohamed@gmail.com">
+              <label for="phone">الهاتف</label>
+              <input type="tel" id="phone" name="phone" value="+966599999999">
+              <label for="address">العنوان</label>
+              <input type="text" id="address" name="address" value="الرياض, المملكة العربية السعودية">
+              <label for="">تغيير كلمة المرور</label>
+              <input type="password" id="password" name="password" placeholder="كلمة المرور الحالية">
+              <input type="password" id="new-password" name="new-password" placeholder="كلمة المرور الجديدة">
+              <input type="password" id="confirm-password" name="confirm-password"
+                placeholder="تأكيد كلمة المرور الجديدة">
+              <button type="submit" class="btn main-button">حفظ التعديلات</button>
+            </form>
+          </div>
+          <div class="addresses tab-content">
+            <div class="empty-state-container">
+              <div class="empty-state">
+                <img src="../../assets/empty-address.png" alt="أيقونة لا توجد عناوين محفوظة">
+                <h3>لا توجد عناوين محفوظة</h3>
+                <a href="../profile/profile.html" class="btn main-button">إضافة عنوان جديد</a>
+              </div>
+            </div>
+
+          </div>
+          <section class="favorites tab-content discount-section store-section">
+            <div class="empty-state-container">
+              <div class="empty-state">
+                <img src="../../assets/empty-fav.png" alt="أيقونة لا توجد مفضلات">
+                <h3>لا توجد مفضلات بعد</h3>
+                <a href="../store/store.html" class="btn main-button">تسوق الآن</a>
+              </div>
+            </div>
+
+          </section>
+          <div class="orders tab-content">
+            <div class="empty-state-container">
+              <div class="empty-state">
+                <img src="../../assets/empty-orders.png" alt="أيقونة لا توجد طلبات">
+                <h3>لا توجد طلبات بعد</h3>
+                <a href="../store/store.html" class="btn main-button">تسوق الآن</a>
+              </div>
+            </div>
+
+
+          </div>
+          <div class="notifications tab-content">
+            <div class="empty-state-container">
+              <div class="empty-state">
+                <img src="../../assets/empty-notifications.png" alt="أيقونة لا توجد إشعارات">
+                <h3>لا توجد إشعارات جديدة</h3>
+                <div class="notification-toggle-section">
+                  <label class="notification-toggle-label">
+                    <input type="checkbox" class="notification-toggle-input" id="notificationToggle">
+                    <span class="notification-toggle-slider"></span>
+                    <span class="notification-toggle-text">يمكنك إيقاف الإشعارات</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

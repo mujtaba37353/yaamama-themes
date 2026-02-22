@@ -1,0 +1,57 @@
+<header class="y-u-flex y-u-justify-center y-u-items-center y-u-fixed header y-u-top-left">
+  <div class="container y-u-flex y-u-justify-between y-u-items-center y-u-w-full y-u-max-w-1200">
+    <div class="logo y-u-flex y-u-justify-end y-u-items-center">
+      <a href="../layout/index.html" class="y-u-text-3xl y-u-font-bold y-u-color-primary">
+        <img src="../../assets/navbar-icon.png" alt="navbar-icon">
+      </a>
+      <ul class="desktop-menu y-u-flex y-u-justify-end y-u-items-center">
+        <li><a href="../layout/index.html">الرئيسيه</a></li>
+        <li><a href="../store/store.html">تسوق</a></li>
+        <li><a href="../about-us/about-us.html">من نحن</a></li>
+        <li><a href="../contact/contact.html">تواصل معنا</a></li>
+      </ul>
+    </div>
+
+    <button class="mobile-menu-btn y-u-flex-col y-u-justify-between" aria-label="Toggle mobile menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="user-nav y-u-flex y-u-justify-end y-u-items-center">
+      <div class="search-container">
+        <label class="search-icon-label" for="search-input">
+          <img src="../../assets/search.svg" alt="بحث" />
+        </label>
+        <input type="text" id="search-input" class="search-input" placeholder="ابحث عن المنتجات...">
+      </div>
+      <a href="../cart/cart.html">
+        <img src="../../assets/cart.svg" alt="" />
+      </a>
+      <a href="../profile/profile.html" class="nav-icon nav-icon--profile">
+        <img src="../../assets/person.svg" alt="حسابي" />
+        <span class="notification-dot" aria-hidden="true"></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <ul class="y-u-flex y-u-flex-col y-u-gap-16">
+        <li><a href="../layout/index.html">الرئيسية</a></li>
+        <li><a href="../store/store.html">تسوق</a></li>
+        <li><a href="../about-us/about-us.html">من نحن</a></li>
+        <li><a href="../contact/contact.html">تواصل معنا</a></li>
+        <li><a href="../cart/cart.html">عربة التسوق</a> <span class="notification-dot" aria-hidden="true"></span></li>
+        <li><a href="../profile/profile.html">حسابي</a> <span class="notification-dot" aria-hidden="true"></span></li>
+        <li class="mobile-search-container">
+          <div class="search-container mobile-search">
+            <label class="search-icon-label" for="mobile-search-input">
+              <img src="../../assets/search.svg" alt="بحث" />
+            </label>
+            <input type="text" id="mobile-search-input" class="search-input" placeholder="ابحث عن المنتجات...">
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

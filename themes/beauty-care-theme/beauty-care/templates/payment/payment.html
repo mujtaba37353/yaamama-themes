@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Care</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/status-popup.css" />  
+  <link rel="stylesheet" href="../../components/quantity.css" />
+  <link rel="stylesheet" href="../../components/products-table.css" />
+  <link rel="stylesheet" href="../../components/total.css" />
+
+  <link rel="stylesheet" href="payment.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner">
+      <h1 class="y-u-text-center"> الدفع </h1>
+      <div class="breadcrumbs container y-u-max-w-1200">
+        <a href="../layout/index.html">الرئيسية</a>
+        <a href="../cart/cart.html">السلة</a>
+        <p>الدفع</p>
+      </div>
+    </section>
+
+    <section class="container y-u-max-w-1200 payment-section">      <div class="products">
+        <h3>إجمالي المنتجات</h3>
+        <div class="header">
+          <p>المنتج</p>
+          <p>السعر</p>
+          <p>الكمية</p>
+          <p>الإجمالي</p>
+        </div>
+        <div class="product-grid">
+          <div class="product-item">
+            <div class="product">
+
+              <img src="../../assets/pro2.jpg" alt="">
+              <p>سيرم فيتامين سي </p>
+            </div>
+            <div class="others">
+              <p class="mobile">
+                سيرم فيتامين سي
+              </p>
+              <div class="price">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+              <div class="quantity">
+                
+                <input type="text" inputmode="numeric" value="1" disabled>
+                
+              </div>
+              <div class="total">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+            </div>
+
+
+          </div>
+          <div class="product-item">
+            <div class="product">
+
+              <img src="../../assets/pro2.jpg" alt="">
+              <p>سيرم فيتامين سي </p>
+            </div>
+            <div class="others">
+              <p class="mobile">
+                سيرم فيتامين سي
+              </p>
+              <div class="price">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+              <div class="quantity">
+                
+                <input type="text" inputmode="numeric" value="1" disabled>
+                
+              </div>
+              <div class="total">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+            </div>
+
+
+          </div>
+          <div class="product-item">
+            <div class="product">
+
+              <img src="../../assets/pro2.jpg" alt="">
+              <p>سيرم فيتامين سي </p>
+            </div>
+            <div class="others">
+              <p class="mobile">
+                سيرم فيتامين سي
+              </p>
+              <div class="price">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+              <div class="quantity">
+                
+                <input type="text" inputmode="numeric" value="1" disabled>
+                
+              </div>
+              <div class="total">
+                <p>50</p>
+                <img src="../../assets/ryal.svg" alt="">
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <form action="" id="payment-form" novalidate>
+        <h2>معلومات التوصيل</h2>
+        <div class="form-group full-width">
+            <input type="text" id="full-name" name="full-name" placeholder="الاسم الكامل">
+        </div>
+        <div class="form-group full-width">
+            <input type="email" id="email" name="email" placeholder="البريد الإلكتروني" dir="ltr">
+        </div>
+        <div class="form-group full-width">
+          <!--change-->
+            <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" maxlength="10" minlength="10" dir="rtl">
+          <!--end of change-->
+        </div>
+        <div class="form-group full-width">
+            <input type="text" id="address" name="address" placeholder="العنوان بالتفصيل">
+        </div>
+
+        <a href="../signup/signup.html" style="text-decoration: underline; color: var(--y-color-secondary); font-size: var(--y-space-16); font-weight: 700;">هل تود إنشاء حساب جديد ؟</a>
+        <div class="form-group full-width">
+          <input type="password" id="password" name="password" placeholder="كلمة المرور">
+      </div>
+
+        <h2>طريقة الدفع</h2>
+        <div id="payment-method-group">
+          <div class="radio-group"> 
+            <input type="radio" name="payment" id="cod" value="cod">
+            <label for="cod">الدفع عند الاستلام (COD)</label>
+          </div>
+          <div class="radio-group"> 
+            <input type="radio" name="payment" id="bank-transfer" value="bank">
+            <label for="bank-transfer">تحويل بنكي</label>
+          </div>
+          <div class="radio-group"> 
+            <input type="radio" name="payment" id="visa" value="card">
+            <label for="visa"> 
+                <img src="../../assets/payment-methods.png" alt="Mada" style="height: 20px; margin-right: 10px;"> 
+            </label>
+          </div>
+        </div>
+        <div id="bank-transfer-details" style="display: none; margin-top: 10px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px;">
+          <p>قم بتحويل المبلغ مباشرة إلى حسابنا البنكي. يرجى استخدام رقم الطلب كمرجع. لن يتم شحن الطلب حتى يتم تأكيد وصول المبلغ.</p>
+        </div>
+        <div class="card">
+          <div class="card-field">
+            <label for="card-number">رقم البطاقة</label>
+            <input type="text" inputmode="numeric" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" style="direction: ltr;">
+          </div>
+          <div class="card-field">
+            <label for="cardholder-name">اسم حامل البطاقة</label>
+            <input type="text" id="cardholder-name" name="cardholder-name" placeholder="Name on card" dir="ltr">
+          </div>
+          <div class="card-row">
+            <div class="card-field expiry-field">
+              <label for="expiry-month">تاريخ الإنتهاء</label>
+              <div class="expiry-inputs">
+                <div class="expiry-col">
+                  <input type="text" inputmode="numeric" id="expiry-month" name="expiry-month" placeholder="الشهر" minlength="2" maxlength="2">
+                </div>
+                <div class="expiry-col">
+                  <input type="text" inputmode="numeric" id="expiry-year" name="expiry-year" placeholder="السنة" minlength="2" maxlength="2">
+                </div>
+              </div>
+            </div>
+            <div class="card-field cvv-field">
+              <div class="cvv-header">
+                <button type="button" class="cvv-info" aria-label="معلومات CVV">
+                  <i class="fa-solid fa-question"></i>
+                </button>
+                <label for="cvv">CVV</label>
+              </div>
+              <!--change-->
+              <input type="text" inputmode="numeric" id="cvv" name="cvv" placeholder="XXX" maxlength="5">
+              <!--end of change-->
+            </div>
+          </div>
+        </div>
+
+       
+        <div class="total-card">
+          <p>
+            المجموع 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">100 <img src="../../assets/ryal.svg" alt=""></span>
+          </p>
+          <p>
+            ضريبة القيمة المضافة 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">100 <img src="../../assets/ryal.svg" alt=""></span>
+          </p>
+          <p class="estimated-total"> 
+            الإجمالى المقدر 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">1100 <img src="../../assets/ryal.svg" alt=""></span>
+          </p>
+        </div>
+        <button type="submit" class="btn main-button fw" id="complete-order-btn">اكمل الطلب</button>
+      </form>
+
+
+    </section>
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <!-- Payment Success Popup -->
+  <input type="checkbox" id="payment-success-popup" class="status-popup-toggle">
+  <div class="status-popup-overlay">
+    <label for="payment-success-popup" class="status-popup-overlay-close"></label>
+    <div class="status-popup-card">
+      <div class="status-popup-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M20 6L9 17l-5-5" />
+        </svg>
+      </div>
+      <p class="status-popup-text">تم تسجيل طلبك بنجاح</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="../../js/validation.js"></script>
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+/* RTL base - padding/margin/icon flips */
+[dir="rtl"] .indecator img,
+[dir="rtl"] .hero-slider-prev img,
+[dir="rtl"] .hero-slider-next img {
+  transform: scaleX(-1);
+}
+html[dir="rtl"] {
+  text-align: right;
+}

@@ -1,0 +1,86 @@
+<div class="y-c-address-container">
+
+    <div id="address-display-view" class="y-c-address-display-view">
+
+        <div class="y-l-address-header">
+            <h2 class="y-c-address-title" data-y="address-section-title">عنوان الفواتير</h2>
+            <a href="#" id="edit-address-btn" class="y-c-edit-link">
+                تعديل <i class="fas fa-pen"></i>
+            </a>
+        </div>
+
+        <div class="y-c-address-list">
+            <div><strong>الاسم:</strong> <span data-field="fullName">محمد حسين الهاشمي</span></div>
+            <div><strong>الدولة:</strong> <span data-field="country">المملكة العربية السعودية</span></div>
+            <div><strong>الشارع:</strong> <span data-field="street">الأمير محمد بن عبدالعزيز (التحلية)</span></div>
+            <div><strong>الحي:</strong> <span data-field="district">العليا</span></div>
+            <div><strong>المدينة:</strong> <span data-field="city">الرياض</span></div>
+            <div><strong>المنطقة:</strong> <span data-field="region">الرياض</span></div>
+            <div><strong>الرمز البريدي:</strong> <span data-field="postalCode">12241</span></div>
+            <div><strong>رقم المبنى:</strong> <span data-field="buildingNo">3472</span></div>
+            <div><strong>رقم الوحدة:</strong> <span data-field="unitNo">12</span></div>
+        </div>
+
+        <button type="button" id="add-address-btn" class="y-c-outline-btn y-c-basic-btn">إضافة عنوان جديد</button>
+    </div>
+
+    <form id="address-edit-form" class="y-c-address-form y-c-address-edit-form">
+
+        <div class="y-c-form-row-split">
+            <div class="y-c-form-group">
+                <label>الاسم الأول <span class="y-u-text-error">*</span></label>
+                <input type="text" name="firstName" value="محمد" class="y-c-form-input" required data-y="full-name">
+            </div>
+            <div class="y-c-form-group">
+                <label>الاسم الأخير <span class="y-u-text-error">*</span></label>
+                <input type="text" name="lastName" value="حسين الهاشمي" class="y-c-form-input" required data-y="full-name">
+            </div>
+        </div>
+
+        <div class="y-c-form-group">
+            <label>الدولة</label>
+            <input type="text" name="country" value="المملكة العربية السعودية"
+                class="y-c-form-input y-c-form-input-readonly" readonly>
+        </div>
+
+        <div class="y-c-form-group">
+            <label>الشارع <span class="y-u-text-error">*</span></label>
+            <input type="text" name="street" value="الأمير محمد بن عبدالعزيز (التحلية)" class="y-c-form-input" required data-y="address-input">
+        </div>
+
+        <div class="y-c-form-row-split">
+            <div class="y-c-form-group">
+                <label>المدينة <span class="y-u-text-error">*</span></label>
+                <input type="text" name="city" value="الرياض" class="y-c-form-input" required data-y="address-input">
+            </div>
+            <div class="y-c-form-group">
+                <label>الحي <span class="y-u-text-error">*</span></label>
+                <input type="text" name="district" value="العليا" class="y-c-form-input" required data-y="address-input">
+            </div>
+            <div class="y-c-form-group">
+                <label>المنطقة <span class="y-u-text-error">*</span></label>
+                <input type="text" name="region" value="الرياض" class="y-c-form-input" required data-y="address-input">
+            </div>
+        </div>
+
+        <div class="y-c-form-row-split">
+            <div class="y-c-form-group">
+                <label>الرمز البريدي <span class="y-u-text-error">*</span></label>
+                <input type="text" name="postalCode" value="12241" class="y-c-form-input" required pattern="[0-9]{5}" data-y="postal-code">
+            </div>
+            <div class="y-c-form-group">
+                <label>رقم المبنى <span class="y-u-text-error">*</span></label>
+                <input type="text" name="buildingNo" value="3472" class="y-c-form-input" required data-y="address-number">
+            </div>
+            <div class="y-c-form-group">
+                <label>رقم الوحدة <span class="y-u-text-error">*</span></label>
+                <input type="text" name="unitNo" value="12" class="y-c-form-input" required data-y="address-number">
+            </div>
+        </div>
+
+        <div class="y-c-form-actions">
+            <button type="submit" class="y-c-btn-maroon">حفظ العنوان</button>
+            <button type="button" id="cancel-edit-btn" class="y-c-btn-maroon">إلغاء</button>
+        </div>
+    </form>
+</div>

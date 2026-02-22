@@ -1,0 +1,17 @@
+/* على الويب 4 أعمدة مثل صفحة المنتجات */
+@media (min-width: 821px) {
+  .wishlist-content .products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* على الجوال (820px وأقل) نفس صفحة المنتجات: عمودان بنفس الحجم */
+.wishlist-page .wishlist-btn i {
+  font-weight: 800 !important;
+  color: var(--y-color-btn);
+}
+
+.wishlist-btn i {
+  font-weight: 800 !important;
+}
+

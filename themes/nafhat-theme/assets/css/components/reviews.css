@@ -1,0 +1,124 @@
+.banner-section {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-16);
+}
+.banner-section img {
+  width: 100%;
+  height: auto;
+}
+.banner-section img:first-child {
+  width: 60%;
+}
+.banner-section img:last-child {
+  width: 40%;
+}
+
+.opinions-slider-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.opinions-slider {
+  display: flex;
+  gap: var(--y-space-16);
+  transition: transform 0.5s ease-in-out;
+}
+
+.opinion-slide {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+.message-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--y-color-fg);
+  border-radius: var(--y-radius-12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: box-shadow var(--y-transition), transform var(--y-transition);
+  cursor: pointer;
+  border: 1px solid var(--y-color-primary);
+  padding: var(--y-space-16);
+  gap: var(--y-space-20);
+}
+.message-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.message-header p {
+  font-weight: var(--y-text-bold);
+}
+.message-header .starts {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-4);
+}
+.message-header .starts i {
+  filter: grayscale(1);
+  color: var(--y-color-primary);
+}
+.message-header .starts i:hover {
+  filter: grayscale(0);
+}
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+.message-content p {
+  font-size: var(--y-text-sm);
+}
+
+@media (max-width: 767px) {
+  .banner-section {
+    gap: var(--y-space-8);
+  }
+
+  .opinion-slide {
+    flex: 0 0 100%;
+  }
+
+  .message-card {
+    padding: var(--y-space-12);
+    gap: var(--y-space-12);
+  }
+
+  .message-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--y-space-8);
+  }
+}
+
+@media (max-width: 575px) {
+  .banner-section {
+    gap: var(--y-space-6);
+    flex-wrap: wrap;
+  }
+  .banner-section img:first-child {
+    width: 100%;
+  }
+  .banner-section img:last-child {
+    width: 100%;
+  }
+
+  .message-card {
+    padding: var(--y-space-8);
+  }
+
+  .message-header p {
+    font-size: var(--y-text-sm);
+  }
+
+  .message-content p {
+    font-size: var(--y-text-xs);
+  }
+}
+
+@media (max-width: 375px) {
+  .message-card {
+    padding: var(--y-space-6);
+  }
+}

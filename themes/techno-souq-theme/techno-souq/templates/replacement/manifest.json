@@ -1,0 +1,37 @@
+{
+    "template": "replacement",
+    "slots": {
+        "page-title": "Replacement page title",
+        "header-placeholder": "Header component placeholder",
+        "replacement-main": "Main content container for replacement page",
+        "replacement-container": "Replacement page container wrapper",
+        "replacement-main-title": "Replacement page main title",
+        "title-separator-1": "First title separator",
+        "title-separator-2": "Second title separator",
+        "return-policy-title": "Return and refund policy section title",
+        "return-policy-title-separator": "Separator after return policy title",
+        "return-policy-intro-paragraph": "Return policy introduction paragraph",
+        "contact-info-paragraph": "Contact information paragraph",
+        "online-payment-separator": "Separator before online payment section",
+        "online-payment-title": "Online payment section title",
+        "online-payment-title-separator": "Separator after online payment title",
+        "online-payment-paragraph": "Online payment refund paragraph",
+        "cash-payment-separator": "Separator before cash payment section",
+        "cash-payment-title": "Cash payment section title",
+        "cash-payment-title-separator": "Separator after cash payment title",
+        "cash-payment-paragraph": "Cash payment refund paragraph",
+        "points-section-separator": "Separator before points section",
+        "points-title": "Points system section title",
+        "points-title-separator": "Separator after points title",
+        "points-paragraph": "Points system refund paragraph",
+        "shipping-policy-separator": "Separator before shipping policy section",
+        "shipping-policy-title": "Shipping policy section title",
+        "shipping-policy-title-separator": "Separator after shipping policy title",
+        "shipping-policy-paragraph": "Shipping policy paragraph",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

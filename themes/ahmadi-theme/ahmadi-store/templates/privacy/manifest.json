@@ -1,0 +1,11 @@
+{
+    "template": "privacy",
+    "slots": {
+        "page-title": "title",
+        "privacy-container": "[data-y='privacy-container']",
+        "privacy-policy-title": "[data-y='privacy-policy-title']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

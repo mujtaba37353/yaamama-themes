@@ -1,0 +1,27 @@
+.total-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-space-16);
+  }
+  .total-card p {
+    font-size: var(--y-space-16);
+    font-weight: 300;
+    color: var(--y-color-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .total-card p span {
+    display: flex;
+    align-items: center;
+    gap: var(--y-space-8);
+  }
+  .total-card p span img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .total-card .estimated-total {
+    border-top: 2px solid var(--y-color-border);
+    padding-top: var(--y-space-16);
+  }

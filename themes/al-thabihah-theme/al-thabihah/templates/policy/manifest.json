@@ -1,0 +1,15 @@
+{
+    "template": "policy",
+    "slots": {
+        "page-title": "Page title",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "breadcrumbs": "Breadcrumbs section",
+        "policy-content": "Main content area for policy",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

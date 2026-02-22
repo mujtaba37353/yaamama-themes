@@ -1,0 +1,28 @@
+{
+    "template": "login",
+    "slots": {
+        "page-title": "Login page title",
+        "login-main": "Main content container for login page",
+        "login-container": "Login page container wrapper",
+        "auth-card": "Authentication card container",
+        "auth-grid": "Authentication form grid layout",
+        "auth-form": "Authentication form section",
+        "login-title": "Login form title",
+        "email-group": "Email input field group",
+        "email-label": "Email field label",
+        "email-input": "Email input field",
+        "password-group": "Password input field group",
+        "password-label": "Password field label",
+        "password-input": "Password input field",
+        "auth-options": "Authentication options container",
+        "forgot-password-link": "Forgot password link",
+        "signup-link": "Sign up registration link",
+        "login-submit-btn": "Login form submit button",
+        "header-placeholder": "Header component placeholder",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components JavaScript file"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

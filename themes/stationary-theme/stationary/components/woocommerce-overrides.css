@@ -1,0 +1,334 @@
+/* WooCommerce overrides — Stationary theme */
+
+.woocommerce-Price-currencySymbol img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 0.25em;
+}
+
+.woocommerce-Price-amount {
+  white-space: nowrap;
+}
+
+.woocommerce ul.products {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error {
+  padding: var(--y-space-16);
+  margin: var(--y-space-16) 0;
+  border-radius: var(--y-radius-8);
+  border: 1px solid var(--y-color-border);
+}
+
+/* ──────────────────────────────────────
+   CHECKOUT — two-column form layout
+   ────────────────────────────────────── */
+
+/* Reset the parent .payment-section grid so the form spans full width */
+.payment-section.checkout-section {
+  display: block;
+}
+
+/* Make the checkout form the 2-column grid */
+.payment-section .checkout.woocommerce-checkout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  width: 100%;
+}
+
+/* Override the generic .payment-section form rule for checkout */
+.payment-section form.checkout {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+/* Left column — billing + payment */
+.checkout-fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  background: var(--y-color-fg);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+  align-self: start;
+}
+
+.checkout-fields > h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--y-space-20);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-text);
+}
+
+/* Hide WooCommerce default billing heading */
+.checkout-fields .woocommerce-billing-fields > h3 {
+  display: none;
+}
+
+/* Billing field wrapper */
+.checkout-fields .woocommerce-billing-fields__field-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+
+/* Full-width fields */
+.checkout-fields .form-row-wide {
+  grid-column: 1 / -1;
+}
+
+/* Half-width fields (already handled by grid) */
+.checkout-fields .form-row-first,
+.checkout-fields .form-row-last {
+  grid-column: auto;
+}
+
+/* Field labels */
+.checkout-fields .form-row label {
+  display: block;
+  font-weight: 600;
+  font-size: var(--y-text-sm);
+  margin-bottom: var(--y-space-4);
+  color: var(--y-color-text);
+}
+
+.checkout-fields .form-row label .optional {
+  font-weight: 400;
+  color: var(--y-color-muted);
+  font-size: var(--y-text-xs);
+}
+
+/* Field inputs */
+.woocommerce-checkout .form-row input,
+.woocommerce-checkout .form-row select,
+.woocommerce-checkout .form-row textarea {
+  width: 100%;
+  padding: var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-14);
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+}
+
+.woocommerce-checkout .form-row input:focus,
+.woocommerce-checkout .form-row select:focus,
+.woocommerce-checkout .form-row textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+}
+
+/* Select2 overrides (WooCommerce uses select2 for country/state) */
+.checkout-fields .select2-container .select2-selection--single {
+  height: auto;
+  padding: var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-14);
+  background: var(--y-color-bg);
+}
+
+.checkout-fields .select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: var(--y-color-text);
+  line-height: normal;
+  padding: 0;
+}
+
+.checkout-fields .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+}
+
+/* Shipping address toggle */
+.checkout-fields .woocommerce-shipping-fields {
+  margin-top: var(--y-space-16);
+}
+
+.checkout-fields #ship-to-different-address label {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Payment methods section */
+.checkout-fields #payment {
+  background: transparent;
+  padding: 0;
+}
+
+.checkout-fields #payment-method-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-14);
+  margin-top: var(--y-space-16);
+}
+
+.checkout-fields #payment-method-group > h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: var(--y-space-20);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-text);
+}
+
+/* Payment box (gateway description/fields) */
+.checkout-fields .payment_box {
+  padding: var(--y-space-12);
+  background: var(--y-color-bg);
+  border-radius: var(--y-space-8);
+  margin-top: var(--y-space-4);
+  margin-bottom: var(--y-space-8);
+  font-size: var(--y-text-sm);
+  color: var(--y-color-text);
+}
+
+/* Place order button */
+.checkout-fields .place-order {
+  margin-top: var(--y-space-16);
+}
+
+/* Right column — order review */
+.checkout-review {
+  align-self: start;
+}
+
+.checkout-review .woocommerce-checkout-review-order-table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+/* Shipping methods (div-based override of cart-shipping.php) */
+.woocommerce-shipping-totals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.woocommerce-shipping-totals .shipping-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--y-color-text);
+}
+
+.woocommerce-shipping-totals .shipping-label span {
+  font-weight: 300;
+}
+
+.woocommerce-shipping-methods {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.woocommerce-shipping-methods li {
+  list-style: none;
+}
+
+.woocommerce-shipping-methods li label {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  cursor: pointer;
+  padding: var(--y-space-8) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  transition: all 0.2s ease;
+}
+
+.woocommerce-shipping-methods li label:has(input:checked) {
+  background-color: color-mix(in srgb, var(--y-color-primary) 10%, white);
+  border-color: var(--y-color-primary);
+}
+
+/* WooCommerce error/info notices on checkout */
+.payment-section .woocommerce-NoticeGroup,
+.payment-section .woocommerce-notices-wrapper {
+  grid-column: 1 / -1;
+}
+
+.payment-section .woocommerce-error {
+  padding: var(--y-space-16);
+  margin-bottom: var(--y-space-16);
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-danger);
+  background: #fff0f0;
+  color: #b20000;
+  list-style: none;
+}
+
+/* Checkout responsive */
+@media (max-width: 780px) {
+  .payment-section .checkout.woocommerce-checkout {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-review {
+    order: -1;
+  }
+
+  .checkout-fields .woocommerce-billing-fields__field-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ──────────────────────────────────────
+   MY ACCOUNT overrides
+   ────────────────────────────────────── */
+
+/* My Account — profile sidebar active link */
+.profile-section .sidbar .links a.active {
+  background-color: #FACC1566;
+  box-shadow: 0px 0px 5px 0px #00000040;
+  border: none;
+}
+
+/* Auth + Account notices — Arabic styling */
+.auth-section .woocommerce-message,
+.auth-section .woocommerce-error,
+.auth-section .woocommerce-info,
+.profile-section .woocommerce-message,
+.profile-section .woocommerce-error,
+.profile-section .woocommerce-info {
+  padding: var(--y-space-16);
+  margin-bottom: var(--y-space-16);
+  border-radius: var(--y-space-8);
+  border: 1px solid;
+  list-style: none;
+}
+
+.auth-section .woocommerce-message,
+.profile-section .woocommerce-message {
+  border-color: #0a7a33;
+  background: #d4f8dd;
+  color: #0a7a33;
+}
+
+.auth-section .woocommerce-error,
+.profile-section .woocommerce-error {
+  border-color: #b20000;
+  background: #fff0f0;
+  color: #b20000;
+}
+
+.auth-section .woocommerce-info,
+.profile-section .woocommerce-info {
+  border-color: var(--y-color-primary);
+  background: color-mix(in oklab, var(--y-color-primary) 15%, white);
+  color: var(--y-color-text);
+}

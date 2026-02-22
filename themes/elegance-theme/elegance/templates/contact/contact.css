@@ -1,0 +1,116 @@
+section.panner {
+  margin-bottom: var(--y-space-24);
+}
+
+.contact-section {
+  padding-top: var(--y-space-32);
+  padding-bottom: var(--y-space-48);
+  margin-bottom: 0;
+}
+
+.contact-section h2 {
+  font-size: var(--y-space-40);
+  font-weight: 300;
+  padding-bottom: var(--y-space-28);
+}
+.contact-section > h2,
+.contact-section > p {
+  padding-right: var(--y-space-56);
+}
+.contact-section p {
+  font-size: var(--y-space-16);
+  font-weight: 400;
+  padding-bottom: var(--y-space-42);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--y-space-14);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--y-space-2);
+}
+
+.contact-info img {
+  width: var(--y-space-40);
+  height: var(--y-space-40);
+}
+
+.contact-social-icon {
+  font-size: 2rem;
+}
+
+.contact-social-placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--y-space-2);
+  cursor: default;
+  pointer-events: none;
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding-top: var(--y-space-24);
+    padding-bottom: var(--y-space-32);
+  }
+  .contact-card .y-btn {
+    width: 100%;
+  }
+  .contact-section > h2,
+  .contact-section > p {
+    padding-right: 0;
+  }
+  .contact-section h2 {
+    font-size: var(--y-space-24);
+  }
+  .contact-section p {
+    font-size: var(--y-space-14);
+  }
+}
+
+@media (max-width: 576px) {
+  .info-card h2,
+  .contact-card h2 {
+    font-size: 20px;
+  }
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--y-space-22);
+  }
+  .contact-list li {
+    padding: var(--y-space-8) var(--y-space-10);
+  }
+  .contact-info {
+    flex-direction: row;
+    gap: var(--y-space-10);
+  }
+  .contact-info img {
+    width: var(--y-space-24);
+    height: var(--y-space-24);
+  }
+  .contact-info h3 {
+    font-size: var(--y-space-16);
+  }
+  .contact-info p {
+    font-size: var(--y-space-14);
+    padding: 0;
+  }
+}

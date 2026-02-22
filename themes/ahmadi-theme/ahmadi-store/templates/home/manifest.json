@@ -1,0 +1,35 @@
+{
+    "template": "home",
+    "slots": {
+        "page-title": "[data-y='page-title']",
+        "sale-banner-text": "[data-y='sale-banner-text']",
+        "hero-badge": "[data-y='hero-badge']",
+        "hero-title": "[data-y='hero-title']",
+        "hero-subtitle": "[data-y='hero-subtitle']",
+        "hero-cta-btn": "[data-y='hero-cta-btn']",
+        "hero-image": "[data-y='hero-image']",
+        "categories-title": "[data-y='categories-title']",
+        "products-title": "[data-y='products-title']",
+        "view-more-products": "[data-y='view-more-products']",
+        "products-grid": "[data-y='products-grid']",
+        "promo-banner-1": "[data-y='promo-banner-1']",
+        "promo-1-title": "[data-y='promo-1-title']",
+        "promo-1-subtitle": "[data-y='promo-1-subtitle']",
+        "promo-1-cta": "[data-y='promo-1-cta']",
+        "promo-1-image": "[data-y='promo-1-image']",
+        "promo-banner-2": "[data-y='promo-banner-2']",
+        "promo-2-title": "[data-y='promo-2-title']",
+        "promo-2-subtitle": "[data-y='promo-2-subtitle']",
+        "promo-2-cta": "[data-y='promo-2-cta']",
+        "promo-2-image": "[data-y='promo-2-image']",
+        "middle-banner-badge": "[data-y='middle-banner-badge']",
+        "middle-banner-title": "[data-y='middle-banner-title']",
+        "middle-banner-subtitle": "[data-y='middle-banner-subtitle']",
+        "middle-banner-cta-btn": "[data-y='middle-banner-cta-btn']"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/home.js"
+    ]
+}

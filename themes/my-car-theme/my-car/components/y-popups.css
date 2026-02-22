@@ -1,0 +1,355 @@
+.y-c-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--y-width-percentage-full);
+    height: var(--y-width-percentage-full);
+    background-color: rgba(0, 0, 0, var(--y-opacity-overlay));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: var(--y-z-index-popup);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.y-c-popup-content {
+    background-color: var(--y-color-background-light);
+    padding: var(--y-spacing-2xl) var(--y-spacing-3xl);
+    border-radius: var(--y-border-radius-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+    box-shadow: var(--y-shadow-lg);
+    max-width: 90%;
+    width: var(--y-width-popup);
+}
+
+.y-c-popup-content .fa-check-circle {
+    font-size: var(--y-width-icon-2xl);
+    color: var(--y-color-success);
+}
+
+.y-c-popup-content h2 {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0;
+}
+
+.y-c-popup-content {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-popup-subtitle {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary);
+}
+
+/* Popup animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.y-c-popup-description {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    line-height: var(--y-line-height-lg);
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .y-c-popup-content {
+        width: var(--y-width-percentage-xl);
+        max-width: var(--y-width-percentage-xl);
+        padding: var(--y-spacing-xl) var(--y-spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-c-popup-content .fa-check-circle {
+        font-size: var(--y-width-icon-2xl-tablet);
+    }
+
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-popup-content {
+        padding: var(--y-spacing-lg);
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-popup-content .fa-check-circle {
+        font-size: var(--y-width-icon-2xl-mobile);
+    }
+
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-lg);
+    }
+}
+
+@media (max-width: 360px) {
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-md);
+    }
+}
+
+/* --- Auth Popup --- */
+
+/* Hide the modal by default */
+.y-c-popup-overlay {
+    display: none;
+    /* Changed from flex to none */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show the modal when .show is added by JS */
+.y-c-popup-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Specific styles for the Auth popup */
+.y-c-auth-popup {
+    width: var(--y-width-popup);
+    max-width: 90vw;
+    padding: var(--y-spacing-xl);
+    gap: var(--y-spacing-sm);
+    position: relative;
+}
+
+.y-c-popup-close {
+    position: absolute;
+    top: var(--y-spacing-md);
+    left: var(--y-spacing-md);
+    /* Adjusted for RTL */
+    background: none;
+    border: none;
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-third-text);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-popup-close:hover {
+    color: var(--y-color-primary-text);
+    transform: scale(1.1);
+}
+
+/* Delete Account Popup Styles */
+.y-c-delete-popup {
+    max-width: 500px;
+    position: relative;
+}
+
+.y-c-popup-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 59, 59, 0.1);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-popup-title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0 0 var(--y-spacing-md);
+}
+
+.y-c-popup-actions {
+    display: flex;
+    gap: var(--y-spacing-lg);
+    width: 100%;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.y-c-popup-actions .y-c-basic-btn {
+    flex: 1;
+    max-width: 150px;
+    padding: var(--y-spacing-md) var(--y-spacing-xl);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    cursor: pointer;
+    transition: var(--y-transition-default);
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-popup-actions .y-c-basic-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: var(--y-shadow-md);
+}
+
+.y-c-popup-actions .y-c-basic-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.y-l-auth-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-auth-icon {
+    width: var(--y-icon-size-md);
+    height: var(--y-icon-size-md);
+    object-fit: contain;
+    margin-bottom: var(--y-spacing-xs);
+}
+
+.y-c-auth-title {
+    font-size: var(--y-font-size-3xl);
+    color: var(--y-color-primary);
+    font-weight: var(--y-font-weight-regular);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-auth-description {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-md);
+    line-height: var(--y-line-height-lg);
+}
+
+/* Form styles */
+.y-c-auth-form {
+    width: 100%;
+    display: none;
+    /* Hide forms by default */
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-auth-form.active {
+    display: flex;
+    /* Show only the active form */
+}
+
+.y-c-auth-form form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-auth-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-auth-link {
+    color: var(--y-color-primary);
+    text-decoration: none;
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-c-auth-link:hover {
+    text-decoration: underline;
+}
+
+.y-c-auth-remember {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    color: var(--y-color-third-text);
+    cursor: pointer;
+}
+
+.y-c-auth-remember input {
+    accent-color: var(--y-color-primary);
+}
+
+.y-c-auth-btn {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+}
+
+.y-c-auth-switcher {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    margin-top: var(--y-spacing-md);
+}
+
+/* Floating label compatibility from y-forms.css */
+.y-c-auth-popup .y-c-floating-field {
+    position: relative;
+    width: 100%;
+}
+
+.y-c-auth-popup .y-c-floating-input {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    background-color: var(--y-color-background-light);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    box-sizing: border-box;
+}
+
+.y-c-auth-popup .y-c-floating-label {
+    position: absolute;
+    top: 50%;
+    right: var(--y-spacing-md);
+    transform: translateY(-50%);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    background-color: var(--y-color-background-light);
+    padding: 0 var(--y-spacing-xs);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.y-c-auth-popup .y-c-floating-input:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+}
+
+.y-c-auth-popup .y-c-floating-input:focus+.y-c-floating-label,
+.y-c-auth-popup .y-c-floating-input.has-value+.y-c-floating-label {
+    top: 0;
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary);
+    transform: translateY(-50%) scale(0.9);
+}

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../layout/layout.css" />
+  <link rel="stylesheet" href="./store.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner">
+      <h1 class="y-u-text-center"> عروض وتخفيضات</h1>
+    </section>
+
+    <section class="container y-u-max-w-1200 discount-section store-section">
+      <div class="store-header">
+        <div class="breadcrumbs">
+          <a href="../layout/index.html">الرئيسية</a>
+          <span> > </span>
+          <p>عروض</p>
+        </div>
+        <div class="sort-dropdown-wrapper">
+          <button class="sort-dropdown-btn">
+            <span>تصنيف حسب</span>
+            <i class="fas fa-chevron-up"></i>
+          </button>
+          <ul class="sort-dropdown-list">
+            <li><a href="#" data-sort="newest">الأحدث</a></li>
+            <li><a href="#" data-sort="bestselling">الأكثر مبيعًا</a></li>
+            <li><a href="#" data-sort="price-high">الأعلى سعرًا</a></li>
+            <li><a href="#" data-sort="price-low">الأقل سعرًا</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="filter-top">
+          <button class="hide-filter-btn">
+            <span>إخفاء الفلتر</span>
+            <i class="fas fa-filter"></i>
+          </button>
+        </div>
+
+        <a href="#" class="clear-all-link">مسح الكل</a>
+
+        <div class="filter-list">
+          <div class="filter-section">
+            <div class="filter-item">
+              <span class="filter-label">الفئة</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="filter-options">
+              <div class="filter-option">
+                <input type="checkbox" id="sales-category-men">
+                <label for="sales-category-men">رجالي</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-category-women">
+                <label for="sales-category-women">نسائي</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-category-children">
+                <label for="sales-category-children">أطفال</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-item">
+              <span class="filter-label">أحذية</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="filter-options">
+              <div class="filter-option">
+                <input type="checkbox" id="sales-shoes-running">
+                <label for="sales-shoes-running">رياضية</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-shoes-classic">
+                <label for="sales-shoes-classic"> كلاسيك</label>
+              </div>
+
+            </div>
+          </div>
+          <div class="filter-section">
+            <div class="filter-item">
+              <span class="filter-label">إكسسوارات</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="filter-options">
+              <div class="filter-option">
+                <input type="checkbox" id="sales-accessories-1">
+                <label for="sales-accessories-1"> حلى</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-accessories-2">
+                <label for="sales-accessories-2">محافظ</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-accessories-3">
+                <label for="sales-accessories-3"> حقائب</label>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="filter-section">
+            <div class="filter-item">
+              <span class="filter-label">اللون</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="filter-options">
+              <div class="filter-option">
+                <input type="checkbox" id="sales-color-red">
+                <label for="sales-color-red">احمر</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-color-blue">
+                <label for="sales-color-blue">ازرق</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-color-black">
+                <label for="sales-color-black">اسود</label>
+              </div>
+              <div class="filter-option">
+                <input type="checkbox" id="sales-color-gray">
+                <label for="sales-color-gray">رمادي</label>
+              </div>
+            </div>
+          </div>
+          <div class="price-range-section">
+            <div class="price-range-header">
+              <span class="filter-label">نطاق السعر</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="price-range-slider-container">
+              <div class="slider-track">
+                <input type="range" id="price-range-min" min="0" max="3000" value="0" class="range-slider range-min">
+                <input type="range" id="price-range-max" min="0" max="3000" value="3000" class="range-slider range-max">
+              </div>
+              <div class="slider-labels">
+                <span>0</span>
+                <span>3000</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <ul class="grid">
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales1.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales2.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales3.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales4.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales5.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="../product-details/product-details.html">
+              <img src="../../assets/sales6.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+    </section>
+
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/components-loader.js"></script>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

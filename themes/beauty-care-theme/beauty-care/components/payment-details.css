@@ -1,0 +1,30 @@
+
+.payment-methods .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--y-space-24);
+    align-items: stretch;
+  }
+  
+  .payment-methods p a{
+    text-decoration: underline;
+    color: #0B055F;
+  }
+  .payment-methods .container .payment-method {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: var(--y-space-8);
+    align-items: center;
+    border:1px solid #263238;
+    border-radius: var(--y-space-16);
+    padding: var(--y-space-16);
+  }
+  .payment-methods .container .payment-method p {
+    font-size: var(--y-space-16);
+    font-weight: 600;
+  }
+  .payment-methods .container .payment-method img {
+    width:min(163px, 100%);
+    object-fit: contain;
+  }
+  

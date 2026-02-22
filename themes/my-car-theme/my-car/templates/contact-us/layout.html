@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-y="contact-us-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <link rel="stylesheet" href="y-contact-us.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body data-y="contact-us-body">
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main data-y="main">
+        <div id="y-l-page-hero" data-y="contact-us-hero">
+        </div>
+
+        <div class="y-l-contact-us-form-header" data-y="contact-us-form-header">
+            <i class="fa-solid fa-envelope" aria-hidden="true" data-y="contact-us-header-icon"></i>
+            <h2 data-y="contact-us-header-title">يسعدنا إستقبال رسالتك</h2>
+        </div>
+
+        <div class="y-l-contact-us-content" data-y="contact-us-content">
+            <form action="#" class="y-l-contact-us-form" data-y="contact-us-form">
+
+                <div class="y-l-form-row" data-y="contact-form-row-1">
+
+                    <div class="y-l-contact-us-form-field" data-y="contact-name-field">
+                        <label for="name" data-y="contact-name-label">الإسم ثلاثي<span
+                                class="y-c-required-indicator">*</span></label>
+                        <input type="text" id="name" name="name" data-y="contact-name-input">
+                    </div>
+
+                    <div class="y-l-contact-us-form-field" data-y="contact-email-field">
+                        <label for="email" data-y="contact-email-label">البريد الإلكتروني<span
+                                class="y-c-required-indicator">*</span></label>
+                        <input type="email" id="email" name="email" data-y="contact-email-input">
+                    </div>
+
+                </div>
+
+                <div class="y-l-form-row" data-y="contact-form-row-2">
+
+                    <div class="y-l-contact-us-form-field" data-y="contact-phone-field">
+                        <label for="name" data-y="contact-phone-label">رقم الهاتف<span
+                                class="y-c-required-indicator">*</span></label>
+                        <input type="phone" id="phone" name="phone" data-y="contact-phone-input">
+                    </div>
+
+                    <div class="y-l-contact-us-form-field" data-y="contact-subject-field">
+                        <label for="title" data-y="contact-subject-label">موضوع الرسالة<span
+                                class="y-c-required-indicator">*</span></label>
+                        <input type="text" id="title" name="title" data-y="contact-subject-input">
+                    </div>
+
+                </div>
+
+                <div class="y-l-contact-us-form-field" data-y="contact-message-field">
+                    <label for="message" data-y="contact-message-label">رسالتك</label>
+                    <textarea id="message" name="message" rows="5" data-y="contact-message-input"></textarea>
+                </div>
+                <br>
+                <button type="submit" class="y-c-basic-btn y-c-contact-btn" data-y="contact-submit-btn">ارسال</button>
+            </form>
+
+            <section class="y-l-contact-us-info" data-y="contact-info-section">
+                <h2 data-y="contact-info-title">تواصل معنا</h2>
+                <span data-y="contact-address" class="y-c-contact-row">
+                    <i class="fa-solid fa-location-dot" aria-hidden="true" data-y="contact-address-icon"></i>
+                    <span class="y-c-contact-text">الرياض - المملكة العربية السعودية</span>
+                </span>
+                <span data-y="contact-phone" class="y-c-contact-row">
+                    <i class="fa-solid fa-phone" aria-hidden="true" data-y="contact-phone-icon"></i>
+                    <span class="y-c-contact-text"><a href="tel:059688929" data-y="contact-phone-1">059688929</a> - <a
+                            href="tel:0584939148" data-y="contact-phone-2">0584939148</a></span>
+                </span>
+                <span data-y="contact-email" class="y-c-contact-row">
+                    <i class="fa-solid fa-envelope" aria-hidden="true" data-y="contact-email-icon"></i>
+                    <span class="y-c-contact-text"><a href="mailto:info@super.ksa.com"
+                            data-y="contact-email-link">info@super.ksa.com</a></span>
+                </span>
+            </section>
+        </div>
+
+        <div class="y-l-active-time">
+            <h2>زورونا في MY CAR
+                <br>أوقات الدوام من 9:30 ص حتى 10:30 م
+            </h2>
+        </div>
+        <div class="y-c-map-container" data-y='map-section'>
+            <div class="y-c-map-card">
+                <p>محمد الكندى </p>
+                <p>المدينه42313, المملكة العربية السعودية</p>
+                <br>
+                <a href="#">عرض خريطة أكبر</a>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" class="y-c-footer" data-y="footer-placeholder"></div>
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+</body>
+
+</html>

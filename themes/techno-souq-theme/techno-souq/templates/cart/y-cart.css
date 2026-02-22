@@ -1,0 +1,402 @@
+/* Breadcrumb styles moved to base/typography.css */
+
+/* Hide default WooCommerce empty cart message */
+.wc-empty-cart-message,
+.cart-empty,
+.return-to-shop,
+.woocommerce-info.cart-empty {
+    display: none !important;
+}
+
+/* Cart page layout */
+.y-l-cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--y-spacing-xl);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-l-cart-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--y-spacing-xl);
+    margin-bottom: var(--y-spacing-2xl);
+    flex: 2;
+}
+
+.y-l-cart-cards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+    flex: 2;
+}
+
+.y-l-cart-summary {
+    flex: 1;
+}
+
+/* Page-specific styles */
+.y-c-cart-page-title {
+    margin-bottom: var(--y-spacing-md);
+}
+
+/* Ensure cart container content is properly aligned */
+[data-y="cart-container"],
+.y-l-container[data-y="cart-container"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+}
+
+[data-y="cart-container"] > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* Keep title and breadcrumb right-aligned (RTL) */
+[data-y="cart-container"] .y-c-cart-page-title,
+[data-y="cart-container"] .y-c-breadcrumb {
+    text-align: right;
+    width: 100%;
+    align-self: flex-start;
+}
+
+/* Center empty cart and suggested products */
+[data-y="cart-container"] .y-c-empty-cart,
+[data-y="cart-container"] .y-l-suggested-products {
+    align-self: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Empty Cart State Styles - Force center alignment */
+.y-c-empty-cart,
+[data-y="empty-cart"],
+.y-l-container .y-c-empty-cart,
+section .y-c-empty-cart {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: var(--y-spacing-3xl) var(--y-spacing-lg) !important;
+    text-align: center !important;
+    border-radius: var(--y-border-radius-lg);
+    min-height: 50vh !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background-color: var(--y-color-background) !important;
+    margin: var(--y-spacing-2xl) auto !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+.y-c-empty-icon-wrapper {
+    margin-bottom: var(--y-spacing-xl) !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.y-c-empty-icon {
+    font-size: var(--y-font-size-7xl) !important;
+    color: var(--y-color-primary) !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.y-c-empty-title {
+    font-size: var(--y-font-size-2xl) !important;
+    color: var(--y-color-primary-text) !important;
+    margin-bottom: var(--y-spacing-xl) !important;
+    font-weight: var(--y-font-weight-bold) !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.y-c-empty-btn {
+    min-width: var(--y-size-200) !important;
+    padding: var(--y-spacing-md) var(--y-spacing-xl) !important;
+    border-radius: var(--y-border-radius-full) !important;
+    margin: 0 auto !important;
+    display: inline-block !important;
+}
+
+/* Suggested Products Section */
+.y-l-suggested-products {
+    margin-top: var(--y-spacing-3xl);
+    margin-bottom: var(--y-spacing-4xl);
+}
+
+/* Override universal reset for suggested products header */
+.y-l-similar-products-header,
+[data-y="suggested-products-header"],
+.y-l-suggested-products .y-l-similar-products-header,
+.y-l-suggested-products [data-y="suggested-products-header"],
+section .y-l-similar-products-header,
+.y-l-container .y-l-similar-products-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    margin-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.y-l-suggested-products .y-l-similar-products-header .y-c-categories-btn,
+[data-y="suggested-products-view-all"],
+.y-l-suggested-products .y-l-similar-products-header a.y-c-categories-btn {
+    background-color: transparent !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.y-l-suggested-products .y-l-similar-products-header .y-c-categories-btn:hover,
+[data-y="suggested-products-view-all"]:hover,
+.y-l-suggested-products .y-l-similar-products-header a.y-c-categories-btn:hover,
+.y-l-suggested-products [data-y="suggested-products-header"] .y-c-categories-btn:hover,
+section .y-l-suggested-products .y-l-similar-products-header .y-c-categories-btn:hover {
+    background-color: transparent !important;
+    background: transparent !important;
+    color: var(--y-color-primary) !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Force margin-bottom on suggested products grid - override universal reset */
+.y-l-suggested-products .y-l-product-grid,
+.y-l-suggested-products ul.y-l-product-grid,
+.y-l-suggested-products ul[data-y="suggested-products-grid"],
+[data-y="suggested-products-grid"],
+.y-l-suggested-products [data-y="suggested-products-grid"],
+ul.y-l-product-grid[data-y="suggested-products-grid"],
+section .y-l-suggested-products ul.y-l-product-grid,
+.y-l-container .y-l-suggested-products ul.y-l-product-grid,
+[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid {
+    margin-bottom: 50px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+.y-c-section-title {
+    margin: 0;
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-bold);
+}
+
+/* Base rule: Force 2 columns for suggested products grid on all screen sizes initially */
+/* This will be overridden for desktop in a min-width media query if needed */
+/* CRITICAL: Must use ul.y-l-product-grid to match specificity of y-cards.css rule */
+.y-l-suggested-products ul.y-l-product-grid,
+.y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+ul.y-l-product-grid[data-y="suggested-products-grid"],
+section .y-l-suggested-products ul.y-l-product-grid,
+.y-l-container .y-l-suggested-products ul.y-l-product-grid,
+[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+.y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+main[data-y="cart-main"] .y-l-suggested-products ul.y-l-product-grid,
+body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+html body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+html body section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+html body .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    display: grid !important;
+}
+
+/* Desktop: Allow 4 columns for suggested products grid on larger screens */
+@media (min-width: 769px) {
+    .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    ul.y-l-product-grid[data-y="suggested-products-grid"],
+    section .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container .y-l-suggested-products ul.y-l-product-grid,
+    [data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    main[data-y="cart-main"] .y-l-suggested-products ul.y-l-product-grid,
+    body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    html body .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .y-c-empty-cart {
+        min-height: 40vh;
+        padding: var(--y-spacing-2xl) var(--y-spacing-md);
+        margin: var(--y-spacing-xl) 0;
+    }
+    
+    .y-c-empty-icon {
+        font-size: var(--y-font-size-6xl);
+    }
+    
+    .y-c-empty-title {
+        font-size: var(--y-font-size-xl);
+    }
+    
+    .y-l-suggested-products {
+        margin-top: var(--y-spacing-2xl);
+    }
+    
+    .y-l-similar-products-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-spacing-md);
+    }
+    
+    /* Force 2 columns on mobile for suggested products grid - override y-cards.css */
+    /* CRITICAL: Must use ul.y-l-product-grid to match specificity of y-cards.css rule at line 13 */
+    .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    ul.y-l-product-grid[data-y="suggested-products-grid"],
+    section .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container .y-l-suggested-products ul.y-l-product-grid,
+    [data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    main[data-y="cart-main"] .y-l-suggested-products ul.y-l-product-grid,
+    body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    html body .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        gap: var(--y-spacing-md) !important;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .y-l-cart-container {
+        flex-direction: column;
+    }
+
+    .y-c-breadcrumb {
+        margin-bottom: var(--y-spacing-lg);
+        font-size: var(--y-font-size-sm);
+    }
+
+    .y-l-cart-items {
+        flex-direction: column;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .y-c-cart-page-title {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-breadcrumb {
+        font-size: calc(var(--y-font-size-sm) - 1px);
+    }
+
+    .y-c-quantity-control {
+        transform: scale(0.9);
+        transform-origin: right center;
+    }
+
+    .y-c-checkout-btn {
+        padding: var(--y-spacing-sm) var(--y-spacing-md);
+        font-size: var(--y-font-size-sm);
+    }
+    
+    /* Ensure 2 columns on very small screens - override y-cards.css */
+    /* CRITICAL: Must use ul.y-l-product-grid to match specificity of y-cards.css rule at line 13 */
+    .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    ul.y-l-product-grid[data-y="suggested-products-grid"],
+    section .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container .y-l-suggested-products ul.y-l-product-grid,
+    [data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    main[data-y="cart-main"] .y-l-suggested-products ul.y-l-product-grid,
+    body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body .y-l-suggested-products ul.y-l-product-grid[data-y="suggested-products-grid"],
+    html body section[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid,
+    html body .y-l-container[data-y="cart-container"] .y-l-suggested-products ul.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        display: grid !important;
+        gap: var(--y-spacing-sm) !important;
+    }
+}
+
+/* Style WooCommerce checkout button */
+.wc-proceed-to-checkout {
+    margin-top: var(--y-spacing-lg);
+}
+
+.wc-proceed-to-checkout .checkout-button,
+.wc-proceed-to-checkout a.checkout-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: var(--y-spacing-md) var(--y-spacing-lg);
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border: none;
+    border-radius: var(--y-border-radius-md);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    text-decoration: none;
+    transition: var(--y-transition-fast);
+}
+
+.wc-proceed-to-checkout .checkout-button:hover,
+.wc-proceed-to-checkout a.checkout-button:hover {
+    background-color: var(--y-color-primary) !important;
+    filter: brightness(0.85);
+    color: var(--y-color-secondary-text) !important;
+    opacity: 1 !important;
+}
+
+/* Hide default number input spinner arrows */
+.y-c-quantity-input::-webkit-inner-spin-button,
+.y-c-quantity-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.y-c-quantity-input {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.y-c-quantity-input[type="number"] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+.y-c-quantity-input[type="number"]::-webkit-outer-spin-button,
+.y-c-quantity-input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+/* Force margin-bottom on suggested products header - override universal reset */
+.y-l-suggested-products .y-l-similar-products-header[data-y="suggested-products-header"],
+section[data-y="cart-container"] .y-l-suggested-products .y-l-similar-products-header,
+.y-l-container[data-y="cart-container"] .y-l-suggested-products .y-l-similar-products-header,
+main .y-l-suggested-products .y-l-similar-products-header {
+    margin-bottom: 50px !important;
+}

@@ -1,0 +1,341 @@
+header {
+  width: -webkit-fill-available;
+  padding: 0px 20px;
+  background-color: var(--y-color-bg);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  padding: var(--y-space-8) 0;
+}
+header .logo {
+  gap: 32px;
+}
+header .logo img {
+  width: 80px;
+  cursor: pointer;
+  object-fit: contain;
+}
+.logo a {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+header .logo ul.desktop-menu {
+  list-style: none;
+  gap: var(--y-space-24);
+  padding: var(--y-space-8) 0;
+}
+header .logo ul li a {
+  text-decoration: none;
+  color: var(--y-color-muted);
+  font-size: 20px;
+  line-height: 28px;
+  padding: 16px 8px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+header .logo ul li a:hover {
+  color: var(--y-color-primary);
+}
+header .user-nav {
+  gap: var(--y-space-6);
+}
+header .user-nav a {
+  text-decoration: none;
+  color: var(--y-color-muted);
+  font-size: 20px;
+  line-height: var(--y-space-24);
+  padding: 16px 8px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+header .user-nav img {
+  width: 23px;
+}
+
+/* عداد السلة — دائرة حمراء فوق أيقونة السلة */
+.cart-count-badge {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--y-color-danger, #ef4444);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 999px;
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+.nav-icon--cart {
+  padding: 8px;
+}
+
+/* عداد السلة في القائمة الجوالة */
+.cart-count-badge--mobile {
+  position: static;
+  margin-inline-start: 8px;
+  display: inline-flex;
+}
+header .user-nav i {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: var(--y-space-24);
+  padding: 16px 8px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-btn {
+  width: var(--y-space-32);
+  height: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 101;
+  display: none;
+}
+
+.mobile-menu-btn span {
+  display: block;
+  width: 100%;
+  height: var(--y-space-4);
+  background-color: var(--y-color-primary);
+  border-radius: var(--y-space-6);
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn.active span:nth-child(1) {
+  transform: rotate(45deg) translate(var(--y-space-6), var(--y-space-6));
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(9px, -9px);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 200;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  background-color: var(--y-color-bg);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-overlay.active .mobile-menu {
+  transform: translateX(0);
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-menu ul li a {
+  text-decoration: none;
+  color: var(--y-color-muted);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 0;
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a.active {
+  color: var(--y-color-primary);
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 50px;
+  background: var(--y-color-bg);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.search-icon-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.search-icon-label img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.search-input {
+  width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--y-color-text);
+  font-size: 14px;
+  padding: 8px 0;
+  transition: width 0.3s ease, padding 0.3s ease;
+  font-family: "Cairo", sans-serif;
+}
+
+.search-input::placeholder {
+  color: var(--y-color-muted);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.search-input:focus {
+  width: 200px;
+  padding-right: 12px;
+}
+
+.search-input:focus::placeholder {
+  opacity: 1;
+}
+
+.search-container:focus-within {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in srgb, var(--y-color-primary) 20%, transparent);
+}
+
+.search-container:focus-within .search-icon-label img {
+  opacity: 1;
+}
+
+.mobile-search-container {
+  width: 100%;
+  order: -1;
+  margin-bottom: var(--y-space-16);
+  border: 2px solid;
+  border-radius: 16px;
+}
+
+.mobile-search .search-input {
+  width: 100%;
+  padding-right: 12px;
+}
+
+.mobile-search .search-input::placeholder {
+  opacity: 1;
+}
+
+.mobile-user-links {
+  flex-wrap: wrap;
+}
+.nav-icon .notification-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #e50019;
+  border: 2px solid var(--y-color-bg);
+  position: absolute;
+  top: 6px;
+  inset-inline-end: 6px;
+  pointer-events: none;
+  display: inline-block;
+}
+.mobile-user-links .nav-icon {
+  position: relative;
+}
+@media (max-width: 1024px) {
+  .search-input:focus {
+    width: 160px;
+  }
+  header .logo ul.desktop-menu {
+    gap: 15px;
+  }
+
+  header .logo ul li a {
+    font-size: 18px;
+    padding: 12px 6px;
+  }
+
+  header .user-nav a {
+    font-size: 18px;
+    padding: 12px 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    padding: 8px 15px;
+  }
+
+  header .logo {
+    gap: 20px;
+  }
+
+  header .logo img {
+    width: 100px;
+  }
+
+  header .logo ul.desktop-menu {
+    display: none;
+  }
+
+  header .user-nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 8px 15px;
+  }
+
+  .mobile-menu {
+    padding: 80px 20px 30px;
+  }
+}

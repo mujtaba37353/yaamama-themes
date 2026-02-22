@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Gulzar&display=swap');
+
+:root {
+    /* ===== COLORS ===== */
+
+    /* Brand Colors */
+    --y-color-hero-form: #F5EDFF;
+    --y-color-primary: #520A76;
+    --y-color-primary-hover: #3e0759;
+
+    /* Text Colors */
+    --y-color-primary-text: #000000;
+    --y-color-secondary-text: #FFFFF8;
+    --y-color-third-text: #626262;
+
+    /* Background Colors */
+    --y-color-background: #FFFEF4;
+    --y-color-background-dark: #0E0E0E;
+    --y-color-background-light: #FFFFFF;
+
+    /* Border Colors */
+    --y-color-border: #8C8C8C;
+    --y-color-border-blured: rgba(0, 0, 0, 0.25);
+    --y-color-border-dark: #000000;
+
+    /* Status Colors */
+    --y-color-error: #e74c3c;
+    --y-color-error-hover: #c0392b;
+    --y-color-success: #27ae60;
+
+    /* Additional Colors */
+    --y-color-card-background: #F9F4FF;
+    --y-color-filter: #EFECE7;
+    --y-color-hero-tab: #FFFFF8;
+    --y-color-link: #55C1DF;
+    --y-color-search: #EFEFEF;
+    --y-color-warning: #DBB804;
+
+    /* ===== OPACITY ===== */
+    --y-opacity-overlay: 0.6;
+    --y-opacity-secondary: 0.4;
+    --y-opacity-semitransparent: 0.2;
+
+    /* ===== TYPOGRAPHY ===== */
+
+    /* Font Family */
+    --y-font-family-primary: 'Cairo', Arial, sans-serif;
+    --y-font-family-secondary: "Gulzar", serif;
+
+    /* Font Weights */
+    --y-font-weight-bold: 700;
+    --y-font-weight-regular: 500;
+    --y-font-weight-semibold: 600;
+
+    /* Font Sizes */
+    --y-font-size-2xl: 1.5rem;
+    /* 24px */
+    --y-font-size-3xl: 2rem;
+    /* 32px */
+    --y-font-size-4xl: 2.5rem;
+    /* 40px */
+    --y-font-size-5xl: 3rem;
+    /* 48px */
+    --y-font-size-6xl: 3.75rem;
+    /* 60px */
+    --y-font-size-lg: 1.125rem;
+    /* 18px */
+    --y-font-size-md: 1rem;
+    /* 16px */
+    --y-font-size-sm: 0.875rem;
+    /* 14px */
+    --y-font-size-xl: 1.25rem;
+    /* 20px */
+    --y-font-size-xs: 0.75rem;
+    /* 12px */
+
+    /* Line Heights */
+    --y-line-height-lg: 1.6;
+    --y-line-height-md: 1.4;
+    --y-line-height-sm: 1.2;
+    --y-line-height-xl: 2.0;
+
+    /* ===== SPACING ===== */
+
+    /* Base Spacing */
+    --y-spacing-2xl: 40px;
+    --y-spacing-3xl: 50px;
+    --y-spacing-4xl: 60px;
+    --y-spacing-5xl: 70px;
+    --y-spacing-6xl: 90px;
+    --y-spacing-lg: 20px;
+    --y-spacing-md: 15px;
+    --y-spacing-sm: 10px;
+    --y-spacing-xl: 30px;
+    --y-spacing-xs: 8px;
+    --y-spacing-xxs: 4px;
+
+    /* Negative Spacing */
+    --y-spacing-xs-neg: -8px;
+
+    /* ===== LAYOUT ===== */
+
+    /* Width */
+    --y-max-width-default: 1200px;
+    --y-width-popup: 500px;
+    /* Form / modal specific widths */
+    --y-max-width-form: 800px;
+
+    /* Percentage-based Widths */
+    --y-width-percentage-130: 130%;
+    --y-width-percentage-80: 80%;
+    --y-width-percentage-90: 90%;
+    --y-width-percentage-95: 95%;
+    --y-width-percentage-full: 100%;
+    --y-width-percentage-lg: 75%;
+    --y-width-percentage-lg-minus: 70%;
+    --y-width-percentage-md: 50%;
+    --y-width-percentage-sm: 25%;
+    --y-width-percentage-sm-plus: 30%;
+    --y-width-percentage-xl: 90%;
+
+    /* Form Input Widths */
+    --y-width-input-lg: 150px;
+    --y-width-input-md: 100px;
+    --y-width-input-sm: 50px;
+
+    /* Responsive Containers */
+    --y-mobile-max-width: calc(100vw - var(--y-spacing-lg));
+    --y-size-container-sm: 300px;
+
+    /* ===== BORDERS & SHADOWS ===== */
+
+    /* Border Radius */
+    --y-border-radius-24: 24px;
+    --y-border-radius-50: 50px;
+    --y-border-radius-full: 99px;
+    --y-border-radius-lg: 16px;
+    --y-border-radius-md: 8px;
+    --y-border-radius-sm: 5px;
+    --y-border-radius-xs: 3px;
+
+    /* Border Width */
+    --y-border-width-md: 3px;
+    --y-border-width-sm: 2px;
+    --y-border-width-xs: 1px;
+
+    /* Outline */
+    --y-outline-offset: 2px;
+    --y-outline-thin: 2px;
+
+    /* Shadows */
+    --y-shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.15);
+    --y-shadow-md: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --y-shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --y-shadow-text: -1px 3px rgba(0, 0, 0, 0.5);
+
+    /* ===== SIZING ===== */
+
+    /* Icon Dimensions */
+    --y-icon-size-2xl: 100px;
+    --y-icon-size-lg: 45px;
+    --y-icon-size-md: 40px;
+    --y-icon-size-sm: 30px;
+    --y-icon-size-xl: 70px;
+    --y-icon-size-xs: 20px;
+
+    /* Responsive Icons */
+    --y-width-icon-2xl: 4rem;
+    --y-width-icon-2xl-mobile: 2.4rem;
+    /* 60% of 2xl */
+    --y-width-icon-2xl-tablet: 3.2rem;
+    /* 80% of 2xl */
+
+    /* Button Sizes */
+    --y-size-button-lg: 50px;
+    --y-size-button-md: 45px;
+    --y-size-button-sm: 40px;
+    --y-size-button-xl: 60px;
+
+    /* Search / header specific sizes */
+    /* Size used by the expandable header search button/input */
+    --y-font-size-search: 15px;
+    --y-search-expanded-width: 200px;
+    --y-size-button-search: 40px;
+
+    /* ===== ANIMATIONS & TRANSITIONS ===== */
+    --y-transition-default: all 0.3s ease;
+    --y-transition-fast: all 0.2s ease;
+    --y-transition-medium: all 0.25s ease;
+    --y-transition-slow: all 0.5s ease;
+
+    /* Transforms */
+    --y-transform-hover-up: -2px;
+
+    /* ===== Z-INDEX LAYERS ===== */
+    --y-z-index-dropdown: 100;
+    --y-z-index-modal: 500;
+    --y-z-index-popup: 1001;
+    --y-z-index-sticky: 200;
+
+    /* ===== COMPONENT-SPECIFIC TOKENS ===== */
+
+    /* Header */
+    --y-active-link-bottom: -4px;
+    --y-active-link-height: 2px;
+    --y-header-height: 100px;
+    --y-header-logo-height: 80px;
+    --y-header-search-height: 36px;
+    --y-mobile-menu-transform: -15px;
+    --y-mobile-search-icon-position: 23px;
+
+    /* Hero Section */
+    --y-hero-height-desktop: 80vh;
+    --y-hero-height-mobile: 50vh;
+    --y-hero-height-small: 40vh;
+    --y-hero-height-tablet: 60vh;
+    --y-hero-height-xs: 30vh;
+    --y-hero-image-height-desktop: 420px;
+    --y-hero-image-height-mobile: 220px;
+    --y-hero-image-height-tablet: 360px;
+    --y-hero-subtitle-size-desktop: var(--y-font-size-3xl);
+    --y-hero-subtitle-size-mobile: var(--y-font-size-xl);
+    --y-hero-subtitle-size-tablet: var(--y-font-size-2xl);
+    --y-hero-title-size-desktop: var(--y-font-size-6xl);
+    --y-hero-title-size-mobile: var(--y-font-size-4xl);
+    --y-hero-title-size-tablet: var(--y-font-size-5xl);
+
+    /* Card Components */
+    --y-size-image-lg: 250px;
+    --y-size-image-md: 200px;
+    --y-size-image-sm: 150px;
+    --y-size-image-xl: 300px;
+    --y-size-image-xs: 100px;
+
+    /* Additional card / layout tokens added for consistency */
+    --y-card-min-width-md: 140px;
+    --y-card-min-width-sm: 120px;
+
+    /* Card aspect ratios */
+    --y-aspect-ratio-16-10: 16 / 10;
+    --y-aspect-ratio-4-3: 4 / 3;
+
+    /* Component max-heights */
+    --y-max-height-mega-menu: 500px;
+    /* Mobile filter/dropdown max height when opened */
+    --y-max-height-filter-mobile: 700px;
+
+    /* Footer */
+    --y-footer-logo-height: 200px;
+
+    /* Banner */
+    --y-banner-height: 600px;
+    --y-banner-height-mobile: 150px;
+    --y-banner-height-tablet: 271px;
+
+    /* Small utility sizes and border radii used across templates */
+    --y-minheight-200: 200px;
+    --y-size-200: 200px;
+    --y-size-300: 300px;
+    --y-size-50: 50px;
+
+    /* Hero/media helper tokens */
+    --y-hero-media-max-desktop: 420px;
+    --y-hero-media-max-mobile: 280px;
+    --y-hero-media-max-tablet: 340px;
+
+    /* Warranty / generic container widths */
+    --y-warranty-max-width: 600px;
+
+    /* ===== ADDITIONAL HARDCODED VALUES ===== */
+    --y-size-120: 120px;
+    --y-size-150: 150px;
+    --y-size-16: 16px;
+    --y-size-160: 160px;
+    --y-size-220: 220px;
+    --y-size-240: 240px;
+    --y-size-32: 32px;
+    --y-size-48: 48px;
+    --y-size-80: 80px;
+
+    /* Additional utility sizes used by components (cart, buttons, small icons) */
+    --y-size-10: 10px;
+    --y-size-14: 14px;
+    --y-size-18: 18px;
+    --y-size-20: 20px;
+    --y-size-24: 24px;
+    --y-size-26: 26px;
+    --y-size-28: 28px;
+    --y-size-30: 30px;
+    --y-size-38: 38px;
+    /* Date picker day size */
+    --y-size-40: 40px;
+    --y-size-5: 5px;
+    --y-size-56: 56px;
+    --y-size-100: 100px;
+    /* AM/PM container height */
+
+    /* Percentages */
+    --y-percent-10: 10%;
+    --y-percent-30: 30%;
+    --y-percent-33: 33.33%;
+    --y-percent-35: 35%;
+    --y-percent-40: 40%;
+    --y-percent-50: 50%;
+    --y-percent-65: 65%;
+    --y-percent-70: 70%;
+
+    /* Text Stroke */
+    --y-text-stroke-1: 1px;
+
+    /* Z-Index Values */
+    --y-z-index-1: 1;
+    --y-z-index-1000: 1000;
+
+}

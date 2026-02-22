@@ -1,0 +1,10 @@
+{
+  "template": "layout",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "design-header": "[data-y='design-header']",
+    "main": "[data-y='main']",
+    "policy": "[data-y='policy']",
+    "footer": "[data-y='footer']"
+  }
+}

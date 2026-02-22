@@ -1,0 +1,51 @@
+/**
+ * Thank You (تأكيد الطلب) — تصميم صفحة نجاح/فشل الطلب
+ * يعتمد على y-c-empty.css للـ not-found-content و btn-back.
+ */
+
+[data-y="thank-you-content"] {
+  width: 100%;
+}
+
+.thank-you-content-wrapper .thank-you-state {
+  gap: 1.25rem;
+}
+
+.thank-you-icon {
+  font-size: 4rem;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.thank-you-icon-success {
+  color: var(--y-success, #22c55e);
+}
+
+.thank-you-icon-failed {
+  color: var(--y-error, #ef4444);
+}
+
+.thank-you-icon-invalid {
+  color: var(--y-color-text-dark, #333);
+  opacity: 0.8;
+}
+
+.thank-you-order-number {
+  font-size: 1rem;
+  color: var(--y-color-text-dark, #333);
+  margin: 0 0 0.5rem;
+}
+
+.thank-you-order-number strong {
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .thank-you-icon {
+    font-size: 3rem;
+  }
+
+  .thank-you-order-number {
+    font-size: 0.95rem;
+  }
+}

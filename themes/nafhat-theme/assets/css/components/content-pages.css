@@ -1,0 +1,137 @@
+/* Content Pages Styles (About, Policies, etc.) */
+
+main {
+  padding-top: 48px;
+}
+
+.content-page .header {
+  margin-bottom: var(--y-space-32);
+}
+
+.content-page .header h1 {
+  margin: 0;
+}
+
+.content {
+  line-height: 1.8;
+}
+
+.content .slide {
+  margin-bottom: var(--y-space-24);
+}
+
+.content .slide h2 {
+  margin-bottom: var(--y-space-12);
+  margin-top: var(--y-space-8);
+}
+
+.content .slide p {
+  margin-bottom: var(--y-space-12);
+  line-height: 1.8;
+}
+
+.content .slide ul,
+.content .slide ol {
+  margin: var(--y-space-16) 0;
+  padding-right: var(--y-space-24);
+}
+
+.content .slide ul li,
+.content .slide ol li {
+  margin-bottom: var(--y-space-8);
+  line-height: 1.8;
+}
+
+.content .slide a {
+  color: var(--y-color-primary);
+  text-decoration: underline;
+  transition: color var(--y-transition);
+}
+
+.content .slide a:hover {
+  color: var(--y-color-secondary);
+}
+
+.content .slide strong {
+  font-weight: var(--y-text-bold);
+  color: var(--y-color-text);
+}
+
+.content .slide em {
+  font-style: italic;
+}
+
+.content .slide blockquote {
+  border-right: 4px solid var(--y-color-primary);
+  padding-right: var(--y-space-16);
+  margin: var(--y-space-16) 0;
+  font-style: italic;
+  color: var(--y-color-muted);
+}
+
+.content .slide img {
+  max-width: 100%;
+  height: auto;
+  margin: var(--y-space-24) 0;
+  border-radius: var(--y-radius-8);
+}
+
+.content .slide table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--y-space-24) 0;
+}
+
+.content .slide table th,
+.content .slide table td {
+  padding: var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  text-align: right;
+}
+
+.content .slide table th {
+  background: var(--y-color-fg);
+  font-weight: var(--y-text-bold);
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 50px;
+  }
+  
+  .header {
+    padding-block: var(--y-space-32) !important;
+    padding-top: var(--y-space-16) !important;
+  }
+  
+  .content {
+    gap: var(--y-space-16) !important;
+  }
+  
+  .content .slide {
+    margin-bottom: var(--y-space-16);
+  }
+  
+  .content .slide h2 {
+    font-size: var(--y-text-lg);
+  }
+  
+  .content .slide ul,
+  .content .slide ol {
+    padding-right: var(--y-space-16);
+  }
+}
+
+@media (max-width: 575px) {
+  .header h1 {
+    font-size: var(--y-text-xl) !important;
+  }
+  
+  .content .slide h2 {
+    font-size: var(--y-text-md);
+  }
+  
+  .content .slide p {
+    font-size: var(--y-text-sm);
+  }
+}

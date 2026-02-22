@@ -1,0 +1,526 @@
+.my-account-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    margin-top: var(--y-space-66) !important;
+    margin-bottom: 0;
+    padding-bottom: var(--y-space-96);
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+}
+
+.account-sidebar {
+    width: 280px;
+    background-color: #fff;
+    padding: var(--y-space-24);
+    border-radius: var(--y-radius-m);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    align-self: flex-start;
+    height: fit-content;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+}
+
+.sidebar-header {
+    padding-bottom: var(--y-space-24);
+    border-bottom: 1px solid #eee;
+    margin-bottom: var(--y-space-24);
+}
+
+.account-sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-space-8);
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.account-sidebar ul li:last-child {
+    border-bottom: none;
+    margin-top: var(--y-space-16);
+    padding-top: var(--y-space-16);
+    border-top: 1px solid #b9b9b9;
+}
+
+.account-sidebar ul li label,
+.account-sidebar ul li .logout-link {
+    display: flex;
+    align-items: center;
+    gap: var(--y-space-12);
+    padding: var(--y-space-16);
+    font-size: var(--font-s);
+    font-weight: var(--y-text-medium);
+    color: var(--y-color-muted);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: var(--y-radius-xs);
+    text-decoration: none;
+}
+
+.account-sidebar ul li label:hover,
+.account-sidebar ul li .logout-link:hover {
+    color: var(--y-color-primary);
+    background-color: var(--y-color-primary-subtle);
+}
+
+.account-sidebar ul li .logout-link:hover {
+    color: var(--y-color-danger);
+    background-color: var(--y-dash-subtle-danger);
+
+}
+
+.account-sidebar ul li .logout-link:hover i {
+    color: var(--y-color-danger);
+}
+
+.account-sidebar input {
+    display: none;
+}
+
+input#page-1:checked~.account-sidebar ul li label[for="page-1"],
+input#page-2:checked~.account-sidebar ul li label[for="page-2"],
+input#page-3:checked~.account-sidebar ul li label[for="page-3"] {
+    background-color: var(--y-color-primary);
+    color: #fff;
+}
+
+
+.account-content {
+    flex: 1;
+    background-color: #fff;
+    padding: var(--y-space-20);
+    border-radius: var(--y-radius-m);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    min-height: 600px;
+}
+
+.profile-actions button {
+    font-size: var(--font-s);
+    font-weight: var(--y-text-bold);
+    padding: var(--y-space-8) var(--y-space-18);
+}
+
+.profile-actions button:last-of-type {
+    color: var(--y-color-danger);
+    border: 1px solid var(--y-color-danger);
+}
+
+.profile-actions button:last-of-type:hover {
+    background-color: var(--y-color-danger);
+    color: #fff !important;
+}
+
+.account-content .page-1,
+.account-content .page-2,
+.account-content .page-3 {
+    display: none;
+}
+
+#page-1:checked~.account-content .page-1 {
+    display: block;
+}
+
+#page-2:checked~.account-content .page-2 {
+    display: block;
+}
+
+#page-3:checked~.account-content .page-3 {
+    display: block;
+}
+
+
+.container>input {
+    display: none;
+}
+
+.profile-form input {
+    border: 1px solid #ddd;
+    background-color: #fff;
+    font-family: inherit;
+}
+
+.profile-form input:focus {
+    border-color: var(--y-color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--y-color-primary-subtle);
+}
+
+
+.stores-grid {
+    gap: var(--y-space-24);
+}
+
+.store-card {
+    background-color: #fff;
+    border: 1px solid #e5e7eb;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.store-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    z-index: 2;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.status-badge.ready {
+    background-color: #ecfdf5;
+    color: var(--y-color-primary);
+}
+
+.status-badge.ready .status-dot {
+    background-color: var(--y-color-primary);
+}
+
+.status-badge.preparing {
+    background-color: #fffbeb;
+    color: var(--y-color-warning);
+}
+
+.status-badge.preparing .status-dot {
+    background-color: var(--y-color-warning);
+}
+
+.image-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.package-badge {
+    background-color: var(--y-color-primary-subtle);
+    color: var(--y-color-primary);
+}
+
+.package-badge {
+    background-color: var(--y-color-primary-subtle);
+    color: var(--y-color-primary);
+    white-space: nowrap;
+}
+
+.divider {
+    height: 1px;
+    background-color: var(--y-color-primary-subtle);
+    width: 100%;
+}
+
+.store-card h3 {
+    font-size: var(--font-l);
+    color: var(--y-color-primary);
+}
+
+.store-actions .btn {
+    padding: var(--y-space-12) var(--y-space-16) !important;
+    font-size: var(--font-s) !important;
+    border-radius: var(--y-radius-s) !important;
+}
+
+.store-actions>button {
+    width: 100% !important;
+}
+
+.store-actions>div {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--y-space-12) !important;
+}
+
+.store-actions>div>button {
+    width: 100% !important;
+    padding: var(--y-space-8) var(--y-space-12) !important;
+    font-size: var(--font-s) !important;
+}
+
+.store-actions .store-actions-row {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: var(--y-space-12) !important;
+    align-items: end !important;
+}
+
+.store-actions .store-actions-row form {
+    margin: 0 !important;
+}
+
+.store-actions .store-actions-row .btn {
+    width: 100% !important;
+}
+
+.invoice-table table {
+    border-collapse: collapse;
+}
+
+.tab-btn {
+    padding: var(--y-space-8) var(--y-space-16);
+    font-size: var(--font-s);
+    border-radius: var(--y-radius-l);
+    border: 1px solid #b9b9b9;
+    background-color: #fff;
+    color: var(--y-color-txt);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    background-color: var(--y-color-primary-subtle);
+    color: var(--y-color-primary);
+    border-color: var(--y-color-primary);
+}
+
+.tab-btn.active {
+    background-color: var(--y-color-primary);
+    color: #fff;
+    border-color: var(--y-color-primary);
+}
+
+.invoice-table th {
+    background-color: #f8f9fa;
+    color: var(--y-color-txt);
+    text-align: center;
+}
+
+.invoice-table td {
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: var(--y-color-primary-subtle) !important;
+    border-color: var(--y-color-primary) !important;
+    color: var(--y-color-primary);
+}
+
+.invoice-status-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: var(--font-xs);
+    font-weight: var(--y-text-medium);
+    min-width: 80px;
+}
+
+.invoice-status-badge--paid {
+    background-color: rgba(16, 185, 129, 0.08);
+    color: var(--y-color-primary);
+}
+
+.invoice-status-badge--unpaid {
+    background-color: #e5e7eb;
+    color: #4b5563;
+}
+
+.invoice-status-badge--late {
+    background-color: rgba(248, 113, 113, 0.12);
+    color: #dc2626;
+}
+
+.account-bottom-nav {
+    display: none;
+}
+
+.bottom-nav-item {
+    text-decoration: none;
+}
+
+.invoice-table tbody tr td > * {
+    margin: auto;
+}
+.delete-account{
+    border: 1px solid var(--y-color-danger); color: var(--y-color-danger);
+        font-size: var(--font-s);
+        font-weight: var(--y-text-bold);
+        padding: var(--y-space-2) var(--y-space-16);
+        border-radius: var(--y-radius-s);
+}
+        .delete-account:hover{
+            background-color: var(--y-color-danger);
+                color: white;
+        }
+
+.y-float-btn {
+    z-index: 90;
+}
+
+@media (max-width: 992px) {
+    .my-account-section {
+        flex-direction: column;
+    }
+
+    .account-sidebar {
+        width: 100%;
+        margin-bottom: var(--y-space-24);
+    }
+
+    .account-content {
+        width: 100%;
+    }
+
+    .stores-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--y-space-24);
+    }
+}
+
+@media (max-width: 768px) {
+    .stores-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .invoice-table {
+        font-size: var(--font-xs);
+    }
+
+    .store-actions .btn {
+        padding: var(--y-space-6) var(--y-space-10) !important;
+        font-size: var(--font-xs) !important;
+        white-space: nowrap;
+    }
+
+    .invoice-filters {
+        flex-wrap: nowrap;
+        gap: var(--y-space-8);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .invoice-filters .tab-btn {
+        padding: var(--y-space-6) var(--y-space-10);
+        font-size: var(--font-xs);
+        white-space: nowrap;
+    }
+
+    .store-card h3 {
+        font-size: var(--font-m);
+    }
+
+    .account-sidebar {
+        display: none;
+    }
+
+    .my-account-section {
+        padding-bottom: var(--y-space-80);
+    }
+
+    .account-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: #ffffff;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: var(--y-space-12) var(--y-space-16);
+        z-index: 10050;
+        box-shadow: 0 -2px 8px rgba(15, 23, 42, 0.06);
+    }
+
+    .bottom-nav-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--y-space-4);
+        font-size: var(--font-xs);
+        font-weight: var(--y-text-medium);
+        color: var(--y-color-txt);
+        text-align: center;
+    }
+
+    .bottom-nav-item i {
+        font-size: 20px;
+    }
+
+    .bottom-nav-item--logout {
+        color: var(--y-color-danger);
+    }
+
+    .y-float-btn {
+        bottom: calc(var(--y-space-16) + 72px);
+    }
+
+    #page-1:checked~.account-bottom-nav .bottom-nav-item--page-1,
+    #page-2:checked~.account-bottom-nav .bottom-nav-item--page-2,
+    #page-3:checked~.account-bottom-nav .bottom-nav-item--page-3 {
+        color: var(--y-color-primary);
+    }
+
+    .footer .container {
+        padding-bottom: var(--y-space-80);
+    }
+}
+
+@media (max-width: 500px) {
+    .invoice-table table {
+        width: 600px;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-space-12);
+    }
+
+    .profile-info img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-info h3 {
+        font-size: var(--font-m);
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--y-space-12);
+    }
+
+    .profile-actions button {
+        width: 100%;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-space-12);
+    }
+}
+
+@media (max-width: 480px) {
+    .account-bottom-nav {
+        padding: var(--y-space-12) var(--y-space-16);
+    }
+}

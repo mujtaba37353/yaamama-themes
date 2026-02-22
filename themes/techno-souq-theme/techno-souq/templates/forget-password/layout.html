@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-y="forget-password-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">نسيت كلمة السر</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-forget-password.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body data-y="forget-password-body">
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main class="y-l-container" data-y="forget-password-main">
+        <div class="y-l-login-page" data-y="forget-password-page">
+            <div class="y-c-auth-card" data-y="forget-password-card">
+
+                <div class="y-l-auth-grid" data-y="forget-password-grid">
+                    <div class="y-l-auth-form" data-y="forget-password-form-section">
+                        <h2 class="y-c-auth-card__title" data-y="forget-password-title">نسيت كلمة المرور</h2>
+                        <p class="y-c-forget-password-description" data-y="forget-password-description">
+                            نسيت كلمة مرورك؟ فضلًا أدخل اسم المستخدم أو البريد الإلكتروني المسجل لدينا. سوف تستلم رابطاً
+                            لإنشاء
+                            كلمة مرور جديدة عبر بريدك الإلكتروني.
+                        </p>
+                        <form id="forgetPasswordForm" data-y="forget-password-form">
+                            <div class="y-c-auth-form-group" data-y="email-form-group">
+                                <label for="email" class="y-c-auth-form-label" data-y="email-label">البريد
+                                    الإلكتروني</label>
+                                <input type="email" id="email" name="email" class="y-c-form-input"
+                                    placeholder="example@email.com" required data-y="email-input">
+                            </div>
+                            <br>
+                            <button type="submit" class="y-c-btn y-c-btn-primary y-c-btn-full"
+                                data-y="submit-reset-btn">
+                                إرسال رابط إعادة التعيين
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/password-confirm.js" data-y="password-confirm-script"></script>
+
+
+</body>
+
+</html>

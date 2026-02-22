@@ -1,0 +1,288 @@
+/* My Account Page Styles - Based on account.css from design */
+.account-page .bottom > .content {
+  grid-template-columns: 1fr 3fr;
+}
+
+.account-page:has(#about-clinic:checked) .about-box-clinic {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-24);
+}
+
+.account-page .about-box-clinic .box {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  justify-content: space-between;
+  padding: var(--y-space-20);
+  background: var(--y-color-bg);
+  border-radius: var(--y-radius-m);
+  box-shadow: var(--y-color-shadow);
+}
+
+.account-page .about-box-clinic .box .top {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-16);
+}
+
+.account-page .about-box-clinic .box .top img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: var(--y-radius-m);
+}
+
+.account-page .about-box-clinic .box .top .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  flex: 1;
+}
+
+.account-page .about-box-clinic .box .top .content h3 {
+  font-size: var(--y-space-20);
+  margin: 0;
+}
+
+.account-page .about-box-clinic .box .top .content h3 a {
+  color: var(--y-color-primary);
+  text-decoration: none;
+}
+
+.account-page .about-box-clinic .box .top .content h3 a:hover {
+  text-decoration: underline;
+}
+
+.account-page .about-box-clinic .box .top .content p {
+  font-size: var(--y-space-16);
+  font-weight: 400;
+  color: var(--y-color-txt);
+  margin: 0;
+}
+
+.account-page .about-box-clinic .box .top .content p.address {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+
+.account-page .about-box-clinic .box .top .content p.address img {
+  width: 16px;
+  height: 16px;
+}
+
+.account-page .about-box-clinic .box p {
+  font-size: var(--y-space-14);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin: 0;
+}
+
+.account-page .content .right img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--y-radius-f);
+  position: relative;
+  top: -56px;
+}
+
+.account-page .container::before {
+  top: 155px;
+}
+
+.account-page .doctors-box-clinic p {
+  font-size: var(--y-space-20);
+  font-weight: 600;
+  margin-bottom: var(--y-space-16);
+}
+
+.account-page .rating-box-clinic {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.account-page .rating-box-clinic a {
+  font-size: var(--y-space-20);
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--y-color-primary);
+}
+
+.account-page .rating-box-clinic a:hover {
+  opacity: 0.8;
+}
+
+.account-page .rating-box-clinic h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  margin-bottom: var(--y-space-16);
+}
+
+.account-page .box .actions {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-8);
+  align-items: center;
+  margin-top: var(--y-space-16);
+}
+
+.account-page .box .actions button {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-4);
+  align-items: center;
+  font-size: var(--y-space-14);
+  padding: var(--y-space-8) var(--y-space-16);
+  border: 1px solid var(--y-color-primary);
+  background: transparent;
+  border-radius: var(--y-radius-m);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.account-page .box .actions button:hover {
+  background: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.account-page .box .actions button img {
+  width: 16px;
+  height: 16px;
+}
+
+.account-page .box .actions button.delete {
+  color: var(--y-color-danger);
+  border-color: var(--y-color-danger);
+}
+
+.account-page .box .actions button.delete:hover {
+  background: var(--y-color-danger);
+  color: var(--y-color-bg);
+}
+
+.account-page .ratings-stars i {
+  color: gold !important;
+}
+
+.account-page .ratings-stars i.inactive {
+  color: var(--y-color-grey) !important;
+}
+
+@media (max-width: 768px) {
+  /* Prevent horizontal scrolling on account pages - allow vertical scrolling */
+  /* CRITICAL: Must override auth.css rules with higher specificity */
+  body.account-page,
+  body.account-page.woocommerce-account,
+  body.account-page.my-account-page,
+  body.woocommerce-account.account-page {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative !important;
+    height: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+  
+  html.account-page,
+  html.account-page.woocommerce-account,
+  html.account-page.my-account-page,
+  html.woocommerce-account.account-page {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    height: auto !important;
+  }
+  
+  /* Ensure main and section allow scrolling */
+  body.account-page main,
+  body.woocommerce-account main {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  body.account-page section,
+  body.woocommerce-account section {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  /* Ensure account page container doesn't cause horizontal overflow */
+  .account-page .container {
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Prevent any child elements from causing horizontal overflow */
+  .account-page * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure form fields don't cause overflow */
+  .account-page input,
+  .account-page textarea,
+  .account-page select,
+  .account-page button {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Ensure content sections don't overflow horizontally */
+  .account-page .bottom > .content {
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .account-page .left {
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .account-page .rating-box-clinic {
+    overflow-x: hidden;
+    overflow-y: visible;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure main section allows vertical scrolling */
+  .account-page section {
+    overflow-x: hidden;
+    overflow-y: visible;
+  }
+  
+  .account-page .container::before {
+    top: 31.5rem;
+  }
+  
+  .account-page .content .right img {
+    max-width: 328px;
+  }
+  
+  .account-page .content .right {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .account-page .doctors-box-clinic p,
+  .account-page .rating-box-clinic a {
+    font-size: var(--y-space-16);
+    font-weight: 400;
+  }
+
+  .account-page:has(#about-clinic:checked) .about-box-clinic {
+    grid-template-columns: 1fr;
+  }
+}

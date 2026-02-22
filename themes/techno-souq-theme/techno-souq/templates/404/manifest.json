@@ -1,0 +1,14 @@
+{
+    "template": "404",
+    "slots": {
+        "page-title": "[data-y='page-title']",
+        "favicon": "[data-y='favicon']",
+        "error-hero": "[data-y='error-hero']",
+        "error-title": "[data-y='error-title']",
+        "footer-placeholder": "[data-y='footer-placeholder']",
+        "shared-components-script": "[data-y='shared-components-script']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

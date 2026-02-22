@@ -1,0 +1,10 @@
+.y-l-privacy-content {
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    padding: var(--y-spacing-lg) var(--y-spacing-md);
+    color: var(--y-color-primary-text);
+}
+
+p {
+    cursor: default;
+}

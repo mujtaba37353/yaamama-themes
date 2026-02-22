@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Time</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+
+  <link rel="stylesheet" href="./process.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner">
+      <p><a href="../layout/index.html">الرئيسية</a> / حسابي</p>
+    </section>
+
+    <section class="profile-section">
+      <div class="container y-u-max-w-1200">
+        <div class="bottom">
+          <div class="sidbar">
+
+            <div class="tabs">
+              <button class="active" data-tab="service"><i class="fas fa-list-check"></i> اختيار الخدمة </button>
+              <button data-tab="date"><i class="fas fa-calendar-alt"></i> التاريخ و الوقت </button>
+              <button data-tab="info"><i class="fas fa-user"></i> معلوماتك</button>
+              <button data-tab="payment"><i class="fas fa-credit-card"></i> الدفع</button>
+            </div>
+
+
+            <div class="bottom">
+              <p><i class="fas fa-phone"></i> <span>+966536520112</span></p>
+              <p><i class="fas fa-envelope"></i> <span>beautimie@gmail.com</span></p>
+            </div>
+          </div>
+          <div class="content">
+            <div class="service-content tab-content active" data-content="service">
+              <div class="top">
+                <h2>اختيار الخدمة</h2>
+                <div class="custome-list">
+                  <input type="checkbox" id="service-list-toggle" name="service-list-toggle">
+                  <label for="service-list-toggle">
+                    <span class="selected-service-text">اختر الخدمة المناسبة لك</span>
+                    <i class="fas fa-chevron-down"></i>
+                  </label>
+                  <div class="list">
+                    <button class="item" data-service="makeup" data-name="المكياج">
+                      <span class="service-name">المكياج</span>
+                    </button>
+                    <button class="item" data-service="nails" data-name="العناية بالأظافر">
+                      <span class="service-name">العناية بالأظافر</span>
+                    </button>
+                    <button class="item" data-service="skincare" data-name="العناية بالبشرة">
+                      <span class="service-name">العناية بالبشرة</span>
+                    </button>
+                    <button class="item" data-service="makeup2" data-name="المكياج">
+                      <span class="service-name">المكياج</span>
+                    </button>
+                    <button class="item" data-service="kids" data-name="العناية بالأطفال">
+                      <span class="service-name">العناية بالأطفال</span>
+                    </button>
+                    <button class="item" data-service="massage" data-name="المساج">
+                      <span class="service-name">المساج</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <button class="btn rounded"> استمر</button>
+            </div>
+            <div class="date-content tab-content" data-content="date">
+
+              <div class="top">
+                <h2>التاريخ و الوقت</h2>
+                <div class="data-time">
+                  <div class="date-time-wrapper">
+                    <div class="date-picker-section">
+                      <div class="calendar-header">
+                        <button class="nav-btn prev-month" type="button">
+                          <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="current-month-year">
+                          <span class="month-name"></span>
+                          <span class="year-name"></span>
+                        </div>
+                        <button class="nav-btn next-month" type="button">
+                          <i class="fas fa-chevron-left"></i>
+                        </button>
+                      </div>
+                      <div class="calendar-weekdays">
+                        <div class="weekday">ح</div>
+                        <div class="weekday">ن</div>
+                        <div class="weekday">ث</div>
+                        <div class="weekday">ر</div>
+                        <div class="weekday">خ</div>
+                        <div class="weekday">ج</div>
+                        <div class="weekday">س</div>
+                      </div>
+                      <div class="calendar-days"></div>
+                    </div>
+                    <div class="time-picker-section">
+                      <h3>اختر الوقت</h3>
+                      <div class="time-slots">
+                        <button class="time-slot" data-time="09:00">09:00 ص</button>
+                        <button class="time-slot" data-time="10:00">10:00 ص</button>
+                        <button class="time-slot" data-time="11:00">11:00 ص</button>
+                        <button class="time-slot" data-time="12:00">12:00 م</button>
+                        <button class="time-slot" data-time="13:00">01:00 م</button>
+                        <button class="time-slot" data-time="14:00">02:00 م</button>
+                        <button class="time-slot" data-time="15:00">03:00 م</button>
+                        <button class="time-slot" data-time="16:00">04:00 م</button>
+                        <button class="time-slot" data-time="17:00">05:00 م</button>
+                        <button class="time-slot" data-time="18:00">06:00 م</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="selected-info">
+                    <div class="selected-date-info">
+                      <i class="fas fa-calendar-alt"></i>
+                      <span class="selected-date-text">لم يتم اختيار تاريخ</span>
+                    </div>
+                    <div class="selected-time-info">
+                      <i class="fas fa-clock"></i>
+                      <span class="selected-time-text">لم يتم اختيار وقت</span>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+              <button class="btn rounded"> استمر</button>
+            </div>
+            <div class="info-content tab-content" data-content="info">
+              <div class="top">
+                <h2>معلوماتك</h2>
+                <form action="">
+                  <div class="form-group">
+                    <div class="group">
+                      <label for="name">الاسم الأول</label>
+                      <input type="text" id="name" name="name">
+                    </div>
+                    <div class="group">
+                      <label for="phone"> رقم الهاتف</label>
+                      <input type="tel" id="phone" name="phone">
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <button class="btn rounded"> استمر</button>
+            </div>
+            <div class="payment-content tab-content" data-content="payment">
+              <div class="top">
+                <h2>الدفع</h2>
+                <div class="payment-methods">
+                  <input type="radio" id="payment-cash" name="payment-method" value="cash" class="payment-radio">
+                  <label for="payment-cash" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="payment-info">
+                      <h3>الدفع كاش</h3>
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                  <input type="radio" id="payment-online" name="payment-method" value="online" class="payment-radio">
+                  <label for="payment-online" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="payment-info">
+                      <h3>الدفع عبر الإنترنت</h3>
+                      <img src="../../assets/payment-methods.png" alt="">
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                  <input type="radio" id="payment-stc" name="payment-method" value="stc" class="payment-radio">
+                  <label for="payment-stc" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="payment-info">
+                      <img src="../../assets/stc-pay.png" alt="">
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                  <input type="radio" id="payment-apple" name="payment-method" value="apple-pay" class="payment-radio">
+                  <label for="payment-apple" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fab fa-apple-pay"></i>
+                    </div>
+                    <div class="payment-info">
+                      <img src="../../assets/apple-pay.png" alt="">
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                  <input type="radio" id="payment-tabby" name="payment-method" value="tabby" class="payment-radio">
+                  <label for="payment-tabby" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fas fa-wallet"></i>
+                    </div>
+                    <div class="payment-info">
+                      <img src="../../assets/taby-pay.png" alt="">
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                  <input type="radio" id="payment-tamara" name="payment-method" value="tamara" class="payment-radio">
+                  <label for="payment-tamara" class="payment-method-card">
+                    <div class="payment-icon">
+                      <i class="fas fa-credit-card"></i>
+                    </div>
+                    <div class="payment-info">
+                      <img src="../../assets/tmara-pay.png" alt="">
+                    </div>
+                    <i class="fas fa-check-circle"></i>
+                  </label>
+                </div>
+
+                <div class="payment-form cash-form" data-form="cash">
+                  <h3>معلومات الدفع كاش</h3>
+                  <form>
+                    <div class="stc-info-box">
+                      <i class="fas fa-info-circle"></i>
+                      <p>سيتم الدفع نقداً عند الاستلام</p>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="payment-form online-form" data-form="online">
+                  <h3>معلومات البطاقة</h3>
+                  <form>
+                    <div class="form-group">
+                      <div class="group full-width">
+                        <label for="card-number">رقم البطاقة</label>
+                        <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456"
+                          maxlength="19">
+                        <i class="fas fa-credit-card card-icon"></i>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="group">
+                        <label for="card-name">اسم حامل البطاقة</label>
+                        <input type="text" id="card-name" name="card-name" placeholder="الاسم كما هو على البطاقة">
+                      </div>
+                      <div class="group">
+                        <label for="card-cvv">CVV</label>
+                        <input type="text" id="card-cvv" name="card-cvv" placeholder="123" maxlength="3">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="group">
+                        <label for="card-expiry">تاريخ الانتهاء</label>
+                        <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="payment-form stc-form" data-form="stc">
+                  <h3>معلومات STC Pay</h3>
+                  <form>
+                    <div class="form-group">
+                      <div class="group full-width">
+                        <label for="stc-phone">رقم الجوال المرتبط بـ STC Pay</label>
+                        <input type="tel" id="stc-phone" name="stc-phone" placeholder="05xxxxxxxx">
+                        <i class="fas fa-mobile-alt stc-icon"></i>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="group full-width">
+                        <label for="stc-name">الاسم الكامل</label>
+                        <input type="text" id="stc-name" name="stc-name" placeholder="الاسم كما هو في STC Pay">
+                      </div>
+                    </div>
+                    <div class="stc-info-box">
+                      <i class="fas fa-info-circle"></i>
+                      <p>سيتم إرسال رابط الدفع إلى رقم الجوال المسجل</p>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="payment-form apple-pay-form" data-form="apple-pay">
+                  <h3>معلومات Apple Pay</h3>
+                  <form>
+                    <div class="stc-info-box">
+                      <i class="fas fa-info-circle"></i>
+                      <p>سيتم توجيهك إلى صفحة الدفع عبر Apple Pay لإتمام عملية الدفع</p>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="payment-form tabby-form" data-form="tabby">
+                  <h3>معلومات Tabby</h3>
+                  <form>
+                    <div class="stc-info-box">
+                      <i class="fas fa-info-circle"></i>
+                      <p>سيتم توجيهك إلى صفحة الدفع عبر Tabby لإتمام عملية الدفع</p>
+                    </div>
+                  </form>
+                </div>
+
+                <div class="payment-form tamara-form" data-form="tamara">
+                  <h3>معلومات Tamara</h3>
+                  <form>
+                    <div class="stc-info-box">
+                      <i class="fas fa-info-circle"></i>
+                      <p>سيتم توجيهك إلى صفحة الدفع عبر Tamara لإتمام عملية الدفع</p>
+                    </div>
+                  </form>
+                </div>
+
+               
+              </div>
+              <a class="btn rounded payment-submit-btn" type="submit" form="payment-form" href="./payment-sucess.html">
+                إتمام الدفع</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/date-time-picker.js"></script>
+
+</body>
+
+</html>

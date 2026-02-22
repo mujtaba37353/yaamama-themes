@@ -1,0 +1,244 @@
+/* General Footer Styling */
+.y-l-site-footer {
+    width: var(--y-width-percentage-full);
+    padding: var(--y-spacing-sm) var(--y-value-0);
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-top: var(--y-border-width-xs) solid var(--y-color-border);
+}
+
+/* Inner container */
+.y-l-footer-container {
+    max-width: var(--y-max-width-default);
+    margin: var(--y-value-0) auto;
+    padding: var(--y-value-0) var(--y-spacing-sm);
+}
+
+/* Main content columns using Flexbox */
+.y-l-footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: var(--y-spacing-xl);
+    padding-bottom: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+/* Footer Columns */
+.y-l-footer-column {
+    flex: 1;
+    min-width: var(--y-size-200);
+    /* 200px */
+    text-align: right;
+}
+
+/* Specific Column Styles */
+.y-l-footer-description-col {
+    flex: 2;
+    /* Description column takes more space */
+    min-width: var(--y-size-300);
+    /* Wider min-width */
+    max-width: var(--y-size-450);
+    /* Allow more space for new text */
+}
+
+.y-l-footer-links-col {
+    flex: 1;
+}
+
+.y-l-footer-contact-col {
+    flex: 1;
+    min-width: var(--y-size-240);
+    /* 240px */
+}
+
+/* Wrapper for links columns (for layout grouping) */
+.y-l-footer-links-wrapper {
+    display: flex;
+    flex: 2;
+    /* Allow links wrapper to take up space */
+    justify-content: space-around;
+    gap: var(--y-spacing-lg);
+    min-width: 300px;
+    /* Min-width for the wrapper */
+}
+
+/* Footer Logo */
+.y-c-footer-logo-container {
+    margin-bottom: var(--y-spacing-xl);
+    width: var(--y-width-percentage-full);
+    display: flex;
+    justify-content: center;
+}
+
+.y-c-footer-logo {
+    height: var(--y-footer-logo-height);
+    width: auto;
+    object-fit: contain;
+}
+
+/* Description Text */
+.y-c-footer-description {
+    font-size: var(--y-font-size-sm);
+    line-height: var(--y-line-height-lg);
+    color: var(--y-color-secondary-text);
+}
+
+/* Column titles */
+.y-c-column-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-md);
+    color: var(--y-color-secondary-text);
+    border-bottom: var(--y-border-width-xs) solid var(--y-color-border);
+    padding-bottom: var(--y-spacing-xs);
+    display: inline-block;
+}
+
+/* Link lists */
+.y-l-footer-links {
+    list-style: none;
+    padding: var(--y-value-0);
+    margin: var(--y-value-0);
+}
+
+.y-l-footer-links li {
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-l-footer-links a {
+    color: var(--y-color-secondary-text);
+    text-decoration: none;
+    transition: var(--y-transition-fast);
+    font-size: var(--y-font-size-md);
+}
+
+.y-l-footer-links a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Contact Info List */
+.y-l-footer-contact-links {
+    list-style: none;
+    padding: var(--y-value-0);
+    margin: var(--y-value-0);
+}
+
+.y-l-footer-contact-links li {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    margin-bottom: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+}
+
+.y-l-footer-contact-links i {
+    color: var(--y-color-secondary-text);
+    opacity: 0.8;
+    width: var(--y-size-20);
+}
+
+.y-l-footer-contact-links a {
+    color: var(--y-color-secondary-text);
+    transition: var(--y-transition-fast);
+}
+
+.y-l-footer-contact-links a:hover {
+    opacity: 0.8;
+}
+
+/* Copyright Section */
+.y-l-footer-copyright {
+    text-align: left;
+    padding: var(--y-spacing-md) var(--y-value-0);
+    margin-top: var(--y-spacing-lg);
+    color: var(--y-color-secondary-text);
+    font-size: var(--y-font-size-sm);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .y-l-footer-main {
+        gap: var(--y-spacing-lg);
+    }
+
+    .y-l-footer-description-col {
+        min-width: 100%;
+        /* Stack description on top */
+        max-width: 100%;
+        flex-basis: 100%;
+    }
+
+    .y-l-footer-links-wrapper {
+        flex-basis: 100%;
+    }
+}
+
+
+/* Mobile (merged) */
+@media (max-width: 768px) {
+    .y-l-footer-main {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        text-align: right;
+        gap: var(--y-spacing-xl);
+        border-bottom: none;
+        margin-bottom: var(--y-value-0);
+    }
+
+    .y-c-column-title {
+        display: none;
+    }
+
+    .y-l-footer-column {
+        width: auto;
+        text-align: right;
+        min-width: unset;
+        flex-basis: auto;
+    }
+
+    .y-l-footer-description-col {
+        display: none;
+        /* Hide description on mobile */
+    }
+
+    .y-l-footer-links-wrapper {
+        flex-direction: row;
+        justify-content: space-around;
+        width: var(--y-width-percentage-90);
+        border-top: 1px solid var(--y-color-border);
+        padding-top: var(--y-spacing-lg);
+        margin: 0 auto;
+        gap: var(--y-spacing-xl);
+        flex-basis: auto;
+        /* Reset basis */
+    }
+
+    .y-l-footer-links-wrapper .y-l-footer-column {
+        text-align: right;
+        /* Align text right inside columns */
+    }
+
+    .y-c-footer-logo-container {
+        justify-content: flex-start;
+        /* Center logo on mobile */
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-c-footer-logo {
+        max-height: var(--y-footer-logo-height-mobile);
+    }
+
+    .y-l-footer-links a,
+    .y-l-footer-contact-links li {
+        font-size: var(--y-font-size-md);
+        /* Readjust for mobile */
+        margin-right: 0;
+    }
+
+    .y-l-footer-contact-links li {
+        justify-content: flex-start;
+        /* Center contact items */
+    }
+}

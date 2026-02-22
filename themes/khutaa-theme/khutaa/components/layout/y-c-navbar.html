@@ -1,0 +1,71 @@
+<nav class="navbar">
+  <div class="logo-container">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <i class="fa fa-search search-icon"></i>
+    </div>
+    <img src="../../assets/navbar-logo.png" alt="Logo" class="logo" />
+  </div>
+
+  <div class="links">
+    <a href="../../templates/home/layout.html" data-page="home">الرئيسية</a>
+    <div class="dropdown">
+      <a href="../../templates/products/layout.html" data-page="products">
+        المنتجات
+        <i class="fa-solid fa-angle-down dropdown-arrow"></i>
+      </a>
+      <div class="dropdown-content">
+        <a href="../../templates/products/layout.html?category=shoes">الأحذية</a>
+        <a href="../../templates/products/layout.html?category=bags">الشنط</a>
+      </div>
+    </div>
+    <a href="../../templates/offers/layout.html" data-page="offers">العروض</a>
+    <a href="../../templates/contact-us/layout.html" data-page="contact">تواصل معنا</a>
+  </div>
+
+  <div class="icons">
+    <div class="search-container">
+      <input type="text" class="search-input" placeholder="Search..." />
+      <i class="fa fa-search search-icon"></i>
+    </div>
+    <a href="../../templates/wishlist/layout.html"><i class="fa-regular fa-heart"></i></a>
+    <a href="../../templates/login/layout.html"><i class="fa-regular fa-user"></i></a>
+    <a href="../../templates/cart/layout.html"><i class="fa-solid fa-bag-shopping"></i></a>
+
+    <!-- Hamburger Menu Button (Visible on mobile) -->
+    <button class="hamburger-menu" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Mobile Sidebar Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-header">
+      <img src="../../assets/navbar-logo.png" alt="Logo" class="mobile-menu-logo" />
+      <button class="mobile-menu-close" aria-label="Close menu">
+        <i class="fa-solid fa-times"></i>
+      </button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="../../templates/home/layout.html" data-page="home">الرئيسية</a>
+
+      <div class="mobile-dropdown">
+        <div class="mobile-dropdown-toggle">
+          <span>المنتجات</span>
+          <i class="fa-solid fa-angle-down mobile-dropdown-arrow"></i>
+        </div>
+        <div class="mobile-dropdown-content">
+          <a href="../../templates/products/layout.html">جميع المنتجات</a>
+          <a href="../../templates/products/layout.html?category=shoes">الأحذية</a>
+          <a href="../../templates/products/layout.html?category=bags">الشنط</a>
+        </div>
+      </div>
+
+      <a href="../../templates/offers/layout.html" data-page="offers">العروض</a>
+      <a href="../../templates/contact-us/layout.html" data-page="contact">تواصل معنا</a>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,546 @@
+.y-c-Profile-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-2xl);
+    margin-top: var(--y-spacing-4xl);
+    /* Added margin top for spacing */
+}
+
+/* Profile Menu Styling */
+.y-c-Profile-menu {
+    flex: 1;
+    background-color: var(--y-color-hero-form);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-lg);
+    color: var(--y-color-primary-text);
+    align-self: flex-start;
+    /* Makes sure it doesn't stretch */
+    height: auto;
+    /* Added for proper alignment */
+}
+
+/* Profile Header */
+.y-c-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-lg);
+    border-bottom: var(--y-border-width-xs) solid var(--y-color-border-light);
+}
+
+.y-c-profile-image-container {
+    position: relative;
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-profile-image {
+    width: var(--y-size-120);
+    /* Smaller image */
+    height: var(--y-size-120);
+    border-radius: 50%;
+    object-fit: cover;
+    border: var(--y-border-width-md) solid var(--y-color-background-light);
+}
+
+.y-c-edit-image-btn {
+    position: absolute;
+    bottom: var(--y-spacing-xs);
+    left: var(--y-spacing-xs);
+    background-color: var(--y-color-background-light);
+    color: var(--y-color-primary);
+    border: none;
+    border-radius: 50%;
+    width: var(--y-size-32);
+    height: var(--y-size-32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--y-shadow-sm);
+}
+
+
+.y-c-profile-name {
+    text-align: center;
+}
+
+.y-c-profile-name h3 {
+    margin: 0;
+    font-size: var(--y-font-size-xl);
+    color: var(--y-color-primary-text);
+    /* Updated color */
+    font-weight: var(--y-font-weight-bold);
+}
+
+/* Menu Links */
+.y-c-Profile-menu a {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    /* Increased gap */
+    padding: var(--y-spacing-md);
+    text-decoration: none;
+    color: var(--y-color-primary-text);
+    /* Updated color */
+    transition: var(--y-transition-default);
+    margin-bottom: var(--y-spacing-xs);
+    border-bottom: none;
+    /* Removed border */
+    border-radius: var(--y-border-radius-md);
+    /* Added radius */
+}
+
+.y-c-Profile-menu a p {
+    cursor: pointer;
+}
+
+.y-c-Profile-menu a:hover {
+    background-color: var(--y-color-primary-hover);
+    /* Darker purple on hover */
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-Profile-menu a.y-c-active {
+    background-color: var(--y-color-background-light);
+    /* White background */
+    color: var(--y-color-primary);
+    /* Purple text */
+}
+
+.y-c-Profile-menu a i {
+    width: var(--y-size-20);
+    /* Increased icon size */
+    text-align: center;
+    font-size: var(--y-font-size-lg);
+    /* Added font size */
+    color: var(--y-color-primary-text);
+    /* Ensure icon matches text */
+}
+
+.y-c-Profile-menu a.y-c-active i {
+    color: var(--y-color-primary);
+    /* Active icon color */
+}
+
+.y-c-Profile-menu a p {
+    margin: 0;
+    font-size: var(--y-font-size-lg);
+    /* Increased font size */
+    font-weight: var(--y-font-weight-semibold);
+}
+
+/* Profile Info Container */
+.y-c-Profile-info {
+    flex: 3;
+    border-radius: var(--y-border-radius-md);
+    overflow: hidden;
+    margin-top: 0;
+    padding: var(--y-spacing-lg);
+}
+
+/* Content Sections */
+.y-c-content-section {
+    display: none;
+    padding: 0;
+}
+
+.y-c-content-section.active {
+    display: block;
+}
+
+/* NEW: Form Section Styles */
+.y-c-form-section {
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-form-section-title {
+    background-color: var(--y-color-hero-form);
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+    padding: var(--y-spacing-md);
+}
+
+.y-c-account-form-actions {
+    text-align: center;
+    padding: var(--y-spacing-lg) 0;
+}
+
+.y-c-form-row-special {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-form-row-special .y-c-form-field {
+    flex: 1;
+}
+
+.y-c-change-password-link {
+    color: var(--y-color-primary);
+    text-decoration: underline;
+    font-weight: var(--y-font-weight-semibold);
+    cursor: pointer;
+    white-space: nowrap;
+    padding-bottom: var(--y-spacing-md);
+    /* Aligns with input */
+    margin-top: var(--y-spacing-lg);
+    /* Spacing from label */
+}
+
+.y-l-component-container {
+    padding: var(--y-spacing-md);
+    border: var(--y-border-width-xs) solid var(--y-color-border-dark);
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-management-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-management-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--y-spacing-lg);
+    /* White background */
+    transition: var(--y-transition-default);
+    margin-bottom: var(--y-spacing-md);
+    border-radius: var(--y-border-radius-md);
+    /* Added radius */
+}
+
+.y-c-management-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-management-info h4 {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-semibold);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    margin: 0 0 var(--y-spacing-xs) 0;
+}
+
+.y-c-management-info h4 i {
+    font-size: var(--y-font-size-xl);
+    color: var(--y-color-primary-text);
+    /* Changed to primary text */
+}
+
+.y-c-management-info h4 img {
+    width: var(--y-size-24);
+    height: var(--y-size-24);
+    object-fit: contain;
+}
+
+.y-c-management-info p {
+    margin: 0;
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    /* Changed to third-text */
+    line-height: var(--y-line-height-md);
+}
+
+/* NEW: Danger Link */
+.y-c-danger-link {
+    color: var(--y-color-error);
+    font-weight: var(--y-font-weight-semibold);
+    cursor: pointer;
+    background: none;
+    border: var(--y-border-width-xs) solid var(--y-color-error);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+    font-family: var(--y-font-family-primary);
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-danger-link:hover {
+    color: var(--y-color-error-hover);
+}
+
+
+
+/* Toggle Switch Styles */
+.y-c-toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: var(--y-size-50);
+    height: var(--y-size-24);
+}
+
+.y-c-toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.y-c-toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--y-color-border);
+    /* Changed default */
+    transition: var(--y-transition-default);
+    border-radius: var(--y-border-radius-full);
+}
+
+.y-c-toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: var(--y-size-18);
+    width: var(--y-size-18);
+    left: var(--y-spacing-xxs);
+    bottom: var(--y-spacing-xxs);
+    background-color: var(--y-color-background-light);
+    transition: var(--y-transition-default);
+    border-radius: var(--y-border-radius-full);
+}
+
+.y-c-toggle-switch input:checked+.y-c-toggle-slider {
+    background-color: var(--y-color-primary);
+}
+
+.y-c-toggle-switch input:checked+.y-c-toggle-slider:before {
+    transform: translateX(var(--y-size-26));
+    /* Adjusted slide distance */
+}
+
+/* Empty Message Styles */
+.y-c-empty-message {
+    text-align: center;
+    padding: var(--y-spacing-2xl);
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-lg);
+}
+
+/* Form Row Layout */
+.y-c-form-row {
+    display: flex;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-form-field {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Orders Section Styles: grid-aligned header + rows */
+.y-c-orders-table {
+    width: 100%;
+    display: block;
+    margin-bottom: var(--y-spacing-lg);
+    background-color: var(--y-color-background-light);
+    /* Changed */
+    border-radius: var(--y-border-radius-md);
+    overflow: hidden;
+}
+
+/* Header row (keeps the primary background and labels) */
+.y-c-orders-header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    gap: var(--y-spacing-lg);
+    padding: var(--y-spacing-md) var(--y-spacing-lg);
+    background-color: var(--y-color-hero-form);
+    /* Changed */
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-semibold);
+    align-items: center;
+}
+
+.y-c-orders-header-cell {
+    text-align: center;
+}
+
+.y-c-orders-header-cell:first-child {
+    text-align: right;
+}
+
+
+
+/* ===== NEW Styles for Reservations/Contracts Cards (3-Column Layout) ===== */
+
+.y-c-booking-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .y-c-Profile-container {
+        flex-direction: column;
+        /* Add margin for hero */
+    }
+
+    .y-c-Profile-menu {
+        width: 100%;
+        margin-bottom: var(--y-spacing-lg);
+    }
+
+    .y-c-profile-header {
+        flex-direction: row;
+        text-align: right;
+        /* Changed to right for RTL */
+        align-items: center;
+        border-bottom: var(--y-border-width-xs) solid var(--y-color-border-light);
+        /* Ensure border is still there */
+        padding-bottom: var(--y-spacing-lg);
+    }
+
+    .y-c-profile-name {
+        text-align: right;
+        margin-right: var(--y-spacing-md);
+    }
+
+    .y-c-management-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-c-Profile-info {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-content-section {
+        padding: 0;
+    }
+
+    .y-c-profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .y-c-profile-name {
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .y-c-management-info {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: right;
+        width: 100%;
+    }
+
+    .y-c-notification-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-form-row,
+    .y-c-form-row-special {
+        flex-direction: column;
+        gap: var(--y-spacing-lg);
+    }
+
+    .y-c-form-field {
+        width: 100%;
+    }
+
+    .y-c-form-section {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-form-section-title {
+        font-size: var(--y-font-size-lg);
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-change-password-link {
+        padding-bottom: 0;
+        margin-top: var(--y-spacing-sm);
+        display: inline-block;
+    }
+
+    .y-c-account-form-actions {
+        padding: var(--y-spacing-md) 0;
+    }
+
+    .y-c-account-form-actions button {
+        width: 100%;
+        max-width: none;
+    }
+
+}
+
+@media (max-width: 640px) {
+    .y-c-Profile-menu {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-Profile-menu a {
+        font-size: var(--y-font-size-sm);
+        padding: var(--y-spacing-sm);
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-Profile-menu a i {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-Profile-menu a p {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-Profile-info {
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-content-section {
+        padding: 0;
+    }
+
+    .y-c-profile-image {
+        width: var(--y-icon-size-xl);
+        height: var(--y-icon-size-xl);
+    }
+
+    .y-c-management-item,
+    .y-c-notification-item {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-management-info h4 {
+        font-size: var(--y-font-size-md);
+        flex-wrap: wrap;
+    }
+
+    .y-c-management-info p {
+        font-size: var(--y-font-size-xs);
+    }
+
+    .y-c-form-section {
+        padding: var(--y-spacing-sm);
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-c-toggle-switch {
+        transform: scale(0.9);
+    }
+
+}

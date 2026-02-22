@@ -1,0 +1,152 @@
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main[data-y="main"] {
+  flex: 1;
+}
+
+/* account page layout */
+.account-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.account-sidebar-shell {
+  width: 100%;
+  position: static;
+}
+
+.account-content-shell {
+  flex: 1;
+  width: 100%;
+  max-width: 920px;
+}
+
+@media (max-width: 1199.98px) {
+  .account-sidebar-shell {
+    flex-basis: auto;
+    top: auto;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .account-sidebar-shell {
+    width: 100%;
+  }
+
+  .account-content-shell {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .account-layout {
+    gap: 0.75rem;
+  }
+}
+
+/* deactivate popup */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1500;
+  padding: 1rem;
+}
+
+.popup-content {
+  background: #fff;
+  border-radius: 16px;
+  max-width: 520px;
+  width: 100%;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.popup-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--y-secondary, #542525);
+}
+
+.popup-description {
+  margin: 0 auto 1.25rem;
+  color: #333;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.popup-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.popup-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.85rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease;
+  min-width: 120px;
+}
+
+.popup-btn.btn-no {
+  background: #f3f3f3;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.popup-btn.btn-no:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+.popup-btn.btn-confirm {
+  background: var(--y-secondary, #542525);
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(84, 37, 37, 0.25);
+}
+
+.popup-btn.btn-confirm:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(84, 37, 37, 0.3);
+}
+
+@media (max-width: 575.98px) {
+  .popup-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .popup-title {
+    font-size: 1.2rem;
+  }
+
+  .popup-description {
+    font-size: 0.95rem;
+  }
+
+  .popup-actions {
+    flex-direction: column;
+  }
+
+  .popup-btn {
+    width: 100%;
+  }
+}

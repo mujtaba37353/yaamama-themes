@@ -1,0 +1,48 @@
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  width: 100%;
+  min-height: 400px;
+}
+
+.empty-state i {
+  font-size: 80px;
+  color: #f7941d;
+  margin-bottom: 24px;
+}
+
+.empty-state h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+  font-family: "Cairo", sans-serif;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 32px;
+  line-height: 1.6;
+  max-width: 500px;
+}
+
+.empty-state .btn-empty-action {
+  background-color: #f7941d;
+  color: #fff;
+  padding: 12px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.empty-state .btn-empty-action:hover {
+  background-color: #d67e12;
+}

@@ -1,0 +1,11 @@
+{
+    "template": "favorite",
+    "slots": {
+        "page-title": "title",
+        "favorites-table": "[data-y='favorites-table']",
+        "favorite-item": "[data-y^='favorite-item']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

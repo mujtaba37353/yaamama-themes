@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">الدفع</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="./y-payment.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="payment-main">
+        <div class="y-l-payment-container" data-y="payment-container">
+            <div class="y-c-payment-main" data-y="payment-main">
+                <form class="y-l-form-container" data-y="payment-form">
+                    <div data-y="shipping-info-section">
+                        <h2 class="y-c-payment-section-title" data-y="shipping-info-title">معلومات التوصيل</h2>
+                        <br>
+                        <div class="y-c-form-field" data-y="shipping-email-field">
+                            <label class="y-c-form-label" data-y="shipping-email-label">سوف نستخدم هذا البريد الإلكتروني
+                                لإرسال التفاصيل والتحديثات
+                                إليك حول طلبك.<span class="y-c-required-mark">*</span></label>
+                            <input type="email" class="y-c-form-input" required placeholder="******@gmail.com"
+                                data-y="shipping-email-input">
+                        </div>
+                        <div class="y-c-form-field" data-y="billing-address-field">
+                            <label class="y-c-form-label" data-y="billing-address-label">أدخل عنوان الفاتورة الذي يتطابق
+                                مع طريقة الدفع الخاصة
+                                بك.
+                                <span class="y-c-required-mark">*</span>
+                            </label>
+                        </div>
+                        <div class="y-c-form-row" data-y="name-row">
+                            <div class="y-c-form-field" data-y="first-name-field">
+                                <input type="text" class="y-c-form-input" placeholder="الاسم الأول" required
+                                    data-y="shipping-first-name-input">
+                            </div>
+                            <div class="y-c-form-field" data-y="last-name-field">
+                                <input type="text" class="y-c-form-input" placeholder="اسم العائلة" required
+                                    data-y="shipping-last-name-input">
+                            </div>
+                        </div>
+                        <div class="y-c-form-field" data-y="street-address-field">
+                            <input type="text" class="y-c-form-input" placeholder="عنوان الشارع / رقم المنزل" required
+                                data-y="shipping-street-address-input">
+                        </div>
+                        <div class="y-c-form-field" data-y="apartment-field">
+                            <label class="y-c-form-label" data-y="apartment-label">+اضافة شقة , الجناح , الوحدة , الخ
+                                <span class="y-c-required-mark">*</span>
+                            </label>
+                        </div>
+                        <div class="y-c-form-row" data-y="location-row">
+                            <div class="y-c-form-field" data-y="state-field">
+                                <input type="text" class="y-c-form-input" placeholder="المحافظة" required
+                                    data-y="shipping-state-input">
+                            </div>
+                            <div class="y-c-form-field" data-y="city-field">
+                                <input type="text" class="y-c-form-input" placeholder="المدينة" required
+                                    data-y="shipping-city-input">
+                            </div>
+                        </div>
+                        <div class="y-c-form-row" data-y="contact-row">
+                            <div class="y-c-form-field" data-y="postal-code-field">
+                                <input type="text" class="y-c-form-input" placeholder="الرمز البريدي" required
+                                    data-y="shipping-postal-code-input">
+                            </div>
+                            <div class="y-c-form-field" data-y="phone-field">
+                                <input type="text" class="y-c-form-input" placeholder="رقم الجوال" required
+                                    data-y="shipping-phone-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="y-c-payment-section" data-y="payment-method-section">
+                        <h2 class="y-c-payment-section-title" data-y="payment-method-title">طريقة الدفع</h2>
+                        <div class="y-c-payment-method-options" data-y="payment-method-options">
+                            <label class="y-c-radio-option y-c-active" data-y="online-payment-option">
+                                <div class="y-c-payment-method-header" data-y="online-payment-header">
+                                    <div data-y="online-payment-label-container">
+                                        <input type="radio" name="payment_method" value="online" checked
+                                            data-y="online-payment-radio">
+                                        <span data-y="online-payment-label">الدفع عبر الإنترنت</span>
+                                    </div>
+
+                                    <div class="y-c-card-logos" data-y="card-logos">
+                                        <i class="fab fa-cc-visa" data-y="visa-logo"></i>
+                                        <i class="fab fa-cc-mastercard" data-y="mastercard-logo"></i>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="y-c-payment-card-details" data-y="card-details-container">
+                                    <div class="y-c-form-field" data-y="card-holder-field">
+                                        <input type="text" class="y-c-form-input" placeholder="اسم حامل البطاقة"
+                                            required data-y="card-holder-input">
+                                    </div>
+                                    <div class="y-c-form-field" data-y="card-number-field">
+                                        <input type="text" class="y-c-form-input" placeholder="رقم البطاقة" required
+                                            data-y="card-number-input">
+                                    </div>
+                                    <div class="y-c-form-field" data-y="card-expiry-field">
+                                        <input type="text" class="y-c-form-input" placeholder="تاريخ انتهاء" required
+                                            data-y="card-expiry-date-input">
+                                    </div>
+                                    <div class="y-c-form-field" data-y="card-cvc-field">
+                                        <input type="text" class="y-c-form-input" placeholder="CVC" required
+                                            data-y="card-cvc-input">
+                                    </div>
+                                </div>
+
+                            </label>
+
+                            <label class="y-c-radio-option" data-y="stc-pay-option">
+                                <div class="y-c-payment-method-header" data-y="stc-pay-header">
+                                    <div data-y="stc-pay-label-container">
+                                        <input type="radio" name="payment_method" value="stc" data-y="stc-pay-radio">
+                                        <span data-y="stc-pay-label">الدفع عن طريق stc pay</span>
+
+                                    </div>
+                                    <span class="y-c-stc-pay-logo" data-y="stc-logo-container">
+                                        <!-- <img src="/assets/Stc_pay.svg.png" alt="stc pay logo" data-y="stc-pay-logo"> -->
+                                    </span>
+                                </div>
+                                <div class="y-c-stc-pay-details" data-y="stc-pay-details">
+                                    <p data-y="stc-pay-info">سيتم تحويلك إلى صفحة STC Pay لإتمام الدفع.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="y-l-submit-container" data-y="submit-container">
+                        <button type="submit" class="y-c-btn y-c-btn-outline y-c-checkout-btn"
+                            data-y="place-order-button">
+                            تقديم الطلب
+                        </button>
+                        <a href="/templates/cart/layout.html" class="y-c-back-link" data-y="back-to-cart-link">
+                            العودة إلى سلة المشتريات
+                            <span>></span>
+                        </a>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="y-c-order-summary-part" data-y="order-summary-part">
+                <div class="y-l-payment-product">
+                    <div class="y-c-payment-image">
+                        <img src="/assets/tv.png" alt="">
+                    </div>
+                    <div class="y-u-flex y-u-flex-column">
+                        <h4 class="y-c-payment-section-title ">تلفزيون</h4>
+                        <h4 class="y-c-payment-section-description">تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع يجمع بين
+                            التصميم الفاخر والأداء الفائق والتقنيات
+                            الثورية ايفون ١٥ برو max ليس مجرد ها</h4>
+                    </div>
+                </div>
+                <div class="y-c-order-summary" data-y="order-summary">
+                    <h2 class="y-c-payment-section-title" data-y="summary-title">إجمالي سلة المشتريات</h2>
+                    <div class="y-c-summary-item" data-y="subtotal-row">
+                        <span class="y-c-summary-label" data-y="subtotal-label">المجموع</span>
+                        <span class="y-c-summary-value" data-y="subtotal">ر.س500,00</span>
+                    </div>
+                    <div class="y-c-summary-item" data-y="tax-row">
+                        <span class="y-c-summary-label" data-y="tax-label">الشحن</span>
+                        <span class="y-c-summary-value" data-y="tax">ر.س75,00</span>
+                    </div>
+                    <div class="y-c-summary-item" data-y="total-row">
+                        <span class="y-c-summary-total" data-y="total-label">الإجمالي المقدر</span>
+                        <span class="y-c-summary-total" data-y="total">ر.س575,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/payment.js"></script>
+
+</body>
+
+</html>

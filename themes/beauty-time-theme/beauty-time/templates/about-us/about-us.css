@@ -1,0 +1,98 @@
+.about-us-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-40);
+  align-items: center;
+  justify-content: center;
+}
+.about-us-section .container .right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+.about-us-section .container .right h2 {
+  font-size: var(--y-space-40);
+  font-weight: 500;
+  color: var(--y-color-primary);
+  padding: 0;
+}
+.about-us-section .container .right p {
+  font-size: var(--y-space-20);
+  font-weight: 400;
+  color: var(--y-color-text);
+  text-align: justify;
+}
+.about-us-section .container .right .bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-24);
+}
+.about-us-section .container .right .bottom .item {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-12);
+}
+.about-us-section .container .right .bottom .item .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.about-us-section .container .right .bottom .item i {
+  font-size: var(--y-space-30);
+  color: var(--y-color-primary);
+}
+.about-us-section .container .right .bottom .item .content p:first-child {
+  font-size: var(--y-space-20);
+  font-weight: 400;
+  color: var(--y-color-text);
+}
+.about-us-section .container .right .bottom .item .content p:last-child {
+  font-size: var(--y-space-16);
+  font-weight: 400;
+  color: var(--y-color-text);
+  text-align: justify;
+}
+
+@media (max-width: 1024px) {
+  .about-us-section .container {
+    grid-template-columns: 1fr;
+    gap: var(--y-space-32);
+  }
+
+  .about-us-section .container img {
+    order: -1;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  .about-us-section .container .right {
+    text-align: center;
+  }
+
+  .about-us-section .container .right h2 {
+    font-size: var(--y-space-32);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-section .container .right h2 {
+    font-size: var(--y-space-28);
+  }
+
+  .about-us-section .container .right p {
+    font-size: var(--y-space-18);
+  }
+
+  .about-us-section .container .right .bottom .item i {
+    font-size: var(--y-space-24);
+  }
+
+  .about-us-section .container .right .bottom .item .content p:first-child {
+    font-size: var(--y-space-18);
+  }
+
+  .about-us-section .container .right .bottom .item .content p:last-child {
+    font-size: var(--y-space-14);
+  }
+}

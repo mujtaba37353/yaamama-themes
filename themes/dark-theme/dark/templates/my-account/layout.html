@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=1.0, user-scalable=no" />
+  <title data-y="page-title">حسابي - خطى للأحذية</title>
+  <link rel="icon" href="../../assets/icon.png" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+
+  <link rel="stylesheet" href="../../components/layout/y-c-navbar.css" />
+  <link rel="stylesheet" href="../../components/layout/y-c-footer.css" />
+  <link rel="stylesheet" href="../../components/layout/y-c-breadcrumb.css" />
+  <link rel="stylesheet" href="../../templates/my-account/my-account.css" />
+
+
+  <link rel="stylesheet" href="../../css/y-animations.css" />
+</head>
+
+<body data-current-page="my-account">
+  <div data-y="nav"></div>
+
+  <header data-y="design-header"></header>
+
+
+
+  <main data-y="main" class="account-main">
+    <div class="y-main-container">
+      <div data-y="breadcrumb"></div>
+      <h1 class="account-welcome">مرحبا عبدالله</h1>
+
+      <div class="account-layout">
+        <input type="radio" name="account-section" id="section-profile" class="section-radio" checked />
+        <input type="radio" name="account-section" id="section-orders" class="section-radio" />
+        <input type="radio" name="account-section" id="section-invoice" class="section-radio" />
+        <input type="radio" name="account-section" id="section-notifications" class="section-radio" />
+
+        <aside class="account-sidebar">
+          <label for="section-profile" class="sidebar-item">
+            <i class="fas fa-user"></i>
+            <span>الصفحة الشخصية</span>
+          </label>
+
+          <label for="section-orders" class="sidebar-item">
+            <i class="fas fa-shopping-bag"></i>
+            <span>الطلبات</span>
+          </label>
+
+          <label for="section-invoice" class="sidebar-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>عنوان الفاتورة</span>
+          </label>
+
+          <label for="section-notifications" class="sidebar-item">
+            <i class="fas fa-bell"></i>
+            <span>الإشعارات</span>
+          </label>
+
+          <a href="../../templates/login/layout.html" class="sidebar-item logout-item">
+            <i class="fas fa-sign-out-alt"></i>
+            <span>تسجيل خروج</span>
+          </a>
+        </aside>
+
+        <div class="account-content">
+          <div class="content-section" id="profile-content">
+            <h2 class="section-title">الصفحة الشخصية</h2>
+            <div class="profile-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">الاسم الأول *</label>
+                  <input type="text" id="firstName" value="عبدالله" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">اسم العائلة *</label>
+                  <input type="text" id="lastName" value="محمد" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="birthDate">تاريخ الميلاد *</label>
+                  <input type="date" id="birthDate" required />
+                </div>
+                <div class="form-group">
+                  <label for="gender">النوع</label>
+                  <input type="text" id="gender" placeholder="ذكر / أنثى" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="phone">رقم الجوال *</label>
+                <input type="tel" id="phone" value="05673948" required />
+              </div>
+
+              <button class="btn-save">حفظ</button>
+            </div>
+
+            <div class="notification-section">
+              <div class="notification-toggle">
+                <div class="toggle-content">
+                  <i class="fas fa-bell"></i>
+                  <div class="toggle-text">
+                    <strong>توقف الإشعارات</strong>
+                    <p>هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل</p>
+                  </div>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" />
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="delete-account">
+              <div class="delete-content">
+                <i class="fas fa-user-circle"></i>
+                <div class="delete-text">
+                  <strong>حذف حسابي</strong>
+                  <p>هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل</p>
+                </div>
+              </div>
+              <button class="btn-delete" id="btn-deactivate-account">تعطيل الحساب</button>
+            </div>
+          </div>
+
+          <div class="content-section" id="orders-content">
+
+            <div class="orders-list-view">
+              <div class="orders-container">
+                <div class="orders-header">
+                  <div class="order-col-header"></div>
+                  <div class="order-col">رقم الطلب</div>
+                  <div class="order-col">التاريخ</div>
+                  <div class="order-col">الحالة</div>
+                  <div class="order-col">الإجمالي</div>
+                  <div class="order-col">إجراءات</div>
+                </div>
+
+                <div class="order-item">
+                  <div class="order-image">
+                    <img src="../../assets/product.png" alt="منتج" />
+                  </div>
+                  <div class="order-col order-number">#2863</div>
+                  <div class="order-col order-date">2/4/2024</div>
+                  <div class="order-col order-status">ناجح</div>
+                  <div class="order-col order-total">
+                    <div class="total-text">المجموع:</div>
+                    <div class="total-price">
+                      40
+                      <img src="../../assets/ryal.svg" alt="ر.س" />
+                    </div>
+                  </div>
+                  <div class="order-col order-actions">
+                    <button class="btn-view">عرض</button>
+                  </div>
+                </div>
+
+                <div class="order-item">
+                  <div class="order-image">
+                    <img src="../../assets/product.png" alt="منتج" />
+                  </div>
+                  <div class="order-col order-number">#2863</div>
+                  <div class="order-col order-date">2/4/2024</div>
+                  <div class="order-col order-status">ناجح</div>
+                  <div class="order-col order-total">
+                    <div class="total-text">المجموع:</div>
+                    <div class="total-price">
+                      40
+                      <img src="../../assets/ryal.svg" alt="ر.س" />
+                    </div>
+                  </div>
+                  <div class="order-col order-actions">
+                    <button class="btn-view">عرض</button>
+                  </div>
+                </div>
+
+                <div class="order-item">
+                  <div class="order-image">
+                    <img src="../../assets/product.png" alt="منتج" />
+                  </div>
+                  <div class="order-col order-number">#2863</div>
+                  <div class="order-col order-date">2/4/2024</div>
+                  <div class="order-col order-status">ناجح</div>
+                  <div class="order-col order-total">
+                    <div class="total-text">المجموع:</div>
+                    <div class="total-price">
+                      40
+                      <img src="../../assets/ryal.svg" alt="ر.س" />
+                    </div>
+                  </div>
+                  <div class="order-col order-actions">
+                    <button class="btn-view">عرض</button>
+                  </div>
+                </div>
+
+                <div class="order-item">
+                  <div class="order-image">
+                    <img src="../../assets/product.png" alt="منتج" />
+                  </div>
+                  <div class="order-col order-number">#2863</div>
+                  <div class="order-col order-date">2/4/2024</div>
+                  <div class="order-col order-status">ناجح</div>
+                  <div class="order-col order-total">
+                    <div class="total-text">المجموع:</div>
+                    <div class="total-price">
+                      40
+                      <img src="../../assets/ryal.svg" alt="ر.س" />
+                    </div>
+                  </div>
+                  <div class="order-col order-actions">
+                    <button class="btn-view">عرض</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="order-details-view" style="display: none;">
+              <div class="order-details-header">
+                <p class="order-submitted-text">تم تقديم الطلب #2343 في نوفمبر 17,2025 وهو الآن بحالة قيد التنفيذ</p>
+              </div>
+
+              <div class="order-details-table">
+                <div class="order-details-row order-details-header-row">
+                  <div class="order-detail-col">المنتج</div>
+                  <div class="order-detail-col">الإجمالي</div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">صندل جلد</div>
+                  <div class="order-detail-col">
+                    100
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">كوتش رباط</div>
+                  <div class="order-detail-col">
+                    100
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">شنطة يد</div>
+                  <div class="order-detail-col">
+                    100
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">شنطة ظهر</div>
+                  <div class="order-detail-col">
+                    100
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">المجموع:</div>
+                  <div class="order-detail-col">
+                    500
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">ضريبة مضافة :</div>
+                  <div class="order-detail-col">
+                    20
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">الإجمالي:</div>
+                  <div class="order-detail-col">
+                    520
+                    <img src="../../assets/ryal.svg" alt="ر.س" />
+                  </div>
+                </div>
+
+                <div class="order-details-row">
+                  <div class="order-detail-col">وسيلة الدفع:</div>
+                  <div class="order-detail-col">الدفع عند الاستلام</div>
+                </div>
+              </div>
+
+              <div class="order-address-section">
+                <h3 class="order-address-title">عنوان الفاتورة</h3>
+                <div class="order-address-info">
+                  <p>عبدالله محمد</p>
+                  <p>345 الهادي</p>
+                  <p>المدينة المنورة</p>
+                  <p>128475</p>
+                  <p>05673948</p>
+                  <p>abd@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="content-section" id="invoice-content">
+
+            <div class="address-empty-state">
+              <h2 class="section-title">أدخل عنوان الفاتورة الجديد *</h2>
+
+              <div class="address-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="invFirstName">الاسم الأول *</label>
+                    <input type="text" id="invFirstName" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="invLastName">اسم العائلة *</label>
+                    <input type="text" id="invLastName" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label>الدولة / المنطقة *</label>
+                  <p class="country-text">المملكة العربية السعودية</p>
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invAddress">العنوان *</label>
+                  <input type="text" id="invAddress" placeholder="عنوان الشارع رقم المنزل" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <input type="text" id="invApartment" placeholder="رقم الشقة (اختياري)" />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invCity">المدينة *</label>
+                  <input type="text" id="invCity" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invProvince">المحافظة *</label>
+                  <input type="text" id="invProvince" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invPostal">الرمز البريدي *</label>
+                  <input type="text" id="invPostal" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invPhone">الهاتف *</label>
+                  <input type="tel" id="invPhone" required />
+                </div>
+
+                <div class="form-group full-width">
+                  <label for="invEmail">البريد الإلكتروني *</label>
+                  <input type="email" id="invEmail" required />
+                </div>
+
+                <button class="btn-save">حفظ</button>
+              </div>
+            </div>
+
+            
+              <div class="address-filled-state">
+                
+                <div class="address-display-card">
+                  <button class="address-close">
+                    <i class="fas fa-times"></i>
+                  </button>
+                  <div class="top">
+                  <h3 class="address-card-title">أدخل عنوان الفاتورة الجديد *</h3>
+                    <div class="buttons">
+                      <button class="btn-edit">تعديل</button>
+                      <button class="btn-edit">إضافة</button>
+                    </div>
+                  </div>
+
+                  <div class="address-info">
+                    <p class="address-name">عبدالله محمد</p>
+                    <p class="address-line">345 الهادي</p>
+                    <p class="address-line">المدينة المنورة</p>
+                    <p class="address-line">128475</p>
+                    <p class="address-line">05673948</p>
+                    <p class="address-line">abd@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+             
+
+          </div>
+
+          <div class="content-section" id="notifications-content">
+            <h2 class="section-title">الإشعارات</h2>
+
+            <div class="notifications-list">
+              <div class="notification-item">
+                <button class="notification-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <p class="notification-text">
+                  هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض
+                  النوادر أو الكلمات العشوائية إلى النص.
+                </p>
+              </div>
+
+              <div class="notification-item">
+                <button class="notification-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <p class="notification-text">
+                  هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض
+                  النوادر أو الكلمات العشوائية إلى النص.
+                </p>
+              </div>
+
+              <div class="notification-item">
+                <button class="notification-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <p class="notification-text">
+                  هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض
+                  النوادر أو الكلمات العشوائية إلى النص.
+                </p>
+              </div>
+
+              <div class="notification-item">
+                <button class="notification-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <p class="notification-text">
+                  هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض
+                  النوادر أو الكلمات العشوائية إلى النص.
+                </p>
+              </div>
+
+              <div class="notification-item">
+                <button class="notification-close">
+                  <i class="fas fa-times"></i>
+                </button>
+                <p class="notification-text">
+                  هناك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض
+                  النوادر أو الكلمات العشوائية إلى النص.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="popup-overlay" id="deactivate-popup" style="display: none;">
+    <div class="popup-content">
+      <h3 class="popup-title">هل انت متأكد من تعطيل الحساب</h3>
+      <p class="popup-description">
+        هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.
+      </p>
+      <div class="popup-actions">
+        <button class="popup-btn btn-no" id="btn-cancel-deactivate">لا</button>
+        <button class="popup-btn btn-confirm" id="btn-confirm-deactivate">تعطيل</button>
+      </div>
+    </div>
+  </div>
+
+  <footer data-y="footer"></footer>
+
+  <script src="../../js/y-navbar.js"></script>
+  <script src="../../js/y-breadcrumb.js"></script>
+  <script src="../../js/y-footer.js"></script>
+  <script src="../../js/y-design-header.js"></script>
+  <script src="../../js/y-order-details.js"></script>
+  <script src="../../js/y-my-account.js"></script>
+</body>
+
+</html>

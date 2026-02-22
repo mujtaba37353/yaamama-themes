@@ -1,0 +1,341 @@
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-top: var(--y-space-66) !important;
+  margin-bottom: 0;
+  padding-bottom: var(--y-space-96);
+  position: relative;
+  z-index: 1;
+}
+
+.auth-section .container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/auth.png') no-repeat center center / cover;
+  z-index: 1;
+  border-radius: var(--y-radius-l);
+}
+
+.auth-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-section .container.right-left {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: var(--y-space-42);
+  padding: var(--y-space-46);
+}
+
+.container.right-left form {
+  background-color: white;
+
+  border-radius: var(--y-space-30);
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-24);
+
+}
+
+.auth-section .container.right-left .right {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+
+.auth-section .container .right {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.auth-section .container .right h2 {
+  width: 100%;
+  font-size: var(--font-xl);
+  font-weight: 600;
+  text-align: center;
+}
+
+.auth-section .container .left {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.auth-section .container .right p {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  text-align: justify;
+}
+
+.auth-section .container .left:not(:has(.card)) img {
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: var(--y-radius-l);
+  border-bottom-left-radius: var(--y-radius-l);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-32);
+  width: 100%;
+  backdrop-filter: blur(2px);
+}
+
+form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+form textarea {
+  resize: vertical;
+}
+form .form-group input,
+form .form-group textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border-radius: var(--y-space-8);
+  background-color: transparent;
+  background: #ffffff;
+  border: 1px solid #0000004d;
+  transition: all 0.3s ease;
+  text-align: right;
+}
+
+form .form-group input:focus,
+form .form-group textarea:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+
+form .form-group input:disabled,
+form .form-group textarea:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+
+form .form-group input:read-only,
+form .form-group textarea:read-only {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+
+form .form-group label {
+  font-weight: 500;
+  font-size: var(--font-m);
+  color: var(--y-color-txt);
+}
+
+form .form-group label .required {
+  color: #ef4444;
+}
+
+form .form-group.password-group {
+  position: relative;
+}
+
+form .form-group .password-input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form .form-group input:invalid {
+  border-color: var(--y-color-danger);
+}
+
+form .form-group input:invalid:focus {
+  border-color: var(--y-color-danger);
+  box-shadow: 0 0 0 var(--y-space-4) rgba(239, 68, 68, 0.1);
+}
+form .form-group .password-input-wrapper .password-toggle {
+  position: absolute;
+  right: var(--y-space-12);
+  cursor: pointer;
+  color: var(--y-color-border);
+  font-size: var(--font-m);
+  z-index: 1;
+  transition: color 0.3s ease;
+  right: 91%;
+  top: 18px;
+}
+
+form .form-group .password-input-wrapper .password-toggle:hover {
+  color: var(--y-color-primary);
+}
+
+form .form-group input::placeholder {
+  color: #9ca3af;
+}
+
+.auth-section .container form p.new-account,
+.auth-section .container form p.forget-text {
+  font-size: var(--font-s);
+  text-align: center;
+  font-weight: var(--y-text-medium);
+}
+
+.auth-section .container form p.new-account a {
+  color: var(--y-color-btn-color);
+  text-decoration: underline;
+}
+
+.auth-section .container form p.new-account,
+.auth-section .container form p.forget-text {
+  font-size: var(--y-space-16);
+  text-align: center;
+  font-weight: var(--y-text-medium);
+  color: var(--y-color-txt);
+}
+
+.auth-section .container form p.new-account a {
+  color: var(--y-color-btn-color);
+}
+
+.auth-section form .auth-switch {
+  width: 100%;
+  font-weight: 700;
+  color: var(--y-color-txt);
+  font-size: var(--font-s) !important;
+  text-align: center !important;
+  width: 100%;
+}
+
+.auth-section form .auth-switch a {
+  color: var(--y-color-btn-color);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.auth-section form .auth-switch a:hover {
+  text-decoration: underline;
+}
+
+.auth-section form .auth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-12);
+  width: 100%;
+}
+
+.auth-section form .auth-remember {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: var(--y-space-8);
+  font-weight: 700;
+}
+
+.auth-section form .auth-remember label {
+  font-size: var(--font-s);
+  color: var(--y-color-txt);
+}
+
+.auth-section form .auth-remember input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--y-color-btn-color);
+}
+
+.auth-section form .auth-note {
+  font-size: var(--y-space-16) !important;
+  line-height: var(--y-line-normal);
+  font-weight: 500 !important;
+  color: var(--y-color-txt);
+}
+
+.auth-section form .auth-actions .auth-forgot {
+  font-weight: 500;
+  font-size: var(--font-s);
+  text-decoration: underline;
+}
+
+.auth-section form .auth-actions .auth-forgot:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .auth-section .container {
+    flex-direction: column-reverse;
+    gap: var(--y-space-44);
+  }
+
+  .auth-section .container.right-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--y-space-24);
+    margin-inline: var(--y-space-14);
+  }
+
+  .auth-section .container .right {
+    width: 100%;
+  }
+
+  .auth-section .container .right p {
+    font-size: var(--y-space-24);
+  }
+
+  .auth-section .container .right h2 {
+    padding-right: 0;
+    padding-bottom: var(--y-space-24);
+    font-size: var(--font-l);
+  }
+
+  .auth-section .container.right-left .left img {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: var(--y-radius-l);
+    border-top-right-radius: var(--y-radius-l);
+  }
+
+  form :is(input, select, textarea) {
+    font-size: var(--font-s) !important;
+  }
+
+  form .form-group label {
+    font-size: var(--font-s) !important;
+  }
+
+  form p.new-account,
+  form p.forget-text {
+    font-size: var(--font-xs) !important;
+  }
+
+  .auth-section form .auth-actions .auth-forgot {
+    font-weight: 500;
+    font-size: var(--font-xs);
+    text-decoration: underline;
+  }
+
+  .auth-section form .auth-remember label {
+    font-size: var(--font-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-section .container.right-left {
+    padding: 0;
+  }
+
+  .auth-section .container::before {
+    background: none;
+  }
+}

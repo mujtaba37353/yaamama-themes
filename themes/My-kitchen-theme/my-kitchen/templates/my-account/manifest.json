@@ -1,0 +1,9 @@
+{
+  "template": "my-account",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "header": "[data-y='design-header']",
+    "account-sidebar": "[data-y='account-sidebar']",
+    "footer": "[data-y='footer']"
+  }
+}

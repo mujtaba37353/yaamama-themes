@@ -1,0 +1,28 @@
+{
+    "template": "password-reset",
+    "slots": {
+        "page-title": "Page title for Password Reset",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "footer-placeholder": "Footer component placeholder",
+        "password-reset-page": "Main page wrapper",
+        "password-reset-card": "The centered white card",
+        "form-title": "Title of the password reset form",
+        "password-reset-form": "The <form> element",
+        "form-group-email": "Form group for Email",
+        "form-description": "Helper text below the input",
+        "form-submit-button-container": "Wrapper for the submit button",
+        "form-submit-btn": "The 'Reset Password' button",
+        "popup-overlay": "The success popup overlay",
+        "popup-content": "The popup content box",
+        "popup-close-btn": "The 'X' close button on the popup",
+        "popup-icon": "The success checkmark icon",
+        "popup-title": "The success title text",
+        "popup-message": "The success helper text"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/auth-forms.js"
+    ]
+}

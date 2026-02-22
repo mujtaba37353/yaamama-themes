@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nafhat - متجر العطور</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="./account.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main class="profile-main">
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full">
+        <div class="header y-u-flex y-u-justify-between y-u-items-center y-u-p-y-56 y-u-p-t-24">
+          <h1 class="y-u-color-primary y-u-text-2xl">حسابي</h1>
+        </div>
+
+        <div class="profile-layout profile-tabs">
+          <input type="radio" name="account-tabs" id="tab-profile" class="profile-tab-input" checked />
+          <input type="radio" name="account-tabs" id="tab-orders" class="profile-tab-input" />
+          <input type="radio" name="account-tabs" id="tab-addresses" class="profile-tab-input" />
+
+          <aside class="profile-sidebar">
+            <div class="profile-sidebar__greeting">
+              <p class="profile-sidebar__hello">أهلاً</p>
+              <p class="profile-sidebar__name">عبده</p>
+            </div>
+            <nav class="profile-nav">
+              <ul>
+                <li>
+                  <label for="tab-profile" class="profile-nav__link" role="button">
+                    <span class="profile-nav__icon"><i class="fas fa-user-circle"></i></span>
+                    <span>حسابي</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="tab-orders" class="profile-nav__link" role="button">
+                    <span class="profile-nav__icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span>طلباتي</span>
+                  </label>
+                </li>
+                <li>
+                  <label for="tab-addresses" class="profile-nav__link" role="button">
+                    <span class="profile-nav__icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <span>عنواني</span>
+                  </label>
+                </li>
+                <li>
+                  <a href="../login/login.html" class="profile-nav__link profile-nav__logout" role="button">
+                    <span class="profile-nav__icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span>تسجيل الخروج</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="../login/login.html" class="profile-nav__logout">
+              <span class="profile-nav__icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span>تسجيل الخروج</span>
+            </a>
+          </aside>
+
+          <div class="profile-panels">
+            <section class="profile-content profile-panel" data-panel="profile">
+              <h2>الملف الشخصي</h2>
+              <form class="profile-form y-u-flex y-u-flex-col y-u-gap-16">
+                <div class="form-row">
+                  <div class="form-group y-c-field">
+                    <label class="y-c-label" for="fullname">الاسم بالكامل</label>
+                    <input type="text" id="fullname" class="y-c-input" placeholder="عبدالله محمد" required />
+                  </div>
+                  <div class="form-group y-c-field">
+                    <label class="y-c-label" for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" class="y-c-input" placeholder="user@example.com" disabled />
+                  </div>
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="phone">رقم الجوال</label>
+                  <input type="tel" id="phone" class="y-c-input" placeholder="+966 XXXXXXXX" required />
+                </div>
+
+                <hr class="form-divider" />
+
+                <div class="form-footer">
+                  <button type="submit" class="y-c-btn y-c-btn--primary">حفظ التغييرات</button>
+                </div>
+              </form>
+            </section>
+
+            <section class="profile-content profile-panel" data-panel="orders">
+              <h2>طلباتي</h2>
+              <div class="y-u-flex y-u-flex-col y-u-gap-16 y-u-w-full">
+                <div class="order-card">
+                  <div class="order-content">
+                    <div class="order-image-wrapper">
+                      <img src="../../assets/pro1.png" alt="Product Image" class="order-image" />
+                    </div>
+                    <div class="order-info">
+                      <div class="order-header">
+                        <span class="order-id">
+                          <i class="fas fa-cube y-u-color-muted"></i>
+                          أوردر-2024-1001
+                        </span>
+                        <span class="order-status">تم الشحن</span>
+                      </div>
+                      <div class="order-meta">
+                        <span class="meta-item">
+                          <i class="far fa-calendar y-u-color-muted"></i>
+                          18 جمادى الأولى 1446 هـ
+                        </span>
+                        <span class="meta-item">
+                          <i class="fas fa-dollar-sign y-u-color-muted"></i>
+                          2599.98 ر.س
+                        </span>
+                        <span class="meta-item">
+                          3 منتجات
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-actions">
+                    <button class="btn-outline order-details-trigger" data-order-status="تم التوصيل"
+                      data-order-number="أوردر-2024-1001" data-order-date="18 جمادى الأولى 1446 هـ"
+                      data-order-address="123، شارع فكري، صلاح سالم" data-order-payment="كريدت كارد تنتهي في 2026"
+                      data-product-name="Samsung 55'' 4K Smart TV" data-product-category="Television"
+                      data-product-qty="1" data-product-price="799.99 ر.س" data-product-image="../../assets/pro1.png">
+                      عرض التفاصيل
+                    </button>
+                  </div>
+                </div>
+                <div class="order-card">
+                  <div class="order-content">
+                    <div class="order-image-wrapper">
+                      <img src="../../assets/pro2.png" alt="Product Image" class="order-image" />
+                    </div>
+                    <div class="order-info">
+                      <div class="order-header">
+                        <span class="order-id">
+                          <i class="fas fa-cube y-u-color-muted"></i>
+                          أوردر-2024-1002
+                        </span>
+                        <span class="order-status">قيد التجهيز</span>
+                      </div>
+                      <div class="order-meta">
+                        <span class="meta-item">
+                          <i class="far fa-calendar y-u-color-muted"></i>
+                          12 جمادى الأولى 1446 هـ
+                        </span>
+                        <span class="meta-item">
+                          <i class="fas fa-dollar-sign y-u-color-muted"></i>
+                          1299.00 ر.س
+                        </span>
+                        <span class="meta-item">
+                          2 منتجات
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-actions">
+                    <button class="btn-outline order-details-trigger" data-order-status="قيد التجهيز"
+                      data-order-number="أوردر-2024-1002" data-order-date="12 جمادى الأولى 1446 هـ"
+                      data-order-address="456، شارع الملك عبدالعزيز" data-order-payment="دفع عند الاستلام"
+                      data-product-name="Yamaha Sound Bar" data-product-category="Audio" data-product-qty="2"
+                      data-product-price="1299.00 ر.س" data-product-image="../../assets/pro2.png">
+                      عرض التفاصيل
+                    </button>
+                  </div>
+                </div>
+                <div class="order-card">
+                  <div class="order-content">
+                    <div class="order-image-wrapper">
+                      <img src="../../assets/pro3.png" alt="Product Image" class="order-image" />
+                    </div>
+                    <div class="order-info">
+                      <div class="order-header">
+                        <span class="order-id">
+                          <i class="fas fa-cube y-u-color-muted"></i>
+                          أوردر-2024-1003
+                        </span>
+                        <span class="order-status">تم الشحن</span>
+                      </div>
+                      <div class="order-meta">
+                        <span class="meta-item">
+                          <i class="far fa-calendar y-u-color-muted"></i>
+                          02 جمادى الأولى 1446 هـ
+                        </span>
+                        <span class="meta-item">
+                          <i class="fas fa-dollar-sign y-u-color-muted"></i>
+                          599.00 ر.س
+                        </span>
+                        <span class="meta-item">
+                          منتج واحد
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="order-actions">
+                    <button class="btn-outline order-details-trigger" data-order-status="تم الشحن"
+                      data-order-number="أوردر-2024-1003" data-order-date="02 جمادى الأولى 1446 هـ"
+                      data-order-address="789، حي اليرموك، الرياض" data-order-payment="Apple Pay"
+                      data-product-name="Dior Homme Intense" data-product-category="Perfume" data-product-qty="1"
+                      data-product-price="599.00 ر.س" data-product-image="../../assets/pro3.png">
+                      عرض التفاصيل
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="order-details-modal" id="order-details-modal" role="dialog" aria-modal="true"
+                aria-hidden="true" aria-labelledby="order-details-title">
+                <div class="modal-backdrop" data-modal-dismiss></div>
+                <div class="modal-card" tabindex="-1">
+                  <button class="modal-close" type="button" aria-label="إغلاق" data-modal-dismiss>
+                    ×
+                  </button>
+                  <div class="modal-status">
+                    <span class="status-chip" id="modal-status-chip">تم التوصيل</span>
+                    <p class="status-text">تفاصيل الطلب</p>
+                  </div>
+                  <div class="modal-meta-grid">
+                    <div class="meta-field">
+                      <p class="meta-label">الطلب رقم</p>
+                      <p class="meta-value" id="modal-order-number">أوردر-2024-1001</p>
+                    </div>
+                    <div class="meta-field">
+                      <p class="meta-label">رقم الطلب</p>
+                      <p class="meta-value" id="modal-order-id">أوردر-2024-1001</p>
+                    </div>
+                    <div class="meta-field">
+                      <p class="meta-label">تاريخ الطلب</p>
+                      <p class="meta-value" id="modal-order-date">18 جمادى الأولى 1446 هـ</p>
+                    </div>
+                    <div class="meta-field">
+                      <p class="meta-label">عنوان التوصيل</p>
+                      <p class="meta-value" id="modal-order-address">123، شارع فكري، صلاح سالم</p>
+                    </div>
+                    <div class="meta-field">
+                      <p class="meta-label">طريقة الدفع</p>
+                      <p class="meta-value" id="modal-order-payment">كريدت كارد تنتهي في 2026</p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="modal-products">
+                    <h3>المنتجات</h3>
+                    <div class="modal-product">
+                      <img src="../../assets/pro1.png" alt="Samsung 55'' 4K Smart TV" id="modal-product-image" />
+                      <div>
+                        <p class="product-name" id="modal-product-name">Samsung 55'' 4K Smart TV</p>
+                        <p class="product-category" id="modal-product-category">Television</p>
+                        <p class="product-qty" id="modal-product-qty">الكمية: 1</p>
+                      </div>
+                      <p class="product-price" id="modal-product-price">799.99 ر.س</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="profile-content profile-panel" data-panel="addresses">
+              <h2>عنواني</h2>
+              <p class="y-u-text-muted y-u-m-b-16">العناوين التالية سيتم استخدامها في صفحة الدفع</p>
+              <div class="addresses-content">
+                <div class="items">
+                  <div class="item">
+                    <p>عبدالله محمد</p>
+                    <p>345 الهادي</p>
+                    <p>المدينة المنورة</p>
+                    <p>128475</p>
+                    <p>05673948</p>
+                    <p>abd@gmail.com</p>
+                    <div class="actions">
+                      <button class="edit" type="button"><i class="fas fa-edit"></i></button>
+                      <button class="delete" type="button"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <p>سارة عبدالله</p>
+                    <p>876 العليا</p>
+                    <p>الرياض</p>
+                    <p>225874</p>
+                    <p>055332211</p>
+                    <p>sara@example.com</p>
+                    <div class="actions">
+                      <button class="edit" type="button"><i class="fas fa-edit"></i></button>
+                      <button class="delete" type="button"><i class="fas fa-trash-alt"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <hr class="form-divider" />
+
+              <div class="form-footer">
+                <a href="../account/new-address.html" class="y-c-btn y-c-btn--primary">اضافة عنوان</a>
+              </div>
+            </section>
+          </div>
+        </div>
+
+    </section>
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/orders-modal.js"></script>
+</body>
+
+</html>

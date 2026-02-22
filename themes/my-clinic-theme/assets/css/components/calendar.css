@@ -1,0 +1,165 @@
+/* Calendar popover on single pages - fixed to center */
+.doctor-page:not(.doctors-page) .calendar-popover,
+.single-clinic #calendar-popover-clinic {
+  display: none !important;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100%;
+  max-width: min(90%, 450px);
+  background-color: #fff;
+  border-radius: var(--y-radius-l);
+  box-shadow: var(--y-color-shadow);
+  padding: var(--y-space-16);
+  z-index: 117;
+}
+
+/* Calendar popover on listing pages (cards) - relative to card */
+.doctors-page .box .calendar-popover,
+.doctors-page .main-box .calendar-popover,
+.clinic-page .box .calendar-popover,
+.clinic-page .main-box .calendar-popover,
+.doctors-box-clinic .box .calendar-popover,
+.doctors-box-clinic .main-box .calendar-popover {
+  display: none !important;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin-top: var(--y-space-8);
+  width: 100%;
+  max-width: min(90vw, 450px);
+  background-color: #fff;
+  border-radius: var(--y-radius-l);
+  box-shadow: var(--y-color-shadow);
+  padding: var(--y-space-16);
+  z-index: 117;
+}
+
+/* Fallback for other calendar popovers */
+.calendar-popover {
+  display: none !important;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100%;
+  max-width: min(90%, 450px);
+  background-color: #fff;
+  border-radius: var(--y-radius-l);
+  box-shadow: var(--y-color-shadow);
+  padding: var(--y-space-16);
+  z-index: 117;
+}
+.box .calendar-popover.show,
+.main-box .calendar-popover.show,
+.calendar-popover.show,
+.doctor-page:not(.doctors-page) .calendar-popover.show,
+.single-clinic #calendar-popover-clinic.show {
+  display: flex !important;
+}
+
+/* Ensure cards have relative positioning for absolute calendar */
+.doctors-page .box.main-box,
+.clinic-page .box.main-box,
+.doctors-page .box.clinic-box,
+.clinic-page .box.clinic-box,
+.doctors-box-clinic .box.main-box {
+  position: relative;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar-header h3 {
+  font-size: var(--y-space-20);
+  font-weight: 700;
+  color: var(--y-color-txt);
+}
+
+.calendar-header button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--y-space-8);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--y-color-primary);
+  font-size: 18px;
+}
+.calendar-popover a.btn {
+  font-size: 14px;
+}
+
+.calendar-popover a.btn.disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+.calendar-header button:hover {
+  background-color: var(--y-color-primary-light);
+}
+.calendar-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.calendar-body .day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: var(--y-color-grey);
+}
+
+.calendar-body .days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--y-space-4);
+}
+
+.days-grid .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease;
+}
+
+.days-grid .day:not(.empty):hover {
+  background-color: var(--y-color-primary);
+  color: white;
+}
+
+.days-grid .day.selected {
+  background-color: var(--y-color-primary);
+  color: white;
+}
+
+.days-grid .day.disabled {
+  color: var(--y-color-grey-light);
+  cursor: not-allowed;
+  background-color: #f2f2f2;
+}
+
+.days-grid .day.empty {
+  cursor: default;
+}
+.main-box {
+  position: relative;
+}

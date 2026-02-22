@@ -1,0 +1,23 @@
+{
+    "template": "faq",
+    "description": "Frequently Asked Questions page with an accordion list.",
+    "slots": {
+        "page-title": "Page title",
+        "header-placeholder": "Header component placeholder",
+        "faq-main": "Main content area",
+        "faq-hero": "Hero section for the FAQ page",
+        "faq-container": "Container for the FAQ content",
+        "faq-title": "Main title 'الاسئلة الشائعة'",
+        "faq-accordion": "Container for the accordion items",
+        "faq-item": "Individual accordion item (repeated)",
+        "faq-toggle": "The clickable button for each question",
+        "faq-panel": "The collapsible panel with the answer",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/faq.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

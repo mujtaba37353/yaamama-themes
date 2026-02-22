@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">السلة</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-cart.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header"></div>
+    <main data-y="cart-main">
+        <section class="y-l-container" data-y="cart-container">
+            <h2 class="y-c-cart-page-title" data-y="cart-page-title">سلة المشتريات</h2>
+            <p class="y-c-breadcrumb" data-y="cart-breadcrumb"><a href="/templates/home/layout.html"
+                    data-y="breadcrumb-home">الرئيسية</a> <span data-y="breadcrumb-separator">></span> سلة
+                المشتريات
+            </p>
+            <div class="y-l-cart-container" data-y="cart-content-container">
+                <div class="y-l-cart-items" data-y="cart-items-section">
+                    <ul class="y-l-cart-cards" data-y="cart-items-list">
+                        <li class="y-c-cart-item">
+                            <div class="cart-item__product">
+                                <img src="/assets/tv.png" alt="SAMSUNG 55” Smart TV" class="cart-item__image">
+                            </div>
+                            <div class="y-c-cart-item__details">
+                                <h2>تلفزيون</h2>
+                                <h3 class="y-c-cart-item__name">تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع يجمع بين
+                                    التصميم
+                                </h3>
+                                <h3>السعر</h3>
+                                <div class="y-c-cart-item__price">600 <img src="/assets/coin-black.png" alt=""> </div>
+                            </div>
+                            <div class="y-c-cart-item__actions">
+                                <button class="y-c-cart-item__remove-btn" aria-label="Remove item">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+
+                                <div class="y-c-quantity-control">
+                                    <button class="y-c-quantity-btn" id="decrease-quantity">-</button>
+                                    <input type="number" class="y-c-quantity-input" value="1" min="1" max="10">
+                                    <button class="y-c-quantity-btn" id="increase-quantity">+</button>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="y-c-cart-item">
+                            <div class="cart-item__product">
+                                <img src="/assets/tv.png" alt="SAMSUNG 55” Smart TV" class="cart-item__image">
+                            </div>
+                            <div class="y-c-cart-item__details">
+                                <h2>تلفزيون</h2>
+                                <h3 class="y-c-cart-item__name">تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع يجمع بين
+                                    التصميم
+                                </h3>
+                                <h3>السعر</h3>
+                                <div class="y-c-cart-item__price">600 <img src="/assets/coin-black.png" alt=""> </div>
+                            </div>
+                            <div class="y-c-cart-item__actions">
+                                <button class="y-c-cart-item__remove-btn" aria-label="Remove item">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+
+                                <div class="y-c-quantity-control">
+                                    <button class="y-c-quantity-btn" id="decrease-quantity">-</button>
+                                    <input type="number" class="y-c-quantity-input" value="1" min="1" max="10">
+                                    <button class="y-c-quantity-btn" id="increase-quantity">+</button>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="y-l-cart-summary" data-y="cart-summary-section">
+                        <div class="y-c-cart-summary-card" data-y="cart-summary-card">
+                            <h3 data-y="cart-summary-title">ملخص الطلب</h3>
+                            <div class="y-c-cart-summary" data-y="cart-summary-details">
+                                <div class="y-c-cart-summary__row" data-y="cart-subtotal-row">
+                                    <span class="y-c-cart-summary__label" data-y="cart-subtotal-label">اجمالي
+                                        العناصر</span>
+                                    <span class="y-c-cart-summary__value" data-y="cart-subtotal-value">1200 ر.س</span>
+                                </div>
+                                <div class="y-c-cart-summary__row" data-y="cart-shipping-row">
+                                    <span class="y-c-cart-summary__label" data-y="cart-shipping-label">الشحن</span>
+                                    <span class="y-c-cart-summary__value" data-y="cart-shipping-value">168 ر.س</span>
+                                </div>
+                                <div class="y-c-cart-summary__row y-c-cart-summary__row--total" data-y="cart-total-row">
+                                    <span class="y-c-cart-summary__label" data-y="cart-total-label">الإجمالي</span>
+                                    <span class="y-c-cart-summary__value" data-y="cart-total-value">1368 ر.س</span>
+                                </div>
+                            </div>
+                            <a href="/templates/payment/layout.html"
+                                class="y-c-btn y-c-btn-primary y-c-btn-full y-c-checkout-btn" data-y="checkout-btn">
+                                إتمام الشراء
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/cart.js"></script>
+</body>
+
+</html>

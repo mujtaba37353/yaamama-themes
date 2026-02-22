@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>سلة المشتريات - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="./y-cart.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-cart-page" data-y="cart-main">
+        <div class="y-u-container">
+
+            <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                <p>
+                    <a href="../home/layout.html">الرئيسية</a>
+                    <span>></span>
+                    <span data-y="bc-current">سلة المشتريات</span>
+                </p>
+            </nav>
+
+
+            <div id="empty-cart-message" class="y-c-empty-cart" style="display: none;" data-y="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <h3>سلتك فارغة حالياً</h3>
+                <p>تصفح المتجر وأضف بعض المنتجات المميزة!</p>
+                <a href="../store/layout.html" class="y-c-outline-btn y-c-basic-btn">تصفح المتجر</a>
+            </div>
+
+            <div class="y-l-cart-container" id="cart-content-wrapper" data-y="cart-container">
+
+                <div class="y-l-cart-items-col" data-y="cart-items-col">
+                    <div class="y-c-cart-items-list" id="cart-items-container" data-y="cart-items-list">
+                    </div>
+                </div>
+
+
+                <!-- Summary Column -->
+                <div class="y-l-cart-summary-col" data-y="cart-summary-col">
+                    <div class="y-c-order-summary-card" data-y="summary-card">
+                        <h3 class="y-c-summary-title" data-y="summary-title">ملخص الطلب</h3>
+
+                        <!-- Subtotal -->
+                        <div class="y-c-summary-row" data-y="summary-subtotal">
+                            <span class="y-c-summary-label">المجموع</span>
+                            <div class="y-c-summary-value-wrapper">
+                                <img src="../../assets/coin.png" class="y-c-currency-icon" alt="SAR">
+                                <span class="y-c-summary-value" id="summary-subtotal">0</span>
+                            </div>
+                        </div>
+
+                        <!-- VAT -->
+                        <div class="y-c-summary-row" data-y="summary-tax">
+                            <span class="y-c-summary-label">ضريبة القيمة المضافة</span>
+                            <div class="y-c-summary-value-wrapper">
+                                <img src="../../assets/coin.png" class="y-c-currency-icon" alt="SAR">
+                                <span class="y-c-summary-value" id="summary-tax">0</span>
+                            </div>
+                        </div>
+
+                        <hr class="y-c-summary-divider">
+
+                        <!-- Total -->
+                        <div class="y-c-summary-row y-c-total-row" data-y="summary-total">
+                            <span class="y-c-summary-label">الإجمالي</span>
+                            <div class="y-c-summary-value-wrapper">
+                                <img src="../../assets/coin.png" class="y-c-currency-icon" alt="SAR">
+                                <span class="y-c-summary-value" id="summary-total">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <a href="../payment/layout.html" class="y-c-outline-btn y-c-btn-full y-c-checkout-btn"
+                        data-y="checkout-btn">
+                        الذهاب إلى الدفع
+                    </a>
+
+                    <a href="../store/layout.html" class="y-c-outline-btn y-c-btn-full" data-y="checkout-btn">
+                        مواصلة التسوق </a>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/cart.js" data-y="cart-script"></script>
+</body>
+
+</html>

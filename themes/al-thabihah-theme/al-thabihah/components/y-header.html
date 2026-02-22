@@ -1,0 +1,69 @@
+<header class="y-l-header">
+    <div class="y-l-header-container">
+
+        <button id="mobile-menu-button" class="y-c-mobile-menu-btn" aria-label="Menu" aria-controls="header-mobile"
+            aria-expanded="false">
+            <i class="fas fa-bars" id="mobile-menu-icon"></i>
+        </button>
+
+        <a href="../home/layout.html" class="y-c-header-logo" data-y="header-logo-link">
+            <img src="../../assets/logo.png" alt="Al Thabihah Logo" data-y="header-logo-img">
+        </a>
+
+        <nav class="y-l-header-nav" data-y="header-desktop-nav">
+            <a href="../home/layout.html" class="y-c-nav-link" data-y="nav-link-home">الرئيسية</a>
+            <a href="../offers/layout.html" class="y-c-nav-link" data-y="nav-link-offers">العروض</a>
+            <a href="../store/layout.html" class="y-c-nav-link" data-y="nav-link-store">جميع المنتجات</a>
+            <a href="../about-us/layout.html" class="y-c-nav-link" data-y="nav-link-about">من نحن</a>
+        </nav>
+
+        <div class="y-l-header-actions" data-y="header-desktop-actions">
+
+            <div class="y-c-header-search" data-y="desktop-search-container">
+                <input type="search" id="expandable-search-input-desktop" class="y-c-search-input"
+                    placeholder="...ابحث">
+                <button class="y-c-header-icon-btn" id="expandable-search-icon-desktop" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <a href="../cart/layout.html" class="y-c-header-icon-btn" aria-label="Cart" data-y="header-icon-cart">
+                <i class="fas fa-bag-shopping"></i>
+                <span class="y-c-cart-badge" data-y="cart-badge">0</span>
+            </a>
+
+            <a href="../login/layout.html" class="y-c-header-icon-btn" aria-label="Account" data-y="header-icon-user">
+                <i class="fas fa-user"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div id="header-mobile" class="y-l-mobile-menu" role="dialog" aria-modal="true" aria-hidden="true">
+
+        <div class="y-l-mobile-menu-header">
+            <button id="mobile-menu-close" class="y-c-mobile-menu-close" aria-label="Close Menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <div class="y-c-mobile-search" data-y="mobile-search-container">
+            <input type="search" id="mobile-search-input" class="y-c-search-input" placeholder="...ابحث">
+            <button class="y-c-search-btn" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </button>
+        </div>
+
+        <nav class="y-l-header-mobile-links" data-y="header-mobile-nav">
+
+            <a href="../home/layout.html" data-y="header-mobile-link-home">الرئيسية</a>
+            <a href="../store/layout.html" data-y="header-mobile-link-store">المتجر</a>
+            <a href="../about-us/layout.html" data-y="header-mobile-link-about">من نحن</a>
+            <a href="../contact-us/layout.html" data-y="header-mobile-link-contact">تواصل معنا</a>
+            <a href="../cart/layout.html" data-y="header-mobile-link-cart">السلة</a>
+            <a href="../login/layout.html" data-y="header-mobile-link-login">حسابي</a>
+
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,19 @@
+{
+    "template": "404",
+    "slots": {
+        "page-title": "404 page title",
+        "favicon": "Favicon icon for the 404 page",
+        "header-placeholder": "Header component placeholder",
+        "main": "Main content area for the 404 page",
+        "error-hero": "Error hero section",
+        "error-image": "404 error image",
+        "error-home-button": "Button to go to home page",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components JavaScript file"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

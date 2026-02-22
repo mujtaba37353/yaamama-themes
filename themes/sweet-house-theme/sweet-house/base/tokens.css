@@ -1,0 +1,124 @@
+:root {
+  --y-main: #55C1DF;
+  --y-secondary: #FF8CB8;
+  --y-u-blue: #55C1DF;
+  --y-u-pink: #FF8CB8;
+  --y-color-primary: #fee3ca;
+  --y-color-primary-light: #d9a85a;
+  --y-color-primary-dark: #8c5e2a;
+  --y-color-secondary: #fcd2a3;
+  --y-color-secondary-light: #fde4b8;
+  --y-color-secondary-dark: #c9a46a;
+  --y-color-accent: #d9b083;
+  --y-color-dark: #7a5230;
+  --y-color-light: #fff8f0;
+  --y-color-text-dark: #3a2c1c;
+  --y-color-text-light: #ffffff;
+  --y-color-on-primary: #ffffff;
+  --y-color-btn: #c3282c;
+  --y-color-bg: #ffffff;
+
+  --y-color-black: #000000;
+  --y-color-ebony: #080402;
+  --y-color-crow: #0d0907;
+  --y-color-charcoal: #28231d;
+  --y-color-midnight: #040406;
+  --y-color-ink: #070504;
+  --y-color-raven: #050301;
+  --y-color-oil: #050100;
+  --y-color-grease: #0a0806;
+  --y-color-onyx: #030104;
+
+  --y-color-gray: #808080;
+  --y-color-shadow: #373737;
+  --y-color-graphite: #594d5b;
+  --y-color-iron: #322d31;
+  --y-color-pewter: #696880;
+  --y-color-cloud: #c5c6d0;
+  --y-color-silver: #adadc9;
+  --y-color-smoke: #59515e;
+  --y-color-dark-slate: #3e3d53;
+  --y-color-anchor: #41424c;
+
+  --y-color-white: #ffffff;
+  --y-color-pearl: #fbfcf8;
+  --y-color-alabaster: #fef9f3;
+  --y-color-snow: #f5fefd;
+  --y-color-pale-ivory: #fdf6e4;
+  --y-color-cream: #fffada;
+  --y-color-eggshell: #fff9e3;
+  --y-color-cotton: #fbfbf9;
+  --y-color-chiffon: #fbfaf2;
+  --y-color-pink-salt: #f8eeec;
+
+  --y-color-success: #28a745;
+  --y-color-success-light: #71d88a;
+  --y-color-success-dark: #1c6b2e;
+  --y-color-warning: #ffc107;
+  --y-color-warning-light: #ffdb58;
+  --y-color-warning-dark: #b28704;
+  --y-color-error: #dc3545;
+  --y-color-error-light: #e5737a;
+  --y-color-error-dark: #8b1c24;
+  --y-color-info: #17a2b8;
+  --y-color-info-light: #63c4d9;
+  --y-color-info-dark: #0f6170;
+
+  --y-radius-0: 0;
+  --y-radius-2: 0.125rem;
+  --y-radius-4: 0.25rem;
+  --y-radius-8: 0.5rem;
+  --y-radius-12: 0.75rem;
+  --y-radius-16: 1rem;
+  --y-radius-20: 1.25rem;
+  --y-radius-24: 1.5rem;
+  --y-radius-32: 2rem;
+  --y-radius-50: 50%;
+
+  --y-font-size-sm: 0.875rem;
+  --y-font-size-base: 1rem;
+  --y-font-size-lg: 1.3125rem;
+  --y-font-size-xl: 1.5rem;
+  --y-font-size-2xl: 1.875rem;
+  --y-font-size-3xl: 2.25rem;
+  --y-font-size-4xl: 3rem;
+  --y-font-size-5xl: 3.75rem;
+  --y-font-size-6xl: 4.5rem;
+  --y-font-size-7xl: 5.25rem;
+
+  --y-fw-thin: 100;
+  --y-fw-extralight: 200;
+  --y-fw-light: 300;
+  --y-fw-normal: 400;
+  --y-fw-medium: 500;
+  --y-fw-bold: 700;
+  --y-fw-extrabold: 800;
+  --y-fw-black: 900;
+
+  --y-font-family: "Cairo", sans-serif;
+  --y-font-alt: "Cairo", sans-serif;
+
+  --y-line-height-tight: 1.25;
+  --y-line-height-base: 1.5;
+  --y-line-height-relaxed: 1.75;
+
+  --y-shadow-sm: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.05);
+  --y-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1),
+    0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+  --y-shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.1),
+    0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.05);
+
+  --y-transition-fast: 0.15s ease-in-out;
+  --y-transition-base: 0.3s ease-in-out;
+  --y-transition-slow: 0.5s ease-in-out;
+
+  --y-zindex-dropdown: 1000;
+  --y-zindex-sticky: 1020;
+  --y-zindex-fixed: 1030;
+  --y-zindex-modal-backdrop: 1040;
+  --y-zindex-modal: 1050;
+  --y-zindex-popover: 1060;
+  --y-zindex-tooltip: 1070;
+  --y-zindex-toast: 1080;
+  --y-zindex-max: 1090;
+}

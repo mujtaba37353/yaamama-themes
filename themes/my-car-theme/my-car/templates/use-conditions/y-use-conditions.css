@@ -1,0 +1,283 @@
+.y-l-additions-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+.y-l-summary-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+/* ========== Info Boxes ========== */
+.y-l-info-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-info-box {
+    padding: var(--y-spacing-md);
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-info-box--delivery {
+    background-color: var(--y-color-warning);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-info-box--pickup {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-info-box-header {
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-lg);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+.y-c-info-box-body p {
+    font-size: var(--y-font-size-md);
+    margin: 0;
+}
+
+.y-c-info-box-body .y-c-info-location {
+    font-weight: var(--y-font-weight-semibold);
+}
+
+/* ========== Additions List ========== */
+.y-l-additions-list {
+    background-color: var(--y-color-background-light);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-lg);
+}
+
+.y-c-section-title {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-addition-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--y-spacing-md) 0;
+    border-bottom: var(--y-border-width-xs) solid var(--y-color-border);
+    cursor: default;
+}
+
+.y-c-addition-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.y-c-addition-item:first-of-type {
+    padding-top: 0;
+}
+
+.y-c-addition-info {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-addition-icon {
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-primary);
+    width: var(--y-size-30);
+    text-align: center;
+}
+
+.y-c-addition-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    display: block;
+}
+
+.y-c-addition-desc {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+}
+
+.y-c-addition-price {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-addition-checkbox {
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    accent-color: var(--y-color-primary);
+}
+
+.y-c-addition-checkbox:disabled {
+    accent-color: var(--y-color-border);
+}
+
+/* ========== use-conditions Table ========== */
+.y-c-use-conditions-table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.y-c-use-conditions-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-use-conditions-table th,
+.y-c-use-conditions-table td {
+    padding: var(--y-spacing-md) var(--y-spacing-sm);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.y-c-use-conditions-table th {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-use-conditions-table td {
+    color: var(--y-color-primary-text);
+}
+
+.y-c-use-conditions-table tbody tr:hover {
+    background-color: var(--y-color-hero-form);
+}
+
+/* ========== Summary Section ========== */
+.y-c-total-price-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: var(--y-spacing-md);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-total-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+.y-c-total-amount {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+.y-c-total-amount span {
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-summary-notes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.y-c-summary-notes li {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-sm);
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-summary-notes li img {
+    width: var(--y-size-16);
+    height: var(--y-size-16);
+    object-fit: contain;
+}
+
+.y-c-terms-agree,
+.y-c-notes-section {
+    flex: 1;
+    margin-top: var(--y-spacing-lg);
+}
+
+.y-c-terms-agree label,
+.y-c-notes-section label {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    cursor: pointer;
+}
+
+.y-l-notes-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--y-spacing-2xl);
+}
+
+.y-c-notes-textarea {
+    display: none;
+    width: 100%;
+    min-height: var(--y-size-80);
+    margin-top: var(--y-spacing-sm);
+    padding: var(--y-spacing-sm);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    font-family: var(--y-font-family-primary);
+    font-size: var(--y-font-size-sm);
+    resize: vertical;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .y-l-info-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-use-conditions-table-container {
+        overflow-x: auto;
+    }
+
+    .y-c-use-conditions-table {
+        font-size: var(--y-font-size-xs);
+    }
+
+    .y-l-notes-row {
+        flex-direction: column;
+        width: var(--y-width-percentage-full);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-addition-info {
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-addition-title {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-addition-price {
+        font-size: var(--y-font-size-md);
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-total-title {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-total-amount {
+        font-size: var(--y-font-size-xl);
+    }
+}

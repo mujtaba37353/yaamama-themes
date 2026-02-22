@@ -1,0 +1,14 @@
+.y-l-privacy-content {
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    padding: 0 var(--y-spacing-md);
+    color: var(--y-color-primary-text);
+}
+
+p {
+    cursor: default;
+}
+
+p:last-child {
+    margin-bottom: var(--y-spacing-3xl);
+}

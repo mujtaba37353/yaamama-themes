@@ -1,0 +1,15 @@
+{
+    "template": "signup",
+    "slots": {
+        "page-title": "title",
+        "signup-form": "[data-y='signup-form']",
+        "email-input": "[data-y='email-input']",
+        "password-input": "[data-y='password-input']",
+        "confirm-password-input": "[data-y='confirm-password-input']",
+        "remember-me-checkbox": "[data-y='remember-me-checkbox']",
+        "signup-btn": "[data-y='signup-btn']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

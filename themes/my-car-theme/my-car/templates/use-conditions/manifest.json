@@ -1,0 +1,31 @@
+{
+    "template": "use-conditions",
+    "description": "use-conditions and Terms of Use page for checkout process",
+    "slots": {
+        "page-title": "Page title",
+        "header-placeholder": "Header component placeholder",
+        "use-conditions-main": "Main content area",
+        "use-conditions-stepper": "Checkout step navigator",
+        "step-search": "Search step",
+        "step-additions": "Add-ons step",
+        "step-terms": "Terms step (active)",
+        "step-payment": "Payment step",
+        "step-confirmation": "Confirmation step",
+        "use-conditions-layout": "Main layout grid",
+        "use-conditions-content": "Main content column (left)",
+        "info-boxes": "Container for delivery/pickup info",
+        "delivery-box": "Delivery info box",
+        "pickup-box": "Pickup info box",
+        "car-details-card": "Card showing selected car details",
+        "additions-list": "List of selected additions",
+        "summary-sidebar": "Sidebar for summary and confirmation (right)",
+        "use-conditions-table-container": "Container for the pricing table",
+        "final-summary": "Container for the final price and confirmation",
+        "confirm-button": "Button to proceed to payment"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

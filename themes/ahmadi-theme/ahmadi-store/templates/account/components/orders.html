@@ -1,0 +1,139 @@
+<div class="y-c-orders-wrapper">
+    <div class="y-c-orders-container" data-y="orders-list-view">
+        <table class="y-c-orders-table" data-y='orders-table'>
+            <thead>
+                <tr>
+                    <th>الطلب</th>
+                    <th>التاريخ</th>
+                    <th>الحالة</th>
+                    <th>الإجمالي</th>
+                    <th>إجراءات</th>
+                </tr>
+            </thead>
+            <tbody data-y-slot='orders-list'>
+                <tr data-y='order-item'>
+                    <td data-y='order-number' class="y-c-text-primary">#2863</td>
+                    <td data-y='order-date'>1 سبتمبر, 2025</td>
+                    <td data-y='order-status'>ناجحة</td>
+                    <td data-y='order-total'>506.00 ر.س لـ 3 عناصر</td>
+                    <td class="y-c-order-actions">
+                        <button class="y-c-btn-action" data-y='view-order-btn'
+                            onclick="document.querySelector('[data-y=orders-list-view]').style.display='none'; document.querySelector('[data-y=order-details-view]').style.display='block'">عرض</button>
+                    </td>
+                </tr>
+
+                <tr data-y='order-item'>
+                    <td data-y='order-number' class="y-c-text-primary">#2864</td>
+                    <td data-y='order-date'>2 سبتمبر, 2025</td>
+                    <td data-y='order-status'>ناجحة</td>
+                    <td data-y='order-total'>400.00 ر.س لـ 2 عناصر</td>
+                    <td class="y-c-order-actions">
+                        <button class="y-c-btn-action" data-y='view-order-btn'
+                            onclick="document.querySelector('[data-y=orders-list-view]').style.display='none'; document.querySelector('[data-y=order-details-view]').style.display='block'">عرض</button>
+                    </td>
+                </tr>
+
+                <tr data-y='order-item'>
+                    <td data-y='order-number' class="y-c-text-primary">#2865</td>
+                    <td data-y='order-date'>3 سبتمبر, 2025</td>
+                    <td data-y='order-status'>فاشلة</td>
+                    <td data-y='order-total'>350.00 ر.س لـ 2 عناصر</td>
+                    <td class="y-c-order-actions">
+                        <button class="y-c-btn-action" data-y='pay-order-btn'>الدفع</button>
+                        <button class="y-c-btn-action" data-y='view-order-btn'
+                            onclick="document.querySelector('[data-y=orders-list-view]').style.display='none'; document.querySelector('[data-y=order-details-view]').style.display='block'">عرض</button>
+                        <button class="y-c-btn-action" data-y='cancel-order-btn'>الغاء</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div data-y="order-details-view" style="display: none;">
+        <div style="text-align: right;">
+            <button class="y-c-view-btn"
+                onclick="document.querySelector('[data-y=orders-list-view]').style.display='block'; document.querySelector('[data-y=order-details-view]').style.display='none'"
+                style="margin-bottom: 20px;" data-y="back-to-orders-btn">
+                <i class="fa-solid fa-arrow-right"></i> عودة للطلبات
+            </button>
+        </div>
+
+        <h2 class="y-c-section-header-lg" style="text-align: center;" data-y="order-details-title">تفاصيل الطلب</h2>
+        <p style="text-align: center; margin-bottom: 30px; color: var(--y-color-primary-text);">
+            تم تقديم الطلب #<span data-y="order-id">23434</span> في <span data-y="order-date">نوفمبر 17,2025</span> وهو
+            الآن
+            بحالة <span data-y="order-status">قيد التنفيذ</span>
+        </p>
+
+        <div class="y-c-order-details-card" data-y="order-details-card">
+
+            <div class="y-c-receipt-row header">
+                <div class="y-c-receipt-label">المنتج</div>
+                <div class="y-c-receipt-label">الإجمالي</div>
+            </div>
+
+            <div data-y="order-items-list">
+                <div class="y-c-receipt-row" data-y="order-item-row">
+                    <div class="y-c-receipt-value" data-y="item-name">صندل كعب</div>
+                    <div class="y-c-receipt-value" data-y="item-price">100 <img src="../../../assets/coin.png" alt="ر.س"
+                            style="width: 16px; height: 16px; vertical-align: middle;"></div>
+                </div>
+                <div class="y-c-receipt-row" data-y="order-item-row">
+                    <div class="y-c-receipt-value" data-y="item-name">كوتش رباط</div>
+                    <div class="y-c-receipt-value" data-y="item-price">100 <img src="../../../assets/coin.png" alt="ر.س"
+                            style="width: 16px; height: 16px; vertical-align: middle;"></div>
+                </div>
+                <div class="y-c-receipt-row" data-y="order-item-row">
+                    <div class="y-c-receipt-value" data-y="item-name">شنطة يد</div>
+                    <div class="y-c-receipt-value" data-y="item-price">100 <img src="../../../assets/coin.png" alt="ر.س"
+                            style="width: 16px; height: 16px; vertical-align: middle;"></div>
+                </div>
+                <div class="y-c-receipt-row" data-y="order-item-row">
+                    <div class="y-c-receipt-value" data-y="item-name">شنطة ظهر</div>
+                    <div class="y-c-receipt-value" data-y="item-price">100 <img src="../../../assets/coin.png" alt="ر.س"
+                            style="width: 16px; height: 16px; vertical-align: middle;"></div>
+                </div>
+            </div>
+
+            <div class="y-c-receipt-row">
+                <div class="y-c-receipt-label">المجموع :</div>
+                <div class="y-c-receipt-value" data-y="order-subtotal">500 <img src="../../../assets/coin.png" alt="ر.س"
+                        style="width: 16px; height: 16px; vertical-align: middle;"></div>
+            </div>
+
+            <div class="y-c-receipt-row">
+                <div class="y-c-receipt-label">ضريبة مضافة :</div>
+                <div class="y-c-receipt-value" data-y="order-tax">20 <img src="../../../assets/coin.png" alt="ر.س"
+                        style="width: 16px; height: 16px; vertical-align: middle;"></div>
+            </div>
+
+            <div class="y-c-receipt-row">
+                <div class="y-c-receipt-label">الإجمالي :</div>
+                <div class="y-c-receipt-value" style="font-weight: bold; color: #000;" data-y="order-total">520 <img
+                        src="../../../assets/coin.png" alt="ر.س"
+                        style="width: 16px; height: 16px; vertical-align: middle;">
+                </div>
+            </div>
+
+            <div class="y-c-receipt-row">
+                <div class="y-c-receipt-label">وسيلة الدفع :</div>
+                <div class="y-c-receipt-value" data-y="payment-method">الدفع نقدا عند الاستلام</div>
+            </div>
+
+            <div class="y-c-receipt-billing" data-y="order-billing-info">
+                <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: var(--y-color-primary-text);">
+                    عنوان
+                    الفاتورة</h3>
+                <div>
+                    <p data-y="billing-name">عبدالله محمد</p>
+                    <p data-y="billing-address">345 الهادي</p>
+                    <p data-y="billing-city">المدينة المنورة</p>
+                    <p style="font-family: sans-serif;" data-y="billing-zip">128475</p>
+                    <p style="font-family: sans-serif;" data-y="billing-phone">05673948</p>
+                    <p style="font-family: sans-serif;" data-y="billing-email">abd@gmail.com</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,284 @@
+/* ============================================= */
+/* --- Form Layout & Helpers --- */
+/* ============================================= */
+
+/* Section wrapper for forms */
+.y-l-contact-section {
+    max-width: 100%;
+    margin: var(--y-spacing-md) auto;
+    background-color: var(--y-color-background);
+    /* Default light bg for contact page */
+}
+
+/* Container for 2-column contact layout */
+.y-l-contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--y-spacing-4xl);
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    padding: 0 var(--y-spacing-lg);
+}
+
+/* Contact page logo */
+.y-c-contact-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.y-c-contact-logo img {
+    width: var(--y-width-percentage-full);
+    height: auto;
+    object-fit: contain;
+}
+
+/* Contact page form wrapper */
+.y-l-contact-form {
+    width: var(--y-width-percentage-full);
+}
+
+.y-c-form-title {
+    font-size: clamp(var(--y-font-size-2xl), 4vw, var(--y-font-size-2xl));
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-md);
+    line-height: var(--y-line-height-sm);
+}
+
+.y-c-form-description {
+    font-size: clamp(var(--y-font-size-md), 2.5vw, var(--y-font-size-lg));
+    color: var(--y-color-primary-text);
+    opacity: var(--y-opacity-primary);
+    margin-bottom: var(--y-spacing-2xl);
+    line-height: var(--y-line-height-lg);
+    max-width: var(--y-size-600);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Form Group: A label and its input */
+.y-c-form-group {
+    margin-bottom: var(--y-spacing-lg);
+    position: relative;
+}
+
+/* Form Row: For placing inputs side-by-side */
+.y-c-form-row {
+    display: flex;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-form-field {
+    flex: var(--y-value-1);
+    min-width: var(--y-width-input-lg);
+    position: relative;
+}
+
+/* Password wrapper for toggle functionality */
+.y-l-password-wrapper {
+    position: relative;
+}
+
+/* Ensure password wrapper works correctly within form fields and form groups */
+.y-c-form-field.y-l-password-wrapper,
+.y-c-form-group.y-l-password-wrapper {
+    position: relative;
+}
+
+
+/* ============================================= */
+/* --- Form Elements --- */
+/* ============================================= */
+
+/* Form Labels */
+.y-c-form-label {
+    display: block;
+    text-align: right;
+    margin-top: var(--y-spacing-xl);
+    margin-bottom: var(--y-spacing-xs);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    font-size: var(--y-font-size-sm);
+    line-height: var(--y-line-height-md);
+}
+
+/* Required asterisk */
+.y-c-required {
+    color: var(--y-color-error);
+    font-size: var(--y-font-size-md);
+    margin-right: var(--y-spacing-xxs);
+}
+
+/* General Form Inputs (used for contact, login, etc.) */
+.y-c-form-input {
+    width: var(--y-width-percentage-full);
+    padding: var(--y-spacing-xs) var(--y-spacing-md);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    font-size: var(--y-font-size-md);
+    font-family: var(--y-font-family-primary);
+    color: var(--y-color-primary-text);
+    /* Default dark bg text */
+    background-color: var(--y-color-background);
+    /* Default light bg */
+    transition: border-color var(--y-transition-fast), box-shadow var(--y-transition-fast);
+    box-sizing: border-box;
+    outline: none;
+    direction: rtl;
+    margin-top: var(--y-spacing-xxs);
+}
+
+.y-c-form-input:focus {
+    border-color: var(--y-color-primary);
+}
+
+/* Textarea specific styling */
+textarea.y-c-form-input {
+    min-height: var(--y-size-120);
+}
+
+/* Autocomplete/Autofill styles */
+.y-c-form-input:-webkit-autofill,
+.y-c-form-input:-webkit-autofill:hover,
+.y-c-form-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--y-color-primary-text);
+    /* Default dark bg text */
+    transition: background-color 5000s ease-in-out var(--y-value-0);
+}
+
+/* ============================================= */
+/* --- Light Background Form Overrides --- */
+/* ============================================= */
+/* Scopes styles for forms on a light background like the contact page */
+
+.y-l-contact-form .y-c-form-title,
+.y-l-contact-form .y-c-form-label {
+    color: var(--y-color-primary-text);
+    /* Black text */
+}
+
+.y-l-contact-form .y-c-form-input {
+    background-color: var(--y-color-background-light);
+    /* White background */
+    color: var(--y-color-primary-text);
+    /* Black text */
+    border: var(--y-border-width-xs) solid var(--y-color-border-blured);
+    /* Subtle border */
+}
+
+.y-l-contact-form .y-c-form-input:focus {
+    border-color: var(--y-color-error);
+    /* Brand red for focus */
+    box-shadow: var(--y-value-0) var(--y-value-0) var(--y-value-0) var(--y-outline-thin) rgba(103, 0, 26, var(--y-opacity-semitransparent));
+    /* Faint red shadow */
+}
+
+/* Override autofill for light background */
+.y-l-contact-form .y-c-form-input:-webkit-autofill,
+.y-l-contact-form .y-c-form-input:-webkit-autofill:hover,
+.y-l-contact-form .y-c-form-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--y-color-primary-text);
+    -webkit-box-shadow: var(--y-value-0) var(--y-value-0) var(--y-value-0) var(--y-spacing-xl) var(--y-color-background-light) inset !important;
+}
+
+/* Specific button layout for contact form */
+.y-l-contact-form {
+    text-align: right;
+    margin-top: var(--y-spacing-md);
+}
+
+/* ============================================= */
+/* --- Form States & Validation --- */
+/* ============================================= */
+.y-c-form-input.error,
+textarea.y-c-form-input.error {
+    border-color: var(--y-color-error);
+}
+
+.y-c-form-input.success,
+textarea.y-c-form-input.success {
+    border-color: var(--y-color-success);
+}
+
+.y-c-form-error {
+    color: var(--y-color-error);
+    font-size: var(--y-font-size-sm);
+    margin-top: var(--y-spacing-xs);
+    display: none;
+    line-height: var(--y-line-height-md);
+    font-weight: var(--y-font-weight-regular);
+    /* Changed from medium */
+    text-align: right;
+}
+
+.y-c-form-error.show {
+    display: block;
+    animation: errorFadeIn 0.3s ease-in;
+    /* Use transition-default duration without 'all' */
+}
+
+@keyframes errorFadeIn {
+    from {
+        opacity: var(--y-value-0);
+        transform: translateY(-var(--y-spacing-xs));
+    }
+
+    to {
+        opacity: var(--y-value-1);
+        transform: translateY(var(--y-value-0));
+    }
+}
+
+/* ============================================= */
+/* --- Responsive Styles --- */
+/* ============================================= */
+
+@media (max-width: 768px) {
+    .y-c-form-group {
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    /* Contact Page Responsive */
+    .y-l-contact-section {
+        padding: var(--y-spacing-2xl) 0;
+    }
+
+    .y-l-contact-container {
+        grid-template-columns: 1fr;
+        /* Stack columns */
+        gap: var(--y-spacing-2xl);
+        padding: 0 var(--y-spacing-md);
+    }
+
+    .y-c-contact-logo {
+        order: 1;
+        /* Logo first */
+    }
+
+    .y-l-contact-form {
+        order: 2;
+        /* Form second */
+    }
+
+    .y-l-contact-form .y-c-form-title {
+        text-align: center;
+        font-size: var(--y-font-size-3xl);
+    }
+
+    .y-c-contact-logo img {
+        max-width: var(--y-size-250);
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-form-row {
+        flex-direction: column;
+        gap: var(--y-value-0);
+    }
+
+    .y-c-form-row .y-c-form-field {
+        min-width: var(--y-width-percentage-full);
+    }
+}

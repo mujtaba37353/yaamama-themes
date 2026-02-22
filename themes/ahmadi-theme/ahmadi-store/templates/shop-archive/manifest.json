@@ -1,0 +1,15 @@
+{
+    "template": "shop-archive",
+    "slots": {
+        "results-start": "[data-y='results-start']",
+        "results-end": "[data-y='results-end']",
+        "results-total": "[data-y='results-total']",
+        "product-grid": "[data-y='product-grid']",
+        "pagination": "[data-y='pagination']"
+    },
+    "js": [
+        "shared-components.js",
+        "products.js",
+        "shopping.js"
+    ]
+}

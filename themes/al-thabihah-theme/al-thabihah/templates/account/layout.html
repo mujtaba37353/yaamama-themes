@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>حسابي - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <link rel="stylesheet" href="./y-account.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-account-page">
+        <div class="y-l-account-container" data-y="account-container">
+
+            <aside class="y-l-account-sidebar" data-y="account-sidebar">
+
+                <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                    <p>
+                        <a href="../home/layout.html">الرئيسية</a>
+                        <span>></span>
+                        <span data-y="bc-current">حسابي</span>
+                    </p>
+                </nav>
+
+                <div class="y-c-profile-card" data-y="profile-card">
+
+                    <div class="y-c-profile-text" data-y="profile-name-container">
+                        <p class="y-c-profile-greeting" data-y="profile-greeting">أهلاً،</p>
+                        <p data-y="profile-name-text">محمد حسين الهاشمي</p>
+                    </div>
+
+                </div>
+
+                <nav class="y-c-account-nav" data-y="account-nav">
+                    <a href="#" id="account-details-link" class="y-c-nav-tab y-c-active" data-y="nav-tab-details">
+                        البيانات الشخصية
+                    </a>
+
+                    <a href="#" id="address-link" class="y-c-nav-tab" data-y="nav-tab-address">
+                        عنوانى
+                    </a>
+
+                    <a href="#" id="favorites-link" class="y-c-nav-tab" data-y="nav-tab-favorites">
+                        المفضلة
+                    </a>
+
+                    <a href="#" id="orders-link" class="y-c-nav-tab" data-y="nav-tab-orders">
+                        الطلبات
+                    </a>
+
+                    <a href="#" id="notifications-link" class="y-c-nav-tab" data-y="nav-tab-notifications">
+                        الإشعارات
+                    </a>
+
+                    <a href="../login/layout.html" class="y-c-nav-tab y-c-nav-tab--logout" data-y="nav-tab-logout">
+                        تسجيل الخروج
+                        <i class="fas fa-sign-out-alt"></i>
+                    </a>
+                </nav>
+            </aside>
+
+            <section class="y-l-account-content" data-y="account-content-area">
+                <div id="account-details-content" class="y-c-content-section active"></div>
+                <div id="address-content" class="y-c-content-section"></div>
+                <div id="favorites-content" class="y-c-content-section"></div>
+                <div id="orders-content" class="y-c-content-section"></div>
+                <div id="notifications-content" class="y-c-content-section"></div>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/global-validation.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/account.js"></script>
+</body>
+
+</html>

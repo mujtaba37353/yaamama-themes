@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beauty Time</title>
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="stylesheet" href="../../base/reset.css" />
+    <link rel="stylesheet" href="../../base/tokens.css" />
+    <link rel="icon" href="../../assets/icon.png" />
+    <link rel="stylesheet" href="../../base/utilities.css" />
+    <link rel="stylesheet" href="../../base/typography.css" />
+    <link rel="stylesheet" href="../../components/header.css" />
+    <link rel="stylesheet" href="../../components/footer.css" />
+    <link rel="stylesheet" href="../../components/toggle.css" />
+    <link rel="stylesheet" href="../../components/panner.css" />
+    <link rel="stylesheet" href="../../components/products.css" />
+    <link rel="stylesheet" href="../../components/buttons.css" />
+
+    <link rel="stylesheet" href="./process.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <y-navbar></y-navbar>
+
+    <main>
+        <section class="panner">
+            <p><a href="../layout/index.html">الرئيسية</a> / حسابي</p>
+        </section>
+
+        <section class="profile-section">
+            <div class="container y-u-max-w-1200">
+                <div class="content">
+                    <div class="success-content">
+                        <div class="appointment-confirmation">
+                            <div class="celebration-icon">🎉</div>
+                            <h2 class="congratulations">تهانينا!</h2>
+                            <p class="appointment-id">رقم معرف الموعد <strong id="appointment-id">#411</strong></p>
+
+                            <div class="appointment-details">
+                                <div class="details-column labels-column">
+                                    <p>التاريخ:</p>
+                                    <p>الوقت المحلي:</p>
+                                    <p>الخدمات:</p>
+                                    <p>الموظف:</p>
+                                    <div class="divider"></div>
+                                    <p>الاسم:</p>
+                                    <p>رقم الهاتف:</p>
+                                </div>
+                                <div class="details-column values-column">
+                                    <p id="appointment-date">نوفمبر 10, 2025</p>
+                                    <p id="appointment-time">12:00 م</p>
+                                    <p id="appointment-service">العناية بالأظافر</p>
+                                    <p id="appointment-employee">Beauty Salon</p>
+                                    <div class="divider"></div>
+                                    <p id="appointment-name">صبا</p>
+                                    <p id="appointment-phone">+966509096788</p>
+                                </div>
+                            </div>
+
+                            <div class="appointment-footer">
+                                <button class="btn btn-primary" onclick="window.location.href='../layout/index.html'">
+                                    العودة للرئيسية
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <y-footer></y-footer>
+
+    <script src="../../js/y-app-init.js"></script>
+
+</body>
+
+</html>

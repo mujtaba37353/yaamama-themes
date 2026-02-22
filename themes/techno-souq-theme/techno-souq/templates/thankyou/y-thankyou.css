@@ -1,0 +1,130 @@
+/* =================================================================
+   Thank You Page Styles
+   ================================================================= */
+
+.y-l-thankyou-container {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--y-spacing-xl);
+    background-color: var(--y-color-background);
+}
+
+.y-c-thankyou-card {
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-4xl) var(--y-spacing-3xl);
+    text-align: center;
+    box-shadow: var(--y-shadow-lg);
+    max-width: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-2xl);
+}
+
+.y-c-thankyou-icon {
+    font-size: 5rem;
+    color: var(--y-color-success);
+    line-height: 1;
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-thankyou-icon i {
+    display: block;
+}
+
+.y-c-thankyou-title {
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0;
+    line-height: var(--y-line-height-md);
+}
+
+.y-c-thankyou-btn {
+    width: 100%;
+    max-width: 400px;
+    padding: var(--y-spacing-md) var(--y-spacing-2xl);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    border-radius: var(--y-border-radius-sm);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-thankyou-btn:hover {
+    background-color: var(--y-color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--y-shadow-md);
+}
+
+/* Hide default WooCommerce thankyou content */
+.woocommerce-order-overview,
+.woocommerce-order-details,
+.woocommerce-order-details__title,
+.woocommerce-order-downloads,
+.woocommerce-order-downloads__title,
+.woocommerce-customer-details,
+.woocommerce-customer-details__title,
+.woocommerce-order,
+.woocommerce-order > *:not(.y-l-thankyou-container),
+.woocommerce-thankyou-order-details,
+.woocommerce-order-overview,
+.woocommerce-order-overview__order,
+.woocommerce-order-overview__date,
+.woocommerce-order-overview__email,
+.woocommerce-order-overview__total,
+.woocommerce-order-overview__payment-method {
+    display: none !important;
+}
+
+/* Show only our custom content */
+.y-l-thankyou-container {
+    display: flex !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .y-l-thankyou-container {
+        padding: var(--y-spacing-lg);
+        min-height: calc(100vh - 150px);
+    }
+
+    .y-c-thankyou-card {
+        padding: var(--y-spacing-3xl) var(--y-spacing-xl);
+        gap: var(--y-spacing-xl);
+    }
+
+    .y-c-thankyou-icon {
+        font-size: 4rem;
+    }
+
+    .y-c-thankyou-title {
+        font-size: var(--y-font-size-2xl);
+    }
+
+    .y-c-thankyou-btn {
+        font-size: var(--y-font-size-md);
+        padding: var(--y-spacing-sm) var(--y-spacing-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-thankyou-card {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    }
+
+    .y-c-thankyou-icon {
+        font-size: 3.5rem;
+    }
+
+    .y-c-thankyou-title {
+        font-size: var(--y-font-size-xl);
+    }
+}

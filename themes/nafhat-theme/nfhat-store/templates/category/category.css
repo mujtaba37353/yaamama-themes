@@ -1,0 +1,76 @@
+.filter .left button {
+  padding: var(--y-space-8) var(--y-space-16);
+  cursor: pointer;
+  color: var(--y-color-muted);
+  appearance: none;
+  font-weight: var(--y-text-bold);
+}
+.filter .left button.active {
+  border-bottom: 4px solid var(--y-color-primary);
+  font-weight: var(--y-text-bold);
+}
+.filter .left button:hover {
+  background: var(--y-color-fg);
+}
+
+.filter .filtration-button {
+  position: relative;
+}
+
+.filter-dropdown .filter-summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.filter-dropdown .filter-summary::-webkit-details-marker {
+  display: none;
+}
+
+.filtration-button > .filter-dropdown > .filter-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  z-index: 99;
+  background: var(--y-color-primary);
+  border-radius: var(--y-radius-12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.filter-dropdown .filter-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  padding: var(--y-space-16);
+  color: white;
+}
+
+.filter-menu .filter-dropdown .filter-menu {
+  padding-left: var(--y-space-16);
+  border-radius: var(--y-radius-8);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.filter-dropdown .filter-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.filter-dropdown[open] > .filter-summary img {
+  transform: rotate(180deg);
+}
+
+@media (max-width: 575px) {
+  .filter {
+    flex-direction: column-reverse;
+    gap: var(--y-space-16);
+    align-items: flex-start;
+  }
+  .filter .left {
+    flex-wrap: wrap;
+  }
+  .filter-dropdown .filter-menu {
+    right: 0;
+    left: auto;
+  }
+}

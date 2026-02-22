@@ -1,0 +1,97 @@
+.y-l-contact-us-content {
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    padding: var(--y-spacing-lg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--y-spacing-2xl);
+}
+
+.y-l-contact-us-form-header {
+    max-width: var(--y-max-width-default);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    color: var(--y-color-primary);
+    margin: auto;
+    padding: var(--y-spacing-lg);
+}
+
+.y-l-contact-us-info {
+    flex: 1;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-secondary-text);
+    background-color: var(--y-color-primary);
+    padding: var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-lg);
+}
+
+.y-l-contact-us-info span {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    cursor: default;
+}
+
+.y-l-contact-us-info a {
+    color: var(--y-color-secondary-text);
+}
+
+.y-l-contact-us-cards {
+    width: var(--y-width-percentage-xl);
+    margin: var(--y-spacing-2xl) auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--y-spacing-md);
+}
+
+.y-l-active-time {
+    max-width: var(--y-max-width-default);
+    margin: var(--y-spacing-3xl) auto;
+    padding: var(--y-spacing-lg) var(--y-spacing-md);
+    color: var(--y-color-primary);
+    text-align: center;
+}
+
+/* Map block */
+.y-c-map-container {
+    height: 40vh;
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    object-fit: cover;
+    background-image: url('/assets/map.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* map card link styles moved to components/y-cards.css */
+
+@media (max-width: 768px) {
+    .y-l-contact-us-content {
+        flex-direction: column;
+    }
+
+    .y-l-contact-us-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .y-l-contact-us-cards div {
+        max-width: var(--y-size-image-lg);
+    }
+
+    .y-c-map-container {
+        height: 20vh;
+        width: 100%;
+        background-size: cover;
+    }
+}

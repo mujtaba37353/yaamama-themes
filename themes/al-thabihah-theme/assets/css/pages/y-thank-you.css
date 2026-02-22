@@ -1,0 +1,155 @@
+/* مودال نجاح الطلب – تصميم من al-thabihah/templates */
+
+/* إخفاء عنوان الصفحة وإشعارات WooCommerce عند عرض المودال – عرض المودال فقط */
+body.y-order-success-modal .y-c-page-title,
+body.y-order-success-modal .y-c-woo-notices {
+    display: none;
+}
+
+/* Wrapper المودال – overlay كامل الشاشة مع توسيط المحتوى */
+.y-c-order-success-modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    padding: var(--y-spacing-xl);
+    box-sizing: border-box;
+}
+
+/* الخلفية المعتمة */
+.y-c-order-success-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+/* الصندوق الأبيض – توسيط المحتوى في الوسط (صندوق واحد لجميع العناصر) */
+.y-c-order-success-card {
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff !important;
+    padding: var(--y-spacing-3xl);
+    border-radius: var(--y-border-radius-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--y-spacing-xl);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border: var(--y-border-width-thin, 1px) solid var(--y-color-border, #eee);
+    max-width: 440px;
+    width: 100%;
+    margin: auto;
+    animation: yOrderSuccessFadeIn 0.3s ease-out;
+}
+
+@keyframes yOrderSuccessFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* أيقونة النجاح – دائرة خضراء كبيرة مع علامة صح بيضاء (كما في ملفات التصميم) */
+.y-c-order-success-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #2e7d32;
+    color: #ffffff !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.y-c-order-success-icon i {
+    font-size: 3.5rem !important;
+    color: #ffffff !important;
+}
+
+/* العنوان */
+.y-c-order-success-title {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* زر العودة للرئيسية – في وسط الصندوق فقط (تجاوز y-c-outline-btn الذي يجعله full width) */
+.y-c-order-success-card .y-c-order-success-btn.y-c-outline-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: var(--y-spacing-sm) var(--y-spacing-xl);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    line-height: 1.25;
+    border-width: var(--y-border-width-sm);
+    border-color: var(--y-color-error, #8b0000);
+    color: var(--y-color-error, #8b0000);
+    background-color: var(--y-color-btn, #f5f0eb);
+    border-radius: var(--y-border-radius-md);
+    text-decoration: none;
+    white-space: nowrap;
+    width: auto !important;
+    min-width: 180px;
+    max-width: 280px;
+    transition: var(--y-transition-default);
+}
+
+.y-c-order-success-card .y-c-order-success-btn:hover {
+    background-color: var(--y-color-error, #8b0000);
+    color: #ffffff;
+}
+
+/* حالة فشل الطلب – صفحة الخطأ مع صندوق أبيض في الوسط */
+.y-l-thankyou-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: var(--y-spacing-2xl);
+}
+
+.y-l-thankyou-page .y-u-container {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.y-l-thankyou-page .y-c-thankyou-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding: var(--y-spacing-3xl);
+    border-radius: var(--y-border-radius-lg);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border: var(--y-border-width-thin) solid var(--y-color-border);
+}
+
+.y-c-thankyou-icon.y-c-icon-error {
+    background-color: rgba(139, 0, 0, 0.12);
+    color: var(--y-color-error);
+}
+
+.y-c-thankyou-icon.y-c-icon-error i {
+    font-size: 2.5rem;
+}

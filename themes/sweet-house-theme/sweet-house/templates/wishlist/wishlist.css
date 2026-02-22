@@ -1,0 +1,22 @@
+.wishlist-page .wishlist-btn i {
+  font-weight: 800 !important;
+  color: var(--y-color-btn);
+}
+
+.wishlist-btn i {
+  font-weight: 800 !important;
+}
+
+@media (max-width: 820px) {
+  .wishlist-page .wishlist-btn i,
+  .wishlist-btn i {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wishlist-page .wishlist-btn i,
+  .wishlist-btn i {
+    font-size: 16px;
+  }
+}

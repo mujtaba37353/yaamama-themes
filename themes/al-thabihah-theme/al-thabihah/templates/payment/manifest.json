@@ -1,0 +1,25 @@
+{
+    "template": "payment",
+    "slots": {
+        "page-title": "Page title for Payment",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "payment-main": "Main content area for payment page",
+        "breadcrumbs": "Breadcrumbs navigation",
+        "bc-current": "Current page breadcrumb",
+        "contact-form-section": "Contact information form section",
+        "payment-form-section": "Payment information form section",
+        "payment-method-section": "Payment method selection",
+        "card-details-form": "Credit card details input form",
+        "order-summary-sidebar": "Sidebar showing cart items and totals",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script",
+        "products-script": "Products data and utility script",
+        "payment-script": "Payment page specific logic"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/payment.js"
+    ]
+}

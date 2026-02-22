@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">حسابي</title>
+    <link rel="Icon" type="image/png" href="/assets/Frame 5.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-popup.css">
+
+    <link rel="stylesheet" href="y-account.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="account-main">
+
+        <section class="y-l-container" data-y="account-container">
+            <h1 data-y="account-page-title">حسابي</h1>
+            <p class="y-c-breadcrumb" data-y="account-breadcrumb"><a href="/templates/home/layout.html"
+                    data-y="breadcrumb-home">الرئيسية</a><span data-y="breadcrumb-separator"> > </span>حسابي</p>
+
+            <h3 class="y-c-header-title" data-y="account-header-title">حسابي</h3>
+            <section class="y-c-Profile-container" data-y="account-profile-container">
+                <div class="y-c-Profile-menu" data-y="profile-menu" data-y-slot="menu-links">
+                    <a href="#" id="account-details-link" data-title="تفاصيل الحساب" data-y="account-details-link">
+                        <p>تفاصيل الحساب</p>
+                    </a>
+                    <a href="#" id="orders-link" data-title="الطلبات" data-y="orders-link">
+                        <p>الطلبات</p>
+                    </a>
+                    <a href="#" id="address-link" data-title="العنوان" data-y="address-link">
+                        <p>العنوان</p>
+                    </a>
+
+                    <a href="../login/layout.html" data-y="logout-link">
+                        <p data-y="logout-text">تسجيل خروج</p>
+                    </a>
+                </div>
+                <div class="y-c-Profile-info" id="profile-content-placeholder" data-y="profile-content-placeholder">
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="y-c-mobile-nav" data-y="mobile-nav">
+        <a href="#" id="mobile-account-details-link" data-title="تفاصيل الحساب" data-y="mobile-account-details-link"
+            class="y-c-mobile-nav-item y-c-active">
+            <i class="fas fa-user"></i>
+            <span>الحساب</span>
+        </a>
+        <a href="#" id="mobile-orders-link" data-title="الطلبات" data-y="mobile-orders-link"
+            class="y-c-mobile-nav-item">
+            <i class="fas fa-shopping-bag"></i>
+            <span>الطلبات</span>
+        </a>
+        <a href="#" id="mobile-address-link" data-title="العنوان" data-y="mobile-address-link"
+            class="y-c-mobile-nav-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>العنوان</span>
+        </a>
+        <a href="../login/layout.html" class="y-c-mobile-nav-item" data-y="mobile-logout-link">
+            <i class="fas fa-sign-out-alt" data-y="mobile-logout-icon"></i>
+            <span data-y="mobile-logout-text">خروج</span>
+        </a>
+    </nav>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/account.js"></script>
+</body>
+
+</html>

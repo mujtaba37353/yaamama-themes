@@ -1,0 +1,167 @@
+/* ============================================= */
+/* --- Auth Page Layout (Login/Signup) --- */
+/* ============================================= */
+
+/* Page wrapper with light gray background */
+.y-l-auth-page {
+    width: var(--y-width-percentage-full);
+    min-height: calc(100vh - var(--y-header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--y-spacing-3xl) var(--y-spacing-lg);
+    background-color: var(--y-color-background);
+}
+
+/* The centered white card */
+.y-c-auth-card {
+    width: var(--y-width-percentage-full);
+    max-width: var(--y-size-500);
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    box-shadow: var(--y-shadow-sm);
+    padding: var(--y-spacing-3xl) var(--y-spacing-2xl);
+    border: var(--y-border-width-xs) solid var(--y-color-border-blured);
+}
+
+.y-c-auth-card .y-c-form-title {
+    text-align: center;
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-xl);
+    font-size: var(--y-font-size-3xl);
+}
+
+/* ============================================= */
+/* --- Form Element Overrides --- */
+/* ============================================= */
+
+/* Use light-theme styles for labels and inputs */
+.y-c-auth-card .y-c-form-label {
+    color: var(--y-color-primary-text);
+}
+
+.y-c-auth-card .y-c-form-input {
+    background-color: var(--y-color-background-light);
+    color: var(--y-color-primary-text);
+    border: var(--y-border-width-xs) solid var(--y-color-border-blured);
+    margin-top: var(--y-spacing-xs);
+}
+
+.y-c-auth-card .y-c-form-input:focus {
+    border-color: var(--y-color-error);
+    box-shadow: var(--y-value-0) var(--y-value-0) var(--y-value-0) var(--y-outline-thin) rgba(103, 0, 26, var(--y-opacity-semitransparent));
+}
+
+.y-c-auth-card .y-c-form-input:-webkit-autofill,
+.y-c-auth-card .y-c-form-input:-webkit-autofill:hover,
+.y-c-auth-card .y-c-form-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--y-color-primary-text);
+    -webkit-box-shadow: var(--y-value-0) var(--y-value-0) var(--y-value-0) var(--y-spacing-xl) var(--y-color-background-light) inset !important;
+}
+
+/* Password Toggle Icon */
+.y-l-password-wrapper {
+    position: relative;
+    width: var(--y-width-percentage-full);
+}
+
+/* Ensure password wrapper works correctly within form fields */
+.y-c-form-field.y-l-password-wrapper,
+.y-c-form-group.y-l-password-wrapper {
+    position: relative;
+    width: var(--y-width-percentage-full);
+}
+
+/* Helper text for password reset */
+.y-c-form-description-small {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    text-align: right;
+    margin-top: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-lg);
+    line-height: var(--y-line-height-md);
+}
+
+
+/* Password toggle icon positioning */
+.y-l-password-wrapper .y-c-password-toggle {
+    position: absolute;
+    left: var(--y-spacing-md);
+    top: 55px;
+    cursor: pointer;
+    color: var(--y-color-border);
+    opacity: var(--y-opacity-secondary);
+    transition: var(--y-transition-fast);
+    z-index: var(--y-z-index-1);
+}
+
+.y-l-password-wrapper .y-c-password-toggle:hover {
+    opacity: var(--y-value-1);
+    color: var(--y-color-primary-text);
+}
+
+/* ============================================= */
+/* --- Links & Buttons --- */
+/* ============================================= */
+
+/* Forgot Password Link */
+.y-l-forgot-password {
+    text-align: right;
+    margin-bottom: var(--y-spacing-lg);
+    margin-top: calc(var(--y-spacing-sm) * -1);
+}
+
+.y-c-forgot-password-link {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary-text);
+    text-decoration: none;
+    transition: color var(--y-transition-fast);
+}
+
+.y-c-forgot-password-link:hover {
+    color: var(--y-color-error);
+    text-decoration: underline;
+}
+
+/* Submit Button (using the outline style from y-forms.css) */
+.y-c-auth-card .y-l-form-button {
+    text-align: center;
+    margin-top: var(--y-spacing-lg);
+}
+
+/* Switch between Login/Signup */
+.y-c-auth-switch {
+    text-align: center;
+    margin-top: var(--y-spacing-xl);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-auth-switch a {
+    color: var(--y-color-error);
+    font-weight: var(--y-font-weight-semibold);
+    text-decoration: none;
+    transition: color var(--y-transition-fast);
+}
+
+.y-c-auth-switch a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================= */
+/* --- Responsive --- */
+/* ============================================= */
+@media (max-width: 480px) {
+    .y-l-auth-page {
+        padding: var(--y-spacing-lg) var(--y-spacing-sm);
+        min-height: calc(100vh - var(--y-header-height-mobile, var(--y-size-80)));
+    }
+
+    .y-c-auth-card {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    }
+
+    .y-c-form-description-small {
+        font-size: var(--y-font-size-xs);
+    }
+}

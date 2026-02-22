@@ -1,0 +1,447 @@
+/* Remove panner top margin on checkout page */
+body.woocommerce-checkout .panner {
+  margin-top: 0;
+}
+
+#payment-method-group {
+  display: flex;
+    flex-direction: column;
+    gap: var(--y-space-14);
+    width: 100%;
+}
+
+.payment-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+}
+
+.payment-section form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  background: var(--y-color-fg);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+}
+.payment-section form .group-input {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+
+.payment-section h2 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  font-size: var(--y-space-20);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-text);
+}
+
+.payment-section input,
+.payment-section select,
+.payment-section textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-14);
+  color: var(--y-color-text);
+  transition: border-color var(--y-transition), box-shadow var(--y-transition);
+}
+
+.payment-section input:focus,
+.payment-section select:focus,
+.payment-section textarea:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+  outline: none;
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  width: -webkit-fill-available;
+  padding: var(--y-space-10);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  background-color: var(--y-color-bg);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-group:has(input[type="radio"]:checked) {
+  background-color: color-mix(in srgb, var(--y-color-primary) 20%, white);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-text);
+}
+
+
+
+
+.payment-section button,.payment-submit-btn {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: var(--y-space-8);
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-12);
+  background-color: var(--y-color-button);
+  color: var(--y-color-text);
+  border: none;
+  width: 100%;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.payment-section button:hover,.payment-submit-btn:hover {
+  transform: translateY(-2px);
+  color: var(--y-color-bg);
+  background-color: var(--y-color-primary);
+}
+
+.payment-section .product-grid,.payment-section .total-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  margin-bottom: var(--y-space-16);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+  background-color: var(--y-color-fg);
+}
+
+.payment-section .product-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: var(--y-space-12);
+}
+
+.payment-section .product-item > img {
+  height: 129px;
+  aspect-ratio: 1;
+  border-radius: var(--y-space-12);
+  object-fit: cover;
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-12);
+  background-color: var(--y-color-fg);
+}
+
+.payment-section .product-item p {
+  margin: 0;
+  color: var(--y-color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 600;
+}
+.payment-section .product-item .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.payment-section .product-item .content .price {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-16);
+}
+.payment-section .product-item .content .price p {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 300;
+}
+.payment-section .product-item .content .price p:last-child {
+  font-size: var(--y-space-16);
+  font-weight: 300;
+}
+.payment-section .product-item p img {
+  width: var(--y-space-24);
+  height: var(--y-space-24);
+}
+
+.payment-section .total {
+  margin-top: var(--y-space-16);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-16) var(--y-space-24);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--y-color-text);
+  background-color: var(--y-color-fg);
+}
+.payment-section .total img {
+  width: var(--y-space-24);
+  height: var(--y-space-24);
+}
+.payment-section .total p {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 600;
+}
+input[type="radio" i] {
+  accent-color: var(--y-color-primary);
+  border: 1px solid var(--y-color-border);
+  outline: var(--y-color-text);
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--y-color-bg);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+input[type="radio" i]:checked {
+  background-color: var(--y-color-primary);
+  outline: 5px solid var(--y-color-bg);
+}
+input[type="radio" i]:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+
+input[type="checkbox" i] {
+  accent-color: var(--y-color-primary);
+  border: 2px solid var(--y-color-primary);
+  outline: var(--y-color-primary);
+  appearance: none;
+  width: var(--y-space-14) !important;
+  height: var(--y-space-14) !important;
+  background-color: var(--y-color-border);
+  border-radius: var(--y-space-2);
+  cursor: pointer;
+  padding: 0 !important;
+}
+input[type="checkbox" i]:checked {
+  background-color: var(--y-color-primary);
+}
+input[type="checkbox" i]:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+
+.card {
+  width: 100%;
+  padding: var(--y-space-4);
+  border-radius: var(--y-space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+  margin-top: var(--y-space-16);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, padding 0.3s ease,
+    margin 0.3s ease;
+  pointer-events: none;
+}
+
+form:has(#visa:checked) .card {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: var(--y-space-16);
+  pointer-events: auto;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s, padding 0.3s ease,
+    margin 0.3s ease;
+}
+
+.card-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.card-field label {
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-normal);
+}
+
+.card input {
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  padding: var(--y-space-14) var(--y-space-16);
+  font-size: var(--y-space-16);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card input::placeholder {
+  color: #9b9b9b;
+}
+
+.card input:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+  outline: none;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+
+.cvv-field {
+  position: relative;
+}
+.radio-group img {
+  height: 20px;
+  object-fit: contain;
+}
+.cvv-header {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.cvv-info {
+  width: 24px !important;
+  height: 24px;
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-text);
+  background: transparent;
+  color: var(--y-color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  font-size: var(--y-space-12);
+}
+
+.cvv-header label {
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-normal);
+}
+
+.expiry-field label {
+  margin-bottom: var(--y-space-8);
+}
+
+.expiry-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-12);
+}
+
+@media (max-width: 992px) {
+  input:not([type="radio"]) {
+    width: 100% !important;
+  }
+  .radio-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .payment-section {
+    grid-template-columns: 1fr;
+  }
+  .payment-section form {
+    grid-template-columns: 1fr;
+    order: 2;
+  }
+  .payment-section .product-item {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+  }
+  .payment-section input:not([type="radio"]) {
+    width: 100%;
+  }
+  .payment-section .product-item .content .price {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 380px) {
+  .payment-section .product-item {
+    grid-template-columns: 1fr;
+  }
+  .payment-section .product-item > img {
+    height: auto;
+    width: 100%;
+    aspect-ratio: 1;
+  }
+  .payment-section form .group-input {
+    grid-template-columns: 1fr;
+  }
+  .payment-section .product-item p {
+    font-weight: 300;
+  }
+}
+
+/* ──────────────────────────────────────
+   Thank-you success modal
+   ────────────────────────────────────── */
+.stationary-thankyou-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background-color: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.stationary-thankyou-overlay .status-popup-card {
+  animation: scaleInCard 0.35s ease;
+}
+
+@keyframes scaleInCard {
+  from { opacity: 0; transform: scale(0.9) translateY(20px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.stationary-thankyou-buttons {
+  display: flex;
+  gap: var(--y-space-16);
+  justify-content: center;
+  margin-top: var(--y-space-24);
+}
+
+.stationary-thankyou-buttons .btn {
+  padding: var(--y-space-10) var(--y-space-32);
+  font-size: var(--y-space-16);
+  min-width: 140px;
+}

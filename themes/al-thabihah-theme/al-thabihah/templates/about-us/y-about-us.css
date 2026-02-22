@@ -1,0 +1,86 @@
+/* Main page section */
+.y-l-about-us-section {
+    padding: var(--y-spacing-4xl) 0;
+    background-color: var(--y-color-background);
+}
+
+/* Two-column container */
+.y-l-about-us-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: var(--y-spacing-3xl);
+}
+
+/* Image styles */
+.y-c-about-image img {
+    width: var(--y-width-percentage-full);
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--y-border-radius-lg);
+    box-shadow: var(--y-shadow-md);
+}
+
+/* Text content styles */
+.y-l-about-content {
+    text-align: right;
+}
+
+.y-c-about-title {
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+    position: relative;
+    padding-bottom: var(--y-spacing-sm);
+    display: inline-block;
+    /* To make underline fit content */
+}
+
+.y-c-about-description {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    line-height: var(--y-line-height-lg);
+    color: var(--y-color-primary-text);
+    max-width: var(--y-size-600);
+    /* Limit line length for readability */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .y-l-about-us-section {
+        padding: var(--y-spacing-2xl) 0;
+    }
+
+    .y-l-about-us-container {
+        grid-template-columns: 1fr;
+        /* Stack columns on mobile */
+        gap: var(--y-spacing-xl);
+    }
+
+    .y-l-about-content {
+        text-align: center;
+        /* Center text on mobile */
+        order: 2;
+        /* Text comes after image */
+    }
+
+    .y-c-about-image {
+        order: 1;
+        /* Image comes first */
+    }
+
+    /* Center the title's underline */
+    .y-c-about-title::after {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .y-c-about-title {
+        font-size: var(--y-font-size-3xl);
+    }
+
+    .y-c-about-description {
+        font-size: var(--y-font-size-md);
+    }
+}

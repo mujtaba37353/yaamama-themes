@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> My Clinic</title>
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="icon" href="../../assets/icon.png" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/lists-section.css" />
+  <link rel="stylesheet" href="./layout.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="hero-section ">
+      <div class="cards">
+        <div class="card">
+          <img src="../../assets/hero1.jpg" alt="طبيب يقدم رعاية صحية متميزة">
+          <div class="content">
+            <h2>دورك الآن مضمون</h2>
+            <p>ودع الانتظار واحجز دورك في أفضل عيادات مع أفضل الأطباء</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../assets/hero2.jpg" alt="عيادة طبية حديثة ومجهزة">
+          <div class="content">
+            <h2>دورك الآن مضمون</h2>
+            <p>ودع الانتظار واحجز دورك في أفضل عيادات مع أفضل أطباء</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../assets/hero3.jpg" alt="فريق طبي متخصص">
+          <div class="content">
+            <h2>دورك الآن مضمون</h2>
+            <p>ودع الانتظار واحجز دورك في أفضل عيادات مع أفضل أطباء</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../assets/hero4.jpg" alt="حجز مواعيد طبية سهل وسريع">
+          <div class="content">
+            <h2>دورك الآن مضمون</h2>
+            <p>ودع الانتظار واحجز دورك في أفضل عيادات مع أفضل أطباء</p>
+          </div>
+        </div>
+      </div>
+      <div class="lists">
+        <h2>احجز جلستك الآن</h2>
+        <div class="bottom">
+          <div class="list">
+            <input type="checkbox" name="list1" id="list1">
+            <label for="list1">التخصص <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
+            <div class="items">
+              <button>أسنان</button>
+              <button>نفسي</button>
+              <button>باطنة</button>
+              <button>نساء و توليد</button>
+              <button>عيون</button>
+              <button>مخ وأعصاب</button>
+              <button>عظام</button>
+              <button>جلدية</button>
+              <button>صدر و جهاز تنفسي</button>
+              <button>أنف و أذن و حنجرة</button>
+
+            </div>
+
+          </div>
+          <div class="list">
+            <input type="checkbox" name="list2" id="list2">
+            <label for="list2">المدينة <img src="../../assets/bottom-arrow.svg" alt="سهم القائمة"></label>
+            <div class="items">
+              <button>الرياض</button>
+              <button>مكة المكرمة</button>
+              <button>المدينة المنورة</button>
+              <button>جدة</button>
+              <button>الدمام</button>
+              <button>الخبر</button>
+              <button>الجبيل</button>
+              <button>الأحساء</button>
+              <button>الخرج</button>
+              <button>القطيف</button>
+              <button>تبوك</button>
+              <button>الباحة</button>
+              <button>الجوف</button>
+              <button>الطائف</button>
+            </div>
+
+          </div>
+          <div class="list">
+            <input type="text" name="doctor" id="doctor" placeholder="اسم الطبيب">
+          </div>
+          <button class="btn main-button fw invert fh">ابحث <img src="../../assets/search.svg" alt="أيقونة البحث"></button>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="way-section">
+      <div class="container y-u-max-w-1200">
+        <div class="header">
+          <h2>لماذا MY CLINIC الاختيار الأمثل ؟</h2>
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img src="../../assets/way1.png" alt="أيقونة حجز سريع وسهل">
+            <p> حجز سريع وسهل</p>
+          </div>
+          <div class="card">
+            <img src="../../assets/way2.png" alt="أيقونة تذكير بالمواعيد">
+            <p>تذكير بالمواعيد عبر الرسائل</p>
+          </div>
+          <div class="card">
+            <img src="../../assets/way3.png" alt="أيقونة إشعارات الرسائل">
+            <p>تذكير بالمواعيد عبر الرسائل</p>
+          </div>
+          <div class="card">
+            <img src="../../assets/way4.png" alt="أيقونة تقييمات المرضى">
+            <p>تقييمات حقيقية من المرضى</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section ">
+      <div class="container y-u-max-w-1200">
+        <h2>اختر التخصص الذى تحتاجه</h2>
+        <div class="box-grid">
+          <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+          <ul class="categories-grid">
+            <li class="category-item">
+              <a href="../doctors/doctors.html">
+                <img src="../../assets/baby.png" alt="أيقونة تخصص أطفال وحديثي الولادة">
+                <p>أطفال وحديثي الولادة</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/tooth.png" alt="أيقونة تخصص الأسنان">
+                <p>أسنان</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"><img src="../../assets/mind.png" alt="أيقونة تخصص الطب النفسي">
+                <p> نفسي</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/stomach.png" alt="أيقونة تخصص الباطنة">
+                <p> باطنة</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/pregnant.png" alt="أيقونة تخصص نساء وتوليد">
+                <p> نساء و توليد</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/eye.png" alt="أيقونة تخصص العيون">
+                <p> عيون</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/brain.png" alt="أيقونة تخصص المخ والأعصاب">
+                <p> مخ وأعصاب</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/bone.png" alt="أيقونة تخصص العظام">
+                <p> عظام</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/hand.png" alt="أيقونة تخصص الجلدية">
+                <p> جلدية</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/lungs.png" alt="أيقونة تخصص الصدر والجهاز التنفسي">
+                <p> صدر و جهاز تنفسي</p>
+              </a>
+
+            </li>
+            <li class="category-item">
+              <a href="../doctors/doctors.html"> <img src="../../assets/ear.png" alt="أيقونة تخصص أنف وأذن وحنجرة">
+                <p> أنف و أذن و حنجرة</p>
+              </a>
+
+            </li>
+          </ul>
+          <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="doctors-section ">
+      <div class="container y-u-max-w-1200">
+        <h2>الأطباء الأكثر اختيارًا</h2>
+      </div>
+
+      <div class="box-grid">
+        <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+        <ul class="doctors-grid">
+          <li class="doctor-info">
+            <div class="top">
+              <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+              <div class="desc">
+                <a href="../doctor-page/doctor-page.html">
+                  <p>دكتور يوسف منصور</p>
+                </a>
+                <p>استاذ جامعي تخصص عظام</p>
+              </div>
+            </div>
+            <p>
+              استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال المفاصل
+            </p>
+            <div class="bottom">
+              <div class="rating">
+                <strong>5</strong>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="views">
+                <p>5000</p>
+                <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+              </div>
+            </div>
+
+          </li>
+
+          <li class="doctor-info">
+            <div class="top">
+              <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+              <div class="desc">
+                <a href="../doctor-page/doctor-page.html">
+                  <p>دكتور يوسف منصور</p>
+                </a>
+                <p>استاذ جامعي تخصص عظام</p>
+              </div>
+            </div>
+            <p>
+              استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال المفاصل
+            </p>
+            <div class="bottom">
+              <div class="rating">
+                <strong>5</strong>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="views">
+                <p>5000</p>
+                <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+              </div>
+            </div>
+
+          </li>
+          <li class="doctor-info">
+            <div class="top">
+              <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+              <div class="desc">
+                <a href="../doctor-page/doctor-page.html">
+                  <p>دكتور يوسف منصور</p>
+                </a>
+                <p>استاذ جامعي تخصص عظام</p>
+              </div>
+            </div>
+            <p>
+              استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال المفاصل
+            </p>
+            <div class="bottom">
+              <div class="rating">
+                <strong>5</strong>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="views">
+                <p>5000</p>
+                <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+              </div>
+            </div>
+
+          </li>
+
+
+        </ul>
+        <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+      </div>
+
+    </section>
+
+
+    <section class="panner">
+      <div class="container y-u-max-w-1200">
+        <img src="../../assets/panner.jpg" alt="احجز موعدك الطبي بسهولة">
+        <div class="content">
+          <h3>احجز دكتورك بسهولة في أي وقت ومن أي مكان</h3>
+          <p>ابحث عن أفضل الأطباء والعيادات في كل التخصصات بخطوات سريعة</p>
+          <a href="../doctors/doctors.html" class="btn main-button">ابحث عن دكتورك</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="doctors-section opinions-section">
+      <div class="container y-u-max-w-1200">
+        <h2>آراء عملائنا</h2>
+      </div>
+
+      <div class="box-grid">
+        <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+        <ul class="doctors-grid">
+          <li class="doctor-info">
+            <div class="top">
+              <div class="desc">
+                <p>خدمة جيدة وممتازة ❤</p>
+              </div>
+            </div>
+            <p>
+              مصطفى محمد
+            </p>
+
+          </li>
+          <li class="doctor-info">
+            <div class="top">
+              <div class="desc">
+                <p>خدمة جيدة وممتازة ❤</p>
+              </div>
+            </div>
+            <p>
+              مصطفى محمد
+            </p>
+
+          </li>
+          <li class="doctor-info">
+            <div class="top">
+              <div class="desc">
+                <p>خدمة جيدة وممتازة ❤</p>
+              </div>
+            </div>
+            <p>
+              مصطفى محمد
+            </p>
+
+          </li>
+          <li class="doctor-info">
+            <div class="top">
+              <div class="desc">
+                <p>خدمة جيدة وممتازة ❤</p>
+              </div>
+            </div>
+            <p>
+              مصطفى محمد
+            </p>
+
+          </li>
+
+
+        </ul>
+        <button class="btn main-button invert circle"><img src="../../assets/bottom-arrow.svg" alt="سهم التنقل"></button>
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

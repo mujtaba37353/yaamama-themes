@@ -1,0 +1,24 @@
+.woocommerce-error,
+.woocommerce-message,
+.woocommerce-info {
+  padding: var(--y-space-12) var(--y-space-16);
+  border-radius: var(--y-radius-8);
+  margin-bottom: var(--y-space-16);
+  border: 1px solid var(--y-color-border);
+  background: var(--y-color-surface);
+}
+.woocommerce-message {
+  border-color: var(--y-color-success);
+  background: color-mix(in oklab, var(--y-color-success) 10%, white);
+}
+.woocommerce-error {
+  border-color: var(--y-color-danger);
+  background: color-mix(in oklab, var(--y-color-danger) 10%, white);
+}
+.woocommerce-info {
+  border-color: var(--y-color-primary);
+  background: color-mix(in oklab, var(--y-color-primary) 10%, white);
+}
+.woocommerce-notices-wrapper {
+  margin-bottom: var(--y-space-24);
+}

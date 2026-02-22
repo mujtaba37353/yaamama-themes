@@ -1,0 +1,12 @@
+{
+    "template": "forget-password",
+    "slots": {
+        "page-title": "title",
+        "forget-password-form": "[data-y='forget-password-form']",
+        "email-input": "[data-y='email-input']",
+        "submit-btn": "[data-y='submit-btn']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "template": "payment",
+    "slots": {
+        "page-title": "title",
+        "payment-form": "[data-y='payment-form']",
+        "shipping-email-input": "[data-y='shipping-email-input']",
+        "shipping-first-name-input": "[data-y='shipping-first-name-input']",
+        "shipping-last-name-input": "[data-y='shipping-last-name-input']",
+        "shipping-street-address-input": "[data-y='shipping-street-address-input']",
+        "shipping-state-input": "[data-y='shipping-state-input']",
+        "shipping-city-input": "[data-y='shipping-city-input']",
+        "shipping-postal-code-input": "[data-y='shipping-postal-code-input']",
+        "shipping-phone-input": "[data-y='shipping-phone-input']",
+        "payment-method-options": "[data-y='payment-method-options']",
+        "online-payment-radio": "[data-y='online-payment-radio']",
+        "stc-pay-radio": "[data-y='stc-pay-radio']",
+        "card-holder-input": "[data-y='card-holder-input']",
+        "card-number-input": "[data-y='card-number-input']",
+        "card-expiry-date-input": "[data-y='card-expiry-date-input']",
+        "card-cvc-input": "[data-y='card-cvc-input']",
+        "stc-pay-logo": "[data-y='stc-pay-logo']",
+        "notes-textarea": "[data-y='notes-textarea']",
+        "product-summary-item": "[data-y='product-summary-item']",
+        "subtotal": "[data-y='subtotal']",
+        "tax": "[data-y='tax']",
+        "total": "[data-y='total']",
+        "checkout-btn": "[data-y='checkout-btn']"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/payment.js"
+    ]
+}

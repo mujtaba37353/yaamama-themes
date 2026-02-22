@@ -1,0 +1,47 @@
+.qnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid var(--y-secondary);
+  padding: 0 15px;
+  border-radius: 15px;
+  min-height: 44px;
+}
+.qnt button,
+.qnt .qnt-minus,
+.qnt .qnt-plus {
+  padding: 5px 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--y-secondary);
+  transition: color 0.2s ease;
+}
+.qnt button:hover:not(:disabled),
+.qnt .qnt-minus:hover:not(:disabled),
+.qnt .qnt-plus:hover:not(:disabled) {
+  color: var(--y-main);
+}
+.qnt button:disabled,
+.qnt .qnt-minus:disabled,
+.qnt .qnt-plus:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.qnt input.qty {
+  width: 2.5rem;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+.qnt input.qty::-webkit-outer-spin-button,
+.qnt input.qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

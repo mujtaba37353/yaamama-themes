@@ -1,0 +1,52 @@
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+input,
+textarea {
+  padding: 0.8rem;
+  margin: 0;
+  border: 1px solid #2e2e2e;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+  outline: none;
+  position: relative;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--y-secondary);
+  box-shadow: 0 0 0 3px rgba(190, 134, 71, 0.1),
+    0 4px 12px rgba(190, 134, 71, 0.15);
+}
+
+input:hover,
+textarea:hover {
+  border-color: rgba(190, 134, 71, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+  color: var(--y-secondary);
+}
+
+@media (max-width: 820px) {
+  label {
+    font-size: 1.7rem;
+  }
+  input,
+  textarea {
+    font-size: 1rem;
+  }
+}

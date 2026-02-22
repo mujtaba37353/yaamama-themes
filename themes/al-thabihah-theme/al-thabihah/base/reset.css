@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:hover {
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body {
+    font-family: var(--y-font-family-primary);
+    line-height: 1.6;
+    color: var(--y-color-primary-text);
+    background-color: var(--y-color-background);
+    direction: rtl;
+    text-align: right;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+p,
+h3,
+h4,
+div {
+    cursor: default;
+}
+
+ul {
+    list-style: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.y-c-validation-error {
+    color: var(--y-color-error);
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-regular);
+    margin-top: var(--y-spacing-xs);
+    display: block;
+    text-align: right;
+    direction: rtl;
+    line-height: var(--y-line-height-md);
+}

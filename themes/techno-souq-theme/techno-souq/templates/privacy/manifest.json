@@ -1,0 +1,37 @@
+{
+    "template": "privacy",
+    "slots": {
+        "page-title": "Privacy page title",
+        "header-placeholder": "Header component placeholder",
+        "privacy-main": "Main content container for privacy page",
+        "privacy-container": "Privacy page container wrapper",
+        "privacy-main-title": "Privacy page main title",
+        "title-separator-1": "First title separator",
+        "title-separator-2": "Second title separator",
+        "privacy-policy-title": "Privacy policy section title",
+        "policy-title-separator": "Separator after policy title",
+        "privacy-intro-paragraph": "Privacy policy introduction paragraph",
+        "contact-info-paragraph": "Contact information paragraph",
+        "online-payment-separator": "Separator before online payment section",
+        "online-payment-title": "Online payment section title",
+        "online-payment-title-separator": "Separator after online payment title",
+        "online-payment-paragraph": "Online payment policy paragraph",
+        "cash-payment-separator": "Separator before cash payment section",
+        "cash-payment-title": "Cash payment section title",
+        "cash-payment-title-separator": "Separator after cash payment title",
+        "cash-payment-paragraph": "Cash payment policy paragraph",
+        "points-section-separator": "Separator before points section",
+        "points-title": "Points system section title",
+        "points-title-separator": "Separator after points title",
+        "points-paragraph": "Points system policy paragraph",
+        "shipping-policy-separator": "Separator before shipping policy section",
+        "shipping-policy-title": "Shipping policy section title",
+        "shipping-policy-title-separator": "Separator after shipping policy title",
+        "shipping-policy-paragraph": "Shipping policy paragraph",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

@@ -1,0 +1,373 @@
+/**
+ * Contact Settings Admin Styles
+ */
+
+/* Main Container */
+.my-car-contact-settings {
+    direction: rtl;
+    margin-right: 20px;
+}
+
+.my-car-contact-settings h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.my-car-contact-settings h1 .dashicons {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+/* Tabs */
+.nav-tab-wrapper {
+    margin-bottom: 0;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+.nav-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.nav-tab .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.nav-tab-active {
+    background: #fff;
+    border-bottom-color: #fff;
+}
+
+/* Tab Content */
+.tab-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #c3c4c7;
+    border-top: none;
+    max-width: 900px;
+}
+
+/* Settings Section */
+.settings-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.settings-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #520A76;
+    color: #520A76;
+    font-size: 18px;
+}
+
+.settings-section h2 .dashicons {
+    color: #520A76;
+}
+
+/* Form Table */
+.form-table th {
+    width: 180px;
+    padding-right: 0;
+    padding-left: 10px;
+    font-weight: 600;
+}
+
+.form-table td {
+    padding-right: 0;
+}
+
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table input[type="password"],
+.form-table input[type="url"],
+.form-table input[type="number"],
+.form-table textarea,
+.form-table select {
+    direction: inherit;
+}
+
+.form-table input[dir="ltr"],
+.form-table textarea[dir="ltr"] {
+    text-align: left;
+}
+
+/* Switch Toggle */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    vertical-align: middle;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #520A76;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 26px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.switch-label {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* SMTP Notices */
+.smtp-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.smtp-notice .dashicons {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.smtp-notice p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.smtp-notice a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.smtp-notice.info {
+    background: #e7f3ff;
+    border: 1px solid #b3d4fc;
+    color: #004085;
+}
+
+.smtp-notice.warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    color: #856404;
+}
+
+.smtp-notice.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.smtp-notice.success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+/* Password Set Indicator */
+.password-set {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+    padding: 4px 10px;
+    background: #d4edda;
+    color: #155724;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.password-set .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+/* Test Email */
+#send-test-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+#send-test-email .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+#test-email-result {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    display: none;
+}
+
+#test-email-result.success {
+    display: block;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#test-email-result.error {
+    display: block;
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+#test-email-result.loading {
+    display: block;
+    background: #e7f3ff;
+    color: #004085;
+    border: 1px solid #b3d4fc;
+}
+
+/* WhatsApp Preview */
+.whatsapp-preview {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.whatsapp-preview h3 {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.preview-container {
+    position: relative;
+    height: 100px;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.whatsapp-button-preview {
+    position: absolute;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button-preview.left {
+    left: 20px;
+}
+
+.whatsapp-button-preview.right {
+    right: 20px;
+}
+
+.whatsapp-button-preview svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* SMTP Fields Toggle */
+.smtp-field {
+    transition: opacity 0.3s ease;
+}
+
+.smtp-field.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Dashicons for WhatsApp (custom) */
+.dashicons-whatsapp::before {
+    content: "\f232";
+    font-family: dashicons;
+}
+
+/* Responsive */
+@media screen and (max-width: 782px) {
+    .form-table th {
+        width: 100%;
+        display: block;
+        padding-bottom: 5px;
+    }
+    
+    .form-table td {
+        display: block;
+        padding-top: 0;
+    }
+    
+    .nav-tab {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .smtp-notice {
+        flex-direction: column;
+    }
+    
+    #send-test-email {
+        margin-top: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+}

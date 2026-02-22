@@ -1,0 +1,16 @@
+{
+    "template": "login",
+    "slots": {
+        "page-title": "title",
+        "login-form": "[data-y='login-form']",
+        "email-input": "[data-y='email-input']",
+        "password-input": "[data-y='password-input']",
+        "forgot-password-link": "[data-y='forgot-password-link']",
+        "signup-link": "[data-y='signup-link']",
+        "remember-me-checkbox": "[data-y='remember-me-checkbox']",
+        "login-btn": "[data-y='login-btn']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

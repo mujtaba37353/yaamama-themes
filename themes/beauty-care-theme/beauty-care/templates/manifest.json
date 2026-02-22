@@ -1,0 +1,28 @@
+{
+  "name": "بيوتي كير",
+  "short_name": "بيوتي كير",
+  "description": "بيوتي كير - منتجات عناية بالبشرة والشعر",
+  "dir": "rtl",
+  "lang": "ar",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#F3F6CD",
+  "theme_color": "#D50B8B",
+  "icons": [
+    {
+      "src": "../assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false,
+  "categories": ["العناية بالبشرة", "العناية بالشعر", "التجميل"]
+}

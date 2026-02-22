@@ -1,0 +1,109 @@
+
+.empty-state-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    padding: var(--y-space-64) var(--y-space-32);
+    width: 100%;
+    background: #fff;
+    border-radius: var(--y-space-16);
+  }
+  
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+    gap: var(--y-space-8);
+  }
+  
+
+  
+  .empty-state img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .empty-state h3 {
+    font-size: var(--y-space-32);
+    font-weight: 700;
+    color: var(--y-color-txt);
+  }
+  
+  .empty-state .btn {
+    padding: var(--y-space-16) var(--y-space-64);
+    font-size: var(--y-space-16);
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--y-color-text) !important;
+    background: var(--y-color-button) !important;
+    display: inline-block;
+    box-shadow: none;
+    text-align: center;
+    min-width: 200px;
+    border: 1px solid var(--y-color-button) !important;
+  }
+  .empty-state .btn:hover {
+    background: var(--y-color-primary) !important;
+    color: var(--y-color-bg) !important;
+    border: 1px solid var(--y-color-primary) !important;
+  }
+  
+  @media (max-width: 768px) {
+    .empty-state-container {
+      min-height: 300px;
+      padding: var(--y-space-48) var(--y-space-16);
+    }
+    
+    .empty-icon {
+      width: 120px;
+      height: 120px;
+    }
+    
+    .empty-icon i {
+      font-size: 80px;
+    }
+    
+    .empty-state h2 {
+      font-size: var(--y-space-18);
+    }
+  
+    .empty-state .btn {
+      min-width: 180px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .empty-state-container {
+      min-height: 250px;
+      padding: var(--y-space-32) var(--y-space-16);
+    }
+    
+    .empty-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: var(--y-space-16);
+    }
+    
+    .empty-icon i {
+      font-size: 60px;
+    }
+    
+    .empty-state h2 {
+      font-size: var(--y-space-16);
+      margin-bottom: var(--y-space-16);
+    }
+  
+    .empty-state .btn {
+      padding: var(--y-space-12) var(--y-space-24);
+      font-size: var(--y-space-14);
+      min-width: 160px;
+    }
+  }
+  
+  

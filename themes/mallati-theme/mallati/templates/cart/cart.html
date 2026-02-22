@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mallati - مولاتي</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/breadcrumb.css" />
+  <link rel="stylesheet" href="./cart.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full cart-page">
+        <div class="header y-u-flex y-u-flex-col y-u-py-32 y-u-p-t-24">
+          <h1 class="y-u-color-muted y-u-text-2xl"> سلة التسوق</h1>
+          <p class="y-u-text-2xl y-u-text-bold y-u-mb-16 y-u-color-muted breadcrumb"><a
+              href="../layout/index.html">الرئيسية</a> > سلة التسوق</p>
+
+        </div>
+
+
+        <div class="cart-grid">
+          <div class="cart-items">
+            <div class="cart-list">
+              <div class="cart-row">
+                <a href="../product-details/product-details.html" class="img">
+                  <img src="../../assets/tv.png" alt="Product Image" />
+                </a>
+                <div class="content">
+                  <div class="info">
+                    <div class="right">
+                      <h2>التليفزيون</h2>
+                      <p>تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع يجمع بين التصميم الفاخر والأداء الفائق والتقنيات
+                        الثورية ايفون ١٥ برو max ليس مجرد ها</p>
+                    </div>
+                    <div class="left">
+                      <p>السعر</p>
+                      <p>100 ر.س</p>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <div class="main">
+                      <button class="item-remove"> <img src="../../assets/trash.svg" alt=""> إزالة</button>
+                      <button><label class="product-add-to-wishlist">
+                        <input type="checkbox" class="wishlist-checkbox">
+                        <i class="far fa-heart"></i>
+                      </label> إضافة المفضلة</button>
+
+                    </div>
+                    <div class="item-qty">
+                      <button class="qty-btn y-u-p-l-16" aria-label="decrease" onclick="document.getElementById('qty1').stepDown();">-</button>
+                      <input class="qty-input" id="qty1" type="number" min="1" value="1" step="1" />
+                      <button class="qty-btn" aria-label="increase" onclick="document.getElementById('qty1').stepUp();">+</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="cart-row">
+                <a href="../product-details/product-details.html" class="img">
+                  <img src="../../assets/tv.png" alt="Product Image" />
+                </a>
+                <div class="content">
+                  <div class="info">
+                    <div class="right">
+                      <h2>التليفزيون</h2>
+                      <p>تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع يجمع بين التصميم الفاخر والأداء الفائق والتقنيات
+                        الثورية ايفون ١٥ برو max ليس مجرد ها</p>
+                    </div>
+                    <div class="left">
+                      <p>السعر</p>
+                      <p>100 ر.س</p>
+                    </div>
+                  </div>
+                  <div class="actions">
+                    <div class="main">
+                      <button class="item-remove"> <img src="../../assets/trash.svg" alt=""> إزالة</button>
+                      <button><label class="product-add-to-wishlist">
+                        <input type="checkbox" class="wishlist-checkbox">
+                        <i class="far fa-heart"></i>
+                      </label> إضافة المفضلة</button>
+
+                    </div>
+                    <div class="item-qty">
+                      <button class="qty-btn y-u-p-l-16" aria-label="decrease" onclick="document.getElementById('qty2').stepDown();">-</button>
+                      <input class="qty-input" id="qty2" type="number" min="1" value="1" step="1" />
+                      <button class="qty-btn" aria-label="increase" onclick="document.getElementById('qty2').stepUp();">+</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <aside class="cart-summary">
+            <div class="summary-card">
+              <h2 class="y-u-text-xl y-u-text-bold y-u-m-b-16">ملخص الطلب</h2>
+              <div class="summary-row">
+                <span> اجمالي العناصر</span>
+                <span>2850 ر.س</span>
+              </div>
+              <div class="summary-row">
+                <span>الشحن</span>
+                <span>100 ر.س</span>
+              </div>
+              <div class="summary-row total">
+                <span>الإجمالي</span>
+                <span>2950 ر.س</span>
+              </div>
+
+              <a href="../payment/payment.html" class="y-c-btn y-c-btn--primary y-u-w-full y-u-text-center">متابعة
+                الدفع</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

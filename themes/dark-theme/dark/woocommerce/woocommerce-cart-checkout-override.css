@@ -1,0 +1,734 @@
+/**
+ * Override WooCommerce default cart & checkout design
+ * to match dark-theme cart and payment design.
+ */
+
+/* ========== CART PAGE ========== */
+
+/* الجوال: مساحة فوق هيدر التصميم حتى لا ينزلق تحت الهيدر الثابت */
+@media (max-width: 820px) {
+  body.woocommerce-cart header[data-y="design-header"] {
+    padding-top: 80px !important;
+  }
+body.admin-bar.woocommerce-cart header[data-y="design-header"] {
+    padding-top: 67px !important;
+}
+
+  /* Breadcrumb في السلة: يبدأ من اليمين لليسار مع هامش بسيط (RTL) */
+  body.woocommerce-cart [data-y="breadcrumb"],
+  body.woocommerce-cart .y-breadcrumb-container {
+    justify-content: flex-start;  /* في RTL يضع المحتوى من اليمين */
+    text-align: right;
+    padding-inline-start: 1rem;  /* هامش من جهة اليمين في RTL */
+    padding-inline-end: 0.5rem;
+  }
+  body.woocommerce-cart .y-breadcrumb {
+    justify-content: flex-start;
+  }
+}
+
+/* حجم الويب: صف واحد — نموذج السلة يمين، ملخص الطلب يسار (RTL) */
+[data-y="cart-table"] {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+/* عندما يكون div.woocommerce الطفل المباشر الوحيد: يأخذ العرض الكامل */
+[data-y="cart-table"] > .woocommerce {
+  grid-column: 1 / -1;
+  width: 100%;
+  min-width: 0;
+}
+
+/* رسائل WooCommerce في صف أعلى لوحده (داخل .woocommerce) */
+[data-y="cart-table"] > .woocommerce-notices-wrapper,
+[data-y="cart-table"] .woocommerce-notices-wrapper {
+  grid-column: 1 / -1;
+}
+
+/* عندما يكون form و cart-collaterals أطفالاً مباشرين (بدون div.woocommerce) */
+[data-y="cart-table"] > .woocommerce-cart-form,
+[data-y="cart-table"] > .cart-collaterals {
+  min-width: 0;
+}
+
+/* div.woocommerce كحاوية: عرض كامل + grid (notices صف أعلى، form و collaterals عمودين) */
+[data-y="cart-table"] .woocommerce {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+[data-y="cart-table"] .woocommerce .woocommerce-cart-form,
+[data-y="cart-table"] .woocommerce .cart-collaterals {
+  min-width: 0;
+}
+
+/* Hide default table layout, use grid like cart-list/cart-item */
+.woocommerce-cart-form .shop_table.cart {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.woocommerce-cart-form .shop_table.cart thead {
+  display: none;
+}
+
+.woocommerce-cart-form .shop_table.cart tbody {
+  display: grid;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each cart row = cart-item style */
+.woocommerce-cart-form .cart_item {
+  display: grid;
+  grid-template-columns: auto 70px 2fr 1fr 2fr auto;
+  align-items: center;
+  gap: 1rem 2rem;
+  padding: 14px 13px;
+  border-radius: 15px;
+  border: 2px solid var(--y-main);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--y-color-text-dark, #000);
+  min-height: 80px;
+  background: var(--y-color-bg, #fff);
+}
+
+.woocommerce-cart-form .cart_item > td {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  vertical-align: middle;
+}
+
+/* Remove button = dark-theme .remove */
+.woocommerce-cart-form .product-remove a.remove {
+  cursor: pointer;
+  font-size: 15px;
+  color: white;
+  background: gray;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.woocommerce-cart-form .product-remove a.remove:hover {
+  background: var(--y-color-crimson, #b90e0a);
+  color: white;
+}
+
+/* Product thumbnail = product-img */
+.woocommerce-cart-form .product-thumbnail img {
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.woocommerce-cart-form .product-name {
+  justify-content: flex-start;
+  text-align: right;
+}
+
+.woocommerce-cart-form .product-name a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Quantity = qnt style + أزرار زيادة/نقصان — مساحة مضغوطة */
+.woocommerce-cart-form .product-quantity {
+  justify-content: center;
+}
+
+.woocommerce-cart-form .product-quantity .quantity,
+.woocommerce-cart-form .product-quantity .quantity.cart-qty-buttons-added {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid var(--y-secondary);
+  padding: 2px 6px;
+  border-radius: 8px;
+  min-width: 0;
+}
+
+.woocommerce-cart-form .product-quantity .quantity .cart-qty-minus,
+.woocommerce-cart-form .product-quantity .quantity .cart-qty-plus {
+  padding: 2px 6px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1;
+  color: var(--y-color-text-dark, #000);
+  font-weight: 600;
+}
+
+.woocommerce-cart-form .product-quantity .quantity .cart-qty-minus:hover,
+.woocommerce-cart-form .product-quantity .quantity .cart-qty-plus:hover {
+  color: var(--y-secondary);
+}
+
+.woocommerce-cart-form .product-quantity .qty {
+  width: 2.4em;
+  padding: .5rem;
+  text-align: center;
+  border: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* إخفاء أزرار السهم الافتراضية لحقل الكمية (Chrome, Safari, Edge) */
+.woocommerce-cart-form .product-quantity .qty::-webkit-outer-spin-button,
+.woocommerce-cart-form .product-quantity .qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Cart actions row (coupon + update) */
+.woocommerce-cart-form tr.actions {
+  display: block;
+  border: none;
+}
+
+.woocommerce-cart-form tr.actions td {
+  display: block;
+  padding: 15px 0 0;
+  border-top: 1px solid var(--y-main);
+  margin-top: 15px;
+}
+
+.woocommerce-cart-form .coupon {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.woocommerce-cart-form .coupon .input-text {
+  padding: .5rem;
+  border: 1px solid var(--y-main);
+  border-radius: 10px;
+  min-width: 140px;
+}
+
+.woocommerce-cart-form .button {
+  padding: 10px 20px;
+  background: var(--y-main);
+  color: var(--y-color-text-light, #fff);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.woocommerce-cart-form .button:hover {
+  opacity: 0.9;
+}
+
+/* Cart totals = cart-summary style */
+.cart-collaterals .cart_totals {
+  background: transparent;
+  border: 1px solid var(--y-main);
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cart-collaterals .cart_totals h2 {
+  margin: 0 0 12px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.cart-collaterals .cart_totals .shop_table {
+  border: none;
+  margin: 0 0 15px;
+}
+
+.cart-collaterals .cart_totals .shop_table tr {
+  border: none;
+  border-top: 1px solid var(--y-main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  gap: 8px;
+}
+
+.cart-collaterals .cart_totals .shop_table tr:first-child {
+  border-top: none;
+}
+
+.cart-collaterals .cart_totals .shop_table th,
+.cart-collaterals .cart_totals .shop_table td {
+  border: none;
+  padding: 0;
+}
+
+.cart-collaterals .wc-proceed-to-checkout {
+  padding: 0;
+}
+
+.cart-collaterals .wc-proceed-to-checkout .checkout-button {
+  width: 100%;
+  text-align: center;
+  padding: 12px 20px;
+  background: var(--y-main);
+  color: var(--y-color-text-light, #fff);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.cart-collaterals .wc-proceed-to-checkout .checkout-button:hover {
+  opacity: 0.9;
+  color: var(--y-color-text-light, #fff);
+}
+
+/* Cart cross-sells if any */
+.cart-collaterals .cross-sells {
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 820px) {
+  /* الجوال: عمود واحد، تقليل المسافات */
+  [data-y="cart-table"] {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+
+  [data-y="cart-table"] .woocommerce {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  [data-y="cart-table"] > .woocommerce-cart-form,
+  [data-y="cart-table"] > .cart-collaterals,
+  [data-y="cart-table"] .woocommerce .woocommerce-cart-form,
+  [data-y="cart-table"] .woocommerce .cart-collaterals {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* الجوال: صورة يمين ← عنوان+سعر ← كمية ← مجموع ← زر حذف — تقليل المسافات والأحجام */
+  .woocommerce-cart-form .cart_item {
+    grid-template-columns: 50px minmax(0, 1fr) auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 4px 6px;
+    font-size: 0.85rem;
+    min-height: auto;
+    padding: 8px 6px;
+    align-items: center;
+    border-width: 1px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .woocommerce-cart-form .cart_item > td {
+    padding: 0;
+    min-width: 0;
+  }
+
+  .woocommerce-cart-form .cart_item .product-remove {
+    grid-column: 5;
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+
+  .woocommerce-cart-form .cart_item .product-remove a.remove {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+
+  .woocommerce-cart-form .cart_item .product-thumbnail {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+
+  .woocommerce-cart-form .cart_item .product-name {
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: right;
+    font-size: 0.9rem;
+    line-height: 1.25;
+  }
+
+  .woocommerce-cart-form .cart_item .product-name a {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .woocommerce-cart-form .cart_item .product-price {
+    grid-column: 2;
+    grid-row: 2;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+
+  .woocommerce-cart-form .cart_item .product-quantity {
+    grid-column: 3;
+    grid-row: 1 / -1;
+    justify-content: center;
+  }
+
+  .woocommerce-cart-form .cart_item .product-quantity .quantity,
+  .woocommerce-cart-form .cart_item .product-quantity .quantity.cart-qty-buttons-added {
+    padding: 0;
+    gap: 1px;
+    border-radius: 25px;
+    height: 50px;
+  }
+
+  /* إظهار رقم الكمية على الجوال: عرض أدنى + لون واضح + padding */
+  .woocommerce-cart-form .cart_item .product-quantity .qty {
+    width: 2.5em;
+    min-width: 28px;
+    padding: .5rem;
+    font-size: 0.95rem;
+    color: var(--y-color-text-dark, #000);
+    background: transparent;
+    -webkit-text-fill-color: var(--y-color-text-dark, #000);
+    opacity: 1;
+  }
+
+  .woocommerce-cart-form .cart_item .product-quantity .cart-qty-minus,
+  .woocommerce-cart-form .cart_item .product-quantity .cart-qty-plus {
+    padding: 1px 4px;
+    font-size: 0.9em;
+  }
+
+  .woocommerce-cart-form .cart_item .product-subtotal {
+    grid-column: 4;
+    grid-row: 1 / -1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: right;
+    font-size: 0.8rem;
+  }
+
+  .woocommerce-cart-form .cart_item .product-subtotal::before {
+    content: "المجموع:";
+    display: block;
+    font-size: 0.75em;
+    opacity: 0.9;
+    margin-bottom: 0;
+  }
+
+  .woocommerce-cart-form .product-thumbnail img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+  }
+}
+
+/* ========== CHECKOUT / PAYMENT PAGE ========== */
+
+/* قسم الدفع يأخذ عرض y-main-container الكامل */
+.y-main-container > [data-y="payment"],
+main [data-y="payment"] {
+  grid-column: 1 / -1;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* إشعارات الوووكومرس: صف مستقل لكل منها */
+[data-y="payment"] .woocommerce > .woocommerce-notices-wrapper {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* إخفاء زر/رابط القسيمة في صفحة الدفع */
+[data-y="payment"] .woocommerce-form-coupon-toggle {
+  display: none !important;
+}
+
+/* إخفاء نموذج إدخال القسيمة في صفحة الدفع */
+[data-y="payment"] form.woocommerce-form-coupon,
+[data-y="payment"] #woocommerce-checkout-form-coupon {
+  display: none !important;
+}
+
+/* Main layout: عمودين على الويب — الايمن: بيانات الفاتورة، الايسر: طلبك + الدفع */
+[data-y="payment"] .woocommerce-checkout,
+[data-y="payment"] form.checkout.woocommerce-checkout,
+main[data-y="main"] [data-y="payment"] form.checkout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: none;
+  width: 100%;
+}
+
+[data-y="payment"] #customer_details,
+main[data-y="main"] [data-y="payment"] #customer_details {
+  grid-column: 1;
+}
+
+[data-y="payment"] #order_review_heading,
+main[data-y="main"] [data-y="payment"] #order_review_heading {
+  display: none;
+  grid-column: 2;
+  margin: 0 0 12px;
+}
+
+[data-y="payment"] #order_review,
+[data-y="payment"] .woocommerce-checkout-review-order,
+main[data-y="main"] [data-y="payment"] #order_review {
+  grid-column: 2;
+  position: sticky;
+  top: 1rem;
+}
+
+[data-y="payment"] form.checkout,
+main[data-y="main"] [data-y="payment"] form.checkout {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Billing/Shipping = payment-form section style */
+[data-y="payment"] .col2-set .col-1,
+[data-y="payment"] .col2-set .col-2 {
+  width: 100%;
+  float: none;
+}
+
+[data-y="payment"] .woocommerce-billing-fields h3,
+[data-y="payment"] .woocommerce-shipping-fields h3,
+[data-y="payment"] .woocommerce-additional-fields h3 {
+  margin-bottom: 15px;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--y-color-text-dark, #000);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--y-secondary);
+}
+
+[data-y="payment"] .form-row {
+  margin-bottom: 15px;
+}
+
+[data-y="payment"] .woocommerce form .form-row input.input-text,
+[data-y="payment"] .woocommerce form .form-row textarea {
+  width: 100%;
+  padding: .5rem;
+  border: 1px solid var(--y-main);
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+[data-y="payment"] .woocommerce form .form-row input.input-text:focus,
+[data-y="payment"] .woocommerce form .form-row textarea:focus {
+  border-color: var(--y-secondary);
+  outline: none;
+}
+
+[data-y="payment"] .woocommerce form .form-row label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+/* Order review heading + table = cart-summary style */
+[data-y="payment"] #order_review_heading,
+main[data-y="main"] [data-y="payment"] #order_review_heading {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+[data-y="payment"] .woocommerce-checkout-review-order-table {
+  border: 1px solid var(--y-main);
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+[data-y="payment"] .woocommerce-checkout-review-order-table th,
+[data-y="payment"] .woocommerce-checkout-review-order-table td {
+  padding: 10px 0;
+  border: none;
+  border-top: 1px solid var(--y-main);
+}
+
+[data-y="payment"] .woocommerce-checkout-review-order-table tr:first-child th,
+[data-y="payment"] .woocommerce-checkout-review-order-table tr:first-child td {
+  border-top: none;
+}
+
+/* Place order button */
+[data-y="payment"] #place_order {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--y-main);
+  color: var(--y-color-text-light, #fff);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+[data-y="payment"] #place_order:hover {
+  opacity: 0.9;
+}
+
+/* Payment methods section */
+[data-y="payment"] .woocommerce-checkout-payment {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--y-main);
+}
+
+[data-y="payment"] .woocommerce-checkout-payment .wc-credit-card-form {
+  display: none;
+}
+
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px;
+}
+
+/* كل li: صف واحد — input يمين و label يسار (RTL)، ثم الـ div (payment_box) تحتهما */
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: wrap;
+  direction: rtl;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  gap: 0.75rem;
+}
+
+/* input على اليمين — في نفس الصف، لا يأخذ عرض كامل */
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li .input-radio {
+  flex: 0 0 auto !important;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  display: inline-block !important;
+}
+
+/* label على اليسار — في نفس الصف */
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li > label {
+  flex: 1 1 auto !important;
+  min-width: 0;
+  width: auto !important;
+  max-width: none !important;
+  margin: 0 !important;
+  cursor: pointer;
+  text-align: right;
+  display: inline-block !important;
+}
+
+/* الـ div (payment_box) في صف لوحده تحت الـ input والـ label */
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li .payment_box {
+  flex-basis: 100%;
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding-inline-start: 0;
+  order: 1;
+}
+
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li .input-radio,
+[data-y="payment"] .woocommerce-checkout-payment ul.wc_payment_methods li > label {
+  order: 0;
+}
+
+/* صفحة الدفع على الجوال: إلغاء الـ grid، عمود واحد — العمود الأول أعلى، الثاني أسفل */
+@media (max-width: 820px) {
+  [data-y="payment"] .woocommerce-checkout,
+  [data-y="payment"] form.checkout.woocommerce-checkout,
+  main[data-y="main"] [data-y="payment"] form.checkout {
+    display: block;
+    grid-template-columns: unset;
+    grid-auto-flow: unset;
+    gap: unset;
+  }
+
+  [data-y="payment"] #customer_details,
+  [data-y="payment"] #order_review_heading,
+  [data-y="payment"] #order_review,
+  [data-y="payment"] .woocommerce-checkout-review-order,
+  main[data-y="main"] [data-y="payment"] #order_review {
+    grid-column: 1;
+  }
+
+  /* #customer_details أعلى بعرض كامل، لا شيء بجانبه */
+  [data-y="payment"] #customer_details {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+  }
+
+  /* col2-set عمود واحد: col-1 ثم col-2 تحت بعض */
+  [data-y="payment"] #customer_details .col2-set {
+    display: block;
+    width: 100%;
+  }
+
+  [data-y="payment"] #customer_details .col2-set .col-1,
+  [data-y="payment"] #customer_details .col2-set .col-2 {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    margin-bottom: 1rem;
+  }
+
+  [data-y="payment"] #order_review_heading {
+    order: 2;
+  }
+
+  /* #order_review أسفل بعرض كامل — grid-column: 1 و position: static لتفوق على قاعدة سطح المكتب */
+  [data-y="payment"] #order_review,
+  [data-y="payment"] .woocommerce-checkout-review-order,
+  main[data-y="main"] [data-y="payment"] #order_review {
+    grid-column: 1;
+    order: 3;
+    position: static;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  [data-y="payment"] .woocommerce-checkout-review-order-table {
+    margin: auto;
+  }
+}

@@ -1,0 +1,371 @@
+.hero-section > p {
+  padding-bottom: var(--y-space-14);
+  color: gray;
+  font-size: var(--y-space-16);
+}
+.filtration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--y-space-16);
+}
+.selects {
+  display: flex;
+  gap: var(--y-space-16);
+}
+.selects select {
+  background: transparent;
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-bold);
+  appearance: none;
+  border: none;
+}
+.selects select:focus-within {
+  outline: none;
+  border: none;
+}
+
+.selects .select {
+  display: flex;
+  justify-content: center;
+  gap: var(--y-space-6);
+  align-items: center;
+  padding: var(--y-space-8) var(--y-space-10);
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-border);
+  background: var(--y-color-bg);
+}
+.selects .select img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+  filter: brightness(0);
+}
+
+.filtration-button {
+  position: relative;
+}
+.filtration, .selects, .filtration-button {
+  overflow: visible;
+}
+.filtration-button > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure space between text and icon */
+  gap: var(--y-space-8);
+  padding: var(--y-space-8) var(--y-space-12);
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-primary); /* Orange border */
+  background: transparent; /* Transparent background */
+  color: var(--y-color-text);
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 160px; /* Give it some width */
+}
+/* General button image style to ensure all buttons have the same icon style */
+.filtration-button > button img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0);
+}
+
+/* Specific rotation for arrow-right to make it look like arrow-down if needed */
+.filtration-button > button img[src*="arrow-right.svg"] {
+  transform: rotate(90deg);
+}
+.filtration-button .filtration-menu {
+  position: absolute;
+  inset-inline-start: 0;
+  top: calc(100% + 6px);
+  min-width: max(220px, 100%);
+  background: var(--y-color-bg);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  padding: var(--y-space-8);
+  display: none;
+  z-index: 74;
+  height: 57vh;
+    overflow-y: scroll;
+}
+.filtration-menu::-webkit-scrollbar {
+  width: 4px;
+}
+.filtration-menu::-webkit-scrollbar-thumb {
+  background: var(--y-color-border);
+  border-radius: var(--y-space-4);
+}
+.filtration-menu::-webkit-scrollbar-track {
+  background: var(--y-color-bg);}
+    .filtration-button:nth-child(1) .filtration-menu {
+        top: 50px;
+        min-width: max-content;
+        right: 0;
+    }
+    .filtration-button:nth-child(2) .filtration-menu {
+        top: 50px;
+        min-width: max-content;
+        right: 0;
+    }
+.filtration-button.active {
+  position: relative;
+}
+.filtration-button.active .filtration-menu {
+  display: block;
+}
+.filtration-menu .filtration-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--y-space-8);
+  padding: var(--y-space-10) var(--y-space-12);
+  border-radius: var(--y-space-6);
+  color: var(--y-color-text);
+  cursor: pointer;
+}
+.filtration-menu .filtration-option:hover {
+  background: color-mix(in oklab, var(--y-color-primary) 8%, transparent);
+}
+.filtration-menu .filtration-option input[type="checkbox"],
+.filtration-menu .filtration-option input[type="radio"] {
+  inline-size: 16px;
+  block-size: 16px;
+}
+
+@media (max-width: 470px) {
+  .selects {
+    flex-direction: column;
+    width: 100%;
+  }
+  .selects .select img {
+    width: 16px;
+    height: 16px;
+  }
+  .selects .select {
+    width: 100%;
+  }
+  .selects .select select {
+    font-size: var(--y-text-sm);
+  }
+  .filtration {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+/* Extended Filter Styles */
+
+.filter-menu-wide {
+  min-width: 300px !important;
+  padding: 24px !important;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.filter-group {
+  margin-bottom: 24px;
+}
+
+.filter-group summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--y-color-text);
+  margin-bottom: 16px;
+}
+
+.filter-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.toggle-icon {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-icon i {
+  position: absolute;
+  transition: opacity 0.2s;
+}
+
+.toggle-icon .fa-minus {
+  opacity: 0;
+}
+
+.filter-group[open] .toggle-icon .fa-plus {
+  opacity: 0;
+}
+
+.filter-group[open] .toggle-icon .fa-minus {
+  opacity: 1;
+}
+
+.filter-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--y-color-text);
+}
+
+/* Custom Radio/Checkbox Styling */
+.filter-row input[type="radio"],
+.filter-row input[type="checkbox"],
+.filtration-option input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #E0E0E0;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.filter-row input[type="radio"]:checked,
+.filter-row input[type="checkbox"]:checked,
+.filtration-option input[type="radio"]:checked {
+  border-color: var(--y-color-primary);
+}
+
+.filter-row input[type="radio"]:checked::after,
+.filter-row input[type="checkbox"]:checked::after,
+.filtration-option input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: var(--y-color-primary);
+  border-radius: 50%;
+}
+
+/* Price Inputs */
+.price-inputs-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.price-input-group {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--y-color-primary);
+  border-radius: 4px;
+  padding: 0 8px;
+  height: 40px;
+  background: #fff;
+}
+
+.price-input-group input {
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  font-size: 14px;
+  color: var(--y-color-text);
+  padding-left: 24px; /* Space for currency */
+}
+
+.price-input-group .currency {
+  position: absolute;
+  left: 8px;
+  color: var(--y-color-text);
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.price-input-group .label {
+  display: none; /* Hidden based on design, but kept for a11y/structure if needed later */
+}
+
+/* Delete Filter Button */
+.delete-filter-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--y-color-primary);
+  border: 1px solid var(--y-color-primary);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background-color 0.2s;
+}
+.apply-filter-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--y-color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 24px;
+  transition: background-color 0.2s;
+}
+.apply-filter-btn:hover {
+  background-color: #d69436; /* Slightly darker shade */
+}
+
+.delete-filter-btn:hover {
+  background-color: #d69436; /* Slightly darker shade */
+  color: #fff;
+}
+
+/* Sort By Menu Styling */
+.filtration-menu label.filtration-option {
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+.filtration-menu label.filtration-option:hover {
+  background: transparent;
+  color: var(--y-color-primary);
+}
+
+/* Rating Stars */
+.rating-row {
+  justify-content: space-between;
+}
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars i {
+  font-size: 18px;
+}
+
+.stars i.filled {
+  color: var(--y-color-primary);
+}
+
+.stars i.empty {
+  color: #9CA3AF; /* Gray-400 equivalent */
+}

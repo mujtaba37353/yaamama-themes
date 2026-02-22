@@ -1,0 +1,14 @@
+{
+    "template": "account",
+    "slots": {
+        "page-title": "title",
+        "account-profile-container": "[data-y='account-profile-container']",
+        "orders-link": "[data-y='orders-link']",
+        "address-link": "[data-y='address-link']",
+        "account-details-link": "[data-y='account-details-link']",
+        "profile-content-placeholder": "[data-y='profile-content-placeholder']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

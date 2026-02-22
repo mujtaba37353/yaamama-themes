@@ -1,0 +1,32 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+/* Remove ::before pseudo-element that causes empty space */
+.products::before {
+  display: none !important;
+  content: none !important;
+}
+
+ul.products::before {
+  display: none !important;
+  content: none !important;
+}
+
+ul.products.columns-4::before,
+ul.products.columns-5::before,
+ul.products.columns-6::before {
+  display: none !important;
+  content: none !important;
+}
+
+@media (max-width: 820px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

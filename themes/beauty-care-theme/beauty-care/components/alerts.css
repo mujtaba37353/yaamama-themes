@@ -1,0 +1,73 @@
+/* إشعارات WooCommerce — تطابق تصميم Beauty Care */
+/* woocommerce-notices-wrapper يحوي .woocommerce-message | .woocommerce-error | .woocommerce-info */
+
+.woocommerce-notices-wrapper {
+  margin-bottom: var(--y-space-24);
+  width: 100%;
+}
+
+.woocommerce-notices-wrapper:empty {
+  display: none;
+}
+
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-error,
+.woocommerce-notices-wrapper .woocommerce-message,
+.woocommerce-notices-wrapper .woocommerce-info,
+.woocommerce-notices-wrapper .woocommerce-error,
+.auth-section .woocommerce-notices-wrapper .woocommerce-message,
+.auth-section .woocommerce-notices-wrapper .woocommerce-info,
+.auth-section .woocommerce-notices-wrapper .woocommerce-error,
+.account-section .woocommerce-notices-wrapper .woocommerce-message,
+.account-section .woocommerce-notices-wrapper .woocommerce-info,
+.account-section .woocommerce-notices-wrapper .woocommerce-error {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--y-space-12);
+  padding: var(--y-space-16) var(--y-space-20);
+  margin: 0 0 var(--y-space-16);
+  border-radius: var(--y-space-12);
+  border: 1px solid;
+  font-size: var(--y-space-16);
+  font-weight: 500;
+  line-height: 1.5;
+  list-style: none;
+  text-align: right;
+  direction: rtl;
+}
+
+.woocommerce .woocommerce-message,
+.woocommerce-notices-wrapper .woocommerce-message,
+.auth-section .woocommerce-notices-wrapper .woocommerce-message,
+.account-section .woocommerce-notices-wrapper .woocommerce-message {
+  background-color: #f0fdf4;
+  border-color: #86efac;
+  color: #166534;
+}
+
+.woocommerce .woocommerce-error,
+.woocommerce-notices-wrapper .woocommerce-error,
+.auth-section .woocommerce-notices-wrapper .woocommerce-error,
+.account-section .woocommerce-notices-wrapper .woocommerce-error {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  color: #b91c1c;
+}
+
+.woocommerce .woocommerce-info,
+.woocommerce-notices-wrapper .woocommerce-info,
+.auth-section .woocommerce-notices-wrapper .woocommerce-info,
+.account-section .woocommerce-notices-wrapper .woocommerce-info {
+  background-color: #eff6ff;
+  border-color: #bfdbfe;
+  color: #1d4ed8;
+}
+
+.woocommerce-message a,
+.woocommerce-info a,
+.woocommerce-error a {
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+}

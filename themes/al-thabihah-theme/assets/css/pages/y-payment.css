@@ -1,0 +1,554 @@
+/* Payment/Checkout – design from al-thabihah/templates/payment/y-payment.css */
+
+/* Theme: page wrapper + container */
+.y-l-payment-page {
+    padding: var(--y-spacing-2xl) 0 var(--y-spacing-4xl);
+    background-color: var(--y-color-background);
+}
+
+.y-l-payment-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--y-spacing-3xl);
+    align-items: start;
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    padding: 0 var(--y-spacing-lg);
+}
+
+.y-c-payment-forms-col,
+.y-c-order-summary-sidebar {
+    min-width: 0;
+}
+
+.y-c-payment-forms-col {
+    padding: var(--y-spacing-xl) var(--y-spacing-6xl) var(--y-spacing-xl) 0;
+}
+
+.y-c-form-section {
+    margin-bottom: var(--y-spacing-3xl);
+}
+
+.y-c-section-header {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+    text-align: right;
+}
+
+/* Hide WooCommerce default breadcrumb to avoid duplicate */
+.y-l-payment-page .woocommerce-breadcrumb,
+body.checkout .woocommerce-breadcrumb {
+    display: none !important;
+}
+
+/* Theme: breadcrumbs scoped to payment page – single line */
+.y-l-payment-page .y-c-breadcrumbs {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-l-payment-page .y-c-breadcrumbs p {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.y-l-payment-page .y-c-breadcrumbs p a,
+.y-l-payment-page .y-c-breadcrumbs p span {
+    white-space: nowrap;
+}
+
+.y-c-back-link {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: var(--y-spacing-xs);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-medium);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.y-c-back-link i,
+.y-c-back-link .y-c-back-link-text {
+    flex-shrink: 0;
+}
+
+.y-c-back-link i {
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-create-account-section {
+    margin-top: var(--y-spacing-xl);
+}
+
+.y-c-create-account-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-create-account-header .y-c-subsection-title {
+    margin-bottom: 0;
+}
+
+.y-c-toggle-icon {
+    transition: transform var(--y-transition-default);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-create-account-header.active .y-c-toggle-icon {
+    transform: rotate(180deg);
+}
+
+.y-l-payment-page .y-l-password-wrapper {
+    position: relative;
+}
+
+.y-l-payment-page .y-c-password-toggle {
+    position: absolute;
+    left: var(--y-spacing-md);
+    top: 20px;
+    cursor: pointer;
+    color: var(--y-color-border);
+    transition: color var(--y-transition-fast);
+}
+
+.y-l-payment-page .y-c-password-toggle:hover {
+    color: var(--y-color-primary-text);
+}
+
+/* إخفاء صناديق الدفع الافتراضية من WooCommerce (inputs إضافية) */
+.y-l-payment-page .payment_box,
+body.checkout .payment_box {
+    display: none !important;
+}
+
+.y-c-payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+/* إلغاء تأثير <br> و <p> التي قد تضاف من wpautop حتى لا ينكسر تخطيط طرق الدفع */
+.y-l-payment-page .y-c-payment-methods br {
+    display: none;
+}
+
+.y-l-payment-page .y-c-payment-methods p:empty {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.y-l-payment-page .y-c-payment-methods .y-c-payment-option > p {
+    display: contents;
+    margin: 0;
+    padding: 0;
+}
+
+.y-c-payment-option {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: var(--y-spacing-md);
+    padding: var(--y-spacing-md);
+    border: var(--y-border-width-thin) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    cursor: pointer;
+    background-color: var(--y-color-background-light);
+    transition: var(--y-transition-default);
+    min-height: var(--y-size-60);
+    width: 100%;
+}
+
+.y-c-payment-option.selected {
+    border: var(--y-border-width-sm) solid var(--y-color-error);
+    background-color: rgba(139, 0, 0, 0.08);
+}
+
+.y-c-radio-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-c-radio-input {
+    display: none;
+}
+
+.y-c-radio-checkmark {
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    border-radius: 50%;
+    border: var(--y-border-width-sm) solid var(--y-color-border);
+    position: relative;
+    display: block;
+    background-color: white;
+}
+
+.y-c-payment-option.selected .y-c-radio-checkmark {
+    border-color: var(--y-color-error);
+}
+
+.y-c-payment-option.selected .y-c-radio-checkmark::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: var(--y-size-10);
+    height: var(--y-size-10);
+    background-color: var(--y-color-error);
+    border-radius: 50%;
+}
+
+.y-c-radio-label {
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    flex: 1 1 auto;
+    min-width: 6em;
+    text-align: right;
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.y-c-card-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-font-size-2xl);
+}
+
+.y-c-card-icons .fa-apple-pay {
+    font-size: var(--y-font-size-3xl);
+}
+
+.y-c-payment-option img {
+    height: 24px;
+    object-fit: contain;
+}
+
+.y-c-card-details-form {
+    background-color: var(--y-color-background-alt);
+    padding: var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-md);
+    display: none;
+}
+
+.y-c-card-details-form.active {
+    display: block;
+}
+
+.y-c-subsection-title {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-xs);
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-c-date-inputs {
+    display: flex;
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-cvv-input-wrapper {
+    position: relative;
+}
+
+.y-c-cvv-hint {
+    position: absolute;
+    left: var(--y-spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--y-color-border);
+    cursor: help;
+}
+
+/* Theme: WooCommerce uses #place_order – نص ظاهر وارتفاع طبيعي */
+.y-l-payment-page #place_order,
+.y-l-payment-page #complete-order-btn {
+    margin-top: var(--y-spacing-xl);
+    padding: var(--y-spacing-sm) var(--y-spacing-xl);
+    font-size: var(--y-font-size-lg);
+    line-height: 1.25;
+    border-width: var(--y-border-width-sm);
+    font-weight: var(--y-font-weight-bold);
+    border-color: var(--y-color-error);
+    color: var(--y-color-error);
+    background-color: var(--y-color-btn, #f5f0eb);
+    white-space: nowrap;
+}
+
+.y-l-payment-page #place_order:hover,
+.y-l-payment-page #complete-order-btn:hover {
+    background-color: var(--y-color-error);
+    color: white;
+}
+
+.y-c-order-summary-sidebar {
+    background-color: var(--y-color-left-part, var(--y-color-background-light));
+    padding: var(--y-spacing-xl) var(--y-spacing-6xl) var(--y-spacing-xl) var(--y-spacing-6xl);
+    height: 100%;
+}
+
+.y-c-summary-sidebar-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+    text-align: right;
+}
+
+.y-c-summary-items {
+    margin-bottom: var(--y-spacing-2xl);
+    border-bottom: var(--y-border-width-thin) solid var(--y-color-border);
+    padding-bottom: var(--y-spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-summary-item {
+    display: flex;
+    gap: var(--y-spacing-md);
+    align-items: flex-start;
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-summary-image-wrapper {
+    position: relative;
+}
+
+.y-c-summary-img,
+.y-c-summary-image-wrapper img {
+    width: var(--y-size-80);
+    height: var(--y-size-60);
+    border-radius: var(--y-border-radius-sm);
+    object-fit: cover;
+    background-color: var(--y-color-background);
+}
+
+.y-c-summary-details {
+    flex: 1;
+}
+
+.y-c-summary-name {
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xxs);
+    display: block;
+}
+
+.y-c-summary-price {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-bold);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xxs);
+}
+
+.y-c-summary-qty-badge {
+    background-color: var(--y-color-error);
+    color: var(--y-color-secondary-text);
+    font-size: var(--y-font-size-xs);
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: calc(-1 * var(--y-spacing-xs));
+    left: calc(-1 * var(--y-spacing-xs));
+}
+
+.y-c-summary-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--y-spacing-xs);
+    margin-top: var(--y-spacing-xs);
+}
+
+.y-c-summary-option {
+    font-size: var(--y-font-size-xs);
+    border: var(--y-border-width-thin) solid var(--y-color-error);
+    color: var(--y-color-error);
+    padding: var(--y-spacing-2) var(--y-spacing-xs);
+    border-radius: var(--y-border-radius-xs);
+    background-color: var(--y-color-background-light);
+}
+
+.y-c-summary-totals {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-order-summary-sidebar .y-c-value {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--y-spacing-xxs);
+    direction: ltr;
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-order-summary-sidebar .y-c-total-value {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--y-spacing-xxs);
+    direction: ltr;
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-total-row-highlight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--y-spacing-lg);
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-lg);
+}
+
+.y-c-coin-icon-small {
+    width: var(--y-size-18);
+    height: auto;
+    vertical-align: middle;
+    margin-inline-start: var(--y-spacing-xxs);
+    margin-inline-end: 0;
+    display: inline-block;
+}
+
+@media (max-width: 992px) {
+    .y-l-payment-page .y-c-breadcrumbs {
+        display: none;
+    }
+
+    .y-l-payment-container {
+        grid-template-columns: 1fr;
+        gap: var(--y-spacing-2xl);
+    }
+
+    .y-c-payment-forms-col {
+        order: 2;
+        padding: var(--y-spacing-lg) var(--y-spacing-md) var(--y-spacing-lg) 0;
+    }
+
+    .y-c-order-summary-sidebar {
+        order: 1;
+        position: static;
+        padding: var(--y-spacing-lg);
+    }
+
+    .y-c-form-section {
+        margin-bottom: var(--y-spacing-2xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-payment-container {
+        gap: var(--y-spacing-xl);
+    }
+
+    .y-c-payment-forms-col {
+        padding: var(--y-spacing-md) var(--y-spacing-sm) var(--y-spacing-md) 0;
+    }
+
+    .y-c-order-summary-sidebar {
+        padding: var(--y-spacing-md);
+        height: auto;
+    }
+
+    .y-c-payment-option {
+        height: auto;
+        min-height: var(--y-size-60);
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-card-icons {
+        font-size: var(--y-font-size-2xl);
+        margin-right: var(--y-spacing-sm);
+    }
+
+    .y-c-summary-item {
+        margin-bottom: var(--y-spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-payment-container {
+        gap: var(--y-spacing-lg);
+    }
+
+    .y-c-payment-forms-col {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-order-summary-sidebar {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-form-row {
+        flex-direction: column;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-payment-option {
+        gap: var(--y-spacing-sm);
+        padding: var(--y-spacing-sm);
+        height: auto;
+    }
+
+    .y-c-card-icons {
+        margin-right: 0;
+    }
+
+    .y-c-section-header {
+        font-size: var(--y-font-size-lg);
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-c-form-section {
+        margin-bottom: var(--y-spacing-xl);
+    }
+
+    .y-c-summary-img,
+    .y-c-summary-image-wrapper img {
+        width: var(--y-size-60);
+        height: var(--y-size-48);
+    }
+
+    .y-c-summary-item {
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-l-payment-page #place_order,
+    .y-l-payment-page #complete-order-btn {
+        font-size: var(--y-font-size-lg);
+    }
+}

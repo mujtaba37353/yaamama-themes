@@ -1,0 +1,128 @@
+.y-breadcrumb-container {
+  padding: 1rem 5%;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.y-breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--y-font-family);
+  font-size: var(--y-font-size-base);
+  gap: 0.25rem 0;
+}
+
+.y-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  color: var(--y-color-text-dark);
+}
+
+.y-breadcrumb-item + .y-breadcrumb-item::before {
+  content: "/";
+  padding: 0 0.5rem;
+  color: var(--y-color-gray);
+}
+
+.y-breadcrumb-item a {
+  color: var(--y-color-text-dark);
+  text-decoration: none;
+  transition: var(--y-transition-fast);
+}
+
+.y-breadcrumb-item a:hover {
+  color: var(--y-main);
+}
+
+.y-breadcrumb-item.active {
+  color: var(--y-color-gray);
+  font-weight: var(--y-fw-bold);
+}
+
+@media (max-width: 992px) {
+  .y-breadcrumb-container {
+    padding: 0.875rem 4%;
+    margin-bottom: 1.5rem;
+  }
+
+  .y-breadcrumb {
+    font-size: 0.95rem;
+  }
+
+  .y-breadcrumb-item + .y-breadcrumb-item::before {
+    padding: 0 0.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .y-breadcrumb-container {
+    padding: 0.75rem 3%;
+    margin-bottom: 1.25rem;
+  }
+
+  .y-breadcrumb {
+    font-size: 0.9rem;
+  }
+
+  .y-breadcrumb-item {
+    max-width: 100%;
+  }
+
+  .y-breadcrumb-item + .y-breadcrumb-item::before {
+    padding: 0 0.35rem;
+    font-size: 0.85rem;
+  }
+
+  .y-breadcrumb-item a,
+  .y-breadcrumb-item.active {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  .y-breadcrumb-container {
+    padding: 0.625rem 2%;
+    margin-bottom: 1rem;
+  }
+
+  .y-breadcrumb {
+    font-size: 0.85rem;
+  }
+
+  .y-breadcrumb-item + .y-breadcrumb-item::before {
+    padding: 0 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  .y-breadcrumb-item a,
+  .y-breadcrumb-item.active {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 420px) {
+  .y-breadcrumb-container {
+    padding: 0.5rem 1.5%;
+    margin-bottom: 0.75rem;
+  }
+
+  .y-breadcrumb {
+    font-size: 0.8rem;
+  }
+
+  .y-breadcrumb-item + .y-breadcrumb-item::before {
+    padding: 0 0.25rem;
+  }
+
+  .y-breadcrumb-item a,
+  .y-breadcrumb-item.active {
+    max-width: 100px;
+  }
+}

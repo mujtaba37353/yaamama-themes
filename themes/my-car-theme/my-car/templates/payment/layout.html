@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدفع | My Car</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <!-- Payment Page Styles -->
+    <link rel="stylesheet" href="y-payment.css">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main data-y="payment-main">
+        <div class="y-u-container">
+
+            <!-- ===== Stepper Navigation ===== -->
+            <nav class="y-l-stepper" data-y="payment-stepper">
+                <ol>
+                    <li class="y-c-step completed"><a href="/templates/store/layout.html">نتائج البحث</a></li>
+                    <li class="y-c-step completed"><a href="/templates/additions/layout.html">الاضافات</a></li>
+                    <li class="y-c-step completed"><a href="/templates/use-conditions/layout.html">شروط الاستخدام</a>
+                    </li>
+                    <li class="y-c-step active"><span>الدفع</span></li>
+                    <li class="y-c-step"><span>التأكيد</span></li>
+                </ol>
+            </nav>
+
+            <!-- ===== Payment Form Section ===== -->
+            <section class="y-l-payment-form-container">
+                <form class="y-c-payment-card" id="payment-form" data-y="payment-form">
+                    <div class="y-l-form-container" style="flex-direction: column; width: 100%;">
+
+                        <!-- Cash Payment Option -->
+                        <div class="y-c-radio-option" data-y="payment-option-cash">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="cash">
+                                <div class="y-c-payment-label-text">
+                                    <span>الدفع نقدا عند الإستلام</span>
+                                    <p>ادفع نقدا للسائق عند استلام السيارة</p>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Apple Pay Option -->
+                        <div class="y-c-radio-option" data-y="payment-option-apple">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="apple">
+                                <div class="y-c-payment-label-text">
+                                    <span>Apple Pay</span>
+                                    <p>ادفع بسهولة وأمان باستخدام Apple Pay</p>
+                                </div>
+                                <div class="y-c-payment-icons">
+                                    <i class="fab fa-apple" style="font-size: 24px;"></i>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Credit Card Option -->
+                        <div class="y-c-radio-option y-c-active" data-y="payment-option-card">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="online" checked>
+                                <div class="y-c-payment-label-text">
+                                    <span>الدفع عبر الانترنت</span>
+                                    <p>ادفع ببطاقتك الائتمانية</p>
+                                </div>
+                                <div class="y-c-payment-icons">
+                                    <img src="/assets/master-card.png" alt="MasterCard">
+                                    <img src="/assets/visa.png" alt="Visa">
+                                    <span class="y-c-mada-badge">mada</span>
+                                </div>
+                            </label>
+
+                            <div class="y-c-payment-card-details">
+                                <div class="y-c-floating-field">
+                                    <input type="text" id="card-name" class="y-c-floating-input" required
+                                        pattern="^[a-zA-Z\s]{5,50}$" title="يجب أن يحتوي الاسم على حروف انجليزية فقط"
+                                        autocomplete="cc-name">
+                                    <label for="card-name" class="y-c-floating-label">اسم حامل البطاقة</label>
+                                </div>
+                                <div class="y-c-floating-field">
+                                    <input type="text" id="card-number" class="y-c-floating-input"
+                                        placeholder="1234 5678 9101 1121" required pattern="[0-9\s]{13,19}"
+                                        maxlength="19" autocomplete="cc-number">
+                                    <label for="card-number" class="y-c-floating-label">رقم البطاقة</label>
+                                </div>
+                                <div class="y-l-form-row">
+                                    <div class="y-c-floating-field">
+                                        <input type="text" id="expiry-date" class="y-c-floating-input"
+                                            placeholder="MM / YY" required pattern="(0[1-9]|1[0-2])\/([0-9]{2})"
+                                            maxlength="5" autocomplete="cc-exp">
+                                        <label for="expiry-date" class="y-c-floating-label">تاريخ الانتهاء</label>
+                                    </div>
+                                    <div class="y-c-floating-field">
+                                        <input type="text" id="cvc" class="y-c-floating-input" placeholder="CVV"
+                                            required pattern="[0-9]{3,4}" maxlength="3" autocomplete="cc-csc">
+                                        <label for="cvc" class="y-c-floating-label">CVV</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STC Pay Option -->
+                        <div class="y-c-radio-option" data-y="payment-option-stc">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="stc">
+                                <div class="y-c-payment-label-text">
+                                    <span>الدفع عن طريق stc pay</span>
+                                    <p>ادفع بسهولة باستخدام محفظة stc pay</p>
+                                </div>
+                                <div class="y-c-payment-icons">
+                                    <img src="/assets/stc-pay.png" alt="STC Pay">
+                                </div>
+                            </label>
+                            <div class="y-c-stc-pay-details" style="display: none;">
+                                <div class="y-c-floating-field">
+                                    <input type="tel" id="stc-phone" class="y-c-floating-input"
+                                        placeholder="05XXXXXXXX">
+                                    <label for="stc-phone" class="y-c-floating-label">رقم الجوال</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tabby Option -->
+                        <div class="y-c-radio-option" data-y="payment-option-tabby">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="tabby">
+                                <div class="y-c-payment-label-text">
+                                    <span>tabby</span>
+                                    <p>قسّم مشترياتك على 4 دفعات بدون فوائد</p>
+                                </div>
+                                <div class="y-c-payment-icons">
+                                    <span class="y-c-tabby-badge">tabby</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Tamara Option -->
+                        <div class="y-c-radio-option" data-y="payment-option-tamara">
+                            <label class="y-c-payment-label">
+                                <input type="radio" name="payment_method" value="tamara">
+                                <div class="y-c-payment-label-text">
+                                    <span>tamara</span>
+                                    <p>اشتر الآن وادفع على 3 دفعات بدون فوائد</p>
+                                </div>
+                                <div class="y-c-payment-icons">
+                                    <span class="y-c-tamara-badge">tamara</span>
+                                </div>
+                            </label>
+                        </div>
+
+                        <a href="#" class="y-c-back-link"><i class="fas fa-arrow-left"></i></a>
+
+                    </div>
+
+                    <!-- ===== Payment Summary Section ===== -->
+                    <aside class="y-l-payment-summary">
+                        <div class="y-l-info-row">
+                            <div class="y-c-summary-detail y-l-summary-title-container">
+                                <p class="y-c-summary-price" data-y="summary-title">السعر المتوقع دفعة</p>
+                                <p class="y-c-summary-price" data-y="summary-total-price">1207.73 ريال</p>
+                            </div>
+                            <button type="submit" class="y-c-submit-btn">ادفع الآن</button>
+                        </div>
+                    </aside>
+
+                </form>
+            </section>
+
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/payment.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+</body>
+
+</html>

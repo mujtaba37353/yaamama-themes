@@ -1,0 +1,31 @@
+{
+  "name": "يمامة | Yamama",
+  "short_name": "يمامة",
+  "description": "يمامة منصة عربية لإنشاء وإدارة المتاجر الإلكترونية وقوالب المتاجر وعمليات الدفع.",
+  "dir": "rtl",
+  "lang": "ar",
+  "display": "standalone",
+  "start_url": "./home/index.html",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "../assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#10b981",
+  "background_color": "#f8fafc",
+  "prefer_related_applications": false,
+  "categories": [
+    "business",
+    "shopping"
+  ]
+}

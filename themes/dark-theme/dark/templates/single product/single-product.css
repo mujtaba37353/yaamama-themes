@@ -1,0 +1,185 @@
+/* منطقة المحتوى الرئيسية: عرض كامل الصفحة */
+#primary.content-area,
+#primary.content-area main#main.site-main {
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+/* html و body في صفحة المنتج المنفردة — الارتفاع يمتد ليشمل كل المحتوى */
+html:has(body.single-product),
+html:has(body.single.single-product) {
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.single-product,
+body.single.single-product {
+  min-height: 100%;
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFBF6;
+  font-family: var(--y-font-family);
+  overflow-x: hidden;
+  max-width: none;
+}
+
+/* إزاحة هيدر الصفحة (البانر) لأسفل شريط التنقل الثابت */
+header[data-y="design-header"] {
+  padding-top: 80px !important;
+}
+
+body.admin-bar header[data-y="design-header"] {
+  padding-top: 112px !important;
+}
+
+/* مسافة أعلى المحتوى — تمنع انزلاق المحتوى تحت الهيدر الثابت */
+body.single-product main#main.site-main,
+body.single.single-product main#main.site-main {
+  padding-top: 5.5rem;
+}
+body.admin-bar.single-product main#main.site-main,
+body.admin-bar.single.single-product main#main.site-main {
+  padding-top: 7rem;
+}
+/* الحاوية الرئيسية: إلغاء المسافة الجانبية من utilities.css و reset.css في كل الأحجام */
+body.single-product main .y-main-container,
+body.single.single-product main .y-main-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-inline: 0 !important;
+  box-sizing: border-box;
+}
+main .y-main-container {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+main .pro {
+  margin: 2.5rem auto 2rem;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+main .pro .section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* حقل الكمية من WooCommerce داخل .qnt */
+.single-product .details .qnt .quantity {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+.single-product .details .qnt .quantity label {
+  display: none;
+}
+.single-product .details .qnt .quantity input.qty,
+.single-product .details .qnt .quantity input[type="number"] {
+  width: 3rem;
+  text-align: center;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  -moz-appearance: textfield;
+}
+.single-product .details .qnt .quantity input.qty::-webkit-outer-spin-button,
+.single-product .details .qnt .quantity input.qty::-webkit-inner-spin-button,
+.single-product .details .qnt .quantity input[type="number"]::-webkit-outer-spin-button,
+.single-product .details .qnt .quantity input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* قسم "تسوق أكثر" — h2 في صف أعلى، ul في صف أسفل بعرض كامل */
+main .pro .related.products {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+main .pro .related.products .section-title,
+main .pro .related.products h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+main .pro .related.products .products,
+main .pro .related.products ul.products {
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+/* المنتجات المرتبطة: 4 أعمدة على الويب، 2 على الجوال — ul بعرض كامل لتمكين البطاقات من أخذ حجمها */
+main .pro .related.products .products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 820px) {
+  main .pro .related.products .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main .pro .related.products .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 820px) {
+  main .pro {
+    padding: 0 1rem;
+  }
+  main .pro .section-title {
+    font-size: 1.35rem;
+  }
+}
+
+/* جوال: تقليل المسافات إلى النصف أعلى المحتوى وأعلى قسم "تسوق أكثر" */
+@media (max-width: 480px) {
+  body.single-product main#main.site-main,
+  body.single.single-product main#main.site-main {
+    padding-top: 2.75rem;
+  }
+  body.admin-bar.single-product main#main.site-main,
+  body.admin-bar.single.single-product main#main.site-main {
+    padding-top: 3.5rem;
+  }
+  body.single-product main .y-main-container,
+  body.single.single-product main .y-main-container {
+    padding-top: 1rem;
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    padding-inline: 0.75rem !important;
+  }
+  main .pro {
+    padding: 0 0.5rem;
+    margin: 1.5rem auto;
+  }
+  main .pro .section-title {
+    font-size: 1.2rem;
+  }
+  main .pro .related.products {
+    margin-top: 1rem;
+  }
+}

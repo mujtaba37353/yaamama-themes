@@ -1,0 +1,545 @@
+/* Breadcrumb Styling */
+.y-c-breadcrumb {
+    margin-bottom: var(--y-spacing-lg);
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+}
+
+/* Layout Grid */
+.y-l-product-detail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xl);
+    margin-top: var(--y-spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .y-l-product-detail {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: var(--y-spacing-3xl);
+    }
+}
+
+/* Left Column: Image Slider Area */
+.y-l-product-images {
+    width: 100%;
+    position: relative;
+    background-color: var(--y-color-background);
+}
+
+@media (min-width: 768px) {
+    .y-l-product-images {
+        width: 50%;
+    }
+}
+
+.y-c-single-slider-container {
+    position: relative;
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--y-size-400);
+}
+
+.y-c-single-main-image {
+    width: 100%;
+    max-height: var(--y-size-350);
+    object-fit: cover;
+    transition: opacity var(--y-transition-fast);
+}
+
+/* Image Overlays */
+.y-c-single-discount {
+    position: absolute;
+    top: var(--y-spacing-md);
+    left: 0;
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    padding: var(--y-spacing-xxs) var(--y-spacing-md);
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-bold);
+    border-radius: var(--y-border-radius-xs);
+    z-index: 2;
+}
+
+.y-c-single-fav-btn {
+    position: absolute;
+    top: var(--y-spacing-md);
+    right: var(--y-spacing-md);
+    z-index: 2;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-single-fav-btn i {
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-2xl);
+}
+
+/* Slider Navigation Dots */
+.y-c-single-dots {
+    position: absolute;
+    bottom: var(--y-spacing-lg);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: var(--y-spacing-xs);
+    z-index: 5;
+}
+
+.y-c-single-dot {
+    width: var(--y-size-8);
+    height: var(--y-size-8);
+    background-color: var(--y-color-border);
+    border-radius: var(--y-border-radius-full);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-single-dot.active {
+    background-color: var(--y-color-primary);
+}
+
+.y-c-single-dot:hover {
+    background-color: var(--y-color-primary-hover);
+}
+
+/* Right Column: Product Info */
+.y-l-product-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+@media (min-width: 768px) {
+    .y-l-product-info {
+        width: 50%;
+    }
+}
+
+.y-c-category-title {
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    margin: 0;
+}
+
+.y-c-product-title {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-regular);
+    line-height: 1.5;
+    margin: 0;
+}
+
+.y-c-meta-label {
+    font-size: var(--y-font-size-xs);
+    color: var(--y-color-third-text);
+}
+
+.y-c-section-label {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+/* Price Section */
+.y-c-product-price-large {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+}
+
+.y-c-price-icon {
+    width: var(--y-size-24);
+    height: auto;
+}
+
+/* Purchase Section (Buttons) */
+.y-l-product-purchase {
+    margin-top: var(--y-spacing-lg);
+}
+
+.y-c-product-quantity-wrapper {
+    margin-bottom: var(--y-spacing-lg);
+}
+
+/* Reviews Section */
+.y-l-reviews-section {
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-rating-stars i {
+    color: var(--y-color-third-text);
+    /* Default star color */
+    font-size: var(--y-font-size-xl);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-rating-stars i.fas {
+    color: var(--y-color-primary);
+    /* Active star color */
+}
+
+.y-c-review-box {
+    background-color: var(--y-color-light-gray);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    padding: var(--y-spacing-lg);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-md);
+    text-align: right;
+}
+
+
+/* Accordion Section */
+.y-l-accordions {
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-accordion-item {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-accordion-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    cursor: pointer;
+    padding-bottom: var(--y-spacing-sm);
+}
+
+.y-c-accordion-header h3 {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+    margin: 0;
+}
+
+.y-c-accordion-icon {
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-lg);
+    transition: transform var(--y-transition-fast);
+}
+
+.y-c-accordion-content {
+    display: none;
+    padding: var(--y-spacing-md) 0;
+    color: var(--y-color-primary-text);
+    line-height: var(--y-line-height-lg);
+    font-size: var(--y-font-size-md);
+}
+
+/* Accordion Active State */
+.y-c-accordion-item.active .y-c-accordion-content {
+    display: block;
+}
+
+.y-c-accordion-item.active .y-c-accordion-header {
+    border-bottom: none;
+}
+
+/* Related Products Header */
+.y-l-similar-products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--y-spacing-3xl);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-c-section-title {
+    margin: 0;
+}
+
+.y-c-review-textarea {
+    background-color: var(--y-color-background);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    padding: var(--y-spacing-lg);
+    color: var(--y-color-text-primary);
+    margin-bottom: var(--y-spacing-md);
+    text-align: right;
+    width: 100%;
+    resize: vertical;
+    min-height: var(--y-size-200);
+    font-family: inherit;
+    font-size: var(--y-font-size-md);
+    outline: none;
+}
+
+.y-c-review-textarea:focus {
+    border-color: var(--y-color-primary);
+}
+
+/* Review Submit Button - Match Add to Cart Button Style */
+#review_form_wrapper button[type="submit"],
+#review_form_wrapper .y-c-btn-primary,
+#review_form_wrapper .submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--y-spacing-xs);
+    padding: var(--y-spacing-md) var(--y-spacing-xl);
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border: none;
+    border-radius: var(--y-border-radius-sm);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-bold);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    width: auto !important; /* Override y-c-btn-full to make button fit content */
+    min-width: auto;
+    margin-top: var(--y-spacing-md);
+}
+
+#review_form_wrapper button[type="submit"]:hover,
+#review_form_wrapper .y-c-btn-primary:hover,
+#review_form_wrapper .submit:hover {
+    background-color: var(--y-color-primary-hover);
+}
+
+/* Product Details Section (Description and Information) */
+.y-l-product-details {
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-product-detail-section {
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-product-detail-section:last-child {
+    margin-bottom: 0;
+}
+
+.y-c-product-detail-content {
+    margin-top: var(--y-spacing-md);
+    color: var(--y-color-primary-text);
+    line-height: var(--y-line-height-lg);
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-product-detail-content p {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-product-detail-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-product-detail-content table th,
+.y-c-product-detail-content table td {
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+    text-align: right;
+    border-bottom: 1px solid var(--y-color-border);
+}
+
+.y-c-product-detail-content table th {
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+    background-color: var(--y-color-background-light);
+}
+
+/* Review Form Styling */
+#review_form_wrapper {
+    margin-top: var(--y-spacing-xl);
+}
+
+#review_form_wrapper .comment-form {
+    margin-top: var(--y-spacing-lg);
+}
+
+#review_form_wrapper .comment-form p {
+    margin-bottom: var(--y-spacing-md);
+}
+
+#review_form_wrapper .comment-form label {
+    display: block;
+    margin-bottom: var(--y-spacing-xs);
+    font-weight: var(--y-font-weight-medium);
+    color: var(--y-color-primary-text);
+}
+
+#review_form_wrapper .comment-form input[type="text"],
+#review_form_wrapper .comment-form input[type="email"],
+#review_form_wrapper .comment-form textarea,
+#review_form_wrapper .comment-form select {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    font-size: var(--y-font-size-md);
+    font-family: inherit;
+    background-color: var(--y-color-background);
+    color: var(--y-color-primary-text);
+}
+
+#review_form_wrapper .comment-form input:focus,
+#review_form_wrapper .comment-form textarea:focus,
+#review_form_wrapper .comment-form select:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+}
+
+#review_form_wrapper .comment-form-rating {
+    margin-bottom: var(--y-spacing-lg);
+}
+
+#review_form_wrapper .comment-form-rating select {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Hide rating select field - we use custom stars instead */
+#review_form_wrapper .comment-form-rating select#rating {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Make custom rating stars clickable */
+#user-rating [data-rating] {
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    user-select: none;
+}
+
+#user-rating [data-rating]:hover {
+    transform: scale(1.1);
+}
+
+/* Hide star rating text content (e.g., "1 of 5 stars") but keep stars visible */
+#review_form_wrapper [role="group"] a[role="radio"],
+#review_form_wrapper [role="radiogroup"] a[role="radio"],
+#review_form_wrapper [role="group"] button[role="radio"],
+#review_form_wrapper [role="radiogroup"] button[role="radio"],
+#review_form_wrapper .stars a,
+#review_form_wrapper .stars-wrapper a,
+#review_form_wrapper .stars button,
+#review_form_wrapper .stars-wrapper button {
+    font-size: 0 !important;
+    line-height: 0 !important;
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+    color: transparent !important;
+    position: relative !important;
+}
+
+/* Ensure stars container is visible and properly styled */
+#review_form_wrapper .stars,
+#review_form_wrapper .stars-wrapper,
+#review_form_wrapper [role="group"],
+#review_form_wrapper [role="radiogroup"] {
+    display: flex !important;
+    gap: var(--y-spacing-xs) !important;
+    align-items: center !important;
+    flex-wrap: wrap !important;
+}
+
+/* Style star links/buttons to show only icons */
+#review_form_wrapper .stars a,
+#review_form_wrapper .stars-wrapper a,
+#review_form_wrapper [role="group"] a[role="radio"],
+#review_form_wrapper [role="radiogroup"] a[role="radio"] {
+    width: var(--y-size-24) !important;
+    height: var(--y-size-24) !important;
+    min-width: var(--y-size-24) !important;
+    min-height: var(--y-size-24) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    background: none !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+/* Ensure SVG stars are visible */
+#review_form_wrapper .stars button svg,
+#review_form_wrapper .stars-wrapper button svg,
+#review_form_wrapper [role="group"] button[role="radio"] svg,
+#review_form_wrapper [role="radiogroup"] button[role="radio"] svg {
+    display: block !important;
+    width: var(--y-size-24) !important;
+    height: var(--y-size-24) !important;
+}
+
+/* Reviews List */
+.woocommerce-Reviews .commentlist {
+    list-style: none;
+    padding: 0;
+    margin: var(--y-spacing-xl) 0;
+}
+
+.woocommerce-Reviews .comment {
+    margin-bottom: var(--y-spacing-xl);
+    padding-bottom: var(--y-spacing-lg);
+    border-bottom: 1px solid var(--y-color-border);
+}
+
+.woocommerce-Reviews .comment:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.woocommerce-Reviews .comment-meta {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.woocommerce-Reviews .comment-author {
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.woocommerce-Reviews .star-rating {
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.woocommerce-Reviews .comment-text {
+    color: var(--y-color-primary-text);
+    line-height: var(--y-line-height-lg);
+}
+
+/* Related Products Grid - Mobile Responsive */
+/* Ensure related products show 2 per row on mobile */
+#product-container-related.y-l-product-grid,
+ul#product-container-related.y-l-product-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: var(--y-spacing-lg) !important;
+}
+
+@media (max-width: 768px) {
+    #product-container-related.y-l-product-grid,
+    ul#product-container-related.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--y-spacing-md) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #product-container-related.y-l-product-grid,
+    ul#product-container-related.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: var(--y-spacing-sm) !important;
+    }
+}

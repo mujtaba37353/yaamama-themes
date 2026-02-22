@@ -1,0 +1,34 @@
+.quantity {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  max-width: 110px;
+  border-radius: var(--y-space-16);
+  color: var(--y-color-txt);
+  border: 1px solid lightgrey;
+}
+.quantity button {
+  color: var(--y-color-text);
+  border: none;
+  cursor: pointer;
+  font-size: var(--y-space-22);
+  font-weight: 300;
+  padding-right: var(--y-space-4);
+}
+.quantity button i {
+  font-size: var(--y-space-22);
+}
+.quantity input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  margin-right: var(--y-space-8);
+  font-size: var(--y-space-24);
+  font-weight: 300;
+  background-color: transparent;
+  color: var(--y-color-text);
+  border-radius: var(--y-space-4);
+}
+.quantity input:focus-visible {
+  outline: none;
+}

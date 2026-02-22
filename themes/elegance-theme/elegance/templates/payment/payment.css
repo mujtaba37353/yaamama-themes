@@ -1,0 +1,334 @@
+#payment-method-group {
+  display: flex;
+    flex-direction: column;
+    gap: var(--y-space-14);
+    width: 100%;
+}
+
+.payment-section .bottom-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+}
+.payment-section .header h2 {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+.payment-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+
+.payment-section form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--y-space-16);
+  background: transparent;
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+}
+
+.payment-section h2 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  font-size: var(--y-space-20);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-txt);
+}
+.payment-section .form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  width: 100%;
+}
+.payment-section input,
+.payment-section select,
+.payment-section textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-14);
+  background: white;
+  color: var(--y-color-txt);
+  transition: all 0.3s ease-in-out;
+  width: 100%;
+}
+.payment-section input::placeholder,
+.payment-section select::placeholder,
+.payment-section textarea::placeholder {
+  color: var(--y-color-txt);
+}
+
+.payment-section input:focus,
+.payment-section select:focus,
+.payment-section textarea:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+
+input[type="radio" i] {
+  accent-color: var(--y-color-primary);
+  border: 2px solid var(--y-color-primary);
+  outline: var(--y-color-txt);
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background-color: var(--y-color-bg);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+input[type="radio" i]:checked {
+  background-color: var(--y-color-primary);
+  outline: 5px solid var(--y-color-bg);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  width: -webkit-fill-available;
+  padding-inline: var(--y-space-42);
+  background-color: var(--y-color-bg);
+  padding: var(--y-space-10);
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-14);
+  color: var(--y-color-txt);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-group img {
+  height: 20px;
+  object-fit: contain;
+}
+.radio-group:has(input[type="radio"]:checked) {
+  background-color: #8f72ec6e;
+  color: var(--y-color-text);
+}
+
+.card {
+  width: 100%;
+  padding: var(--y-space-4);
+  background: var(--y-color-bg);
+  border-radius: var(--y-space-14);
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+  margin-top: var(--y-space-16);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, padding 0.3s ease,
+    margin 0.3s ease;
+  pointer-events: none;
+}
+
+form:has(#visa:checked) .card {
+  max-height: 600px;
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: var(--y-space-16);
+  pointer-events: auto;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s, padding 0.3s ease,
+    margin 0.3s ease;
+}
+
+.card-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.card-field label {
+  color: var(--y-color-txt);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-normal);
+}
+
+.card input {
+  background: white;
+  color: var(--y-color-txt);
+  border: 1px solid var(--y-color-txt);
+  border-radius: var(--y-space-14);
+  padding: var(--y-space-14) var(--y-space-16);
+  font-size: var(--y-space-16);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card input::placeholder {
+  color: #9b9b9b;
+}
+
+.card input:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+  outline: none;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+
+.cvv-field {
+  position: relative;
+}
+
+.cvv-header {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.cvv-info {
+  width: 24px !important;
+  height: 24px;
+  border-radius: var(--y-space-14);
+  border: 1px solid var(--y-color-txt);
+  background: transparent;
+  color: var(--y-color-txt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  font-size: var(--y-space-12);
+}
+
+.cvv-header label {
+  color: var(--y-color-txt);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-normal);
+}
+
+.expiry-field label {
+  margin-bottom: var(--y-space-8);
+}
+
+.expiry-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-12);
+}
+
+.payment-section .product-grid {
+  background-color: var(--y-color-bg);
+  border-radius: var(--y-space-14);
+  padding: var(--y-space-24);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  margin-bottom: var(--y-space-16);
+  color: var(--y-color-txt);
+  border: 2px solid var(--y-color-primary);
+}
+
+.payment-section .coupon {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--y-space-12);
+}
+
+.payment-section .coupon input {
+  margin: 0;
+}
+
+.total {
+  margin-top: var(--y-space-16);
+  border-radius: var(--y-space-14);
+  padding: var(--y-space-16) var(--y-space-24);
+  display: flex;
+  gap: var(--y-space-16);
+  flex-direction: column;
+  color: var(--y-color-txt);
+  border: 2px solid var(--y-color-primary);
+}
+.total img {
+  width: 24px;
+  height: 24px;
+}
+.total p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-20);
+  font-weight: 300;
+}
+
+label[for="visa"] {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+.payment-section .header a {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+  text-decoration: none;
+  color: var(--y-color-txt);
+  font-size: var(--y-space-16);
+  font-weight: 700;
+}
+.payment-section .header a i {
+  font-size: var(--y-space-20);
+}
+
+@media (max-width: 992px) {
+  .payment-section .bottom-section {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: var(--y-space-24);
+  }
+  .payment-section button {
+    width: 100%;
+    justify-content: center;
+  }
+  input:not([type="radio"]) {
+    width: 100% !important;
+  }
+  .radio-group {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .card-row {
+    grid-template-columns: 1fr;
+  }
+
+  .expiry-inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+  .payment-section .product-item {
+    grid-template-columns: 1fr;
+  }
+  .payment-section .form-group {
+    grid-template-columns: 1fr;
+  }
+  .payment-section input,
+  .payment-section select,
+  .payment-section textarea {
+    font-size: var(--y-space-16) !important;
+  }
+  .payment-section h2 {
+    font-size: var(--y-space-16);
+  }
+}

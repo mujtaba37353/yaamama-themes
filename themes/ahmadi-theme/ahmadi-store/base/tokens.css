@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+:root {
+    /* Colors */
+    --y-color-primary: #cc3747;
+    --y-color-primary-hover: #b8323f;
+    --y-color-text: #000000;
+    --y-color-secondary-text: #666;
+    --y-color-background: #fff;
+    --y-color-faded: #ECECEC;
+    --y-color-border: #ddd;
+    --y-color-link: #429AFF;
+    --y-color-success: #25D366;
+    --y-color-error: #f44336;
+    --y-color-info: #2196F3;
+
+    /* Fonts */
+    --y-font-family-primary: 'Cairo', Arial, sans-serif;
+    --y-font-weight-regular: 400;
+    --y-font-weight-bold: 700;
+    --y-font-size-sm: 14px;
+    --y-font-size-md: 16px;
+    --y-font-size-lg: 18px;
+    --y-font-size-xl: 20px;
+    --y-font-size-2xl: 2.5rem;
+    --y-font-size-3xl: 3rem;
+
+    /* Spacing */
+    --y-spacing-xs: 8px;
+    --y-spacing-sm: 10px;
+    --y-spacing-md: 15px;
+    --y-spacing-lg: 20px;
+    --y-spacing-xl: 30px;
+    --y-spacing-2xl: 40px;
+    --y-spacing-3xl: 50px;
+
+    /* Borders & Shadows */
+    --y-border-radius-sm: 5px;
+    --y-border-radius-md: 8px;
+    --y-border-radius-lg: 15px;
+    --y-shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.1);
+    --y-shadow-md: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --y-shadow-lg: 0 15px 40px rgba(0, 0, 0, 0.15);
+
+    /* Animations & Transitions */
+    --y-transition-default: all 0.3s ease;
+    --y-transition-fast: all 0.2s ease;
+    --y-transition-slow: all 0.5s ease;
+}

@@ -1,0 +1,217 @@
+/* 3 أعمدة على الويب، عمودان على التابلت، عمود على الموبايل */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--y-space-16);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  justify-items: start;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+  min-width: 0; /* يسمح للبطاقة بالانكماش داخل الخلية */
+  border-radius: var(--y-radius-12);
+  transition: box-shadow var(--y-transition), transform var(--y-transition);
+  cursor: pointer;
+  position: relative;
+}
+
+/* البطاقة تملأ الخلية في الشبكة */
+.grid.products .card,
+.grid .card {
+  max-width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card .img {
+  position: relative;
+  border-top-left-radius: var(--y-space-12);
+  border-top-right-radius: var(--y-space-12);
+  overflow: visible;
+}
+
+.card .img > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-8);
+  padding: var(--y-space-16);
+}
+
+.card .content p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--y-color-txt);
+  font-size: var(--y-space-14);
+}
+
+.card .content .left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+
+.card .content .left p {
+  color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.product-card-media {
+  position: relative;
+}
+
+/* رابط الصورة خلف الأزرار حتى لا يلتقط النقر على إضافة للسلة */
+.product-card-media > a:first-of-type {
+  position: relative;
+  z-index: 0;
+}
+
+.product-card-action {
+  position: absolute;
+  z-index: 2;
+  border: none;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--y-space-10);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.9);
+  transition: transform var(--y-transition), box-shadow var(--y-transition),
+    background-color var(--y-transition), color var(--y-transition);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card-action:hover {
+  transform: scale(1.05);
+}
+
+.product-card-favorite {
+  top: var(--y-space-12);
+  inset-inline-start: var(--y-space-12);
+  inset-inline-end: auto;
+  color: var(--y-color-text);
+  font-size: var(--y-text-lg);
+}
+
+.product-card-favorite:hover,
+.product-card-favorite.active {
+  color: var(--y-color-danger);
+}
+
+.product-card-cart {
+  bottom: var(--y-space-12);
+  right: var(--y-space-12);
+  background: var(--y-color-primary);
+  width: 56px;
+  height: 56px;
+  padding: 0;
+}
+
+/* نموذج/رابط إضافة للسلة يغطي كامل الزر */
+.product-card-cart .elegance-add-to-cart-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.product-card-cart a,
+.product-card-cart .button,
+.product-card-cart .elegance-add-to-cart-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.product-card-cart a:hover,
+.product-card-cart .button:hover,
+.product-card-cart .elegance-add-to-cart-btn:hover {
+  background: transparent;
+  color: inherit;
+}
+
+/* أيقونة السلة داخل الزر (زر النموذج) */
+.product-card-cart .elegance-add-to-cart-btn img {
+  width: 24px;
+  height: 24px;
+  pointer-events: none;
+}
+
+/* أيقونة السلة للعرض فقط عند استخدام الرابط */
+.product-card-cart > img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--y-color-primary);
+  color: white;
+  padding: var(--y-space-4) var(--y-space-16);
+  border-top-right-radius: var(--y-space-20);
+  border-bottom-left-radius: var(--y-space-20);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--y-space-12);
+  }
+
+  .card .content {
+    padding: var(--y-space-12);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--y-space-16);
+    justify-items: center;
+  }
+
+  .grid .card {
+    width: 100%;
+    max-width: 360px;
+  }
+}

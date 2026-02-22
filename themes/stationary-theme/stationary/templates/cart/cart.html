@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stationary</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/quantity.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/total.css" />
+  <link rel="stylesheet" href="cart.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner panner-image  y-u-m-b-0 container y-u-max-w-1200">
+      <h1 class="y-u-text-center"> السلة</h1>
+    </section>
+    <section class="breadcrumbs container y-u-max-w-1200 y-u-m-b-0 ">
+      <a href="../layout/index.html">الرئيسية</a>
+      <p>السلة</p>
+    </section>
+    
+    
+    
+
+    <section class="container y-u-max-w-1200 cart-section">
+      <div class="top">
+        <div class="header y-u-flex y-u-justify-between y-u-items-center">
+          <p>المنتج</p>
+          <p>السعر</p>
+          <p>الكمية</p>
+          <p>الإجمالي</p>
+        </div>
+        <div class="items">
+          <div class="item">
+            <div class="img"><img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              <div class="content">
+                <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                <button><img src="../../assets/trash.svg" alt="حذف المنتج"></button>
+              </div>
+            </div>
+
+
+            <div class="mobile-text">
+              <div class="top-mobile">
+                <p> اورجانيك فود</p><button><img src="../../assets/trash.svg" alt="حذف المنتج"></button>
+              </div>
+
+
+              <div class="mobile-content">
+                <p> 100 <img src="../../assets/ryal.svg" alt="ريال"></p>
+                <div class="quantity">
+                  <button>-</button>
+                  <input type="number" value="1">
+                  <button>+</button>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <p> 100 <img src="../../assets/ryal.svg" alt="ريال"></p>
+            <div class="content">
+              <div class="quantity">
+                <button>-</button>
+                <input type="number" value="1">
+                <button>+</button>
+              </div>
+
+            </div>
+            <p> 1000 <img src="../../assets/ryal.svg" alt="ريال"></p>
+
+          </div>
+          <div class="item">
+            <div class="img"><img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              <div class="content">
+                <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                <button><img src="../../assets/trash.svg" alt="حذف المنتج"></button>
+              </div>
+            </div>
+
+
+            <div class="mobile-text">
+              <div class="top-mobile">
+                <p> اورجانيك فود</p><button><img src="../../assets/trash.svg" alt="حذف المنتج"></button>
+              </div>
+
+
+              <div class="mobile-content">
+                <p> 100 <img src="../../assets/ryal.svg" alt="ريال"></p>
+                <div class="quantity">
+                  <button>-</button>
+                  <input type="number" value="1">
+                  <button>+</button>
+                </div>
+
+
+              </div>
+
+            </div>
+
+            <p> 100 <img src="../../assets/ryal.svg" alt="ريال"></p>
+            <div class="content">
+              <div class="quantity">
+                <button>-</button>
+                <input type="number" value="1">
+                <button>+</button>
+              </div>
+
+            </div>
+            <p> 1000 <img src="../../assets/ryal.svg" alt="ريال"></p>
+
+          </div>
+
+
+
+        </div>
+      </div>
+      <div class="bottom">
+        <h2> إجمالى سلة المشتريات</h2>
+        <div class="total-card">
+          <p>
+            المجموع 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">100 <img src="../../assets/ryal.svg" alt="ريال"></span>
+          </p>
+          <p>
+            ضريبة القيمة المضافة 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">100 <img src="../../assets/ryal.svg" alt="ريال"></span>
+          </p>
+          <p class="estimated-total"> 
+            الإجمالى المقدر 
+            <span class="y-u-flex y-u-items-center y-u-gap-8">1100 <img src="../../assets/ryal.svg" alt="ريال"></span>
+          </p>
+        </div>
+        <a href="../payment/payment.html" class="btn secondary-button fw"> اذهب إلى الدفع</a>
+        <a href="../store/store.html" class="btn outline fw"> مواصلة التسوق</a>
+</div>
+
+    </section>
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

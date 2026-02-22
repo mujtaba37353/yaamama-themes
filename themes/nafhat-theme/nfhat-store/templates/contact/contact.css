@@ -1,0 +1,114 @@
+main {
+  padding-top: var(--y-space-96);
+}
+
+.contact-hero {
+  background: var(--y-color-fg);
+  padding-block: var(--y-space-0) !important;
+}
+
+.contact-hero__inner {
+  padding: var(--y-space-40) var(--y-space-24);
+}
+
+.contact-hero__inner h1 {
+  color: var(--y-color-text);
+}
+
+.contact-hero__inner p {
+  margin-top: var(--y-space-8);
+  color: var(--y-color-muted);
+}
+
+.contact-content {
+  padding: var(--y-space-32) var(--y-space-24) var(--y-space-56);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--y-space-24);
+}
+
+.contact-card,
+.info-card {
+  padding: var(--y-space-24);
+  background: var(--y-color-surface);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-radius-12);
+}
+
+.contact-card h2,
+.info-card h2 {
+  margin-bottom: var(--y-space-16);
+}
+
+.contact-list {
+  list-style: none;
+  display: grid;
+  gap: var(--y-space-12);
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-12);
+  color: var(--y-color-text);
+}
+
+.contact-list li i {
+  color: var(--y-color-primary);
+  width: 20px;
+  text-align: center;
+}
+
+.contact-list li a {
+  color: var(--y-color-text);
+  transition: color var(--y-transition);
+}
+
+.contact-list li a:hover {
+  color: var(--y-color-primary);
+}
+
+.contact-list li.socials {
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-8);
+}
+
+.contact-list li.socials a i {
+  font-size: 20px;
+}
+
+.map {
+  margin-top: var(--y-space-16);
+  border-radius: var(--y-radius-12);
+  overflow: hidden;
+  padding: var(--y-space-2);
+  border: 3px solid var(--y-color-border);
+  color: var(--y-color-primary) !important;
+}
+.map > * {
+  color: var(--y-color-primary) !important;
+}
+
+@media (max-width: 991px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .contact-hero__inner {
+    padding: var(--y-space-24) var(--y-space-16);
+  }
+  .contact-content {
+    padding: var(--y-space-24) var(--y-space-16) var(--y-space-40);
+  }
+  .contact-card,
+  .info-card {
+    padding: var(--y-space-16);
+  }
+}

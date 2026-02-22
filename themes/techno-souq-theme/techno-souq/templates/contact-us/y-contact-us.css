@@ -1,0 +1,164 @@
+h2 {
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-2xl);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+/* We're keeping this simplified CSS that aligns with the HTML structure */
+.y-l-container {
+    padding: var(--y-spacing-xl) 0;
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* Form specific styling that extends the base y-form components */
+.y-c-contact-form {
+    margin-top: var(--y-spacing-md);
+    background-color: var(--y-color-background-light);
+    padding: var(--y-spacing-xl);
+    border-radius: var(--y-border-radius-lg);
+}
+
+.y-c-form-button {
+    text-align: left;
+}
+
+.y-c-form-button button {
+    font-size: var(--y-font-size-lg);
+    border-radius: var(--y-border-radius-full);
+}
+
+.y-l-contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--y-spacing-xl);
+    margin-top: var(--y-spacing-xl);
+}
+
+/* Contact card styling */
+.y-c-contact-card {
+    background-color: transparent;
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-lg);
+    flex: 1;
+}
+
+.y-c-contact-card h3 {
+    color: var(--y-color-primary);
+    margin-bottom: var(--y-spacing-md);
+    font-size: var(--y-font-size-lg);
+}
+
+.y-c-contact-card p,
+.y-c-contact-card a {
+    display: block;
+    margin-bottom: var(--y-spacing-md);
+    color: var(--y-color-text-secondary);
+    text-decoration: none;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-contact-card a:hover {
+    color: var(--y-color-primary);
+}
+
+.y-c-contact-card i {
+    width: var(--y-spacing-lg);
+    margin-left: var(--y-spacing-sm);
+    color: var(--y-color-primary);
+}
+
+/* Social media icons styling */
+.y-c-social-container {
+    background-color: transparent;
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-lg);
+}
+
+.y-c-social-container h3 {
+    color: var(--y-color-primary);
+    margin-bottom: var(--y-spacing-md);
+    font-size: var(--y-font-size-lg);
+}
+
+.y-c-social-icons {
+    display: flex;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--y-icon-size-lg);
+    height: var(--y-icon-size-lg);
+    border-radius: var(--y-border-radius-full);
+    color: var(--y-color-secondary-text);
+    font-size: var(--y-font-size-lg);
+    transition: var(--y-transition-fast);
+    background-color: var(--y-color-primary-light);
+}
+
+.y-c-social-icon:hover {
+    transform: translateY(calc(var(--y-spacing-xs) * -0.38));
+}
+
+.y-c-map-container {
+    margin-top: var(--y-spacing-xl);
+    width: 100%;
+    height: auto;
+    border-radius: var(--y-border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--y-shadow-sm);
+}
+
+.y-c-map-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--y-border-radius-md);
+    box-shadow: var(--y-shadow-sm);
+}
+
+/* Form Messages */
+.y-c-form-message {
+    padding: var(--y-spacing-md);
+    margin-bottom: var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-md);
+    font-size: var(--y-font-size-md);
+    text-align: center;
+}
+
+.y-c-form-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.y-c-form-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+    /* --y-breakpoint-md */
+    .y-l-container {
+        padding: var(--y-spacing-lg) 0;
+    }
+
+    h2 {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-l-contact-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شروط الاستخدام | My Car</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="y-use-conditions.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main data-y="use-conditions-main">
+        <div class="y-u-container">
+
+            <!-- ===== Stepper Navigation ===== -->
+            <nav class="y-l-stepper" data-y="use-conditions-stepper">
+                <ol>
+                    <li class="y-c-step completed"><a href="/templates/store/layout.html">نتائج البحث</a></li>
+                    <li class="y-c-step completed"><a href="../additions/layout.html">الاضافات</a></li>
+                    <li class="y-c-step active"><span>شروط الاستخدام</span></li>
+                    <li class="y-c-step"><a href="../payment/layout.html">الدفع</a></li>
+                    <li class="y-c-step"><span>التأكيد</span></li>
+                </ol>
+            </nav>
+
+            <div class="y-l-additions-content">
+                <!-- Location/Time Info -->
+                <div class="y-l-info-boxes" data-y="info-boxes">
+
+                    <div class="y-c-info-box y-c-info-box--pickup" data-y="pickup-box">
+                        <div class="y-c-info-box-header">
+                            <span>الاستلام</span>
+                        </div>
+                        <div class="y-c-additions-row">
+                            <div class="y-c-info-box-body">
+                                <p>Thu, 20 Nov, 01:00 PM</p>
+                                <p class="y-c-info-location">المجمع, الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="y-c-info-box y-c-info-box--delivery" data-y="delivery-box">
+                        <div class="y-c-info-box-header">
+                            <span>التسليم</span>
+                        </div>
+                        <div class="y-c-additions-row">
+                            <div class="y-c-info-box-body">
+                                <p>Wed, 26 Nov, 01:00 PM</p>
+                                <p class="y-c-info-location">الاحمدية, الرياض</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Car Details -->
+                <div class="y-c-product-card" data-y="product-card">
+                    <div class="y-c-card-layout">
+                        <div class="y-c-card-info">
+
+                            <div>
+                                <div class="y-c-card-category" data-y="product-category">
+                                    <i class="fa-solid fa-car"></i>
+                                    سيدان صغيرة
+                                </div>
+                                <h3 class="y-c-card-name" data-y="product-title">نيسان صني 2025</h3>
+                                <div class="y-c-card-similar" data-y="product-similar">أو مشابهة</div>
+                            </div>
+
+                            <div class="y-c-card-features" data-y="product-features">
+
+                                <span class="y-c-card-feature-item" title="ركاب">
+                                    <i class="fa-solid fa-users"></i>
+                                    4
+                                </span>
+
+                                <span class="y-c-card-feature-item" title="حقائب">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    3
+                                </span>
+
+                                <span class="y-c-card-feature-item" title="ناقل حركة">
+                                    <i class="fa-solid fa-gear"></i>
+                                    A
+                                </span>
+
+                                <span class="y-c-card-feature-item" title="أبواب">
+                                    <i class="fa-solid fa-door-closed"></i>
+                                    4
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="y-c-card-image">
+                            <img src="/assets/product.png" alt="نيسان صني 2025" loading="lazy" data-y="product-image">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Additions List -->
+                <div class="y-l-additions-list" data-y="additions-list">
+
+                    <h3 class="y-c-section-title">الاضافات</h3>
+                    <label class="y-c-addition-item" for="addon-km">
+
+                        <div class="y-c-addition-info">
+                            <i class="fas fa-infinity y-c-addition-icon"></i>
+                            <div>
+                                <span class="y-c-addition-title">كيلو متر مفتوح</span>
+                                <span class="y-c-addition-desc">تجول بلا قيود!</span>
+                            </div>
+                        </div>
+
+                        <span class="y-c-addition-price">400 ريال</span>
+
+                        <div>
+                            <input type="checkbox" id="addon-km" class="y-c-addition-checkbox" checked disabled>
+                        </div>
+
+                    </label>
+
+                    <label class="y-c-addition-item" for="addon-seat">
+
+                        <div class="y-c-addition-info">
+                            <i class="fas fa-baby y-c-addition-icon"></i>
+                            <div>
+                                <span class="y-c-addition-title">مقعد الأطفال</span>
+                                <span class="y-c-addition-desc">لا تتنازل عن أمانهم!</span>
+                            </div>
+                        </div>
+
+                        <span class="y-c-addition-price y-c-price-free">مجاني</span>
+
+                        <div>
+                            <input type="checkbox" id="addon-seat" class="y-c-addition-checkbox" checked disabled>
+                        </div>
+
+                    </label>
+                </div>
+
+                <!-- Right Side Summary -->
+                <aside class="y-l-summary-sidebar">
+                    <!-- Pricing Table -->
+                    <div class="y-c-includes-card" data-y="pricing-table-container">
+                        <h3 class="y-c-section-title">ملخص الرسوم</h3>
+                        <div class="y-c-use-conditions-table-container">
+                            <table class="y-c-use-conditions-table">
+                                <thead>
+                                    <tr>
+                                        <th>البند</th>
+                                        <th>العدد</th>
+                                        <th>الوحدة</th>
+                                        <th>الاجمالي</th>
+                                        <th>الخصم</th>
+                                        <th>الصافي</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أيام الرحلة</td>
+                                        <td>7</td>
+                                        <td>2265.75</td>
+                                        <td>15860.25</td>
+                                        <td>28.0%</td>
+                                        <td>1119.38 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>تفويض داخلي</td>
+                                        <td>1</td>
+                                        <td>39.75</td>
+                                        <td>39.75</td>
+                                        <td>0.0%</td>
+                                        <td>39.75 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>رسوم إلزام أو تمديد العقد</td>
+                                        <td>1</td>
+                                        <td>25.84</td>
+                                        <td>25.84</td>
+                                        <td>0.0%</td>
+                                        <td>25.84 ريال</td>
+                                    </tr>
+                                    <tr>
+                                        <td>قيمة الضريبة</td>
+                                        <td>1</td>
+                                        <td>1722.77</td>
+                                        <td>1722.77</td>
+                                        <td>0.0%</td>
+                                        <td>122.77 ريال</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Summary -->
+                    <div class="y-c-includes-card" data-y="final-summary">
+                        <div class="y-c-total-price-section">
+                            <span class="y-c-total-title">سعر التأجير المتوقع</span>
+                            <span class="y-c-total-amount">1207.73 <span>ريال</span></span>
+                        </div>
+
+                        <ul class="y-c-summary-notes">
+                            <li><img src="/assets/check.png" alt="check"> سعر التأجير المتوقع خاضع للتدقيق النهائي.</li>
+                            <li><img src="/assets/check.png" alt="check"> السعر شامل ضريبة القيمة المضافة.</li>
+                            <li><img src="/assets/check.png" alt="check"> السعر لا يشمل نظام الصالحة (إن وجد).</li>
+                        </ul>
+
+                        <div class="y-c-terms-agree">
+                            <label for="terms-checkbox">
+                                <input type="checkbox" id="terms-checkbox" class="y-c-addition-checkbox">
+                                لقد قمت بقراءة الشروط والأحكام و أوافق عليها
+                            </label>
+                        </div>
+
+                        <div class="y-l-notes-row">
+
+                            <div class="y-c-notes-section">
+                                <label for="notes-textarea">
+                                    <input type="radio" id="notes-checkbox" class="y-c-addition-checkbox">
+                                    إضافة ملاحظة
+                                </label>
+                                <textarea id="notes-textarea" class="y-c-notes-textarea"
+                                    placeholder="اكتب ملاحظتك هنا..."></textarea>
+                            </div>
+
+                            <a href="../payment/layout.html" class="y-c-basic-btn y-c-confirm-btn"
+                                data-y="confirm-button">
+                                تأكيد
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+    <script>
+        // Simple script to toggle notes textarea
+        document.getElementById('notes-checkbox').addEventListener('change', function () {
+            const textarea = document.getElementById('notes-textarea');
+            textarea.style.display = this.checked ? 'block' : 'none';
+        });
+    </script>
+</body>
+
+</html>

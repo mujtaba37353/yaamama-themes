@@ -1,0 +1,19 @@
+/* Generic page content (about, policy, etc.) */
+.pages .content,
+main .content {
+  max-width: 720px;
+}
+.pages .content p,
+main .content p {
+  margin-bottom: var(--y-space-16);
+  line-height: 1.7;
+}
+.pages .content h2,
+main .content h2 {
+  margin-top: var(--y-space-24);
+  margin-bottom: var(--y-space-12);
+}
+.pages .slide,
+main .slide {
+  margin-bottom: var(--y-space-24);
+}

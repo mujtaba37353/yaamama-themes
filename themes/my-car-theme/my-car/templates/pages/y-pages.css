@@ -1,0 +1,768 @@
+/* ===== Static Pages Styles ===== */
+
+/* ===== Hero Section (shared) ===== */
+.y-l-page-hero {
+    background-color: #520A76;
+    background: linear-gradient(135deg, rgba(82, 10, 118, 0.95) 0%, rgba(62, 7, 89, 1) 100%);
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.y-c-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #FFFFF8;
+    padding: 48px 24px;
+}
+
+.y-c-hero-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    font-size: 36px;
+    color: #FFFFF8;
+}
+
+.y-c-hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    color: #FFFFF8;
+}
+
+.y-c-hero-subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin: 0;
+    color: #FFFFF8;
+}
+
+/* ===== Contact Us Page ===== */
+.y-l-contact-us-form-header {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: #520A76;
+    margin: 48px auto 24px;
+    padding: 0 24px;
+}
+
+.y-l-contact-us-form-header i {
+    font-size: 2rem;
+}
+
+.y-l-contact-us-form-header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.y-l-contact-us-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 48px;
+    direction: rtl;
+}
+
+.y-l-contact-us-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.y-l-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.y-l-contact-us-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.y-l-contact-us-form-field label {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.y-c-required-indicator {
+    color: #dc2626;
+    margin-right: 4px;
+}
+
+.y-l-contact-us-form-field input,
+.y-l-contact-us-form-field textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    font-family: 'Cairo', Arial, sans-serif;
+    color: #000;
+    background-color: #FFFEF4;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    direction: rtl;
+}
+
+.y-l-contact-us-form-field input:focus,
+.y-l-contact-us-form-field textarea:focus {
+    outline: none;
+    border-color: #520A76;
+    box-shadow: 0 0 0 3px rgba(82, 10, 118, 0.1);
+}
+
+.y-l-contact-us-form-field input::placeholder,
+.y-l-contact-us-form-field textarea::placeholder {
+    color: #9CA3AF;
+}
+
+.y-c-contact-btn {
+    align-self: flex-start;
+}
+
+/* Contact Info Card */
+.y-l-contact-us-info {
+    flex: 1;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    font-size: 1rem;
+    color: #FFFFF8;
+    background: linear-gradient(135deg, #520A76 0%, #3e0759 100%);
+    padding: 32px;
+    border-radius: 12px;
+}
+
+.y-l-contact-us-info h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.y-c-contact-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.y-c-contact-row i {
+    width: 20px;
+    text-align: center;
+}
+
+.y-l-contact-us-info a {
+    color: #FFFFF8;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.y-l-contact-us-info a:hover {
+    opacity: 0.8;
+}
+
+/* Active Time Section */
+.y-l-active-time {
+    max-width: 1200px;
+    margin: 48px auto;
+    padding: 32px;
+    color: #520A76;
+    text-align: center;
+    background-color: #F5EDFF;
+    border-radius: 12px;
+}
+
+.y-l-active-time h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.y-l-active-time i {
+    margin-left: 8px;
+}
+
+/* Map Section */
+.y-c-map-container {
+    height: 300px;
+    max-width: 1200px;
+    margin: 0 auto 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 24px;
+}
+
+.y-c-map-card {
+    background-color: #fff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.y-c-map-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #520A76;
+    margin: 0 0 8px 0;
+}
+
+.y-c-map-card p {
+    font-size: 0.875rem;
+    color: #626262;
+    margin: 0 0 12px 0;
+}
+
+.y-c-map-link {
+    font-size: 0.875rem;
+    color: #520A76;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.y-c-map-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== About Us Page ===== */
+.y-l-about-section {
+    padding: 64px 0;
+    direction: rtl;
+}
+
+.y-c-about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.y-c-about-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #520A76;
+    margin: 0 0 24px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.y-c-about-text p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+
+.y-c-about-image-placeholder {
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(135deg, #F5EDFF 0%, #e8d5f5 100%);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+    color: #520A76;
+}
+
+/* Vision & Mission */
+.y-l-vision-section {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 64px;
+}
+
+.y-c-vision-card {
+    flex: 1;
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    padding: 32px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.y-c-vision-card:hover {
+    border-color: #520A76;
+    box-shadow: 0 4px 24px rgba(82, 10, 118, 0.1);
+}
+
+.y-c-vision-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #520A76 0%, #3e0759 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #fff;
+}
+
+.y-c-mission-icon {
+    background: linear-gradient(135deg, #27ae60 0%, #219a52 100%);
+}
+
+.y-c-vision-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #520A76;
+    margin: 0 0 12px 0;
+}
+
+.y-c-vision-card p {
+    font-size: 1rem;
+    color: #626262;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Values Section */
+.y-l-values-section {
+    text-align: center;
+    padding: 64px 0;
+    background-color: #F5EDFF;
+    border-radius: 16px;
+    margin-bottom: 64px;
+}
+
+.y-c-section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #520A76;
+    margin: 0 0 48px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.y-l-values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 0 32px;
+}
+
+.y-c-value-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+}
+
+.y-c-value-icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #DBB804;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: #fff;
+}
+
+.y-c-value-item h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+}
+
+.y-c-value-item p {
+    font-size: 0.875rem;
+    color: #626262;
+    margin: 0;
+}
+
+/* Stats Section */
+.y-l-stats-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    padding: 48px;
+    background: linear-gradient(135deg, #520A76 0%, #3e0759 100%);
+    border-radius: 16px;
+    margin-bottom: 48px;
+}
+
+.y-c-stat-item {
+    text-align: center;
+    color: #fff;
+}
+
+.y-c-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.y-c-stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ===== Policy Pages (Privacy & Cancellation) ===== */
+.y-l-policy-container {
+    padding: 48px 24px;
+    direction: rtl;
+}
+
+.y-c-policy-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.y-c-policy-intro {
+    background-color: #F5EDFF;
+    padding: 24px;
+    border-radius: 12px;
+    margin-bottom: 32px;
+}
+
+.y-c-policy-intro p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+.y-c-policy-date {
+    font-size: 0.875rem;
+    color: #626262;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.y-c-policy-section {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.y-c-policy-section:last-child {
+    border-bottom: none;
+}
+
+.y-c-policy-section h2 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #520A76;
+    margin: 0 0 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.y-c-policy-section p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0 0 16px 0;
+}
+
+.y-c-policy-section ul {
+    margin: 0;
+    padding: 0 24px;
+}
+
+.y-c-policy-section li {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.y-c-policy-section li strong {
+    color: #520A76;
+}
+
+.y-c-policy-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.y-c-policy-contact span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.y-c-policy-contact i {
+    color: #520A76;
+}
+
+.y-c-policy-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 14px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #520A76;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.y-c-policy-cta:hover {
+    background-color: #3e0759;
+    transform: translateY(-2px);
+    color: #fff;
+}
+
+/* Cancellation Tiers */
+.y-c-cancellation-tiers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.y-c-tier {
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.y-c-tier-header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.y-c-tier-body {
+    padding: 24px 16px;
+    background-color: #fff;
+}
+
+.y-c-tier-percentage {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.y-c-tier-label {
+    font-size: 0.875rem;
+    color: #626262;
+}
+
+.y-c-tier-full .y-c-tier-header {
+    background-color: #10b981;
+    color: #fff;
+}
+
+.y-c-tier-full .y-c-tier-percentage {
+    color: #10b981;
+}
+
+.y-c-tier-partial .y-c-tier-header {
+    background-color: #f59e0b;
+    color: #fff;
+}
+
+.y-c-tier-partial .y-c-tier-percentage {
+    color: #f59e0b;
+}
+
+.y-c-tier-none .y-c-tier-header {
+    background-color: #dc2626;
+    color: #fff;
+}
+
+.y-c-tier-none .y-c-tier-percentage {
+    color: #dc2626;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .y-l-contact-us-content {
+        flex-direction: column;
+    }
+    
+    .y-c-about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .y-l-vision-section {
+        flex-direction: column;
+    }
+    
+    .y-l-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .y-l-stats-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .y-c-cancellation-tiers {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-page-hero {
+        min-height: 220px;
+    }
+    
+    .y-c-hero-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+    }
+    
+    .y-c-hero-title {
+        font-size: 1.75rem;
+    }
+    
+    .y-c-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .y-l-form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .y-l-contact-us-form-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .y-l-contact-us-form-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .y-c-about-text h2 {
+        font-size: 1.5rem;
+    }
+    
+    .y-c-policy-section h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-page-hero {
+        min-height: 180px;
+    }
+    
+    .y-c-hero-content {
+        padding: 32px 16px;
+    }
+    
+    .y-c-hero-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .y-c-hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .y-l-values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .y-l-stats-section {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .y-c-stat-number {
+        font-size: 2rem;
+    }
+    
+    .y-c-contact-btn {
+        width: 100%;
+    }
+    
+    .y-c-policy-cta {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===== Contact Form Messages ===== */
+.y-c-form-message {
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.y-c-form-message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.y-c-form-message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.y-c-form-message::before {
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+}
+
+.y-c-form-message-success::before {
+    content: '\f058';
+}
+
+.y-c-form-message-error::before {
+    content: '\f06a';
+}

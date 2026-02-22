@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حسابي | Yamama</title>
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="icon" href="../../assets/icon.png" />
+
+    <link rel="stylesheet" href="../../base/reset.css" />
+    <link rel="stylesheet" href="../../base/tokens.css" />
+    <link rel="stylesheet" href="../../base/utilities.css" />
+    <link rel="stylesheet" href="../../base/typography.css" />
+    <link rel="stylesheet" href="../../components/header.css" />
+    <link rel="stylesheet" href="../../components/footer.css" />
+    <link rel="stylesheet" href="../../components/buttons.css" />
+    <link rel="stylesheet" href="../../components/auth.css" />
+    <link rel="stylesheet" href="../../components/filters.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <y-navbar></y-navbar>
+
+    <main class="special-bg">
+
+        <section class="my-account-section y-u-py-40">
+            <div class="container y-u-max-w-1200 y-u-flex y-u-gap-24">
+                <input type="radio" name="account-page" id="page-1" checked>
+                <input type="radio" name="account-page" id="page-2">
+                <input type="radio" name="account-page" id="page-3">
+
+                <aside class="account-sidebar">
+
+                    <ul class="y-u-flex y-u-flex-col y-u-gap-8">
+                        <li>
+                            <label for="page-1" class="y-u-flex y-u-items-center y-u-gap-12">
+                                <i class="fa-regular fa-user"></i>
+                                <span>حسابي</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="page-2" class="y-u-flex y-u-items-center y-u-gap-12">
+                                <i class="fa-solid fa-store"></i>
+                                <span>متاجري</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="page-3" class="y-u-flex y-u-items-center y-u-gap-12">
+                                <i class="fa-regular fa-file-lines"></i>
+                                <span>الفواتير</span>
+                            </label>
+                        </li>
+                        <li>
+                            <a href="../login/index.html" class="y-u-flex y-u-items-center y-u-gap-12 logout-link">
+                                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                                <span>تسجيل خروج</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+                <div class="account-content">
+                    <div class="page-1">
+                        <div class="page-header y-u-m-b-32">
+                            <h1 class="y-u-text-xl y-u-font-bold y-u-m-b-8">إدارة الملف الشخصي</h1>
+                            <p class="y-u-text-muted y-u-text-s">قم بتحديث معلوماتك الشخصية وسيرتك الذاتية لإدارة هويتك
+                                الشخصية</p>
+                        </div>
+
+                        <div class="profile-header y-u-flex y-u-justify-between y-u-items-start y-u-m-b-40">
+                            <div class="profile-info y-u-flex y-u-items-center y-u-gap-16">
+                                <div class="profile-image">
+                                    <img src="../../assets/prof-img.jpg" alt="صورة ملف المستخدم" class="y-u-rounded-f"
+                                        style="width: 80px; height: 80px; object-fit: cover;">
+                                </div>
+                                <div>
+                                    <h3 class="y-u-text-l y-u-font-bold y-u-m-b-4">محمد أحمد</h3>
+                                    <p class="y-u-text-muted y-u-text-s">مدير</p>
+                                </div>
+                            </div>
+                            <div class="profile-actions y-u-flex y-u-gap-12">
+                                <a href="../delete-account/index.html"
+                                    class="btn y-u-flex y-u-items-center y-u-gap-8 delete-account">
+                                    حذف الحساب
+                                    <i class="fa-regular fa-trash-can"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form class="profile-form y-u-flex y-u-flex-col y-u-gap-24">
+                            <div class="form-row y-u-grid y-u-grid-2 y-u-gap-24">
+                                <div class="form-group">
+                                    <label class="y-u-block y-u-m-b-8 y-u-font-bold">الاسم</label>
+                                    <input type="text" class="y-u-w-full y-u-p-12 y-u-rounded-s y-u-border"
+                                        value="محمد أحمد">
+                                </div>
+                                <div class="form-group">
+                                    <label class="y-u-block y-u-m-b-8 y-u-font-bold">البريد الإلكتروني</label>
+                                    <input type="email" class="y-u-w-full y-u-p-12 y-u-rounded-s y-u-border"
+                                        value="example@gmail.com">
+                                </div>
+                            </div>
+                            <div class="form-row y-u-grid y-u-grid-2 y-u-gap-24">
+                                <div class="form-group">
+                                    <label class="y-u-block y-u-m-b-8 y-u-font-bold">رقم الجوال</label>
+                                    <input type="tel" class="y-u-w-full y-u-p-12 y-u-rounded-s y-u-border"
+                                        value="0568924908" maxlength="14"
+                                        oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(this.value.startsWith('009665')) this.maxLength = 14; else if(this.value.startsWith('+9665')) this.maxLength = 13; else if(this.value.startsWith('9665')) this.maxLength = 12; else if(this.value.startsWith('05')) this.maxLength = 10; else this.maxLength = 14;">
+                                </div>
+                                <div class="form-group">
+                                    <label class="y-u-block y-u-m-b-8 y-u-font-bold">النوع</label>
+                                    <div class="custom-dropdown">
+                                        <div class="dropdown-trigger">
+                                            <span class="dropdown-current">ذكر</span>
+                                            <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                                        </div>
+                                        <ul class="dropdown-options">
+                                            <li data-value="male" class="selected">ذكر</li>
+                                            <li data-value="female">أنثى</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-actions y-u-flex y-u-gap-16 y-u-m-t-24">
+                                <button type="submit" class="btn main-button">تعديل</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="page-2">
+                        <div class="page-header y-u-m-b-32">
+                            <h1 class="y-u-text-xl y-u-font-bold y-u-m-b-8">إدارة متاجرك</h1>
+                            <p class="y-u-text-muted y-u-text-s">كل المتاجر الخاصة بك</p>
+                        </div>
+
+                        <div class="stores-grid y-u-grid y-u-grid-3 y-u-gap-24">
+
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge ready y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاهز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge ready y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاهز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge ready y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاهز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge preparing y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاري التجهيز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge preparing y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاري التجهيز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
+                                <div
+                                    class="status-badge preparing y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+                                    <span class="status-dot"></span>
+                                    جاري التجهيز
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+                                    <div class="image-wrapper y-u-rounded-f y-u-p-4"
+                                        style="border: 2px solid var(--y-color-primary);">
+                                        <img src="../../assets/product.png" alt="Store" class="y-u-rounded-f"
+                                            style="width: 120px; height: 120px; object-fit: cover;">
+                                    </div>
+                                </div>
+
+                                <div class="y-u-text-center y-u-m-b-16">
+                                    <h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4">متجر خطى</h3>
+                                    <p class="y-u-text-muted y-u-text-s">متجر أزياء وحقائب</p>
+                                </div>
+
+                                <div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+                                    <p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : 1 اكتوبر 2025</p>
+                                    <span
+                                        class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة
+                                        اليمامة</span>
+                                </div>
+
+                                <div class="divider y-u-m-b-24"></div>
+
+                                <div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+                                    <button class="btn main-button y-u-w-full">دخول</button>
+                                    <div class="y-u-grid y-u-grid-2 y-u-gap-12">
+                                        <button class="btn black-outline-button y-u-w-full">إدارة</button>
+                                        <button class="btn black-outline-button y-u-w-full">تفاصيل</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page-3">
+                        <div class="page-header y-u-m-b-32">
+                            <h1 class="y-u-text-xl y-u-font-bold y-u-m-b-8">إدارة الفواتير</h1>
+                            <p class="y-u-text-muted y-u-text-s">قم بإدارة جميع فواتيرك الصادرة والواردة</p>
+                        </div>
+
+                        <div class="invoice-filters y-u-flex y-u-gap-16 y-u-m-b-32 y-u-flex-wrap">
+                            <button class="tab-btn active">الكل</button>
+                            <button class="tab-btn">مدفوعة</button>
+                            <button class="tab-btn">غير مدفوعة</button>
+                            <button class="tab-btn">متأخرة</button>
+                        </div>
+
+                        <div class="invoice-table y-u-overflow-x-auto">
+                            <table class="y-u-w-full">
+                                <thead>
+                                    <tr class="y-u-border-b">
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">التاريخ</th>
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">المتجر</th>
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">الوصف</th>
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">السعر</th>
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">الحالة</th>
+                                        <th class="y-u-text-end y-u-p-16 y-u-font-bold">تنزيل</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="y-u-border-b">
+                                        <td class="y-u-p-16 y-u-text-s">1 يناير 2026 - يناير 2026</td>
+                                        <td class="y-u-p-16 y-u-text-s">متجر خطي</td>
+                                        <td class="y-u-p-16 y-u-text-s">اشتراك سنوي</td>
+
+                                        <td class="y-u-p-16 y-u-text-s y-u-flex y-u-items-center y-u-gap-4">
+                                            <span class="y-u-text-s y-u-font-bold">15,000</span>
+                                            <img src="../../assets/ryal-prim.svg" alt="Ryal" style="width: 16px;">
+                                        </td>
+                                        <td class="y-u-p-16 y-u-text-s">
+                                            <span class="invoice-status-badge invoice-status-badge--paid">مدفوع</span>
+                                        </td>
+                                        <td class="y-u-p-16">
+                                            <button
+                                                class="download-btn y-u-flex y-u-items-center y-u-justify-center y-u-rounded-f"
+                                                style="width: 32px; height: 32px; border: 1px solid var(--y-color-border); background: transparent;">
+                                                <i class="fa-solid fa-download"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="y-u-border-b">
+                                        <td class="y-u-p-16 y-u-text-s">1 يناير 2026 - يناير 2026</td>
+                                        <td class="y-u-p-16 y-u-text-s">متجر خطي</td>
+                                        <td class="y-u-p-16 y-u-text-s">اشتراك سنوي</td>
+
+                                        <td class="y-u-p-16 y-u-text-s y-u-flex y-u-items-center y-u-gap-4">
+                                            <span class="y-u-text-s y-u-font-bold">15,000</span>
+                                            <img src="../../assets/ryal-prim.svg" alt="Ryal" style="width: 16px;">
+                                        </td>
+                                        <td class="y-u-p-16 y-u-text-s">
+                                            <span class="invoice-status-badge invoice-status-badge--unpaid">غير
+                                                مدفوع</span>
+                                        </td>
+                                        <td class="y-u-p-16">
+                                            <button
+                                                class="download-btn y-u-flex y-u-items-center y-u-justify-center y-u-rounded-f"
+                                                style="width: 32px; height: 32px; border: 1px solid var(--y-color-border); background: transparent;">
+                                                <i class="fa-solid fa-download"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="y-u-border-b">
+                                        <td class="y-u-p-16 y-u-text-s">1 يناير 2026 - يناير 2026</td>
+                                        <td class="y-u-p-16 y-u-text-s">متجر خطي</td>
+                                        <td class="y-u-p-16 y-u-text-s">اشتراك سنوي</td>
+
+                                        <td class="y-u-p-16 y-u-text-s y-u-flex y-u-items-center y-u-gap-4">
+                                            <span class="y-u-text-s y-u-font-bold">15,000</span>
+                                            <img src="../../assets/ryal-prim.svg" alt="Ryal" style="width: 16px;">
+                                        </td>
+                                        <td class="y-u-p-16 y-u-text-s">
+                                            <span class="invoice-status-badge invoice-status-badge--paid">مدفوع</span>
+                                        </td>
+                                        <td class="y-u-p-16">
+                                            <button
+                                                class="download-btn y-u-flex y-u-items-center y-u-justify-center y-u-rounded-f"
+                                                style="width: 32px; height: 32px; border: 1px solid var(--y-color-border); background: transparent;">
+                                                <i class="fa-solid fa-download"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr class="y-u-border-b">
+                                        <td class="y-u-p-16 y-u-text-s">1 يناير 2026 - يناير 2026</td>
+                                        <td class="y-u-p-16 y-u-text-s">متجر خطي</td>
+                                        <td class="y-u-p-16 y-u-text-s">اشتراك سنوي</td>
+
+                                        <td class="y-u-p-16 y-u-text-s y-u-flex y-u-items-center y-u-gap-4">
+                                            <span class="y-u-text-s y-u-font-bold">15,000</span>
+                                            <img src="../../assets/ryal-prim.svg" alt="Ryal" style="width: 16px;">
+                                        </td>
+                                        <td class="y-u-p-16 y-u-text-s">
+                                            <span class="invoice-status-badge invoice-status-badge--late">متأخرة</span>
+                                        </td>
+                                        <td class="y-u-p-16">
+                                            <button
+                                                class="download-btn y-u-flex y-u-items-center y-u-justify-center y-u-rounded-f"
+                                                style="width: 32px; height: 32px; border: 1px solid var(--y-color-border); background: transparent;">
+                                                <i class="fa-solid fa-download"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+                <nav class="account-bottom-nav">
+                    <label for="page-1" class="bottom-nav-item bottom-nav-item--page-1">
+                        <i class="fa-regular fa-user"></i>
+                        <span>حسابي</span>
+                    </label>
+                    <label for="page-2" class="bottom-nav-item bottom-nav-item--page-2">
+                        <i class="fa-solid fa-store"></i>
+                        <span>متاجري</span>
+                    </label>
+                    <label for="page-3" class="bottom-nav-item bottom-nav-item--page-3">
+                        <i class="fa-regular fa-file-lines"></i>
+                        <span>فواتيري</span>
+                    </label>
+                    <a href="../login/index.html" class="bottom-nav-item bottom-nav-item--logout">
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <span>تسجيل خروج</span>
+                    </a>
+                </nav>
+
+            </div>
+        </section>
+    </main>
+
+    <y-footer></y-footer>
+    <script src="../../js/y-app-init.js"></script>
+    <script src="../../js/dropdown.js"></script>
+    <script src="../../js/form-validation.js"></script>
+</body>
+
+</html>

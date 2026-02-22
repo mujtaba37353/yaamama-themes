@@ -1,0 +1,30 @@
+{
+    "template": "favorite",
+    "slots": {
+        "page-title": "Favorite page title",
+        "favicon": "Favorite page favicon",
+        "header-placeholder": "Header component placeholder",
+        "favorite-main": "Main content container for favorite page",
+        "favorite-container": "Favorite page container wrapper",
+        "favorite-page-title": "Favorite page main title",
+        "favorite-breadcrumb": "Favorite breadcrumb navigation",
+        "breadcrumb-home": "Home link in breadcrumb",
+        "breadcrumb-separator": "Breadcrumb separator",
+        "favorites-container": "Favorites content container",
+        "empty-favorites-message": "Empty favorites message container",
+        "empty-favorites-icon": "Empty favorites heart icon",
+        "empty-favorites-title": "Empty favorites title",
+        "empty-favorites-description": "Empty favorites description",
+        "browse-products-btn": "Browse products button",
+        "favorites-grid": "Favorites products grid",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script",
+        "products-script": "Products script",
+        "favorite-script": "Favorite functionality script"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/favorite.js"
+    ]
+}

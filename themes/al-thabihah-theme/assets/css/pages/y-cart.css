@@ -1,0 +1,405 @@
+/* Cart page – design from al-thabihah/templates/cart/y-cart.css */
+
+.y-l-cart-page .y-c-breadcrumbs {
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-l-cart-page .y-c-breadcrumbs p {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    margin: 0 0 var(--y-spacing-xl);
+    white-space: nowrap;
+}
+
+.y-l-cart-page .y-c-breadcrumbs p a,
+.y-l-cart-page .y-c-breadcrumbs p span {
+    white-space: nowrap;
+}
+
+.y-l-cart-page .woocommerce-breadcrumb,
+body.cart .woocommerce-breadcrumb {
+    display: none !important;
+}
+
+.y-l-cart-page {
+    padding: var(--y-spacing-2xl) 0 var(--y-spacing-4xl);
+    background-color: var(--y-color-background);
+}
+
+.y-c-section-title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+/* --- Layout Grid --- */
+.y-l-cart-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: var(--y-spacing-xl);
+    align-items: start;
+}
+
+.y-l-cart-items-col,
+.y-l-cart-summary-col {
+    min-width: 0;
+}
+
+/* --- Cart Items List --- */
+.y-c-cart-items-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+/* Item Card */
+.y-c-cart-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: var(--y-spacing-lg);
+    background-color: var(--y-color-background-light);
+    padding: var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-lg);
+    border: 1px solid var(--y-color-border-blured);
+    box-shadow: var(--y-shadow-xs);
+    align-items: stretch;
+    position: relative;
+}
+
+/* إلغاء تأثير <br> و <p></p> التي قد تضاف من فلتر ووردبريس/ووكومرس حتى لا ينكسر التخطيط */
+.y-c-cart-item br {
+    display: none;
+}
+
+.y-c-cart-item p:empty {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+.y-c-cart-item > p {
+    display: contents;
+    margin: 0;
+    padding: 0;
+}
+
+
+.y-c-item-image {
+    width: var(--y-size-120);
+    height: var(--y-size-120);
+    border-radius: var(--y-border-radius-md);
+    overflow: hidden;
+    background-color: var(--y-color-background);
+}
+
+.y-c-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.y-c-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: var(--y-spacing-sm);
+    padding-top: var(--y-spacing-xs);
+}
+
+.y-c-item-name {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    text-decoration: none;
+}
+
+.y-c-item-price {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xxs);
+}
+
+.y-c-coin-icon-small {
+    width: var(--y-size-18);
+    height: auto;
+}
+
+.y-c-item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--y-spacing-sm);
+    margin-top: auto;
+}
+
+.y-c-item-tag {
+    font-size: var(--y-font-size-xs);
+    color: var(--y-color-error);
+    background-color: var(--y-color-btn);
+    border: 1px solid var(--y-color-error);
+    padding: var(--y-spacing-2) var(--y-spacing-xs);
+    border-radius: var(--y-border-radius-sm);
+    font-weight: var(--y-font-weight-regular);
+}
+
+.y-c-item-actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: var(--y-size-140);
+    padding-left: var(--y-spacing-md);
+}
+
+/* Theme: cart quantity input (WooCommerce uses dynamic id) */
+.y-c-cart-item .y-c-quantity-selector input[type="number"] {
+    width: var(--y-size-60);
+    height: var(--y-size-40);
+    border: none;
+    text-align: center;
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-md);
+    margin: var(--y-spacing-xxs) var(--y-spacing-sm);
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.y-c-cart-item .y-c-quantity-selector input[type="number"]::-webkit-outer-spin-button,
+.y-c-cart-item .y-c-quantity-selector input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.y-c-item-total {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.y-c-total-value {
+    font-size: var(--y-font-size-lg);
+}
+
+/* Sticky wrapper: summary card + buttons together so "الذهاب للدفع" doesn’t go under the card on scroll */
+.y-c-cart-summary-sticky {
+    position: sticky;
+    top: var(--y-size-120);
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+/* --- Order Summary Card --- */
+.y-c-order-summary-card {
+    background-color: var(--y-color-background);
+    padding: var(--y-spacing-xl);
+    border-radius: var(--y-border-radius-lg);
+    border: 1px solid var(--y-color-border-blured);
+    margin-bottom: var(--y-spacing-sm);
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-summary-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-xl);
+    text-align: right;
+    border-bottom: none;
+}
+
+.y-c-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-summary-label {
+    font-weight: var(--y-font-weight-regular);
+}
+
+.y-c-summary-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    direction: ltr;
+}
+
+.y-c-summary-value {
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    font-size: var(--y-font-size-lg);
+}
+
+.y-c-currency-icon {
+    width: var(--y-size-16);
+    height: auto;
+}
+
+.y-c-summary-divider {
+    border: 0;
+    border-top: var(--y-border-width-thin) solid var(--y-color-border);
+    margin: var(--y-spacing-lg) 0;
+}
+
+.y-c-total-row .y-c-summary-label {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+}
+
+.y-c-total-row .y-c-summary-value {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+}
+
+.y-c-total-row {
+    margin-bottom: 0;
+}
+
+/* Theme: summary column buttons – single line, no extra height */
+.y-l-cart-summary-col .y-c-outline-btn,
+.y-l-cart-summary-col .y-c-update-cart-btn {
+    margin-bottom: var(--y-spacing-md);
+    padding: var(--y-spacing-sm) var(--y-spacing-lg);
+    font-size: var(--y-font-size-md);
+    line-height: 1.3;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-l-cart-summary-col .y-c-checkout-btn {
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-cart-item .y-c-qty-btn {
+    min-width: var(--y-size-40);
+    min-height: var(--y-size-40);
+    padding: 0;
+    font-size: var(--y-font-size-xl);
+}
+
+/* Theme: delete as anchor (WooCommerce uses <a>) */
+a.y-c-delete-btn {
+    text-decoration: none;
+}
+
+/* Empty Cart State */
+.y-c-empty-cart {
+    text-align: center;
+    padding: var(--y-spacing-6xl) 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-empty-cart i {
+    font-size: var(--y-size-60);
+    color: var(--y-color-border);
+}
+
+.y-c-empty-cart h3 {
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-empty-cart p {
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-md);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .y-l-cart-container {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-cart-summary-sticky {
+        position: static;
+    }
+}
+
+/* موبايل: شكل البطاقة كما في التصميم – صورة واسم وسعر وخيارات ثم خط منقط ثم كمية ومجموع، X في الزاوية العليا لليمين */
+@media (max-width: 480px) {
+    .y-c-cart-item {
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        gap: var(--y-spacing-md);
+        padding: var(--y-spacing-md);
+        padding-top: var(--y-spacing-2xl);
+    }
+
+    .y-c-item-image {
+        grid-column: 2;
+        grid-row: 1;
+        width: var(--y-size-90);
+        height: var(--y-size-90);
+    }
+
+    .y-c-item-details {
+        grid-column: 1;
+        grid-row: 1;
+        padding-inline-end: var(--y-size-40);
+        padding-top: var(--y-spacing-sm);
+    }
+
+    .y-c-cart-item .y-c-item-name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block;
+    }
+
+    .y-c-item-tags {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .y-c-item-actions {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        padding-top: var(--y-spacing-md);
+        margin-top: var(--y-spacing-xs);
+        border-top: 1px dashed var(--y-color-border-blured);
+        min-width: auto;
+    }
+
+    .y-c-cart-item .y-c-delete-btn {
+        position: absolute;
+        top: var(--y-spacing-sm);
+        inset-inline-end: var(--y-spacing-sm);
+        z-index: 2;
+        margin: 0;
+    }
+
+    .y-c-item-total {
+        width: auto;
+        order: 1;
+    }
+
+    .y-c-cart-item .y-c-quantity-wrapper {
+        order: 2;
+    }
+}

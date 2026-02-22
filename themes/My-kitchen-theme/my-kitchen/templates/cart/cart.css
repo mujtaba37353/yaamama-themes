@@ -1,0 +1,65 @@
+main .main-container {
+  margin: 0 auto;
+}
+
+main .main-container .woocommerce-cart-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-areas:
+    "notice notice"
+    "cart summary";
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+main .main-container .woocommerce-cart-wrapper > * {
+  min-width: 0;
+}
+
+main .main-container .woocommerce-cart-wrapper .woocommerce-notices-wrapper {
+  grid-area: notice;
+}
+
+main .main-container .woocommerce-cart-wrapper .myk-cart-form {
+  grid-area: cart;
+}
+
+main .main-container .woocommerce-cart-wrapper .cart-summary {
+  grid-area: summary;
+}
+
+.myk-cart-update {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  main .main-container {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  main .main-container .woocommerce-cart-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "notice"
+      "cart"
+      "summary";
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .myk-cart-form,
+  .cart-summary {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+
+  .cart-list {
+    min-width: auto;
+    width: 100%;
+  }
+}

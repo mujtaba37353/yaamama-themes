@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/products.css">
+
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/price-value.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/empty-state.css" />
+  <link rel="stylesheet" href="../../components/status-popup.css" />
+  <link rel="stylesheet" href="profile.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+
+  <main>
+    <section class="panner  y-u-m-b-0">
+      <h1 class="y-u-text-center"> حسابي </h1>
+    </section>
+    <section class="profile-section">
+      <input type="radio" name="profile-tab" id="tab-profile" checked>
+      <input type="radio" name="profile-tab" id="tab-addresses">
+      <input type="radio" name="profile-tab" id="tab-favorites">
+      <input type="radio" name="profile-tab" id="tab-orders">
+      <input type="radio" name="profile-tab" id="tab-notifications">
+
+      <div class="sidbar">
+        <div class="top">
+          <div class="content">
+            <span>اهلا,</span>
+            <p>محمد حسين الهاشمي</p>
+          </div>
+        </div>
+        <div class="links">
+          <label for="tab-profile">البيانات الشخصية</label>
+          <label for="tab-addresses">عنواني</label>
+          <label for="tab-favorites">المفضلة</label>
+          <label for="tab-orders">الطلبات</label>
+          <label for="tab-notifications">الإشعارات</label>
+          <a class="logout-link" href="../signup/signup.html">تسجيل الخروج</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="profile tab-content">
+          <form action="">
+            <label for="name">الاسم بالكامل</label>
+            <input type="text" id="name" name="name" value="محمد حسين الهاشمي">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" name="email" value="mohamed@gmail.com">
+            <label for="phone">الهاتف</label>
+            <input type="tel" id="phone" name="phone" value="+966599999999">
+            <label for="address">العنوان</label>
+            <input type="text" id="address" name="address" value="الرياض, المملكة العربية السعودية">
+            <label for="">تغيير كلمة المرور</label>
+            <input type="password" id="password" name="password" placeholder="كلمة المرور الحالية">
+            <input type="password" id="new-password" name="new-password" placeholder="كلمة المرور الجديدة">
+            <input type="password" id="confirm-password" name="confirm-password"
+              placeholder="تأكيد كلمة المرور الجديدة">
+            <button type="submit" class="btn main-button">حفظ التعديلات</button>
+          </form>
+        </div>
+        <div class="addresses tab-content">
+          <!-- <div class="empty-state-container">
+            <div class="empty-state">
+              <div class="empty-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h2>لا توجد عناوين محفوظة</h2>
+              <label for="mode-new" class="btn main-button" style="cursor: pointer;">إضافة عنوان جديد</label>
+            </div>
+          </div> -->
+          <input type="radio" name="address-mode" id="mode-view" checked hidden>
+          <input type="radio" name="address-mode" id="mode-edit" hidden>
+          <input type="radio" name="address-mode" id="mode-new" hidden>
+
+          <div class="address-view-mode">
+            <div class="billing-address-container">
+              <div class="billing-header">
+                <h3>عنوان الفواتير</h3>
+                <label for="mode-edit" class="edit-address-link" style="cursor: pointer;">تعديل</label>
+              </div>
+              <div class="billing-details">
+                <div class="detail-row">
+                  <span class="label">الاسم:</span>
+                  <span class="value">محمد حسين الهاشمي</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">الشارع:</span>
+                  <span class="value">الأمير محمد بن عبدالعزيز (التحلية)</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">الحي:</span>
+                  <span class="value">العليا</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">المدينة:</span>
+                  <span class="value">الرياض</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">المنطقة:</span>
+                  <span class="value">الرياض</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">الرمز البريدي:</span>
+                  <span class="value">12241</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">رقم المبنى:</span>
+                  <span class="value">3472</span>
+                </div>
+                <div class="detail-row">
+                  <span class="label">رقم الوحدة:</span>
+                  <span class="value">12</span>
+                </div>
+              </div>
+              <div class="billing-actions">
+                <label for="mode-new" class="btn main-button" style="cursor: pointer;">إضافة عنوان جديد</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="address-edit-mode">
+            <div class="billing-address-form">
+              <h3>عنوان الفاتورة</h3>
+              <form>
+                <div class="form-row two-cols">
+                  <div class="form-group">
+                    <label>الاسم الأول<span class="required">*</span></label>
+                    <input type="text" value="محمد">
+                  </div>
+                  <div class="form-group">
+                    <label>الاسم الأخير<span class="required">*</span></label>
+                    <input type="text" value="حسين الهاشمي">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>الدولة<span class="required">*</span></label>
+                    <div class="static-value">المملكة العربية السعودية</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>الشارع<span class="required">*</span></label>
+                    <input type="text" value="الأمير محمد بن عبدالعزيز (التحلية)">
+                  </div>
+                </div>
+
+                <div class="form-row three-cols">
+                  <div class="form-group">
+                    <label>الحي<span class="required">*</span></label>
+                    <input type="text" value="العليا">
+                  </div>
+                  <div class="form-group">
+                    <label>المدينة<span class="required">*</span></label>
+                    <input type="text" value="الرياض">
+                  </div>
+                  <div class="form-group">
+                    <label>المنطقة<span class="required">*</span></label>
+                    <input type="text" value="الرياض">
+                  </div>
+                </div>
+
+                <div class="form-row three-cols">
+                  <div class="form-group">
+                    <label>الرمز البريدي<span class="required">*</span></label>
+                    <input type="text" value="12241">
+                  </div>
+                  <div class="form-group">
+                    <label>رقم المبنى<span class="required">*</span></label>
+                    <input type="text" value="3472">
+                  </div>
+                  <div class="form-group">
+                    <label>رقم الوحدة<span class="required">*</span></label>
+                    <input type="text" value="12">
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <label for="mode-view" class="btn main-button" style="cursor: pointer;"
+                    data-status-popup="address-saved" data-status-popup-message="تم حفظ العنوان">حفظ العنوان</label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="address-new-mode">
+            <div class="billing-address-form">
+              <h3>عنوان الفاتورة</h3>
+              <form>
+                <div class="form-row two-cols">
+                  <div class="form-group">
+                    <label>الاسم الأول<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label>الاسم الأخير<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>الدولة<span class="required">*</span></label>
+                    <div class="static-value">المملكة العربية السعودية</div>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label>الشارع<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-row three-cols">
+                  <div class="form-group">
+                    <label>الحي<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label>المدينة<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label>المنطقة<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-row three-cols">
+                  <div class="form-group">
+                    <label>الرمز البريدي<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label>رقم المبنى<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                  <div class="form-group">
+                    <label>رقم الوحدة<span class="required">*</span></label>
+                    <input type="text" placeholder="">
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <label for="mode-view" class="btn main-button" style="cursor: pointer;"
+                    data-status-popup="address-saved" data-status-popup-message="تم حفظ العنوان">حفظ العنوان</label>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+        <section class="favorites tab-content discount-section store-section">
+          <!-- <div class="empty-state-container">
+            <div class="empty-state">
+              <div class="empty-icon">
+                <i class="fas fa-heart-broken"></i>
+              </div>
+              <h2>لم تقم بإضافة منتجات إلى المفضلة بعد</h2>
+              <a href="../store/store.html" class="btn main-button">استكشف المنتجات</a>
+            </div>
+          </div> -->
+          <ul class="grid">
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales1.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales2.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales3.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales1.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales2.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+            <li class="card">
+              <div class="img product-card-media">
+                <a href="../product-details/product-details.html">
+                  <img src="../../assets/sales3.png" alt="">
+                </a>
+                <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+                  <i class="fa-solid fa-heart" style="color: var(--y-color-danger);"></i>
+                </button>
+                <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+                  <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+                </button>
+              </div>
+              <div class="content">
+                <p>قميص قطن صيفى</p>
+                <div class="left">
+
+                  <p>50 ريال</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn main-button">مسح الجميع</button>
+        </section>
+        <div class="orders tab-content" id="ordersList">
+          <!-- <div class="empty-state-container">
+            <div class="empty-state">
+              <div class="empty-icon">
+                <i class="fas fa-box-open"></i>
+              </div>
+              <h2>لا توجد طلبات بعد</h2>
+              <a href="../store/store.html" class="btn main-button">تسوق الآن</a>
+            </div>
+          </div> -->
+          <ul class="orders-list">
+            <li class="item" data-order-id="ORD-003">
+              <div class="order-card">
+                <div class="order-status status-cancelled">
+                  <span>ملغى</span>
+                </div>
+                <div class="order-content">
+                  <div class="order-main-info">
+                    <p class="order-number">ORD - 003</p>
+                    <p class="order-date">21 - 11 - 2025</p>
+                    <p class="order-products">عدد المنتجات: 2</p>
+                    <p class="order-total">الإجمالي: 1000 ر.س</p>
+                  </div>
+                  <div class="order-actions">
+                    <button class="view-order-btn" data-order="ORD-003">
+                      عرض التفاصيل
+                    </button>
+                    <button class="cancel-order-btn" data-order="ORD-003">
+                      إلغاء الطلب
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item" data-order-id="ORD-001">
+              <div class="order-card">
+                <div class="order-status status-delivered">
+                  <span>تم التوصيل</span>
+                </div>
+                <div class="order-content">
+                  <div class="order-main-info">
+                    <p class="order-number">ORD - 001</p>
+                    <p class="order-date">14 - 03 - 2025</p>
+                    <p class="order-products">عدد المنتجات: 2</p>
+                    <p class="order-total">الإجمالي: 720 ر.س</p>
+                  </div>
+                  <div class="order-actions">
+                    <button class="view-order-btn" data-order="ORD-001">
+                      عرض التفاصيل
+                    </button>
+                    <button class="cancel-order-btn" data-order="ORD-001">
+                      إلغاء الطلب
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="item" data-order-id="ORD-002">
+              <div class="order-card">
+                <div class="order-status status-pending">
+                  <span>لم يصل بعد</span>
+                </div>
+                <div class="order-content">
+                  <div class="order-main-info">
+                    <p class="order-number">ORD - 002</p>
+                    <p class="order-date">14 - 09 - 2025</p>
+                    <p class="order-products">عدد المنتجات: 1</p>
+                    <p class="order-total">الإجمالي: 500 ر.س</p>
+                  </div>
+                  <div class="order-actions">
+                    <button class="view-order-btn" data-order="ORD-002">
+                      عرض التفاصيل
+                    </button>
+                    <button class="cancel-order-btn" data-order="ORD-002">
+                      إلغاء الطلب
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+
+        </div>
+
+        <div class="order-details-page tab-content" id="orderDetailsPage">
+          <div class="order-details-content">
+            <div class="order-details-header">
+              <div class="order-status-badge status-delivered">
+                تم التوصيل
+              </div>
+              <div class="order-header-main">
+                <a href="#" class="back-to-orders" id="backToOrders">
+                  <i class="fas fa-arrow-right"></i>
+                  الرجوع إلى الطلبات
+                </a>
+                <div class="order-info">
+                  <p class="order-details-title">
+                    طلب رقم: <span id="orderNumber">ORD - 001</span>
+                  </p>
+                  <p class="order-details-date">
+                    تاريخ الطلب: <span id="orderDate">14 - 03 - 2025</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="order-products-title">المنتجات</h3>
+
+            <div class="order-products-table">
+              <table>
+                <tbody id="orderProductsList">
+                  <tr class="order-product-row">
+                    <td>
+                      <div class="order-product-card">
+                        <div class="order-product-info">
+                          <p class="order-product-name">قميص قطن صيفى</p>
+                          <p class="order-product-price">السعر: 150 ر.س</p>
+                          <p class="order-product-quantity">الكمية: 2</p>
+                          <p class="order-product-total">الإجمالي: 300 ر.س</p>
+                        </div>
+                        <div class="order-product-image">
+                          <img src="../../assets/sales1.png" alt="قميص قطن صيفى" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="order-product-row">
+                    <td>
+                      <div class="order-product-card">
+                        <div class="order-product-info">
+                          <p class="order-product-name">قميص قطن صيفي</p>
+                          <p class="order-product-price">السعر: 150 ر.س</p>
+                          <p class="order-product-quantity">الكمية: 1</p>
+                          <p class="order-product-total">الإجمالي: 150 ر.س</p>
+                        </div>
+                        <div class="order-product-image">
+                          <img src="../../assets/sales1.png" alt="قميص قطن صيفي" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="order-product-row">
+                    <td>
+                      <div class="order-product-card">
+                        <div class="order-product-info">
+                          <p class="order-product-name">شنطة ظهر حريمي</p>
+                          <p class="order-product-price">السعر: 50 ر.س</p>
+                          <p class="order-product-quantity">الكمية: 2</p>
+                          <p class="order-product-total">الإجمالي: 100 ر.س</p>
+                        </div>
+                        <div class="order-product-image">
+                          <img src="../../assets/sales2.png" alt="شنطة ظهر حريمي" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr class="order-product-row">
+                    <td>
+                      <div class="order-product-card">
+                        <div class="order-product-info">
+                          <p class="order-product-name">شنطة ظهر حريمي</p>
+                          <p class="order-product-price">السعر: 50 ر.س</p>
+                          <p class="order-product-quantity">الكمية: 1</p>
+                          <p class="order-product-total">الإجمالي: 50 ر.س</p>
+                        </div>
+                        <div class="order-product-image">
+                          <img src="../../assets/sales2.png" alt="شنطة ظهر حريمي" />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="order-summary">
+              <div class="summary-column">
+                <h4>عنوان الشحن</h4>
+                <p>المملكة العربية السعودية</p>
+                <p>الرياض</p>
+                <p>منطقة الرياض - حي العليا</p>
+                <p>شارع الأمير محمد بن عبدالعزيز</p>
+                <p>(التحلية) - مبنى 3472 - وحدة 12</p>
+              </div>
+              <div class="summary-column">
+                <h4>وسيلة الدفع</h4>
+                <p>الدفع عند الإستلام (COD)</p>
+                <div class="invoice-info">
+                  <span>رقم الفاتورة</span>
+                  <span>123456789</span>
+                </div>
+              </div>
+              <div class="summary-column totals-column">
+                <h4>الإجمالي</h4>
+                <div class="summary-item subtotal">
+                  <span>600 ر.س</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-item">
+                  <span>ضريبة القيمة المضافة</span>
+                  <span>70 ر.س</span>
+                </div>
+                <div class="summary-item">
+                  <span>رسوم التوصيل</span>
+                  <span>50 ر.س</span>
+                </div>
+                <div class="summary-divider"></div>
+                <div class="summary-item total">
+                  <span>إجمالي السعر</span>
+                  <span>720 ر.س</span>
+                </div>
+                <p class="summary-note">
+                  (شامل ضريبة القيمة المضافة 15%)
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="notifications tab-content">
+          <!-- <div class="empty-state-container">
+            <div class="empty-state">
+              <div class="empty-icon">
+                <i class="fas fa-bell-slash"></i>
+              </div>
+              <h2>لا توجد إشعارات جديدة</h2>
+              <a href="../layout/index.html" class="btn main-button">العودة للرئيسية</a>
+            </div>
+          </div> -->
+          <div class="notifications-container">
+            <div class="notification-card">
+              <div class="notification-badge">
+                <i class="fa-solid fa-certificate"></i>
+                <span>جديد</span>
+              </div>
+              <div class="notification-text">وصلت منتجات جديدة مناسبة لذوقك !</div>
+              <button class="notification-close" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="notification-card">
+              <div class="notification-badge">
+                <i class="fa-solid fa-certificate"></i>
+                <span>جديد</span>
+              </div>
+              <div class="notification-text">وصلت منتجات جديدة مناسبة لذوقك !</div>
+              <button class="notification-close" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="notification-card">
+              <div class="notification-badge">
+                <i class="fa-solid fa-certificate"></i>
+                <span>جديد</span>
+              </div>
+              <div class="notification-text">وصلت منتجات جديدة مناسبة لذوقك !</div>
+              <button class="notification-close" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <div class="notification-card">
+              <div class="notification-badge">
+                <i class="fa-solid fa-certificate"></i>
+                <span>جديد</span>
+              </div>
+              <div class="notification-text">وصلت منتجات جديدة مناسبة لذوقك !</div>
+              <button class="notification-close" aria-label="إغلاق">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+          </div>
+          <div class="notification-toggle-section">
+            <label class="notification-toggle-label">
+              <input type="checkbox" class="notification-toggle-input" id="notificationToggle">
+              <span class="notification-toggle-slider"></span>
+              <span class="notification-toggle-text">يمكنك إيقاف الإشعارات</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    </section>
+
+
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/components-loader.js"></script>
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

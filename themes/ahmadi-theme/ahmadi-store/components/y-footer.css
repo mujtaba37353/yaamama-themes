@@ -1,0 +1,140 @@
+.y-c-footer {
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 40px 0 20px;
+}
+
+.y-c-footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-inline-start: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-direction: row-reverse;
+    /* لنقل اللوجو إلى اليمين */
+}
+
+/* This container holds the text/link sections */
+.y-c-footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    flex: 1;
+}
+
+.y-c-footer-section {
+    flex: 1;
+    min-width: 220px;
+}
+
+.y-c-footer-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--y-color-text);
+    padding-bottom: 10px;
+}
+
+.y-c-footer-section p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--y-color-text);
+    line-height: 1.7;
+}
+
+.y-c-footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.y-c-footer-section ul li {
+    margin-bottom: 12px;
+}
+
+.y-c-footer-section ul li a {
+    color: var(--y-color-text);
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.y-c-footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer bottom for copyright and payments */
+.y-c-footer-bottom {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 20px 20px 0;
+    padding-inline-start: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    flex-direction: row;
+}
+
+.y-c-footer-bottom div p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.y-c-footer-bottom img {
+    height: 70px;
+    width: auto;
+}
+
+/* Responsive design for footer */
+@media (max-width: 992px) {
+
+    .y-c-footer-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    .y-c-footer-content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .y-c-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-footer {
+        padding: 30px 0 15px;
+    }
+
+    .y-c-footer-container {
+        padding: 0 12px;
+        padding-inline-start: 16px;
+    }
+
+    .y-c-footer-bottom {
+        padding: 20px 12px 0;
+        padding-inline-start: 16px;
+    }
+
+    .y-c-footer-section h3 {
+        font-size: 20px;
+    }
+
+    .y-c-footer-section p,
+    .y-c-footer-section ul li a {
+        font-size: 16px;
+    }
+}

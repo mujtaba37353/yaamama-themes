@@ -1,0 +1,91 @@
+.panner {
+  background: url(../assets/panner.png);
+  background-size: cover;
+  background-position: 19% 54%;
+  background-repeat: no-repeat;
+  height: 197px;
+  margin-top: var(--y-space-96);
+  margin-bottom: var(--y-space-32);
+  position: relative;
+}
+
+.panner-two {
+  background: url(../assets/panner2.png);
+  background-size: 26%;
+  background-position: 100% 45%;
+  background-repeat: no-repeat;
+  height: 197px;
+  margin-top: var(--y-space-96);
+  margin-bottom: var(--y-space-32);
+  position: relative;
+  background-color: #f6f7f9;
+  display: flex;
+  justify-content: center;
+  padding-top: var(--y-space-62) !important;
+
+  --size: 61px;
+  --m: 1.5;
+  --p: calc(var(--m) * var(--size));
+  --R: calc(var(--size) * sqrt(var(--m) * var(--m) + 1));
+  mask: radial-gradient(
+        var(--R) at 50% calc(100% - (var(--size) + var(--p))),
+        #000 99%,
+        #0000 101%
+      )
+      calc(50% - 2 * var(--size)) 0 / calc(4 * var(--size)) 100%,
+    radial-gradient(var(--R) at 50% calc(100% + var(--p)), #0000 99%, #000 101%)
+      50% calc(100% - var(--size)) / calc(4 * var(--size)) 100% repeat-x;
+}
+.panner p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: var(--y-space-30);
+  color: var(--y-color-bg);
+}
+.panner-two p {
+  max-width: 1200px;
+  width: 100%;
+  text-align: left;
+  font-size: var(--y-space-30);
+  color: var(--y-color-primary);
+  position: initial;
+  transform: initial;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .panner {
+    height: 160px;
+    margin-top: var(--y-space-80);
+    background-position: 19% 50%;
+  }
+
+  .panner p {
+    font-size: var(--y-space-26);
+    padding: 0 var(--y-space-16);
+  }
+
+  .panner-two {
+    height: 160px;
+    margin-top: var(--y-space-80);
+    padding-top: var(--y-space-48) !important;
+    background-size: 30%;
+  }
+
+  .panner-two p {
+    font-size: var(--y-space-26);
+    padding: 0 var(--y-space-16);
+  }
+}
+
+@media (max-width: 767px) {
+  .panner {
+    height: 0;
+    overflow: hidden;
+    width: 0;
+    margin-top: var(--y-space-16);
+  }
+}

@@ -1,0 +1,58 @@
+<header class="y-u-flex y-u-justify-center y-u-items-center y-u-fixed header y-u-top-left">
+  <div class="container y-u-flex y-u-justify-between y-u-items-center y-u-w-full y-u-max-w-1200">
+    <div class="logo y-u-flex y-u-justify-end y-u-items-center">
+      <a href="../home/index.html" class="y-u-text-3xl y-u-font-bold y-u-color-primary">
+        <img src="../../assets/navbar-icon.png" alt="شعار منصة يمامة" />
+      </a>
+      <ul class="desktop-menu y-u-flex y-u-justify-end y-u-items-center">
+        <li><a href="../home/index.html" class="active">الرئيسية</a></li>
+        <li><a href="../store/index.html">متاجرنا</a></li>
+        <li><a href="../about-us/index.html">من نحن</a></li>
+        <li><a href="../contact/index.html">تواصل معنا</a></li>
+
+      </ul>
+    </div>
+
+    <button class="mobile-menu-btn y-u-flex-col y-u-justify-between" aria-label="Toggle mobile menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="user-nav y-u-flex y-u-justify-end y-u-items-center">
+
+
+      <a href="../my-account/index.html">
+        <img src="../../assets/person.svg" alt="أيقونة حساب المستخدم" />
+        <span>حسابي</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu-overlay">
+    <nav class="mobile-menu">
+      <button class="mobile-menu-close" aria-label="Close menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </button>
+      <div class="mobile-menu-search">
+        <div class="y-header-search">
+          <div class="y-header-search__wrap y-header-search--active">
+            <button class="y-header-search__icon-btn" type="button" aria-label="Toggle search">
+              <img src="../../assets/search.svg" alt="بحث" class="y-header-search__icon" />
+            </button>
+            <input type="text" class="y-header-search__input" placeholder="بحث" />
+          </div>
+        </div>
+      </div>
+      <ul class="mobile-menu-list y-u-flex y-u-flex-col y-u-gap-16">
+        <li><a href="../home/index.html" class="active">الرئيسية</a></li>
+        <li><a href="../store/index.html">متاجرنا</a></li>
+        <li><a href="../about-us/index.html">من نحن</a></li>
+        <li><a href="../contact/index.html">تواصل معنا</a></li>
+        <li class="mobile-menu-item-with-bullet"><a href="../my-account/index.html">حسابي</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,67 @@
+/*
+Theme Name: Techno Souq Theme
+Theme URI: https://yamama-themes.com
+Author: Yamama Themes
+Author URI: https://yamama-themes.com
+Description: ثيم WooCommerce مخصص مع تصميم HTML/CSS جاهز مبني على نظام تصميم Techno Souq
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.9
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: techno-souq-theme
+Tags: e-commerce, woocommerce, rtl, arabic, custom-design, responsive
+
+Techno Souq Theme is a custom WooCommerce theme built on the Techno Souq design system.
+*/
+
+/* Prevent horizontal scrolling - Additional WordPress-specific rules */
+#page,
+#main,
+main,
+.site-main,
+.content-area {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all sections respect viewport width */
+section,
+article,
+header,
+footer,
+aside,
+nav {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Prevent WordPress admin bar from causing issues */
+#wpadminbar {
+    max-width: 100vw;
+}
+
+/* Responsive: Prevent horizontal scroll on mobile */
+@media (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    * {
+        max-width: 100vw;
+    }
+    
+    /* Ensure all containers respect mobile viewport */
+    .y-l-container,
+    [class*="container"],
+    [class*="wrapper"] {
+        max-width: 100vw;
+        padding-left: var(--y-spacing-md, 1rem);
+        padding-right: var(--y-spacing-md, 1rem);
+        box-sizing: border-box;
+    }
+}

@@ -1,0 +1,9 @@
+
+.wishlist-page .wishlist-btn i {
+  font-weight: 800 !important;
+  color: var(--y-color-btn);
+}
+
+.wishlist-btn i {
+  font-weight: 800 !important;
+}

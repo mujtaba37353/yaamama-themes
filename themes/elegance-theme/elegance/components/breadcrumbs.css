@@ -1,0 +1,30 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  flex-wrap: nowrap;
+  font-size: var(--y-space-16);
+  color: var(--y-color-primary);
+  font-weight: 700;
+  padding-bottom: var(--y-space-16);
+}
+.breadcrumbs a,
+.breadcrumbs span {
+  white-space: nowrap;
+}
+.breadcrumbs .breadcrumbs-current,
+.breadcrumbs p {
+  color: #00000063;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .breadcrumbs {
+    font-size: var(--y-space-12);
+    flex-wrap: nowrap;
+  }
+  .breadcrumbs .breadcrumbs-current,
+  .breadcrumbs p {
+    font-size: var(--y-space-12);
+  }
+}

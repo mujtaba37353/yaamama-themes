@@ -1,0 +1,93 @@
+<div class="y-c-popup-overlay" id="auth-popup-modal" data-y="auth-popup-modal">
+    <div class="y-c-popup-content y-c-auth-popup" data-y="auth-popup-content">
+
+        <button class="y-c-popup-close" data-auth-close>&times;</button>
+
+        <div class="y-c-auth-form active" data-auth-form="login">
+
+            <div class="y-l-auth-row">
+                <img src="/assets/login.png" alt="Login" class="y-c-auth-icon">
+                <h2 class="y-c-auth-title">تسجيل الدخول</h2>
+            </div>
+
+            <form id="login-form">
+                <div class="y-c-floating-field">
+                    <input type="email" id="login-email" class="y-c-floating-input" required>
+                    <label for="login-email" class="y-c-floating-label">البريد الالكتروني*</label>
+                </div>
+                <div class="y-c-floating-field">
+                    <input type="password" id="login-password" class="y-c-floating-input" required>
+                    <label for="login-password" class="y-c-floating-label">كلمة المرور*</label>
+                </div>
+                <div class="y-c-auth-options">
+                    <a href="#" class="y-c-auth-link" data-auth-show="pass-reset">نسيت كلمة المرور؟</a>
+                    <label class="y-c-auth-remember">
+                        <input type="checkbox" name="remember"> تذكرني
+                    </label>
+                </div>
+                <button type="submit" class="y-c-basic-btn y-c-auth-btn">تسجيل الدخول</button>
+            </form>
+
+            <p class="y-c-auth-switcher">
+                ليس لديك حساب؟ <a href="#" class="y-c-auth-link" data-auth-show="signup">إنشاء حساب جديد</a>
+            </p>
+        </div>
+
+        <div class="y-c-auth-form" data-auth-form="signup">
+
+            <div class="y-l-auth-row">
+                <img src="/assets/signup.png" alt="Sign Up" class="y-c-auth-icon">
+                <h2 class="y-c-auth-title">إنشاء حساب جديد</h2>
+            </div>
+
+            <form id="signup-form">
+                <div class="y-c-floating-field">
+                    <input type="text" id="signup-name" class="y-c-floating-input" required>
+                    <label for="signup-name" class="y-c-floating-label">الاسم بالكامل*</label>
+                </div>
+                <div class="y-c-floating-field">
+                    <input type="email" id="signup-email" class="y-c-floating-input" required>
+                    <label for="signup-email" class="y-c-floating-label">البريد الالكتروني*</label>
+                </div>
+                <div class="y-c-floating-field">
+                    <input type="tel" id="signup-phone" class="y-c-floating-input" required>
+                    <label for="signup-phone" class="y-c-floating-label">رقم الهاتف*</label>
+                </div>
+                <div class="y-c-floating-field">
+                    <input type="password" id="signup-password" class="y-c-floating-input" required>
+                    <label for="signup-password" class="y-c-floating-label">كلمة المرور*</label>
+                </div>
+                <button type="submit" class="y-c-basic-btn y-c-auth-btn">إنشاء الحساب</button>
+            </form>
+
+            <p class="y-c-auth-switcher">
+                لديك حساب بالفعل؟ <a href="#" class="y-c-auth-link" data-auth-show="login">تسجيل الدخول</a>
+            </p>
+        </div>
+
+        <div class="y-c-auth-form" data-auth-form="pass-reset">
+
+            <div class="y-l-auth-row">
+                <img src="/assets/pass-reset.png" alt="Reset Password" class="y-c-auth-icon">
+                <h2 class="y-c-auth-title">إستعادة كلمة المرور</h2>
+            </div>
+
+            <p class="y-c-auth-description">
+                سيتم إرسال رابط لإعادة تعيين كلمة المرور إلى بريدك الإلكتروني المسجل.
+            </p>
+
+            <form id="reset-form">
+                <div class="y-c-floating-field">
+                    <input type="email" id="reset-email" class="y-c-floating-input" required>
+                    <label for="reset-email" class="y-c-floating-label">البريد الالكتروني*</label>
+                </div>
+                <button type="submit" class="y-c-basic-btn y-c-auth-btn">إرسال</button>
+            </form>
+
+            <p class="y-c-auth-switcher">
+                <a href="#" class="y-c-auth-link" data-auth-show="login">العودة لتسجيل الدخول</a>
+            </p>
+        </div>
+
+    </div>
+</div>

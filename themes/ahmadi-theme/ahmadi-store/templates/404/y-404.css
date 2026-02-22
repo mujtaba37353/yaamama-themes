@@ -1,0 +1,9 @@
+.y-l-404-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--y-color-primary);
+    padding: var(--y-spacing-3xl);
+    border-radius: var(--y-border-radius-lg);
+    margin: var(--y-spacing-3xl) 0;
+}

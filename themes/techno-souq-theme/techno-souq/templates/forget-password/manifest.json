@@ -1,0 +1,26 @@
+{
+    "template": "forget-password",
+    "slots": {
+        "forget-password-page": "Forget password page root element",
+        "page-title": "Forget password page title",
+        "forget-password-body": "Forget password page body",
+        "header-placeholder": "Header component placeholder",
+        "forget-password-main": "Main content container for forget password page",
+        "forget-password-card": "Forget password form card",
+        "forget-password-title": "Forget password form title",
+        "forget-password-form": "Forget password form element",
+        "email-form-group": "Email input form group",
+        "email-label": "Email field label",
+        "email-input": "Email input field",
+        "forget-password-description": "Forget password description text",
+        "forget-password-action": "Forget password action container",
+        "submit-reset-btn": "Submit reset link button",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script",
+        "password-confirm-script": "Password confirmation script"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/password-confirm.js"
+    ]
+}

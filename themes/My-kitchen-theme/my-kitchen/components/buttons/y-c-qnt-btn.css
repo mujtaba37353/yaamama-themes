@@ -1,0 +1,38 @@
+.qnt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--y-secondary);
+  padding: 0 15px;
+  border-radius: 15px;
+}
+.qnt button {
+  padding: 5px 10px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.qnt .qty {
+  width: 48px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: inherit;
+  appearance: textfield;
+}
+
+.qnt .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qnt .qty::-webkit-outer-spin-button,
+.qnt .qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

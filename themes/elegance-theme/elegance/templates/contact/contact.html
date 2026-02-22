@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="contact.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner  y-u-m-b-0">
+      <h1 class="y-u-text-center"> تواصل معنا </h1>
+    </section>
+    <section class="container y-u-max-w-1200 contact-section y-u-p-t-32">
+      <h2> معلومات التواصل</h2>
+      <p>يمكنك التواصل معنا عبر البريد الإلكتروني أو الهاتف</p>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <img src="../../assets/phone-primary.svg" alt="">
+          <h3>الهاتف</h3>
+          <p>+966 12 345 6789</p>
+        </div>
+        <div class="contact-info">
+          <img src="../../assets/email-primary.svg" alt="">
+          <h3>البريد الإلكترونى</h3>
+          <p> elegance@gmail.com</p>
+        </div>
+        <div class="contact-info">
+          <img src="../../assets/facebook-primary.svg" alt="">
+          <h3>الفيسبوك</h3>
+          <p>elegance</p>
+        </div>
+        <div class="contact-info">
+          <img src="../../assets/instgram-primary.svg" alt="">
+          <h3>الانستقرام</h3>
+          <p>elegance</p>
+        </div>
+        <div class="contact-info">
+          <img src="../../assets/map-primary.svg" alt="">
+          <h3>العنوان</h3>
+          <p>الرياض , المملكة العربية السعودية</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="auth-section">
+      <div class="container y-u-max-w-1200">
+        <div class="right">
+          <h2> ارسل لنا استسفسارك</h2>
+          <form action="">
+            <div class="form-group">
+              <label for="name">الاسم</label>
+              <input type="text" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني</label>
+              <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+              <label for="number"> الهاتف</label>
+              <input type="number" id="number" name="number">
+            </div>
+            <div class="form-group">
+              <label for="message"> الرسالة</label>
+              <input type="text" id="message" name="message">
+            </div>
+            <button type="submit"> ارسال</button>
+          </form>
+
+        </div>
+        <div class="left">
+          <img src="../../assets/contact-us.png" alt="">
+        </div>
+      </div>
+
+
+
+
+    </section>
+
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/components-loader.js"></script>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

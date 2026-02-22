@@ -1,0 +1,241 @@
+.single-product {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr;
+  align-items: start;
+  gap: 2rem;
+  padding: 2rem 5%;
+  margin: 2rem auto;
+  max-width: 1400px;
+  direction: rtl;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.thumbnails img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  border: 2px solid transparent;
+  background-color: var(--y-color-light);
+}
+
+.thumbnails img:hover {
+  transform: scale(1.05);
+  border-color: var(--y-main);
+}
+
+.main-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.main-image-container img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.1) rotate(-5deg);
+  transition: transform 0.5s ease;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 2rem;
+}
+
+.details h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--y-color-text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.details h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--y-color-text-dark);
+  margin: 0;
+}
+
+.colors {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.color {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+.color:hover {
+  transform: scale(1.1);
+}
+
+.color.selected {
+  border-color: var(--y-main);
+}
+
+.product-code {
+  font-family: sans-serif;
+  color: var(--y-color-gray);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--y-color-text-dark);
+}
+
+.sizes {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sizes button {
+  width: 60px;
+  height: 40px;
+  border: 1px solid var(--y-main);
+  background-color: transparent;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--y-color-text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sizes button:hover,
+.sizes button.active {
+  background-color: var(--y-main);
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.actions .qnt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 50px;
+  border: 1px solid var(--y-main);
+  border-radius: 25px;
+  padding: 0 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.actions .qnt button {
+  width: 40px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--y-color-text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions .qnt span {
+  width: 30px;
+  text-align: center;
+}
+
+.actions .btn-primary {
+  height: 50px;
+  padding: 0 2rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  background-color: var(--y-secondary);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  flex-grow: 1;
+  max-width: 200px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.actions .btn-primary:hover {
+  background-color: var(--y-main);
+}
+
+@media (max-width: 992px) {
+  .single-product {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .thumbnails {
+    flex-direction: row;
+    justify-content: center;
+    order: 2;
+  }
+
+  .thumbnails img {
+    width: 80px;
+  }
+
+  .main-image-container {
+    order: 1;
+  }
+
+  .details {
+    order: 3;
+    padding-right: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .colors,
+  .sizes,
+  .actions {
+    justify-content: center;
+  }
+
+  .actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .actions .btn-primary {
+    width: 100%;
+    max-width: 100%;
+  }
+}

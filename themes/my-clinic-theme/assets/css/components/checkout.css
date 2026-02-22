@@ -1,0 +1,248 @@
+/* Custom Checkout Styles */
+/* إلغاء أي grid من doctor-page — العرض عمودي: عنوان ثم فورم */
+.checkout-custom.doctor-page .bottom > .content,
+.checkout-custom .bottom .content {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  grid-template-columns: unset;
+  gap: 0;
+}
+
+/* العنوان «الدفع» في الأعلى، بعرض كامل */
+.checkout-custom .checkout-title {
+  width: 100%;
+  text-align: center;
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-32);
+  padding: 0;
+}
+
+/* منطقة الفورم تحت العنوان */
+.checkout-custom .checkout-form-area {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* حجم الويب: الفورم ثلثا الشاشة (66.67%) ومُوسَّط بين اليمين واليسار */
+@media (min-width: 769px) {
+  .checkout-custom .checkout-form-area {
+    width: 66.67%;
+    max-width: 66.67%;
+    margin: 0 auto;
+    padding: 0 var(--y-space-24);
+  }
+  .checkout-custom .checkout-form-area form,
+  .checkout-custom .checkout-form-area > .checkout-section {
+    max-width: 100%;
+  }
+}
+
+.checkout-custom .checkout-section {
+  margin-bottom: var(--y-space-32);
+  padding: var(--y-space-24);
+  background-color: var(--y-color-bg);
+  border-radius: var(--y-radius-m);
+  box-shadow: var(--y-color-shadow);
+}
+
+.checkout-custom .checkout-section h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-24);
+  padding-bottom: var(--y-space-16);
+  border-bottom: 1px solid #0000001a;
+}
+
+.checkout-custom .form-group {
+  margin-bottom: var(--y-space-24);
+}
+
+.checkout-custom .form-group label {
+  display: block;
+  font-size: var(--y-space-20);
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-12);
+  font-weight: 500;
+}
+
+.checkout-custom .form-group input[type="email"],
+.checkout-custom .form-group input[type="password"],
+.checkout-custom .form-group input[type="text"],
+.checkout-custom .form-group input[type="tel"] {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid #0000004d;
+  border-radius: var(--y-radius-m);
+  background-color: var(--y-color-bg);
+  transition: all 0.3s ease;
+  font-size: var(--y-space-16);
+}
+
+.checkout-custom .form-group input[type="email"]:focus,
+.checkout-custom .form-group input[type="password"]:focus,
+.checkout-custom .form-group input[type="text"]:focus,
+.checkout-custom .form-group input[type="tel"]:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+
+.checkout-custom .form-group small {
+  display: block;
+  color: #666;
+  margin-top: var(--y-space-8);
+  font-size: var(--y-space-14);
+  line-height: 1.4;
+}
+
+.checkout-custom .form-group input[readonly] {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.checkout-custom .form-group input[type="checkbox"],
+.checkout-custom .form-group input[type="radio"] {
+  width: auto;
+  margin-left: var(--y-space-8);
+  cursor: pointer;
+  accent-color: var(--y-color-primary);
+}
+
+.checkout-custom .form-group label:has(input[type="checkbox"]),
+.checkout-custom .form-group label:has(input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.checkout-custom .form-group label:has(input[type="checkbox"]) span,
+.checkout-custom .form-group label:has(input[type="radio"]) span {
+  margin-right: var(--y-space-8);
+}
+
+/* Gender selection container */
+.checkout-custom .form-group .gender-selection {
+  display: flex;
+  gap: var(--y-space-16);
+  align-items: center;
+  margin-top: var(--y-space-8);
+}
+
+.checkout-custom .form-group .gender-selection > label {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  cursor: pointer;
+  font-weight: 400;
+  margin-bottom: 0;
+  padding: var(--y-space-12) var(--y-space-20);
+  border: 1px solid #0000004d;
+  border-radius: var(--y-radius-m);
+  transition: all 0.3s ease;
+  background-color: var(--y-color-bg);
+  flex: 1;
+  justify-content: center;
+}
+
+.checkout-custom .form-group .gender-selection > label:hover {
+  border-color: var(--y-color-primary);
+  background-color: color-mix(in oklab, var(--y-color-primary) 5%, transparent);
+}
+
+.checkout-custom .form-group .gender-selection > label:has(input[type="radio"]:checked) {
+  border-color: var(--y-color-primary);
+  background-color: color-mix(in oklab, var(--y-color-primary) 10%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+}
+
+.checkout-custom .form-group .gender-selection > label input[type="radio"] {
+  margin: 0;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.checkout-custom .payment-method {
+  margin-bottom: var(--y-space-16);
+  padding: var(--y-space-16);
+  border: 1px solid #0000001a;
+  border-radius: var(--y-radius-m);
+  transition: all 0.3s ease;
+}
+
+.checkout-custom .payment-method:hover {
+  border-color: var(--y-color-primary);
+  background-color: color-mix(in oklab, var(--y-color-primary) 5%, transparent);
+}
+
+/* طريقة الدفع المحددة (selected) */
+.checkout-custom .payment-method:has(input[type="radio"]:checked) {
+  border-color: var(--y-color-primary);
+  background-color: color-mix(in oklab, var(--y-color-primary) 8%, transparent);
+  box-shadow: 0 0 0 2px color-mix(in oklab, var(--y-color-primary) 25%, transparent);
+}
+
+.checkout-custom .payment-method label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: var(--y-space-18);
+  font-weight: 500;
+}
+
+.checkout-custom .payment-method input[type="radio"] {
+  width: auto;
+  margin-left: var(--y-space-12);
+  cursor: pointer;
+  accent-color: var(--y-color-primary);
+}
+
+.checkout-custom .checkout-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-32);
+}
+
+.checkout-custom .password-error {
+  display: block;
+  color: red;
+  font-size: var(--y-space-14);
+  margin-top: var(--y-space-8);
+}
+
+.checkout-custom .auth-choice-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-24);
+}
+
+.checkout-custom .error-message {
+  color: red;
+  margin-bottom: var(--y-space-16);
+  padding: var(--y-space-12);
+  background: #ffebee;
+  border-radius: var(--y-radius-m);
+  border: 1px solid #f44336;
+}
+
+@media (max-width: 768px) {
+  .checkout-custom .checkout-buttons,
+  .checkout-custom .auth-choice-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .checkout-custom .checkout-section {
+    padding: var(--y-space-16);
+  }
+}

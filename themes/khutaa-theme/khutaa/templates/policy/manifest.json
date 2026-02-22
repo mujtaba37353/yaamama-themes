@@ -1,0 +1,12 @@
+{
+  "template": "layout",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "design-header": "[data-y='design-header']",
+    "main": "[data-y='main']",
+    "privacy-policy": "[data-y='privacy-policy']",
+    "refund-policy": "[data-y='refund-policy']",
+    "using-policy": "[data-y='using-policy']",
+    "footer": "[data-y='footer']"
+  }
+}

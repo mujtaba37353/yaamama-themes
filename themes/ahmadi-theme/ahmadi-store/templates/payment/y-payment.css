@@ -1,0 +1,59 @@
+/* Coupon field styles */
+.y-c-coupon-toggle {
+    cursor: pointer;
+}
+
+.y-c-coupon-field {
+    display: none;
+    margin-top: 10px;
+    padding: 15px;
+}
+
+.y-c-coupon-input-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.y-c-coupon-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.y-c-apply-coupon-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.3s;
+}
+
+.y-c-apply-coupon-btn:hover {
+    background: #333;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .y-c-coupon-field {
+        padding: 10px;
+    }
+
+    .y-c-coupon-input-wrapper {
+        gap: 8px;
+    }
+
+    .y-c-coupon-input {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .y-c-apply-coupon-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}

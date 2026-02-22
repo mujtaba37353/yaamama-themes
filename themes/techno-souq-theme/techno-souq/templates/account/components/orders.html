@@ -1,0 +1,207 @@
+<!-- Empty Orders State (Hidden) -->
+<div class="y-c-empty-state" data-y="empty-orders-container" style="display: none;">
+    <div class="y-c-empty-icon-wrapper">
+        <i class="fas fa-shopping-cart y-c-empty-icon"></i>
+    </div>
+    <h3 class="y-c-empty-title">لا يوجد طلبات</h3>
+    <a href="/templates/home/layout.html" class="y-c-btn y-c-btn-primary y-c-empty-btn">عودة للتسوق</a>
+</div>
+
+<!-- Orders List -->
+<div class="y-l-orders-list" data-y="orders-list">
+
+    <!-- Order Item 1 (Delivered) -->
+    <div class="y-c-order-card">
+        <div class="y-c-order-img-wrapper">
+            <img src="/assets/tv.png" alt="Product Image">
+            <div class="y-c-order-overlay">
+                <span>+2</span>
+            </div>
+        </div>
+        <div class="y-c-order-content">
+            <div class="y-c-order-header">
+                <div class="y-c-order-id-wrapper">
+                    <i class="fas fa-cube"></i>
+                    <span class="y-c-order-id">أوردر-1001-2024</span>
+                </div>
+                <span class="y-c-order-status y-c-status-delivered">تم التوصيل</span>
+            </div>
+
+            <div class="y-c-order-meta">
+
+                <div class="y-c-order-date">
+                    <i class="far fa-calendar"></i>
+                    <span>18 جمادى الأولى 1446 هـ</span>
+                </div>
+
+                <span class="y-c-order-price">2599.98 ر.س</span>
+                <span class="y-c-order-count">3 منتجات</span>
+
+            </div>
+        </div>
+        <div class="y-c-order-actions">
+            <button class="y-c-btn y-c-btn-show js-show-order-details">عرض التفاصيل</button>
+        </div>
+    </div>
+    <!-- Order Item 2 (Shipped) -->
+    <div class="y-c-order-card">
+        <div class="y-c-order-img-wrapper">
+            <img src="/assets/tv.png" alt="Product Image">
+        </div>
+        <div class="y-c-order-content">
+            <div class="y-c-order-header">
+                <div class="y-c-order-id-wrapper">
+                    <i class="fas fa-cube"></i>
+                    <span class="y-c-order-id">أوردر-1001-2024</span>
+                </div>
+                <span class="y-c-order-status y-c-status-delivered">تم الشحن</span>
+            </div>
+
+            <div class="y-c-order-meta">
+                <div class="y-c-order-date">
+                    <i class="far fa-calendar"></i>
+                    <span>18 جمادى الأولى 1446 هـ</span>
+                </div>
+                <span class="y-c-order-price">2599.98 ر.س</span>
+                <span class="y-c-order-count">3 منتجات</span>
+            </div>
+        </div>
+        <div class="y-c-order-actions">
+            <button class="y-c-btn y-c-btn-show js-show-order-details">عرض التفاصيل</button>
+        </div>
+    </div>
+</div>
+
+<!-- Order Details Overlay (Matching Image Content) -->
+<div class="y-c-popup-overlay" id="order-details-popup" style="display: none;">
+    <div class="y-c-popup-content y-c-order-details-modal">
+        <!-- Header -->
+        <div class="y-c-modal-header">
+            <button class="y-c-modal-close" id="close-order-details">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+
+        <!-- Top Info: Status Badge & Order Number Header -->
+        <div class="y-c-order-info-header">
+            <h2 class="y-c-modal-title">تفاصيل الطلب</h2>
+
+            <div class="y-c-info-col">
+                <span class="y-c-order-status-badge-static">تم التوصيل</span>
+            </div>
+
+        </div>
+
+        <!-- Details Grid -->
+        <div class="y-c-order-grid-details">
+            <!-- Right Col: Order Num -->
+            <div class="y-c-grid-item">
+                <span class="y-c-info-label"> <i class="fas fa-cube y-c-icon-sm"></i> رقم الطلب</span>
+                <span class="y-c-info-value">أوردر-1001-2024</span>
+            </div>
+
+            <!-- Left Col: Date -->
+            <div class="y-c-grid-item">
+                <span class="y-c-info-label"> <i class="far fa-calendar y-c-icon-sm"></i> تاريخ الطلب</span>
+                <span class="y-c-info-value">18 جمادى الأولى 1446 هـ</span>
+            </div>
+
+            <!-- Right Col: Address -->
+            <div class="y-c-grid-item">
+                <span class="y-c-info-label"> <i class="fas fa-map-marker-alt y-c-icon-sm"></i> عنوان التوصيل</span>
+                <span class="y-c-info-value">123، شارع فكري، صلاح سالم</span>
+            </div>
+
+            <!-- Left Col: Payment -->
+            <div class="y-c-grid-item">
+                <span class="y-c-info-label"> <i class="far fa-credit-card y-c-icon-sm"></i> طريقة الدفع</span>
+                <span class="y-c-info-value">كريديت كارد تنتهي في 2026</span>
+            </div>
+        </div>
+
+        <div class="y-c-divider"></div>
+
+        <h3 class="y-c-products-section-title">المنتجات</h3>
+
+        <div class="y-c-modal-products-list">
+            <!-- Product 1 -->
+            <div class="y-c-modal-product-item">
+
+                <div class="y-c-modal-product-img">
+                    <img src="/assets/tv.png" alt="Product">
+                </div>
+
+                <div class="y-c-modal-product-info">
+                    <h4 class="y-c-modal-product-name">Samsung 55" 4K Smart TV</h4>
+                    <p class="y-c-modal-product-cat">Television</p>
+                    <p class="y-c-modal-product-qty">الكمية: 1</p>
+                </div>
+
+                <div class="y-c-modal-product-price">
+                    799.99 <br> ر.س
+                </div>
+
+            </div>
+
+            <!-- Product 2 -->
+            <div class="y-c-modal-product-item">
+
+                <div class="y-c-modal-product-img">
+                    <img src="/assets/tv.png" alt="Product">
+                </div>
+
+                <div class="y-c-modal-product-info">
+                    <h4 class="y-c-modal-product-name">Samsung 55" 4K Smart TV</h4>
+                    <p class="y-c-modal-product-cat">Television</p>
+                    <p class="y-c-modal-product-qty">الكمية: 1</p>
+                </div>
+
+                <div class="y-c-modal-product-price">
+                    799.99 <br> ر.س
+                </div>
+
+            </div>
+            <!-- Product 3 -->
+            <div class="y-c-modal-product-item">
+
+                <div class="y-c-modal-product-img">
+                    <img src="/assets/tv.png" alt="Product">
+                </div>
+
+                <div class="y-c-modal-product-info">
+                    <h4 class="y-c-modal-product-name">Samsung 55" 4K Smart TV</h4>
+                    <p class="y-c-modal-product-cat">Television</p>
+                    <p class="y-c-modal-product-qty">الكمية: 1</p>
+                </div>
+
+                <div class="y-c-modal-product-price">
+                    799.99 <br> ر.س
+                </div>
+
+            </div>
+        </div>
+
+        <div class="y-c-divider"></div>
+
+        <!-- Summary Section -->
+        <div class="y-c-order-summary">
+            <div class="y-c-summary-row">
+                <span class="y-c-summary-label">المجموع الفرعي</span>
+                <span class="y-c-summary-value">2599.98 ر.س</span>
+            </div>
+            <div class="y-c-summary-row">
+                <span class="y-c-summary-label">الشحن</span>
+                <span class="y-c-summary-value">مجاني</span>
+            </div>
+            <div class="y-c-summary-row">
+                <span class="y-c-summary-label">الضريبة</span>
+                <span class="y-c-summary-value">شاملة</span>
+            </div>
+            <div class="y-c-summary-row y-c-summary-total">
+                <span class="y-c-summary-label">الإجمالي</span>
+                <span class="y-c-summary-value">2599.98 ر.س</span>
+            </div>
+        </div>
+
+    </div>
+</div>

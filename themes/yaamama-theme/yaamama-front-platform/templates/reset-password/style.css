@@ -1,0 +1,15 @@
+.reset-password-section .auth-form {
+  background-color: #ffffff;
+  border-radius: var(--y-space-30);
+  border: 2px solid var(--y-color-primary);
+  padding: var(--y-space-24);
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  width: 100%;
+}
+
+.reset-password-section .auth-form .forget-text {
+  margin: 0;
+  text-align: center;
+}

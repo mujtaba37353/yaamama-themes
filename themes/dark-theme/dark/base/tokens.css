@@ -1,0 +1,205 @@
+:root {
+  --y-main: #A3B993;
+  --y-secondary: #A4825D;
+  --y-color-primary: #E5CBAD;
+  --y-color-primary-light: #d9a85a;
+  --y-color-primary-dark: #8c5e2a;
+  --y-color-secondary: #fcd2a3;
+  --y-color-secondary-light: #fde4b8;
+  --y-color-secondary-dark: #c9a46a;
+  --y-color-accent: #d9b083;
+  --y-color-dark: #7a5230;
+  --y-color-light: #fff8f0;
+  --y-color-text-dark: #3a2c1c;
+  --y-color-text-light: #ffffff;
+  --y-color-on-primary: #ffffff;
+  --y-color-btn: #c3282c;
+  --y-color-bg: #ffffff;
+
+  --y-color-cherry-red: #990F02;
+  --y-color-rose: #E3242B;
+  --y-color-jam: #60100B;
+  --y-color-merlot: #541E1B;
+  --y-color-garnet: #610C04;
+  --y-color-crimson: #B90E0A;
+  --y-color-ruby: #900603;
+  --y-color-scarlet: #900D09;
+  --y-color-wine: #4E0707;
+  --y-color-brick: #7E2811;
+
+  --y-color-orange: #ED7014;
+  --y-color-tangerine: #FA8128;
+  --y-color-merigold: #FCAE1E;
+  --y-color-cider: #B56727;
+  --y-color-rust: #8D4004;
+  --y-color-ginger: #BE5504;
+  --y-color-tiger: #FC6A03;
+  --y-color-fire: #DD571C;
+  --y-color-bronze: #B2560D;
+  --y-color-cantaloupe: #FDA172;
+
+  --y-color-tan: #E6DBAC;
+  --y-color-beige: #EEDC9A;
+  --y-color-macaroons: #F9E076;
+  --y-color-hazel-wood: #C9BB8E;
+  --y-color-granola: #D6B85A;
+  --y-color-oat: #DFC98A;
+  --y-color-egg-nog: #FAE29C;
+  --y-color-fawn: #C8A951;
+  --y-color-sugar-cookie: #F3EAAF;
+  --y-color-sand: #D8B863;
+
+  --y-color-green: #3CB043;
+  --y-color-chartreuse: #B0FC38;
+  --y-color-juniper: #3A5311;
+  --y-color-sage: #728C69;
+  --y-color-lime: #AEF359;
+  --y-color-fern: #5DBB63;
+  --y-color-olive: #98BF64;
+  --y-color-emerald: #028A0F;
+  --y-color-pear: #74B72E;
+  --y-color-moss: #466D1D;
+
+  --y-color-blue: #3944BC;
+  --y-color-slate: #757C88;
+  --y-color-sky: #63C5DA;
+  --y-color-navy: #0A1172;
+  --y-color-indigo: #281E5D;
+  --y-color-cobalt: #1338BE;
+  --y-color-teal: #48AAAD;
+  --y-color-ocean: #016064;
+  --y-color-peacock: #022D36;
+  --y-color-azure: #1520A6;
+
+  --y-color-purple: #A32CC4;
+  --y-color-mauve: #7A4988;
+  --y-color-dark-violet: #710193;
+  --y-color-boysenberry: #630436;
+  --y-color-electric-lavender: #E39FF6;
+  --y-color-plum: #601A35;
+  --y-color-strong-magenta: #A1045A;
+  --y-color-deep-lilac: #B65FCF;
+  --y-color-grape: #663046;
+  --y-color-royal-periwinkle: #BE93D4;
+
+  --y-color-pink: #F699CD;
+  --y-color-pink-rose: #FC94AF;
+  --y-color-french-fuchsia: #FC46AA;
+  --y-color-punch: #F25278;
+  --y-color-blush-pink: #FEC5E5;
+  --y-color-watermelon: #FE7F9C;
+  --y-color-flamingo: #FDA4BA;
+  --y-color-rouge: #F26B8A;
+  --y-color-light-salmon: #FDAB9F;
+  --y-color-coral-pink: #FE7D6A;
+
+  --y-color-brown-oil: #231709;
+  --y-color-roasted-coffee: #4B371C;
+  --y-color-mocha: #3C280D;
+  --y-color-peanut-brown: #795C34;
+  --y-color-carob: #362511;
+  --y-color-hickory: #371D10;
+  --y-color-wood: #3F301D;
+  --y-color-pecan: #4A2511;
+  --y-color-walnut: #432616;
+  --y-color-caramel: #65350F;
+
+  --y-color-black: #000000;
+  --y-color-ebony: #080402;
+  --y-color-crow: #0D0907;
+  --y-color-charcoal: #28231D;
+  --y-color-midnight: #040406;
+  --y-color-ink: #070504;
+  --y-color-raven: #050301;
+  --y-color-oil: #050100;
+  --y-color-grease: #0A0806;
+  --y-color-onyx: #030104;
+
+  --y-color-gray: #808080;
+  --y-color-shadow: #373737;
+  --y-color-graphite: #594D5B;
+  --y-color-iron: #322D31;
+  --y-color-pewter: #696880;
+  --y-color-cloud: #C5C6D0;
+  --y-color-silver: #ADADC9;
+  --y-color-smoke: #59515E;
+  --y-color-dark-slate: #3E3D53;
+  --y-color-anchor: #41424C;
+
+  --y-color-white: #FFFFFF;
+  --y-color-pearl: #FBFCF8;
+  --y-color-alabaster: #FEF9F3;
+  --y-color-snow: #F5FEFD;
+  --y-color-pale-ivory: #FDF6E4;
+  --y-color-cream: #FFFADA;
+  --y-color-eggshell: #FFF9E3;
+  --y-color-cotton: #FBFBF9;
+  --y-color-chiffon: #FBFAF2;
+  --y-color-pink-salt: #F8EEEC;
+
+  --y-color-success: #28a745;
+  --y-color-success-light: #71d88a;
+  --y-color-success-dark: #1c6b2e;
+  --y-color-warning: #ffc107;
+  --y-color-warning-light: #ffdb58;
+  --y-color-warning-dark: #b28704;
+  --y-color-error: #dc3545;
+  --y-color-error-light: #e5737a;
+  --y-color-error-dark: #8b1c24;
+  --y-color-info: #17a2b8;
+  --y-color-info-light: #63c4d9;
+  --y-color-info-dark: #0f6170;
+
+  --y-radius-0: 0;
+  --y-radius-2: 0.125rem;
+  --y-radius-4: 0.25rem;
+  --y-radius-8: 0.5rem;
+  --y-radius-12: 0.75rem;
+  --y-radius-16: 1rem;
+  --y-radius-20: 1.25rem;
+  --y-radius-24: 1.5rem;
+  --y-radius-32: 2rem;
+  --y-radius-50: 50%;
+
+  --y-font-size-sm: 0.875rem;
+  --y-font-size-base: 1rem;
+  --y-font-size-lg: 1.3125rem;
+  --y-font-size-xl: 1.5rem;
+  --y-font-size-2xl: 1.875rem;
+  --y-font-size-3xl: 2.25rem;
+  --y-font-size-4xl: 3rem;
+  --y-font-size-5xl: 3.75rem;
+  --y-font-size-6xl: 4.5rem;
+  --y-font-size-7xl: 5.25rem;
+
+  --y-fw-thin: 100;
+  --y-fw-extralight: 200;
+  --y-fw-light: 300;
+  --y-fw-normal: 400;
+  --y-fw-medium: 500;
+  --y-fw-bold: 700;
+  --y-fw-extrabold: 800;
+  --y-fw-black: 900;
+  --y-font-family: "Cairo", sans-serif;
+  --y-font-alt: "Calibri", sans-serif;
+  --y-line-height-tight: 1.25;
+  --y-line-height-base: 1.5;
+  --y-line-height-relaxed: 1.75;
+  --y-shadow-sm: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.05);
+  --y-shadow: 0 0.0625rem 0.1875rem 0 rgba(0, 0, 0, 0.1), 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+  --y-shadow-lg: 0 0.625rem 0.9375rem -0.1875rem rgba(0, 0, 0, 0.1),
+    0 0.25rem 0.375rem -0.125rem rgba(0, 0, 0, 0.05);
+  --y-transition-fast: 0.15s ease-in-out;
+  --y-transition-base: 0.3s ease-in-out;
+  --y-transition-slow: 0.5s ease-in-out;
+  --y-zindex-dropdown: 1000;
+  --y-zindex-sticky: 1020;
+  --y-zindex-fixed: 1030;
+  --y-zindex-modal-backdrop: 1040;
+  --y-zindex-modal: 1050;
+  --y-zindex-popover: 1060;
+  --y-zindex-tooltip: 1070;
+  --y-zindex-toast: 1080;
+  --y-zindex-max: 1090;
+
+}

@@ -1,0 +1,134 @@
+:root {
+  --y-color-primary: #c195a0;
+  --y-color-secondary: #8b6b7a;
+  --y-color-bg: #fefcfd;
+  --y-color-s-bg: #f5f0f2;
+  --y-color-fg: #f0e8eb;
+  --y-color-text: #2d1b21;
+  --y-color-muted: #6b4a56;
+  --y-color-i: #a67b8a;
+  --y-color-surface: #faf7f8;
+
+  --y-color-border: #e8dde0;
+  --y-color-primary-contrast: #2d1b21;
+
+  --y-color-accent: #c195a0;
+  --y-color-danger: #ef4444;
+  --y-color-warning: #f59e0b;
+  --y-color-success: #22c55e;
+  --y-color-transparency: transparent;
+
+  --y-text-start: left;
+  --y-text-end: right;
+  --y-text-center: center;
+  --y-text-justify: justify;
+  --y-text-nowrap: nowrap;
+  --y-text-wrap: wrap;
+  --y-text-break-all: break-all;
+  --y-text-break-word: break-word;
+  --y-text-break-inside: break-inside;
+  --y-text-break-outside: break-outside;
+  --y-text-break-before: break-before;
+  --y-text-break-after: break-after;
+  --y-text-bold: 700;
+  --y-text-medium: 500;
+  --y-text-normal: 400;
+  --y-text-light: 300;
+
+  --y-space-0: 0;
+  --y-space-2: 2px;
+  --y-space-4: 4px;
+  --y-space-6: 6px;
+  --y-space-8: 8px;
+  --y-space-10: 10px;
+  --y-space-12: 12px;
+  --y-space-14: 14px;
+  --y-space-16: 16px;
+  --y-space-20: 20px;
+  --y-space-24: 24px;
+  --y-space-28: 28px;
+  --y-space-32: 32px;
+  --y-space-40: 40px;
+  --y-space-48: 48px;
+  --y-space-56: 56px;
+  --y-space-64: 64px;
+  --y-space-80: 80px;
+  --y-space-96: 96px;
+  --y-space-104: 104px;
+  --y-space-120: 120px;
+
+  --y-space-144: 144px;
+  --y-space-168: 168px;
+  --y-space-180: 180px;
+  --y-space-196: 196px;
+  --y-space-192: 192px;
+  --y-space-216: 216px;
+  --y-space-240: 240px;
+  --y-space-256: 256px;
+  --y-space-264: 264px;
+  --y-space-288: 288px;
+  --y-space-312: 312px;
+  --y-space-328: 328px;
+  --y-space-336: 336px;
+  --y-space-360: 360px;
+  --y-space-376: 376px;
+  --y-space-392: 392px;
+  --y-space-408: 408px;
+  --y-space-424: 424px;
+  --y-space-440: 440px;
+  --y-space-456: 456px;
+  --y-space-472: 472px;
+  --y-space-488: 488px;
+  --y-space-504: 504px;
+  --y-space-520: 520px;
+  --y-space-536: 536px;
+  --y-space-552: 552px;
+  --y-space-568: 568px;
+  --y-space-584: 584px;
+  --y-space-600: 600px;
+
+  --y-radius-0: 0;
+  --y-radius-4: 4px;
+  --y-radius-8: 8px;
+  --y-radius-12: 12px;
+  --y-radius-full: 9999px;
+
+  --y-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --y-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --y-shadow-md: 0px 4px 8px -2px rgba(0, 0, 0, 0.04),
+    0px 2px 4px -2px rgba(0, 0, 0, 0.08);
+  --y-shadow-lg: 0px 20px 24px -4px rgba(0, 0, 0, 0.08),
+    0px 8px 8px -4px rgba(0, 0, 0, 0.04);
+
+  --y-font-sans: "Cairo", ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --y-font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --y-font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+
+  --y-text-xs: 12px;
+  --y-text-sm: 14px;
+  --y-text-md: 16px;
+  --y-text-lg: 20px;
+  --y-text-xl: 24px;
+  --y-text-2xl: 32px;
+  --y-text-3xl: 40px;
+  --y-text-4xl: 56px;
+
+  --y-line-compact: 1.25;
+  --y-line-normal: 1.6;
+  --y-line-relaxed: 1.8;
+
+  --y-transition-fast: 120ms ease;
+  --y-transition: 200ms ease;
+  --y-transition-slow: 320ms ease;
+}
+
+:root {
+  --y-logical-inline-start: left;
+  --y-logical-inline-end: right;
+}
+[dir="rtl"] {
+  --y-logical-inline-start: right;
+  --y-logical-inline-end: left;
+}

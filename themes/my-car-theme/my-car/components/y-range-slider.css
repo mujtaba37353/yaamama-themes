@@ -1,0 +1,63 @@
+/* Range Slider Component */
+.y-c-range-slider-wrapper {
+    position: relative;
+    width: var(--y-width-percentage-full);
+    padding: var(--y-spacing-md) var(--y-spacing-xs);
+    height: var(--y-size-20);
+}
+
+.y-c-slider-track {
+    position: relative;
+    width: var(--y-width-percentage-full);
+    height: var(--y-spacing-xs);
+    background: var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    cursor: pointer;
+}
+
+.y-c-slider-line {
+    position: absolute;
+    height: 100%;
+    background: var(--y-color-primary);
+    left: var(--min-pos, 0%);
+    right: calc(100% - var(--max-pos, 100%));
+    border-radius: inherit;
+}
+
+.y-c-slider-point {
+    position: absolute;
+    top: 50%;
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    background: var(--y-color-primary);
+    border: var(--y-border-width-sm) solid var(--y-color-background-light);
+    border-radius: var(--y-border-radius-full);
+    transform: translate(-50%, -50%);
+    cursor: grab;
+    box-shadow: var(--y-shadow-sm);
+    z-index: 3;
+    transition: box-shadow var(--y-transition-fast);
+}
+
+.y-c-slider-point:active {
+    cursor: grabbing;
+    box-shadow: var(--y-shadow-md);
+}
+
+#minPoint {
+    left: var(--min-pos, 0%);
+}
+
+#maxPoint {
+    left: var(--max-pos, 100%);
+}
+
+.y-c-range-values {
+    display: block;
+    text-align: center;
+    margin-top: var(--y-spacing-xs);
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-semibold);
+    white-space: nowrap;
+}

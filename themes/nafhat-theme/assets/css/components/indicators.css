@@ -1,0 +1,34 @@
+.indecators {
+  display: flex;
+  flex-direction: row;
+  gap: var(--y-space-16);
+  justify-content: end;
+  align-items: center;
+  margin-block: var(--y-space-16);
+}
+.indecator {
+  padding: var(--y-space-8);
+  cursor: pointer;
+  transition: all var(--y-transition);
+}
+.indecator img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(0);
+}
+
+.hero-slider-indicators .active {
+  background-color: white !important;
+  border-color: white !important;
+}
+
+@media (max-width: 575px) {
+  .indecator {
+    padding: var(--y-space-4);
+  }
+
+  .indecator img {
+    width: 18px;
+    height: 18px;
+  }
+}

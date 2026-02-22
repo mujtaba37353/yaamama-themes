@@ -1,0 +1,32 @@
+{
+    "template": "product-single",
+    "slots": {
+        "page-title": "title",
+        "product-image": "[data-y='product-image']",
+        "product-title": "[data-y='product-title']",
+        "product-price": "[data-y='product-price']",
+        "product-stock-display": "[data-y='product-stock-display']",
+        "quantity-input": "[data-y='quantity-input']",
+        "quantity-minus": "[data-y='quantity-minus']",
+        "quantity-plus": "[data-y='quantity-plus']",
+        "add-to-cart-btn": "[data-y='add-to-cart-btn']",
+        "favorite-btn": "[data-y='favorite-btn']",
+        "fav-text": "[data-y='fav-text']",
+        "product-id": "[data-y='product-id']",
+        "product-category": "[data-y='product-category']",
+        "product-packaging": "[data-y='product-packaging']",
+        "reviews-title": "[data-y='reviews-title']",
+        "first-review-text": "[data-y='first-review-text']",
+        "star-rating-container": "[data-y='star-rating-container']",
+        "review-textarea": "[data-y='review-textarea']",
+        "submit-review-btn": "[data-y='submit-review-btn']",
+        "related-products-title": "[data-y='related-products-title']",
+        "view-more-related": "[data-y='view-more-related']",
+        "related-products-grid": "[data-y='related-products-grid']"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/single-product.js"
+    ]
+}

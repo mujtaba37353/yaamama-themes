@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="cart.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner ">
+      <h1 class="y-u-text-center">عربة التسوق</h1>
+    </section>
+    <section class="container y-u-max-w-1200 cart-section">
+      <div class="right">
+        <h2>المنتجات في السلة</h2>
+        <div class="items">
+          <div class="item">
+            <img src="../../assets/pro1.png" alt="">
+            <div class="content">
+              <h2>قميص قطن صيفى</h2>
+              <div class="price">
+                <p>100 ر.س</p>
+                <p>50 ر.س</p>
+              </div>
+              <p>اللون : اسود</p>
+              <p>الحجم : M</p>
+
+            </div>
+            <div class="quantity">
+              <button>-</button>
+              <input type="number" value="1">
+              <button>+</button>
+            </div>
+            <button><img src="../../assets/trash.svg" alt=""></button>
+
+          </div>
+          <div class="item">
+            <img src="../../assets/pro2.png" alt="">
+            <div class="content">
+              <h2>قميص قطن صيفى</h2>
+              <div class="price">
+                <p>100 ر.س</p>
+                <p>50 ر.س</p>
+              </div>
+              <p>اللون : اسود</p>
+              <p>الحجم : M</p>
+            </div>
+            <div class="quantity">
+              <button>-</button>
+              <input type="number" value="1">
+              <button>+</button>
+            </div>
+            <button><img src="../../assets/trash.svg" alt=""></button>
+
+          </div>
+        </div>
+      </div>
+      <div class="left">
+        <h2> السلة</h2>
+        <div class="total">
+          <p>المجموع : <span> 1000 ر.س</span></p>
+          <p>الضريبة : <span> 100 ر.س</span></p>
+          <p> الاجمالي : <span> 1100 ر.س</span></p>
+        </div>
+        <a href="../payment/payment.html" class="y-c-btn--primary"> اذهب الى الدفع</a>
+      </div>
+
+    </section>
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/components-loader.js"></script>
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

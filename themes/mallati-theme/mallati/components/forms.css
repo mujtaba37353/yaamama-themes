@@ -1,0 +1,35 @@
+.y-c-field {
+  display: grid;
+  gap: var(--y-space-8);
+}
+.y-c-label {
+  font-weight: 600;
+  font-size: var(--y-text-sm);
+}
+.y-c-input,
+.y-c-select,
+.y-c-textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+  transition: border-color var(--y-transition), box-shadow var(--y-transition);
+}
+.y-c-input:focus,
+.y-c-select:focus,
+.y-c-textarea:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.y-c-help {
+  font-size: var(--y-text-sm);
+  color: var(--y-color-muted);
+}
+.y-c-error {
+  color: var(--y-color-danger);
+  font-size: var(--y-text-sm);
+}

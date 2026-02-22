@@ -1,0 +1,118 @@
+/* Grid on .woocommerce wrapper - direct parent of notices, form, cart-collaterals */
+.cart-section .woocommerce {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: var(--y-space-24);
+  align-items: start;
+}
+
+/* Row 1: notices full width */
+.cart-section .woocommerce > .woocommerce-notices-wrapper,
+.cart-section .woocommerce > [class*="woocommerce-message"],
+.cart-section .woocommerce > [class*="woocommerce-error"],
+.cart-section .woocommerce > [class*="woocommerce-info"] {
+  grid-column: 1 / -1;
+}
+
+.cart-section .empty-state-container {
+  grid-column: 1 / -1;
+}
+
+/* Row 2: العمود الايمن (يمين) = form - العمود الايسر (يسار) = cart-collaterals */
+.cart-section .woocommerce .woocommerce-cart-form {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.cart-section .woocommerce .cart-collaterals {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.cart-section .cart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-24);
+}
+
+.cart-section .cart_totals .wc-proceed-to-checkout {
+  margin-bottom: var(--y-space-16);
+}
+
+.cart-section .cart_totals .btn.outline {
+  display: block;
+  text-align: center;
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-12);
+  border: 2px solid var(--y-color-primary);
+  color: var(--y-color-primary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cart-section .cart_totals .btn.outline:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+}
+.cart-section .left {
+  background-color: var(--y-color-fg);
+  border-radius: var(--y-space-20);
+  padding: var(--y-space-32) var(--y-space-20);
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+.cart-section .left h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-text);
+  border-bottom: var(--y-border);
+  padding-bottom: var(--y-space-16);
+}
+
+.cart-section .left a {
+  width: 100%;
+  text-align: center;
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-12);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+.cart-section .left a:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+/* Mobile: عمود واحد، ترتيب من الأعلى للأسفل */
+@media (max-width: 768px) {
+  .cart-section .woocommerce {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+  }
+  .cart-section .woocommerce > .woocommerce-notices-wrapper {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .cart-section .woocommerce .woocommerce-cart-form {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .cart-section .woocommerce .cart-collaterals {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  /* إظهار زر اذهب إلى الدفع على الجوال (layout.css يخفي .main-button) */
+  .cart-section .wc-proceed-to-checkout .main-button,
+  .cart-section .wc-proceed-to-checkout a.btn.main-button {
+    display: flex !important;
+  }
+  /* إظهار زر تسوق الآن في السلة الفارغة على الجوال */
+  .cart-section .empty-state-container .main-button,
+  .cart-section .empty-state .btn.main-button {
+    display: inline-block !important;
+  }
+}

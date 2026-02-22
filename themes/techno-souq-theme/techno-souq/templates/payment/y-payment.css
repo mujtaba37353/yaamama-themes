@@ -1,0 +1,794 @@
+.y-l-payment-container {
+    max-width: var(--y-max-width-default);
+    margin: auto;
+    padding: var(--y-spacing-lg);
+    display: flex;
+    flex-direction: row;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-payment-main {
+    flex: 1;
+
+    .y-c-summary-item {
+        font-size: var(--y-font-size-sm);
+        margin: var(--y-spacing-sm) 0;
+        padding-bottom: var(--y-spacing-xs);
+    }
+
+    .y-c-summary-total {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-order-summary-part img {
+        width: 40px;
+    }
+
+    x: 1;
+}
+
+.y-c-payment-section {
+    padding: var(--y-spacing-lg);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-payment-section-title {
+    font-size: var(--y-font-size-xl);
+    color: var(--y-color-primary);
+    font-weight: var(--y-font-weight-bold);
+}
+
+.y-c-payment-method-options {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-radio-option {
+    display: block;
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-md);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+}
+
+
+/* Make the card details visible when the option is active */
+.y-c-active .y-c-payment-card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.y-c-payment-method-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.y-c-card-logos {
+    display: flex;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-font-size-xl);
+}
+
+.y-c-card-logos i {
+    font-size: var(--y-font-size-2xl);
+}
+
+.y-c-stc-pay-logo img {
+    height: var(--y-spacing-xl);
+    width: auto;
+}
+
+.y-c-order-summary-part {
+    flex: 0.4;
+    border: 1px solid var(--y-color-primary);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-lg);
+    height: fit-content;
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-order-summary-part img {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+}
+
+.y-c-order-summary {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--y-font-size-lg);
+    margin: var(--y-spacing-lg) 0;
+    border-bottom: 1px solid var(--y-color-border);
+    padding-bottom: var(--y-spacing-sm);
+}
+
+.y-c-summary-label {
+    color: var(--y-color-third-text);
+}
+
+.y-c-summary-value {
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-c-summary-total {
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+.y-l-submit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-l-submit-container button,
+.y-l-submit-container .y-c-back-btn {
+    flex: 1;
+    width: calc(50% - var(--y-spacing-xs));
+    text-align: center;
+    padding: var(--y-spacing-md) var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-sm);
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-md);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    color: var(--y-color-primary);
+    border: 1px solid var(--y-color-primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.y-c-back-btn:hover {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+/* Ensure checkout button has same styling */
+.y-c-checkout-btn {
+    background-color: transparent;
+    color: var(--y-color-primary);
+    border: 1px solid var(--y-color-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-c-checkout-btn:hover {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-payment-card-details {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--y-spacing-md);
+    margin-top: var(--y-spacing-md);
+    display: none;
+}
+
+.y-c-payment-card-details .y-c-form-field:nth-child(1),
+.y-c-payment-card-details .y-c-form-field:nth-child(2) {
+    grid-column: span 2;
+}
+
+.y-c-stc-pay-details {
+    margin-top: var(--y-spacing-md);
+    color: var(--y-color-third-text);
+    display: none;
+}
+
+.y-c-stc-pay-details p {
+    text-align: center;
+}
+
+.y-c-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, var(--y-opacity-overlay));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+    /* Ensure it's on top of other content */
+}
+
+.y-c-popup-content {
+    background-color: var(--y-color-background);
+    padding: var(--y-spacing-2xl) var(--y-spacing-3xl);
+    border-radius: var(--y-border-radius-lg);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+    box-shadow: var(--y-shadow-lg);
+    max-width: 90%;
+    width: var(--y-width-popup);
+}
+
+.y-c-popup-content i {
+    font-size: var(--y-width-icon-2xl);
+    color: var(--y-color-success);
+    /* Success Color */
+}
+
+.y-c-popup-content h2 {
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-popup-content .y-c-basic-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+}
+
+.y-l-payment-product {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-payment-section-description {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    line-height: 1.4;
+}
+
+@media (max-width: 992px) {
+    .y-l-payment-container {
+        flex-direction: column;
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-order-summary-part {
+        margin-top: 0;
+        margin-bottom: var(--y-spacing-xl);
+        width: 100%;
+        flex: unset;
+    }
+
+    .y-c-payment-section {
+        margin-bottom: var(--y-spacing-xl);
+    }
+
+    .y-c-popup-content {
+        width: 90%;
+        max-width: 90%;
+        padding: var(--y-spacing-xl) var(--y-spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-payment-container {
+        flex-direction: column;
+        padding: var(--y-spacing-md);
+    }
+
+    /* Move order summary to top on mobile */
+    .y-c-order-summary-part {
+        order: -1;
+        margin-top: 0;
+        margin-bottom: var(--y-spacing-lg);
+    }
+
+    .y-c-payment-main {
+        order: 1;
+    }
+
+    .y-c-summary-item {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-payment-method-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-card-logos {
+        margin-top: var(--y-spacing-xs);
+    }
+
+    .y-c-payment-section-title {
+        font-size: var(--y-font-size-xl);
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-c-form-row {
+        flex-direction: column;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-radio-option {
+        padding: var(--y-spacing-md) var(--y-spacing-sm);
+    }
+
+    .y-c-popup-content .fa-check-circle {
+        font-size: calc(var(--y-width-icon-xxl) * 0.8);
+    }
+
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-xl);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-payment-container {
+        flex-direction: column;
+        padding: var(--y-spacing-sm);
+    }
+
+    /* Move order summary to top on mobile */
+    .y-c-order-summary-part {
+        order: -1;
+        padding: var(--y-spacing-md);
+        margin-bottom: var(--y-spacing-lg);
+        margin-top: 0;
+    }
+
+    .y-c-payment-main {
+        order: 1;
+    }
+
+    .y-c-order-summary {
+        gap: var(--y-spacing-xs);
+    }
+
+    .y-c-summary-item {
+        font-size: var(--y-font-size-sm);
+        margin: var(--y-spacing-sm) 0;
+    }
+
+    .y-c-radio-option {
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-payment-section-title {
+        font-size: var(--y-font-size-lg);
+    }
+
+    .y-l-submit-container {
+        flex-direction: column;
+        gap: var(--y-spacing-md);
+        margin-top: var(--y-spacing-xl);
+    }
+
+    .y-l-submit-container button,
+    .y-l-submit-container .y-c-back-btn {
+        width: 100%;
+    }
+
+    .y-c-payment-card-details {
+        grid-template-columns: 1fr;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-payment-card-details .y-c-form-field {
+        grid-column: span 1 !important;
+        margin-bottom: var(--y-spacing-sm);
+    }
+
+    .y-c-form-input {
+        padding: var(--y-spacing-sm);
+        font-size: var(--y-font-size-md);
+    }
+    
+    /* Fix duplicate form-row in mobile - hide wrapper, show only input */
+    .y-c-form-field .form-row {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        display: block !important;
+    }
+    
+    .y-c-form-field .form-row .woocommerce-input-wrapper {
+        width: 100% !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .y-c-form-field .form-row input,
+    .y-c-form-field .form-row select,
+    .y-c-form-field .form-row textarea {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: var(--y-spacing-sm) !important;
+        border: 1px solid var(--y-color-primary-text) !important;
+        border-radius: var(--y-border-radius-lg) !important;
+        font-size: var(--y-font-size-md) !important;
+        box-sizing: border-box !important;
+    }
+
+    .y-c-card-logos i {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-stc-pay-logo img {
+        height: var(--y-spacing-lg);
+    }
+
+    .y-c-popup-content {
+        padding: var(--y-spacing-lg);
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-popup-content .fa-check-circle {
+        font-size: calc(var(--y-width-icon-xxl) * 0.6);
+    }
+
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-lg);
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .y-l-payment-container {
+        flex-direction: column;
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-order-summary-part {
+        padding: var(--y-spacing-sm);
+    }
+
+    .y-c-order-summary-part img {
+        width: 30px;
+    }
+
+    .y-c-summary-item {
+        font-size: calc(var(--y-font-size-sm) - 1px);
+        margin: var(--y-spacing-xs) 0;
+        padding-bottom: var(--y-spacing-xs);
+    }
+
+    .y-c-payment-section-title {
+        font-size: var(--y-font-size-md);
+        margin-bottom: var(--y-spacing-sm);
+    }
+
+    .y-c-form-input {
+        padding: var(--y-spacing-xs);
+        font-size: var(--y-font-size-sm);
+    }
+
+    .y-c-card-logos i {
+        font-size: var(--y-font-size-lg);
+    }
+
+    .y-c-popup-content h2 {
+        font-size: var(--y-font-size-md);
+    }
+}
+
+/* WooCommerce Checkout Form Overrides */
+.woocommerce-billing-fields h3,
+.woocommerce-shipping-fields h3,
+.woocommerce-additional-fields h3,
+#order_review_heading,
+.woocommerce-checkout-review-order h3 {
+    display: none !important;
+}
+
+.woocommerce-billing-fields__field-wrapper,
+.woocommerce-shipping-fields__field-wrapper,
+.woocommerce-additional-fields__field-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row,
+.woocommerce-shipping-fields__field-wrapper .form-row,
+.woocommerce-additional-fields__field-wrapper .form-row {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row label,
+.woocommerce-shipping-fields__field-wrapper .form-row label,
+.woocommerce-additional-fields__field-wrapper .form-row label {
+    display: none;
+}
+
+/* Hide duplicate form-row inside y-c-form-field - show only input */
+.y-c-form-field .form-row {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.y-c-form-field .form-row .woocommerce-input-wrapper {
+    width: 100% !important;
+    display: block !important;
+}
+
+.y-c-form-field .form-row input,
+.y-c-form-field .form-row select,
+.y-c-form-field .form-row textarea {
+    width: 100% !important;
+    margin: 0 !important;
+    display: block !important;
+    padding: var(--y-spacing-md) !important;
+    border: 1px solid var(--y-color-primary-text) !important;
+    border-radius: var(--y-border-radius-lg) !important;
+    font-size: var(--y-font-size-lg) !important;
+    transition: var(--y-transition-default) !important;
+    box-sizing: border-box !important;
+    background-color: transparent !important;
+    font-family: var(--y-font-family-primary) !important;
+}
+
+.y-c-form-field .form-row input:focus,
+.y-c-form-field .form-row select:focus,
+.y-c-form-field .form-row textarea:focus {
+    outline: none !important;
+    border-color: var(--y-color-primary) !important;
+    box-shadow: 0 0 0 2px rgba(23, 135, 127, 0.1) !important;
+}
+
+/* Ensure inputs inside y-c-form-field use our custom styling */
+.y-c-form-field input[type="text"],
+.y-c-form-field input[type="email"],
+.y-c-form-field input[type="tel"],
+.y-c-form-field select,
+.y-c-form-field textarea {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    border: 1px solid var(--y-color-primary-text);
+    border-radius: var(--y-border-radius-lg);
+    font-size: var(--y-font-size-lg);
+    transition: var(--y-transition-default);
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: var(--y-font-family-primary);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row input[type="text"],
+.woocommerce-billing-fields__field-wrapper .form-row input[type="email"],
+.woocommerce-billing-fields__field-wrapper .form-row input[type="tel"],
+.woocommerce-billing-fields__field-wrapper .form-row input[type="password"],
+.woocommerce-billing-fields__field-wrapper .form-row select,
+.woocommerce-shipping-fields__field-wrapper .form-row input[type="text"],
+.woocommerce-shipping-fields__field-wrapper .form-row input[type="email"],
+.woocommerce-shipping-fields__field-wrapper .form-row input[type="tel"],
+.woocommerce-shipping-fields__field-wrapper .form-row select,
+.woocommerce-additional-fields__field-wrapper .form-row textarea {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    border: 1px solid var(--y-color-primary-text);
+    border-radius: var(--y-border-radius-lg);
+    font-size: var(--y-font-size-lg);
+    transition: var(--y-transition-default);
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: var(--y-font-family-primary);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row input:focus,
+.woocommerce-billing-fields__field-wrapper .form-row select:focus,
+.woocommerce-shipping-fields__field-wrapper .form-row input:focus,
+.woocommerce-shipping-fields__field-wrapper .form-row select:focus,
+.woocommerce-additional-fields__field-wrapper .form-row textarea:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+    box-shadow: 0 0 0 2px rgba(23, 135, 127, 0.1);
+}
+
+.woocommerce-billing-fields__field-wrapper .form-row .woocommerce-input-wrapper,
+.woocommerce-shipping-fields__field-wrapper .form-row .woocommerce-input-wrapper,
+.woocommerce-additional-fields__field-wrapper .form-row .woocommerce-input-wrapper {
+    width: 100%;
+}
+
+/* Hide Select2 completely for country fields */
+.select2-container,
+.select2-dropdown,
+select[name="billing_country"],
+select[name="shipping_country"] {
+    display: none !important;
+}
+
+/* Country input field styling */
+.y-c-country-input {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    border: 1px solid var(--y-color-primary-text);
+    border-radius: var(--y-border-radius-lg);
+    font-size: var(--y-font-size-lg);
+    transition: var(--y-transition-default);
+    box-sizing: border-box;
+    background-color: transparent;
+    font-family: var(--y-font-family-primary);
+}
+
+.y-c-country-input:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+    box-shadow: 0 0 0 2px rgba(23, 135, 127, 0.1);
+}
+
+/* Checkbox styling */
+#ship-to-different-address-checkbox,
+#createaccount {
+    width: var(--y-spacing-md);
+    height: var(--y-spacing-md);
+    accent-color: var(--y-color-primary);
+    cursor: pointer;
+    margin-left: var(--y-spacing-sm);
+}
+
+#ship-to-different-address label,
+.create-account label {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-font-size-md);
+    cursor: pointer;
+    color: var(--y-color-primary-text);
+}
+
+/* Hide required asterisks from WooCommerce default */
+.woocommerce-billing-fields__field-wrapper .required,
+.woocommerce-shipping-fields__field-wrapper .required {
+    display: none;
+}
+
+/* Order notes textarea */
+.woocommerce-additional-fields__field-wrapper textarea {
+    min-height: calc(var(--y-spacing-3xl) * 2);
+    resize: vertical;
+}
+
+/* Remove default WooCommerce form-row spacing */
+.form-row-first,
+.form-row-last,
+.form-row-wide {
+    width: 100%;
+    float: none;
+    clear: none;
+}
+
+/* Ensure form fields use our custom classes */
+.woocommerce-billing-fields__field-wrapper .y-c-form-field,
+.woocommerce-shipping-fields__field-wrapper .y-c-form-field {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.woocommerce-billing-fields__field-wrapper .y-c-form-row,
+.woocommerce-shipping-fields__field-wrapper .y-c-form-row {
+    display: flex;
+    gap: var(--y-spacing-md);
+}
+
+.woocommerce-billing-fields__field-wrapper .y-c-form-row .y-c-form-field,
+.woocommerce-shipping-fields__field-wrapper .y-c-form-row .y-c-form-field {
+    flex: 1;
+}
+
+/* Coupon Form Styling */
+.y-c-coupon-toggle {
+    text-align: center;
+    margin: var(--y-spacing-lg) 0;
+}
+
+.y-c-coupon-toggle .woocommerce-info {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: var(--y-font-family-primary);
+    font-size: var(--y-font-size-xl);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-coupon-link {
+    color: var(--y-color-primary);
+    text-decoration: none;
+    font-weight: var(--y-font-weight-bold);
+    transition: var(--y-transition-fast);
+    cursor: pointer;
+}
+
+.y-c-coupon-link:hover {
+    color: var(--y-color-primary-hover);
+    text-decoration: underline;
+}
+
+.y-c-coupon-form {
+    margin: var(--y-spacing-lg) 0;
+    text-align: center;
+}
+
+.y-c-coupon-form-container {
+    display: flex;
+    flex-direction: row;
+    gap: var(--y-spacing-md);
+    align-items: flex-end;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.y-c-coupon-form-container .y-c-form-field {
+    flex: 2;
+    margin-bottom: 0;
+}
+
+.y-c-coupon-form-container .y-c-form-input {
+    width: 100%;
+    padding: var(--y-spacing-md);
+    border: 1px solid var(--y-color-primary-text);
+    border-radius: var(--y-border-radius-lg);
+    font-size: var(--y-font-size-lg);
+    font-family: var(--y-font-family-primary);
+    text-align: center;
+}
+
+.y-c-coupon-btn {
+    flex: 1;
+    padding: var(--y-spacing-md) var(--y-spacing-lg);
+    background-color: transparent;
+    color: var(--y-color-primary);
+    border: 1px solid var(--y-color-primary);
+    border-radius: var(--y-border-radius-sm);
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-md);
+    font-family: var(--y-font-family-primary);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    white-space: nowrap;
+}
+
+.y-c-coupon-btn:hover {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+@media (max-width: 768px) {
+    .y-c-coupon-form-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .y-c-coupon-form-container .y-c-form-field,
+    .y-c-coupon-form-container .y-c-coupon-btn {
+        flex: 1;
+        width: 100%;
+    }
+    
+    .y-c-coupon-toggle .woocommerce-info {
+        font-size: var(--y-font-size-lg);
+    }
+}

@@ -1,0 +1,28 @@
+.policy-content {
+  padding: var(--y-space-32) 0;
+  line-height: 1.8;
+  color: var(--y-color-text);
+}
+
+.policy-content h2 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  margin-bottom: var(--y-space-16);
+  font-family: "Cairo", sans-serif;
+  font-style: normal;
+  margin-top: var(--y-space-32);
+}
+
+.policy-content h2:first-of-type {
+  margin-top: 0;
+}
+
+.policy-content ul {
+  list-style-type: disc;
+  padding-right: var(--y-space-24);
+  margin-bottom: var(--y-space-16);
+}
+
+.policy-content p {
+  margin-bottom: var(--y-space-16);
+}

@@ -1,0 +1,189 @@
+<div class="payment-form">
+  <div class="section">
+    <h3>معلومات التوصيل</h3>
+    <p class="note">
+      سوف نستخدم هذا البريد الإلكتروني لإرسال التفاصيل والتحديثات إليك حول طلبك.
+    </p>
+
+    <div class="form-field-container">
+      <div class="field-label">البريد الإلكتروني *</div>
+      <div class="field-placeholder">*******@gmail.com</div>
+      <input type="email" id="delivery-email" class="hidden-input" required />
+    </div>
+  </div>
+
+  <div class="section">
+    <h3>عنوان الدفع</h3>
+    <p class="note">
+      أدخل عنوان الفاتورة الذي يتطابق مع طريقة الدفع الخاصة بك.
+    </p>
+
+    <div class="form-row">
+      <div class="form-field-container">
+        <div class="field-label">الاسم الأول *</div>
+        <div class="field-placeholder">أدخل الاسم الأول</div>
+        <input type="text" id="first-name" class="hidden-input" required />
+      </div>
+      <div class="form-field-container">
+        <div class="field-label">اسم العائلة *</div>
+        <div class="field-placeholder">أدخل اسم العائلة</div>
+        <input type="text" id="last-name" class="hidden-input" required />
+      </div>
+    </div>
+
+    <div class="form-field-container">
+      <div class="field-label">عنوان الشارع / رقم المنزل *</div>
+      <div class="field-placeholder">أدخل عنوان الشارع ورقم المنزل</div>
+      <input type="text" id="address" class="hidden-input" required />
+    </div>
+
+    <div class="form-field-container">
+      <div class="field-label">إضافة شقة، الجناح، الوحدة، إلخ</div>
+      <div class="field-placeholder">اختياري</div>
+      <input type="text" id="apartment" class="hidden-input" />
+    </div>
+
+    <div class="form-row">
+      <div class="form-field-container">
+        <div class="field-label">المدينة *</div>
+        <div class="field-placeholder">أدخل اسم المدينة</div>
+        <input type="text" id="city" class="hidden-input" required />
+      </div>
+      <div class="form-field-container">
+        <div class="field-label">المحافظة *</div>
+        <div class="field-placeholder">أدخل اسم المحافظة</div>
+        <input type="text" id="province" class="hidden-input" required />
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-field-container">
+        <div class="field-label">رقم الجوال *</div>
+        <div class="field-placeholder">05xxxxxxxx</div>
+        <input type="tel" id="phone" class="hidden-input" required />
+      </div>
+      <div class="form-field-container">
+        <div class="field-label">الرمز البريدي *</div>
+        <div class="field-placeholder">12345</div>
+        <input type="text" id="postal-code" class="hidden-input" required />
+      </div>
+    </div>
+  </div>
+
+  <div class="section2">
+    <div class="payment-container">
+      <div class="payment-methods-section">
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" id="payment-method-card" name="payment-method" value="card" checked />
+            <div class="option-text">
+              <span class="option-sub">ادفع ببطاقتك البنكية</span>
+            </div>
+            <div class="option-logos">
+              <img src="../../assets/payment-methods.png" alt="Mada, Visa, MasterCard" class="option-img" />
+            </div>
+          </label>
+
+          <div class="payment-form-fields" id="credit-card-fields">
+            <div class="form-field-container">
+              <div class="field-label">أسم حامل البطاقة</div>
+              <div class="field-placeholder">الاسم علي البطاقة</div>
+              <input type="text" id="card-holder-name" class="hidden-input" />
+            </div>
+
+            <div class="form-field-container">
+              <div class="field-label">رقم البطاقة</div>
+              <div class="field-placeholder">1234 5678 9101 1121</div>
+              <input type="text" id="card-number" class="hidden-input" maxlength="19" />
+            </div>
+
+            <div class="form-field-container">
+              <div class="field-label">تاريخ الانتهاء</div>
+              <div class="field-placeholder">MM / YY</div>
+              <input type="text" id="expiry-date" class="hidden-input" maxlength="5" />
+            </div>
+
+            <div class="form-field-container">
+              <div class="field-label">CCV</div>
+              <div class="field-placeholder">XXX</div>
+              <input type="text" id="cvv" class="hidden-input" maxlength="4" />
+            </div>
+          </div>
+
+          <label class="payment-option">
+            <input type="radio" id="payment-method-apple" name="payment-method" value="apple-pay" />
+            <div class="option-text">
+              <span class="option-sub">ادفع مباشرة عبر Apple Pay</span>
+            </div>
+            <div class="option-logos">
+              <img src="../../assets/apple-pay.png" alt="Apple Pay" class="option-img" />
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" id="payment-method-stc" name="payment-method" value="stc-pay" />
+            <div class="option-text">
+              <span class="option-sub">محفظة STC Pay</span>
+            </div>
+            <div class="option-logos">
+              <img src="../../assets/stc-pay.png" alt="STC Pay" class="option-img" />
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" id="payment-method-tamara" name="payment-method" value="tamara" />
+            <div class="option-text">
+              <span class="option-sub">ادفع مع تمارا</span>
+            </div>
+            <div class="option-logos">
+              <img src="../../assets/tmara-pay.png" alt="Tamara" class="option-img" />
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" id="payment-method-tabby" name="payment-method" value="tabby" />
+            <div class="option-text">
+              <span class="option-sub">  ادفع مع تابي</span>
+            </div>
+            <div class="option-logos">
+              <img src="../../assets/taby-pay.png" alt="Tabby" class="option-img" />
+            </div>
+          </label>
+
+          <label class="payment-option">
+            <input type="radio" id="payment-method-cod" name="payment-method" value="cod" />
+            <div class="option-text">
+              <span class="option-sub">الدفع مباشرة عند الاستلام</span>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="form-field-container textarea-container">
+      <div class="field-label">إضافة ملحوظة</div>
+      <div class="field-placeholder">أي ملاحظات إضافية...</div>
+      <textarea id="notes" class="hidden-textarea" rows="3"></textarea>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="terms-note">
+      من خلال متابعة عملية الشراء الخاصة بك، فإنك توافق على
+      <a href="../../templates/policy/layout.html" class="terms-link">الشروط والأحكام</a>
+      و
+      <a href="/my-kitchen/privacy-policy/" class="terms-link">سياسة الخصوصية</a>
+      الخاصة بنا
+    </p>
+  </div>
+
+  <div class="form-actions">
+    <a href="../../templates/cart/layout.html"><i> <i class="fa fa-arrow-right" aria-hidden="true"></i> </i>العودة إلى
+      سلة المشتريات
+    </a>
+
+    <button type="submit" class="btn-primary">تقديم الطلب</button>
+  </div>
+</div>

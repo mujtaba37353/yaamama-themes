@@ -1,0 +1,208 @@
+.products-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--y-space-16);
+  margin-block: 0;
+  padding-block: 0;
+  position: relative;
+}
+.products-section .container .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products-section .container .header a {
+  font-size: var(--y-space-24);
+  text-decoration: underline;
+  color: var(--y-color-text);
+}
+.products-section h2 {
+  font-size: var(--y-space-32);
+
+  font-weight: 600;
+  color: var(--y-color-text);
+  text-align: center;
+  transition: all 0.3s ease;
+  padding-bottom: var(--y-space-0);
+}
+
+.products-section .grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--y-space-16);
+  margin-block: var(--y-space-32);
+}
+@media (max-width: 1100px) {
+  .products-section .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .products-section .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 520px) {
+  .products-section .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid .card .card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--y-space-16);
+  background-color: var(--y-color-fg);
+  border-radius: var(--y-space-24);
+  box-shadow: 0 0 4px 2px rgb(0 0 0 / 12%);
+  padding: var(--y-space-20);
+  padding-inline: var(--y-space-10);
+  height: 100%;
+}
+.grid .card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--y-space-16);
+  flex: 1;
+}
+.grid .card a .img {
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+.grid .card a .img img {
+  border-radius: var(--y-space-24);
+  object-fit: contain;
+  height: var(--y-space-196);
+}
+.grid .card a .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--y-space-16);
+  width: 100%;
+}
+.grid .card a .content p {
+  font-size: var(--y-space-16);
+  font-weight: 600;
+  color: var(--y-color-text);
+}
+
+.grid .card a .content .top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--y-space-8);
+}
+.grid .card a .content .top p {
+  font-size: var(--y-space-20);
+  font-weight: 300;
+}
+.grid .card a .content .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-8);
+}
+.grid .card a .content .bottom button {
+  display: flex;
+  align-items: center;
+  place-items: center;
+  width: fit-content;
+  height: 100%;
+  gap: var(--y-space-8);
+  font-weight: 600;
+  color: var(--y-color-text);
+  background-color: var(--y-color-button);
+  padding: var(--y-space-12);
+  border-radius: var(--y-space-30);
+  transition: all 0.2s ease-in-out;
+  text-wrap: nowrap;
+}
+.grid .card a .content .bottom p {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.grid .card a .content .bottom p span {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+.grid .card a .content .bottom p span.grey-ryal {
+  text-decoration: line-through;
+  filter: contrast(0.01);
+}
+.grid .card a .content .bottom button:hover,
+.grid .card .card-bottom .bottom .button:hover,
+.grid .card .card-bottom .bottom a.button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.grid .card {
+  display: flex;
+  flex-direction: column;
+}
+.grid .card a {
+  flex: 1;
+}
+.grid .card .card-bottom {
+  width: 100%;
+}
+.grid .card .card-bottom .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-8);
+}
+.grid .card .card-bottom .bottom p {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.grid .card .card-bottom .bottom a.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: var(--y-color-text);
+  background-color: var(--y-color-button);
+  padding: var(--y-space-12);
+  border-radius: var(--y-space-30);
+  transition: all 0.2s ease-in-out;
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+
+
+  .products-section h2,
+  .opinion-section .container h2 {
+    font-size: var(--y-space-20);
+  }
+  .products-section .container .header a {
+    font-size: var(--y-space-20);
+  }
+}
+@media (max-width: 480px) {
+
+  .grid .card a .content .top p {
+    text-align: center;
+  }
+  .grid .card a .content .bottom {
+    grid-template-columns: 1fr;
+  }
+  .grid .card a .content .bottom p {
+    justify-content: center;
+  }
+}

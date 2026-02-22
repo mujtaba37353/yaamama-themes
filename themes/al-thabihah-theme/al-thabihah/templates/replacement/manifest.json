@@ -1,0 +1,15 @@
+{
+    "template": "replacement",
+    "slots": {
+        "page-title": "Page title",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "breadcrumbs": "Breadcrumbs section",
+        "replacement-content": "Main content area for replacement policy",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

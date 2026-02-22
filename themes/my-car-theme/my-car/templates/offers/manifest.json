@@ -1,0 +1,20 @@
+{
+    "template": "offers",
+    "slots": {
+        "page-title": "Title of the offers page",
+        "header-placeholder": "Header component placeholder",
+        "offers-main": "Main content area of the offers page",
+        "product-breadcrumb": "Breadcrumb navigation for the offers page",
+        "offers-container": "Main container for offers products",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/range-slider.js",
+        "../../js/store.js",
+        "../../js/offers.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

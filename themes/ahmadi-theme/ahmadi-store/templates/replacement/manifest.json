@@ -1,0 +1,13 @@
+{
+    "template": "replacement",
+    "slots": {
+        "page-title": "title",
+        "replacement-container": "[data-y='replacement-container']",
+        "replacement-policy-title": "[data-y='replacement-policy-title']",
+        "shipping-policy-title": "[data-y='shipping-policy-title']",
+        "shipping-policy-text": "[data-y='shipping-policy-text']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

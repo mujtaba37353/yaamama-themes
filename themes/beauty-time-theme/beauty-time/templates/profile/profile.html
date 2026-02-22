@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Time</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+
+  <link rel="stylesheet" href="./profile.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="panner">
+      <p><a href="../layout/index.html">الرئيسية</a> / حسابي</p>
+    </section>
+
+    <section class="profile-section">
+      <div class="container y-u-max-w-1200">
+        <div class="bottom">
+          <div class="sidbar">
+            <div class="profile-img">
+              <img src="../../assets/fake-profile-img.png" alt="">
+            </div>
+
+            <div class="tabs">
+              <button class="active" data-tab="profile"><i class="fas fa-user"></i> تفاصيل الحساب </button>
+              <button data-tab="downloads"><i class="fas fa-calendar-alt"></i> حجوزاتي</button>
+              <button data-tab="favorites"><i class="fas fa-bell"></i> الإشعارات</button>
+              <a href="../login/login.html"><i class="fas fa-right-from-bracket"></i> تسجيل الخروج</a>
+            </div>
+          </div>
+          <div class="content">
+            <div class="main-content tab-content active" data-content="profile">
+              <div class="account-form-card">
+                <h2 class="section-title">المعلومات الشخصية</h2>
+                <form class="account-form" action="">
+                  <div class="form-group">
+                    <div class="group">
+                      <label for="name">
+                        <i class="fas fa-user"></i>
+                        الاسم الأول
+                      </label>
+                      <input type="text" id="name" name="name" placeholder="أدخل الاسم الأول">
+                    </div>
+                    <div class="group">
+                      <label for="family-name">
+                        <i class="fas fa-user"></i>
+                        اسم العائلة
+                      </label>
+                      <input type="text" id="family-name" name="family-name" placeholder="أدخل اسم العائلة">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="group">
+                      <label for="date-of-birth">
+                        <i class="fas fa-calendar"></i>
+                        تاريخ الميلاد
+                      </label>
+                      <input type="date" id="date-of-birth" name="date-of-birth">
+                    </div>
+                    <div class="group">
+                      <label for="gender">
+                        <i class="fas fa-venus-mars"></i>
+                        النوع
+                      </label>
+                      <select id="gender" name="gender">
+                        <option value="">اختر النوع</option>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="group">
+                      <label for="email">
+                        <i class="fas fa-envelope"></i>
+                        البريد الإلكتروني
+                      </label>
+                      <input type="email" id="email" name="email" placeholder="example@email.com">
+                    </div>
+                    <div class="group">
+                      <label for="phone">
+                        <i class="fas fa-phone"></i>
+                        رقم الهاتف
+                      </label>
+                      <input type="tel" id="phone" name="phone" placeholder="05xxxxxxxx">
+                    </div>
+                  </div>
+                  <div class="form-actions">
+                    <button type="submit" class="btn-save">
+                      <i class="fas fa-save"></i>
+                      حفظ التغييرات
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div class="settings-section">
+                <h2 class="section-title">الإعدادات</h2>
+                <div class="settings-cards">
+                  <div class="setting-card">
+                    <div class="setting-header">
+                      <div class="setting-icon">
+                        <i class="fas fa-bell"></i>
+                      </div>
+                      <div class="setting-info">
+                        <h3>إعدادات الإشعارات</h3>
+                        <p>التحكم في تلقّي الإشعارات والتنبيهات</p>
+                      </div>
+                    </div>
+                    <div class="setting-action">
+                      <label class="notification-toggle">
+                        <input type="checkbox" checked>
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="setting-card danger">
+                    <div class="setting-header">
+                      <div class="setting-icon danger-icon">
+                        <i class="fas fa-ban"></i>
+                      </div>
+                      <div class="setting-info">
+                        <h3>تعطيل الحساب</h3>
+                        <p>سيتم تعطيل حسابك مؤقتاً ويمكنك تفعيله لاحقاً</p>
+                      </div>
+                    </div>
+                    <div class="setting-action">
+                      <button class="btn-danger" id="disable-account-btn">
+                        <i class="fas fa-ban"></i>
+                        تعطيل الحساب
+                      </button>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="download-content tab-content" data-content="downloads">
+              <ul class="bookings-list">
+                <li class="booking-card">
+                  <div class="booking-image">
+                    <img src="../../assets/book.png" alt="خدمة">
+                  </div>
+                  <div class="booking-details">
+                    <h3 class="booking-title">حجز موعد خدمة بالصالون</h3>
+                    <p class="booking-service">العناية بالشعر</p>
+                    <div class="booking-info">
+                      <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>نوفمبر 10, 2025</span>
+                      </div>
+                      <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 ص</span>
+                      </div>
+                      <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>محمد علي</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-footer">
+                    <div class="booking-price">
+                      <span class="price-label">السعر</span>
+                      <span class="price-value">200 <img src="../../assets/ryal-prim.svg" alt="ريال"></span>
+                    </div>
+                    <span class="status-badge paid">تم الدفع</span>
+                  </div>
+                </li>
+                <li class="booking-card">
+                  <div class="booking-image">
+                    <img src="../../assets/book.png" alt="خدمة">
+                  </div>
+                  <div class="booking-details">
+                    <h3 class="booking-title">حجز موعد خدمة بالصالون</h3>
+                    <p class="booking-service">العناية بالشعر</p>
+                    <div class="booking-info">
+                      <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>نوفمبر 10, 2025</span>
+                      </div>
+                      <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10:00 ص</span>
+                      </div>
+                      <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>محمد علي</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="booking-footer">
+                    <div class="booking-price">
+                      <span class="price-label">السعر</span>
+                      <span class="price-value">200 <img src="../../assets/ryal-prim.svg" alt="ريال"></span>
+                    </div>
+                    <span class="status-badge pending">في انتظار الدفع</span>
+                  </div>
+                </li>
+              </ul>
+
+
+
+            </div>
+            <div class="favorite-content tab-content" data-content="favorites">
+              <ul class="notifications-list">
+                <li class="notification-card">
+                  <div class="notification-icon">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-text">هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم
+                      تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص.</p>
+                    <span class="notification-time">منذ ساعتين</span>
+                  </div>
+                  <button class="notification-delete" aria-label="حذف الإشعار">
+                    <i class="fas fa-trash-can"></i>
+                  </button>
+                </li>
+                <li class="notification-card">
+                  <div class="notification-icon">
+                    <i class="fas fa-calendar-check"></i>
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-text">تم تأكيد حجزك بنجاح. يرجى الحضور في الوقت المحدد.</p>
+                    <span class="notification-time">منذ 5 ساعات</span>
+                  </div>
+                  <button class="notification-delete" aria-label="حذف الإشعار">
+                    <i class="fas fa-trash-can"></i>
+                  </button>
+                </li>
+                <li class="notification-card unread">
+                  <div class="notification-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-text">تذكير: لديك موعد غداً في الساعة 10:00 صباحاً</p>
+                    <span class="notification-time">منذ يوم</span>
+                  </div>
+                  <button class="notification-delete" aria-label="حذف الإشعار">
+                    <i class="fas fa-trash-can"></i>
+                  </button>
+                </li>
+                <li class="notification-card">
+                  <div class="notification-icon">
+                    <i class="fas fa-info-circle"></i>
+                  </div>
+                  <div class="notification-content">
+                    <p class="notification-text">تم تحديث سياسة الخصوصية. يرجى مراجعة التحديثات الجديدة.</p>
+                    <span class="notification-time">منذ 3 أيام</span>
+                  </div>
+                  <button class="notification-delete" aria-label="حذف الإشعار">
+                    <i class="fas fa-trash-can"></i>
+                  </button>
+                </li>
+              </ul>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <!-- Disable Account Popup -->
+  <div class="disable-account-popup" id="disable-account-popup">
+    <div class="popup-overlay"></div>
+    <div class="popup-content">
+      <div class="popup-header">
+        <h3>تعطيل الحساب</h3>
+        <button class="popup-close" id="close-disable-popup">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="popup-body">
+        <div class="popup-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <p>هل أنت متأكد من رغبتك في تعطيل حسابك؟</p>
+        <p class="popup-warning">سيتم تعطيل حسابك مؤقتاً ويمكنك تفعيله مرة أخرى في أي وقت.</p>
+      </div>
+      <div class="popup-footer">
+        <button class="btn-cancel" id="cancel-disable-btn">إلغاء</button>
+        <button class="btn-confirm" id="confirm-disable-btn">تعطيل الحساب</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../../js/y-app-init.js"></script>
+
+</body>
+
+</html>

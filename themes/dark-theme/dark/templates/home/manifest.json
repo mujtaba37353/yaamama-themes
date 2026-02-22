@@ -1,0 +1,13 @@
+{
+  "template": "layout",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "header": "[data-y='header']",
+    "main": "[data-y='main']",
+    "product-sec": "[data-y='product-sec']",
+    "category": "[data-y='category']",
+    "offers-sec": "[data-y='offers-sec']",
+    "reviews": "[data-y='reviews']",
+    "footer": "[data-y='footer']"
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "template": "account",
+    "slots": {
+        "page-title": "Page title for account page",
+        "account-profile-container": "Main container for account profile",
+        "orders-link": "Link to orders section",
+        "address-link": "Link to address section",
+        "account-details-link": "Link to account details section",
+        "profile-content-placeholder": "Content placeholder for profile sections",
+        "user-name": "Display for user's name",
+        "user-email": "Display for user's email",
+        "user-address": "Display for user's address",
+        "edit-btn": "Button to edit user information"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/account.js"
+    ]
+}

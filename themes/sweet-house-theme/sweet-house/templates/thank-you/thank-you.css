@@ -1,0 +1,158 @@
+/* Thank You page — Sweet House design */
+
+body.woocommerce-checkout.woocommerce-order-received {
+  height: auto;
+}
+body.woocommerce-checkout.woocommerce-order-received main {
+  flex: 0 0 auto;
+}
+body.woocommerce-checkout.woocommerce-order-received main > .main-container {
+  margin-top: 0;
+}
+
+/* Design header — بانر */
+.thank-you-design-wrap .thank-you-design-header {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.thank-you-design-header .panner-img {
+  margin-top: 8rem !important;
+}
+.thank-you-design-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+/* Container */
+.thank-you-container {
+  margin-block: 1.5rem;
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+/* Card */
+.thank-you-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+}
+.thank-you-card--success .thank-you-icon {
+  color: #2e7d32;
+}
+.thank-you-card--error .thank-you-icon {
+  color: #c62828;
+}
+.thank-you-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+.thank-you-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--y-secondary, #542525);
+  margin: 0 0 0.75rem;
+}
+.thank-you-message {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+.thank-you-order-details {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  text-align: right;
+  direction: rtl;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  padding-top: 1rem;
+}
+.thank-you-order-details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+.thank-you-order-details .label {
+  color: #666;
+  margin-left: 0.5rem;
+}
+.thank-you-order-details strong {
+  color: #222;
+}
+.thank-you-actions,
+.thank-you-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.thank-you-actions .btn-auth,
+.thank-you-footer-actions .btn-auth {
+  margin: 0;
+}
+.btn-auth--outline {
+  background: transparent;
+  color: var(--y-secondary, #542525);
+  border: 2px solid var(--y-secondary, #542525);
+}
+.btn-auth--outline:hover {
+  background: var(--y-secondary, #542525);
+  color: #fff;
+}
+
+/* Order details table (WooCommerce) */
+.thank-you-order-table {
+  margin-top: 1.5rem;
+}
+.thank-you-order-table .woocommerce-table {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.thank-you-order-table .woocommerce-table th,
+.thank-you-order-table .woocommerce-table td {
+  padding: 0.5rem 0.75rem;
+  text-align: right;
+}
+.thank-you-order-table .woocommerce-table thead th {
+  background: #f5f5f5;
+  font-weight: 600;
+}
+
+/* Breadcrumb */
+.thank-you-design-wrap .woocommerce-breadcrumb-wrap {
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .thank-you-card {
+    padding: 1.5rem 1rem;
+  }
+  .thank-you-title {
+    font-size: 1.35rem;
+  }
+  .thank-you-actions,
+  .thank-you-footer-actions {
+    flex-direction: column;
+  }
+  .thank-you-actions .btn-auth,
+  .thank-you-footer-actions .btn-auth {
+    width: 100%;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>تواصل معنا - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="./y-contact-us.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main>
+        <section class="y-l-contact-section" data-y="contact-section">
+            <div class="y-u-container y-l-contact-container" data-y="contact-container">
+
+                <div class="y-l-contact-form" data-y="contact-form-container">
+                    <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                        <p>
+                            <a href="../home/layout.html">الرئيسية</a>
+                            <span>></span>
+                            <span data-y="bc-current">تواصل معنا</span>
+                        </p>
+                    </nav>
+                    <h1 class="y-c-form-title" data-y="form-title">تواصل معنا</h1>
+
+                    <form action="#" method="POST" class="y-c-contact-form-fields" data-y="contact-form">
+
+                        <div class="y-c-form-group" data-y="form-group-name">
+                            <label for="name" class="y-c-form-label">الاسم <span class="y-c-required">*</span></label>
+                            <input type="text" id="name" name="name" class="y-c-form-input" required data-y="full-name">
+                        </div>
+
+                        <div class="y-c-form-group" data-y="form-group-email">
+                            <label for="email" class="y-c-form-label">البريد الإلكتروني <span
+                                    class="y-c-required">*</span></label>
+                            <input type="email" id="email" name="email" class="y-c-form-input" required data-y="email-input">
+                        </div>
+
+                        <div class="y-c-form-group" data-y="form-group-phone">
+                            <label for="phone" class="y-c-form-label">الهاتف <span class="y-c-required">*</span></label>
+                            <input type="tel" id="phone" name="phone" class="y-c-form-input" required data-y="phone-input">
+                        </div>
+
+                        <div class="y-c-form-group" data-y="form-group-message">
+                            <label for="message" class="y-c-form-label">اكتب رسالتك <span
+                                    class="y-c-required">*</span></label>
+                            <textarea id="message" name="message" class="y-c-form-input" rows="6" required></textarea>
+                        </div>
+
+                        <div class="y-l-form-button" data-y="form-submit-button-container">
+                            <button type="submit" class="y-c-outline-btn" data-y="form-submit-btn">إرسال</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="y-c-contact-logo" data-y="contact-logo">
+                    <img src="../../assets/contact-us.png" alt="Al Thabihah Logo" data-y="logo-image">
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/global-validation.js"></script>
+    <script src="../../js/contact-us.js"></script>
+    <script src="../../js/products.js"></script>
+</body>
+
+</html>

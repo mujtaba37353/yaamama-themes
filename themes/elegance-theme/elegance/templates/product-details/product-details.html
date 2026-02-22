@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/quantity.css" />
+  <link rel="stylesheet" href="../../components/breadcrumbs.css" />
+  <link rel="stylesheet" href="../../components/price-value.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/payment-details.css" />
+
+  <link rel="stylesheet" href="../layout/layout.css">
+  <link rel="stylesheet" href="product-details.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+
+  <y-navbar></y-navbar>
+
+  <main>
+
+    <section class="details-section">
+      <div class="container y-u-max-w-1200">
+        <div class="breadcrumbs">
+          <a href="../layout/index.html"><i class="fa-solid fa-house"></i></a>
+          / <a href="../store/store.html">المتجر</a>
+            / <p> قميص قطن صيفى</p>
+        </div>
+      </div>
+
+      <div class="container y-u-max-w-1200">
+        <div class="imgs-section">
+          <div class="imgs">
+            <img src="../../assets/sales1.png" alt="">
+            <img src="../../assets/sales1.png" alt="">
+            <img src="../../assets/sales1.png" alt="">
+            <img src="../../assets/sales1.png" alt="">
+          </div>
+          <div class="main-img">
+            <img src="../../assets/sales1.png" alt="">
+            <i class="heart fa-solid fa-heart active"></i>
+          </div>
+
+
+
+        </div>
+        <div class="content">
+          <div class="header">
+            <h3>قميص قطن صيفى</h3>
+          </div>
+          <p>قميص صيفي خفيف ومريح مصنوع من خامة ناعمة تسمح بمرور الهواء، يمنحك إطلالة أنيقة وعملية تناسب الأجواء الحارة والمشاوير اليومية.</p>
+          <div class="price">
+            <p class="price-value">
+              <span class="grey-ryal">150 <img src="../../assets/ryal-red.svg" alt=""></span>
+              <span>50 <img src="../../assets/ryal.svg" alt=""></span>
+            </p>
+          </div>
+          <div class="color">
+            <p>اللون</p>
+            <div class="color-grid">
+              <label for="color-1">
+                <input type="radio" name="color" id="color-1">
+                <div class="color-item"></div>
+              </label>
+              <label for="color-2">
+                <input type="radio" name="color" id="color-2">
+                <div class="color-item"></div>
+              </label>
+              <label for="color-3">
+                <input type="radio" name="color" id="color-3">
+                <div class="color-item"></div>
+              </label>
+              <label for="color-4">
+                <input type="radio" name="color" id="color-4">
+                <div class="color-item"></div>
+              </label>
+            </div>
+          </div>
+          <div class="color">
+            <p>المقاس</p>
+            <div class="sizes-grid">
+              <label for="size-1">
+                <input type="radio" name="size" value="S" id="size-1">
+
+              </label>
+              <label for="size-2">
+                <input type="radio" name="size" value="M" id="size-2">
+
+              </label>
+              <label for="size-3">
+                <input type="radio" name="size" value="L" id="size-3">
+
+              </label>
+              <label for="size-4">
+                <input type="radio" name="size" value="XL" id="size-4">
+
+              </label>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <div class="quantity">
+              <button>-</button>
+              <input type="number" value="1">
+              <button>+</button>
+            </div>
+            <button class="btn main-button">اضافة للسلة <img src="../../assets/add-to-cart-icon.svg" alt=""></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="payment-methods">
+      <div class="container y-u-max-w-1200">
+        <div class="payment-method">
+          <p>قسِّمها على 5 دفعات بقيمة 10 ر.س بدون فوائد.
+            
+            <br>
+            متوافق مع أحكام الشريعة الإسلامية.
+             
+          <a href="">لمعرفة المزيد</a>
+          </p>
+          <img src="../../assets/taby-pay.png" alt="">
+        </div>
+        <div class="payment-method">
+          <p>أو قسّم فاتورتك بقيمة 10 ر.س على 5 دفعات بدون رسوم تأخير.
+            <br>
+            
+            متوافقة مع الشريعة الإسلامية . 
+
+
+            <a href="">لمعرفة المزيد</a>
+          </p>
+             
+          
+
+          <img src="../../assets/tmara-pay.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="container y-u-max-w-1200 discount-section">
+      <h2>
+        منتجات مشابهة
+
+      </h2>
+      <ul class="grid">
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="product-details.html">
+              <img src="../../assets/sales1.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="product-details.html">
+              <img src="../../assets/sales2.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img product-card-media">
+            <a href="product-details.html">
+              <img src="../../assets/sales3.png" alt="">
+            </a>
+            <button type="button" class="product-card-action product-card-favorite" aria-label="أضف إلى المفضلة">
+              <i class="fa-regular fa-heart"></i>
+            </button>
+            <button type="button" class="product-card-action product-card-cart" aria-label="أضف إلى السلة">
+              <img src="../../assets/add-to-cart.svg" alt="إضافة إلى السلة">
+            </button>
+          </div>
+          <div class="content">
+            <p>قميص قطن صيفى</p>
+            <div class="left">
+              <p>100 ريال</p>
+              <p>50 ريال</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+
+    </section>
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/components-loader.js"></script>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

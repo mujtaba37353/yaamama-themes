@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nafhat - متجر العطور</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="./payment.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full payment-page"></div>
+      <div class="header y-u-flex y-u-flex-col y-u-py-32 y-u-p-t-24">
+        <h1 class="y-u-color-muted y-u-text-2xl"> الدفع</h1>
+
+      </div>
+
+      <div class="checkout-grid">
+        <div class="checkout-main">
+          <form id="payment-form" class="checkout-form">
+            <div class="delivery-form">
+              <div class="delivery-info">
+                <h3 class="section-title">معلومات التوصيل</h3>
+                <p class="section-description">
+                  سوف نستخدم هذا البريد الإلكتروني لإرسال التفاصيل والتحديثات إليك حول طلبك.
+                </p>
+                <div class="form-field-full">
+                  <!-- Email field removed to avoid duplicate ID, using the one in billing address -->
+                </div>
+              </div>
+              <div class="billing-address">
+                <h3 class="section-title">معلومات التوصيل</h3>
+                <div class="address-section">
+                  <p class="section-description">أدخل معلومات التوصيل الخاصة بك.</p>
+                  
+                    <div class="form-field-full">
+                      <input type="text" id="full-name" name="full-name" placeholder="الاسم الكامل" class="form-input">
+                    </div>
+                    <div class="form-field-full">
+                      <input type="email" id="email" name="email" placeholder="البريد الإلكتروني"  class="form-input">
+
+                    </div>
+                    <div class="form-field-full">
+                      <input type="tel" id="phone" name="phone" placeholder="رقم الجوال" maxlength="10" minlength="10" dir="rtl" class="form-input">
+
+                    </div>
+                    <div class="form-field-full">
+                      <input type="text" id="address" name="address" placeholder="العنوان بالتفصيل" class="form-input">
+
+                    </div>
+                    <a href="../signup/signup.html" style="text-decoration: underline; color: var(--y-color-secondary); font-size: var(--y-space-16); font-weight: 700;">هل تود إنشاء حساب جديد ؟</a>
+                    <div class="form-field-full">
+                      <div class="password-input-wrapper">
+                        <input type="password" id="password" name="password" placeholder="" class="form-input">
+                        <button type="button" class="password-toggle" aria-label="إظهار/إخفاء كلمة المرور">
+                          <i class="fa-regular fa-eye"></i>
+                        </button>
+                      </div>
+                    </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+          
+            <div class="payment-card-container" id="payment-method-group">
+                    
+            <div class="payment-method-row">
+                <div class="method-header">
+                    <label class="radio-label">
+                        <input type="radio" name="payment_method" id="visa" value="card" checked>
+                        <span class="radio-custom"></span>
+                        <span class="method-title">الدفع عبر الإنترنت</span>
+                    </label>
+                    <div class="card-icons">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+
+                    </div>
+                </div>
+                
+                <div class="method-body expanded">
+                    <p class="helper-text">ادفع ببطاقتك الإئتمانية.</p>
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <input type="text" id="cardholder-name" placeholder="اسم حامل البطاقة" class="form-input" inputmode="text" maxlength="50">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="card-number" placeholder="رقم البطاقة" class="form-input" maxlength="19" dir="ltr">
+                        </div>
+
+                        <div class="input-group">
+                          <input type="text" id="expiry-month" placeholder="الشهر (MM)" class="form-input" maxlength="2" inputmode="numeric">
+                                            </div>
+                      <div class="input-group">
+                        <input type="text" id="expiry-year" placeholder="السنة (YY)" class="form-input" maxlength="2" inputmode="numeric">
+                                        </div>
+                          
+                        <div class="input-group">
+                            <input type="text" id="cvv" placeholder="CVV" class="form-input" maxlength="4" inputmode="numeric">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-method-row">
+                <div class="method-header">
+                    <label class="radio-label">
+                        <input type="radio" name="payment_method" value="cod">
+                        <span class="radio-custom"></span>
+                        <span class="method-title">الدفع عند الاستلام</span>
+                    </label>
+                </div>
+            </div>
+            <div class="payment-method-row">
+              <div class="method-header">
+                  <label class="radio-label">
+                      <input type="radio" name="payment_method" id="bank-transfer" value="bank">
+                      <span class="radio-custom"></span>
+                      <span class="method-title">  تحويل بنكي</span>
+                  </label>
+                  <div class="method-body expanded">
+                    <p class="helper-text">ادفع ببطاقتك الإئتمانية.</p>
+
+                  </div>
+              </div>
+          </div>
+
+            <div class="note-section">
+                <label class="radio-label">
+                    <input type="checkbox">
+                    <span class="radio-custom checkbox-style"></span>
+                    <span class="method-title">إضافة ملحوظة</span>
+                </label>
+                <div class="method-body expanded">
+                  <div class="form-grid">
+                      <div class="input-group">
+                          <textarea placeholder="اكتب ملاحظاتك هنا"></textarea>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="footer-info">
+                <hr class="divider">
+                <p class="privacy-text">
+                    من خلال متابعة عملية الشراء الخاصة بك، فإنك توافق على الشروط والأحكام وسياسة الخصوصية الخاصة بنا Privacy Policy
+                </p>
+                
+                <div class="action-buttons">
+                    <a href="../cart/cart.html" class="btn-back">
+                        <i class="fa-solid fa-chevron-right"></i>
+                        العودة إلى سلة المشتريات
+                    </a>
+                    <button class="btn-submit">تقديم الطلب</button>
+                </div>
+            </div>
+
+          </form>
+        </div>
+
+        </div>
+        <aside class="checkout-sidebar">
+          <div class="order-summary">
+            <div class="product-info">
+              <div class="product-details">
+                <div class="product-image-wrapper">
+                  <img class="product-image" src="../../assets/tv.png"
+                    alt="Samsung 55'' 4K Smart TV" />
+                  <p>1</p>
+                </div>
+                <div class="product-text">
+                  <h2 class="brand-name">Samsung</h2>
+                  <p class="product-description">Samsung 55'' 4K Smart TV
+                  </p>
+                  <p class="product-price">100 ر.س</p>
+                </div>
+
+              </div>
+              <div class="order-summary-section">
+                <div class="summary-content">
+                  <h3 class="summary-title">ملخص الطلب</h3>
+                  <div class="summary-items">
+                    <div class="summary-item">
+                      <div class="item-row">
+                        <span class="item-label">إجمالي العناصر</span>
+                        <span class="item-price">100 ر.س</span>
+                      </div>
+                      <img class="divider" src="img/line-2.svg" alt="" />
+                    </div>
+                    <div class="summary-item">
+                      <div class="item-row">
+                        <span class="item-label">الشحن</span>
+                        <span class="item-price">100 ر.س</span>
+                      </div>
+                      <img class="divider" src="img/line-2-2.svg" alt="" />
+                    </div>
+                    <div class="summary-item">
+                      <div class="item-row">
+                        <span class="total-label">
+                          <span class="total-text">الإجمالي </span>
+                          <span class="vat-text">(شامل ضريبة القيمة المضافة )</span>
+                        </span>
+                        <span class="total-price">100 ر.س</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="payment-success-modal" id="payment-success-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-success-dismiss></div>
+    <div class="success-card" role="dialog" aria-modal="true" tabindex="-1">
+      <div class="success-icon" aria-hidden="true"><i class="fas fa-check"></i></div>
+      <p class="success-message">تمت العملية بنجاح</p>
+      <a href="../layout/index.html" class="success-primary-btn">العودة للرئيسية</a>
+    </div>
+  </div>
+
+  <y-footer></y-footer>
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/payment.js"></script>
+  <script src="../../js/validation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+/* Hero reused */
+.y-c-hero-About-us {
+    background-image: url('../../assets/image 40.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    padding: 100px 0;
+}
+
+.y-c-hero-text-About-us {
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 500;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Intro section */
+.y-c-contat-us h1 {
+    padding: 40px 40px 40px 0;
+}
+
+.y-c-contat-us p {
+    font-size: 1.2rem;
+    padding: 0 40px 40px 0;
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .y-c-contat-us p {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-contat-us p {
+        font-size: 1rem;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .y-c-contat-us h1 {
+        padding: 20px 20px 20px 0;
+    }
+}
+
+/* WhatsApp block */
+.y-c-contat-us-whastapp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1000px;
+    padding: 0 40px 0 0;
+}
+
+.y-c-contat-us-whastapp a {
+    text-decoration: none;
+    color: #4FCE5D;
+    font-size: 50px;
+}
+
+@media (max-width: 480px) {
+    .y-c-contat-us-whastapp {
+        width: 100%;
+    }
+
+    .y-c-contat-us-whastapp h1 {
+        font-size: 20px;
+        padding: 0;
+    }
+}
+
+/* Map block */
+.y-c-map-container {
+    height: 40vh;
+    max-width: 1400px;
+    margin: 0 40px;
+    object-fit: cover;
+    background-image: url('../../assets/map1.png');
+    display: flex;
+    justify-content: flex-end;
+}
+
+.y-c-map-card {
+    height: fit-content;
+    font-size: medium;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.y-c-map-card a {
+    text-decoration: none;
+    color: #429AFF;
+}
+
+@media (max-width: 480px) {
+    .y-c-map-card {
+        width: 50%;
+        height: 50%;
+    }
+
+    .y-c-map-container {
+        margin: 0;
+    }
+}
+
+/* Contact info cards */
+.y-c-contact-info-card-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: var(--y-spacing-3xl);
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.y-c-contact-info-card {
+    flex: 1 1 300px;
+    max-width: 350px;
+    height: 120px;
+    font-size: medium;
+    background-color: #F2EFEF;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.y-c-contact-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.y-c-contact-info-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.y-c-contact-info-card ul {
+    margin-right: 17px;
+}
+
+.y-c-info-icon {
+    align-self: flex-end;
+}

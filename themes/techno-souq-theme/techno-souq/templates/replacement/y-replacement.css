@@ -1,0 +1,13 @@
+h2 {
+    color: var(--y-color-primary);
+}
+
+p {
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    p {
+        width: 100%;
+    }
+}

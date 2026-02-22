@@ -1,0 +1,35 @@
+{
+  "name": "My Clinic",
+  "short_name": "My Clinic",
+  "description": "My Clinic for booking appointments and clinics",
+  "dir": "rtl",
+  "lang": "ar",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "../../assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../../assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false,
+  "categories": [
+    "health",
+    "booking",
+    "clinics",
+    "doctors",
+    "appointments",
+    "medical",
+    "healthcare",
+    "hospital",
+    "doctor",
+    "appointment"
+  ]
+}

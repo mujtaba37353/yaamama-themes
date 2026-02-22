@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Clinic</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/box.css" />
+  <link rel="stylesheet" href="../../components/icons-badge.css" />
+  <link rel="stylesheet" href="../../components/doctor-page.css" />
+  <link rel="stylesheet" href="booking.css" />
+  <link rel="stylesheet" href="../../components/popup.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="doctor-page booking booking-clinc">
+      <div class="container y-u-max-w-1200">
+        <div class="bottom">
+          <div class="content">
+            <h2>اكمل حجزك</h2>
+            <div class="right">
+              <div class="box">
+                <img src="../../assets/pro-clinic.jpg" alt="صورة العيادة">
+                <a href="../clinic-page/clinic-page.html">
+                  <h3>عيادة برو كلينيك</h3>
+                </a>
+                <p class="small-text">اليوم | 08 نوفمبر 2025 (04:00 مساءً - 07:00 مساءً)</p>
+              </div>
+
+            </div>
+            <div class="left">
+              <h2>اكمل حجزك</h2>
+              <form action="">
+                <label for="name">اسم المريض</label>
+                <input type="text" name="name" id="name">
+                <label for="phone">رقم الجوال</label>
+                <input type="number" name="phone" id="phone">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" name="email" id="email">
+                <div class="buttons">
+                  <a href="#payment-popup" class="btn main-button fw">احجز</a>
+                  <a href="#" class="btn white-button fw">الغاء</a>
+                </div>
+              </form>
+
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <div id="payment-popup" class="popup-overlay">
+    <div class="popup-content payment-form">
+      <a href="#" class="close-btn">&times;</a>
+      <h2> ادخل بريدك الاكتروني</h2>
+      <div class="form-group">
+        <input type="email" id="email-popup" placeholder="البريد الإلكتروني">
+      </div>
+      <h2>معلومات الدفع</h2>
+      <div class="form-group">
+        <label for="card-number">رقم البطاقة</label>
+        <input type="text" id="card-number" placeholder="XXXX XXXX XXXX XXXX">
+      </div>
+      <div class="form-group">
+        <label for="card-holder">اسم حامل البطاقة</label>
+        <input type="text" id="card-holder" placeholder="الاسم على البطاقة">
+      </div>
+      <div class="expiry-cvv">
+        <div class="form-group">
+          <label for="expiry-month">تاريخ الإنتهاء</label>
+          <input type="text" id="expiry-month" placeholder="الشهر">
+        </div>
+        <div class="form-group">
+          <label for="expiry-year" style="color: transparent;">.</label>
+          <input type="text" id="expiry-year" placeholder="السنة">
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" placeholder="XXX">
+        </div>
+      </div>
+      <a href="#success-popup" class="btn main-button fw">ادفع</a>
+    </div>
+  </div>
+
+  <div id="success-popup" class="popup-overlay">
+    <div class="popup-content success-popup">
+      <a href="#" class="close-btn">&times;</a>
+      <div class="icon">
+        <i class="fas fa-check"></i>
+      </div>
+      <h2>تم الحجز بنجاح</h2>
+    </div>
+  </div>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

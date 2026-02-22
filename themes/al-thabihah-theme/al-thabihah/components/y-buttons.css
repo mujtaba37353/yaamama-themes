@@ -1,0 +1,237 @@
+.y-c-outline-btn {
+    padding: var(--y-spacing-md) var(--y-spacing-5xl);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-error);
+    /* Maroon text */
+    background-color: var(--y-color-btn);
+    border: var(--y-border-width-sm) solid var(--y-color-error);
+    /* Maroon border */
+    border-radius: var(--y-border-radius-md);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    width: var(--y-width-percentage-full);
+    /* Full width */
+}
+
+.y-c-outline-btn:hover {
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-color: transparent;
+}
+
+.y-c-checkout-btn {
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-l-form-button {
+    text-align: center;
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-basic-btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--y-spacing-xl);
+    margin: var(--y-spacing-xl) 0;
+    width: max-content;
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border: none;
+}
+
+/* Show More Button Container */
+.y-c-show-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-promo-btn {
+    /* This is a light-background version of the outline button */
+    padding: var(--y-spacing-sm) var(--y-spacing-2xl);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    /* Maroon text */
+    background-color: var(--y-color-btn);
+    /* Beige background */
+    border: var(--y-border-width-sm) solid var(--y-color-error);
+    /* Maroon border */
+    border-radius: var(--y-border-radius-md);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.y-c-promo-btn:hover {
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+/* Quantity Selector */
+.y-c-quantity-selector {
+    display: flex;
+    align-items: center;
+    border: var(--y-border-width-thin) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    overflow: hidden;
+}
+
+.y-c-qty-btn {
+    background-color: var(--y-color-background);
+    border: none;
+    width: var(--y-size-40);
+    height: var(--y-size-40);
+    font-size: var(--y-font-size-3xl);
+    cursor: pointer;
+    color: var(--y-color-primary-text);
+    transition: background-color 0.2s;
+}
+
+#qty-input {
+    width: var(--y-size-60);
+    height: var(--y-size-40);
+    border: none;
+    text-align: center;
+    background-image: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-md);
+    margin: var(--y-spacing-xxs) var(--y-spacing-sm);
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+#qty-input::-webkit-outer-spin-button,
+#qty-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: var(--y-value-0);
+}
+
+.y-c-slider-arrow {
+    width: var(--y-size-50);
+    height: var(--y-size-50);
+    border: var(--y-border-width-thin) solid var(--y-color-border);
+    background-image: var(--y-color-primary);
+    border-radius: var(--y-border-radius-full);
+    color: var(--y-color-secondary-text);
+    font-size: var(--y-font-size-2xl);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-c-slider-arrow:hover {
+    transform: translateY(var(--y-transform-hover-up));
+}
+
+.y-c-slider-arrow:disabled {
+    opacity: var(--y-opacity-disabled);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Radio Button Style for Sizes */
+.y-c-option-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-radio-btn {
+    position: relative;
+    cursor: pointer;
+}
+
+.y-c-radio-btn input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.y-c-radio-btn span {
+    display: inline-block;
+    padding: var(--y-spacing-sm) var(--y-spacing-lg);
+    background-color: var(--y-color-background-light);
+    border: var(--y-border-width-thin) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-radio-btn input:checked~span {
+    color: var(--y-color-error);
+    background-color: var(--y-color-btn);
+    border: var(--y-border-width-sm) solid var(--y-color-error);
+}
+
+.y-c-radio-btn:hover span {
+    border-color: var(--y-color-error);
+}
+
+.y-c-btn-full {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Delete Button */
+.y-c-delete-btn {
+    background: none;
+    border: none;
+    color: var(--y-color-error);
+    font-size: var(--y-font-size-xl);
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Center vertically in the middle space */
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: var(--y-spacing-xs);
+}
+
+.y-c-delete-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width:768px) {
+
+    .y-c-quantity-selector {
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    .y-c-slider-arrow {
+        width: var(--y-size-40);
+        height: var(--y-size-40);
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-slider-arrow:hover {
+        transform: none;
+    }
+
+    .y-c-quantity-selector {
+        flex: 0 0 auto;
+        width: fit-content;
+        min-width: var(--y-size-150);
+    }
+}
+
+@media (max-width:480px) {
+
+    .y-c-delete-btn {
+        position: absolute;
+        top: var(--y-spacing-xxs);
+        right: var(--y-spacing-xxs);
+        margin: 0;
+        font-size: var(--y-font-size-3xl);
+    }
+}

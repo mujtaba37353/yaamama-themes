@@ -1,0 +1,15 @@
+{
+    "template": "cart",
+    "slots": {
+        "cart-container": "[data-y='cart-container']",
+        "cart-items-container": "[data-y='cart-items-container']",
+        "subtotal": "[data-y='subtotal']",
+        "tax": "[data-y='tax']",
+        "total": "[data-y='total']",
+        "checkout-btn": "[data-y='checkout-btn']"
+    },
+    "js": [
+        "shared-components.js",
+        "cart.js"
+    ]
+}

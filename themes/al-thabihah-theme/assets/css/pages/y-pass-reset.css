@@ -1,0 +1,31 @@
+/* Password reset / Reset password pages - shared auth styles + empty state */
+.y-c-auth-empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--y-spacing-2xl) var(--y-spacing-xl);
+    text-align: center;
+}
+
+.y-c-auth-empty-state i {
+    font-size: var(--y-font-size-4xl);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-auth-empty-state .y-c-form-title-sub {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.y-c-auth-empty-state p {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-xl);
+    line-height: var(--y-line-height-md);
+}
+
+.y-c-auth-empty-state .y-c-basic-btn {
+    margin-top: var(--y-spacing-md);
+}

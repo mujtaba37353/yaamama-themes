@@ -1,0 +1,27 @@
+{
+    "template": "contact-us",
+    "slots": {
+        "page-title": "Page title for Contact Us",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "footer-placeholder": "Footer component placeholder",
+        "contact-section": "Main section wrapper",
+        "contact-container": "Two-column grid container",
+        "contact-logo": "Left column for the logo",
+        "logo-image": "The logo image itself",
+        "contact-form-container": "Right column for the form",
+        "form-title": "Title of the contact form",
+        "contact-form": "The <form> element",
+        "form-group-name": "Form group for Name",
+        "form-group-email": "Form group for Email",
+        "form-group-phone": "Form group for Phone",
+        "form-group-message": "Form group for Message",
+        "form-submit-button-container": "Wrapper for the submit button",
+        "form-submit-btn": "The 'Send' button",
+        "shared-components-script": "Shared components JavaScript file"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js"
+    ]
+}

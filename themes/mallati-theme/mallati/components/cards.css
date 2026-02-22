@@ -1,0 +1,35 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--y-space-24);
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-14);
+  text-decoration: none;
+  font-weight: 700;
+  transition: background-color var(--y-transition), color var(--y-transition),
+    box-shadow 200ms ease, transform 200ms ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px var(--y-color-bg);
+}
+
+.btn.btn-primary:hover svg,
+.btn.btn-secondary:hover i,
+.btn.btn-secondary:hover svg {
+  transform: translateX(-4px);
+}
+.btn-primary {
+  background: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.btn-secondary {
+  background: transparent;
+  color: var(--y-color-primary);
+}
+
+@media (max-width: 992px) {
+  .auction-card {
+    grid-template-columns: 1fr;
+  }
+}

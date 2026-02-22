@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nafhat - متجر العطور</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/indicators.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="./category.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col y-u-h-full">
+      <h1 class="y-u-text-3xl y-u-text-bold y-u-mb-16 y-u-color-muted y-u-m-b-4">
+        المكياج
+      </h1>
+      <img src="../../assets/makeup.jpg" alt="Makeup" class="y-u-w-full" height="600"
+        style="object-fit: cover; height: 600px" />
+    </section>
+
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="filter y-u-flex y-u-flex-row y-u-justify-between y-u-items-center">
+        <div class="left y-u-flex y-u-flex-row y-u-gap-16 y-u-items-center y-u-p-b-16">
+          <button class="active">الكل</button>
+          <button>أدوات المكياج</button>
+          <button>الأظافر</button>
+          <button>الشفاه</button>
+          <button>العيون</button>
+          <button>الوجه</button>
+          <button>جديد</button>
+        </div>
+        <div class="filtration-button">
+          <details class="filter-dropdown">
+            <summary class="filter-summary y-u-flex y-u-flex-row y-u-gap-24 y-u-items-center">
+              تصنيف
+              <img src="../../assets/arrow-down.svg" alt="arrow-down" />
+            </summary>
+            <div class="box filter-menu">
+              <details class="filter-dropdown">
+                <summary class="filter-summary y-u-flex y-u-flex-row y-u-gap-24 y-u-items-center">
+                  ترتيب الاكثر شيوعا
+                  <img src="../../assets/arrow-down.svg" alt="arrow-down" />
+                </summary>
+                <div class="box filter-menu">
+                  <button></button>
+
+                </div>
+              </details>
+              <details class="filter-dropdown">
+                <summary class="filter-summary y-u-flex y-u-flex-row y-u-gap-24 y-u-items-center">
+                  الماركة
+                  <img src="../../assets/arrow-down.svg" alt="arrow-down" />
+                </summary>
+                <div class="box filter-menu">
+                  <button></button>
+
+                </div>
+              </details>
+              <details class="filter-dropdown">
+                <summary class="filter-summary y-u-flex y-u-flex-row y-u-gap-24 y-u-items-center">
+                  السعر
+                  <img src="../../assets/arrow-down.svg" alt="arrow-down" />
+                </summary>
+                <div class="box filter-menu">
+                  <button></button>
+
+                </div>
+              </details>
+            </div>
+          </details>
+        </div>
+      </div>
+      <ul class="products-grid">
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/pro1.png" alt="Product 1" />
+              <img src="../../assets/heart.svg" alt="Add" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-title">غوتشي</p>
+              <p class="product-description">
+                عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+                مل
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/pro1.png" alt="Product 1" />
+              <img src="../../assets/heart.svg" alt="Add" />
+            </div>
+            <div class="product-content">
+              <p class="product-title">غوتشي</p>
+              <p class="product-description">
+                عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+                مل
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/pro1.png" alt="Product 1" />
+              <img src="../../assets/heart.svg" alt="Add" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-title">غوتشي</p>
+              <p class="product-description">
+                عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+                مل
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/pro1.png" alt="Product 1" />
+              <img src="../../assets/heart.svg" alt="Add" />
+            </div>
+            <div class="product-content">
+              <p class="product-title">غوتشي</p>
+              <p class="product-description">
+                عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+                مل
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+        <li class="product-card">
+          <div class="product-img">
+            <img src="../../assets/pro1.png" alt="Product 1" />
+            <img src="../../assets/heart.svg" alt="Add" />
+          </div>
+          <div class="product-content">
+            <p class="product-title">غوتشي</p>
+            <p class="product-description">
+              عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100
+              مل
+            </p>
+          </div>
+          <div class="product-actions">
+            <button class="product-add-to-cart">1000 <img src="../../assets/ريال.svg" alt="ريال" /></button>
+            <button class="product-add-to-wishlist">
+              <img src="../../assets/add.svg" alt="Add" />
+            </button>
+          </div>
+        </li>
+
+
+      </ul>
+    </section>
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

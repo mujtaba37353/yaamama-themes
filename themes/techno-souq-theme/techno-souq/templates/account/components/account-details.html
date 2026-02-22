@@ -1,0 +1,53 @@
+<div class="y-c-account-details-form-container">
+    <form class="y-c-account-details-form" id="account-details-form">
+        <!-- First row: First name and Last name -->
+        <div class="y-c-form-row">
+            <div class="y-c-form-group">
+                <label for="first-name" class="y-c-form-label">الاسم الأول</label>
+                <input type="text" id="first-name" class="y-c-form-input" value="محمد" required>
+            </div>
+
+            <div class="y-c-form-group">
+                <label for="last-name" class="y-c-form-label">الاسم الأخير</label>
+                <input type="text" id="last-name" class="y-c-form-input" value="الجوهري" required>
+            </div>
+        </div>
+
+        <!-- Second row: Birth date and Gender -->
+        <div class="y-c-form-row">
+            <div class="y-c-form-group">
+                <label for="birth-date" class="y-c-form-label">تاريخ الميلاد</label>
+                <input type="date" id="birth-date" class="y-c-form-input" value="1990-01-01">
+            </div>
+
+            <div class="y-c-form-group">
+                <label for="gender" class="y-c-form-label">الجنس</label>
+                <div class="y-c-dropdown y-c-gender-dropdown" id="gender-dropdown">
+                    <div class="y-c-dropdown-selected" data-value="male">ذكر</div>
+                    <div class="y-c-dropdown-options">
+                        <div class="y-c-dropdown-option" data-value="male">ذكر</div>
+                        <div class="y-c-dropdown-option" data-value="female">أنثى</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third row: Email and Mobile -->
+        <div class="y-c-form-row">
+            <div class="y-c-form-group">
+                <label for="email" class="y-c-form-label">البريد الإلكتروني</label>
+                <input type="email" id="email" class="y-c-form-input" value="mohamedelgohary410@gmail.com" required>
+            </div>
+
+            <div class="y-c-form-group">
+                <label for="mobile" class="y-c-form-label">رقم الهاتف المحمول</label>
+                <input type="tel" id="mobile" class="y-c-form-input" value="+2010 9344 1358" required>
+            </div>
+        </div>
+
+        <!-- Submit button -->
+        <div class="y-c-form-actions">
+            <button type="submit" class="y-c-btn y-c-btn-primary y-c-checkout-btn y-c-btn-full">حفظ التغييرات</button>
+        </div>
+    </form>
+</div>

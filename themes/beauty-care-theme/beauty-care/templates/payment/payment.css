@@ -1,0 +1,456 @@
+/* صفحة استلام الطلب: إخفاء محتوى الصفحة وعرض المودال فقط */
+body.order-success-modal-only .woocommerce-order > *:not(.order-success-modal-wrapper) {
+  display: none !important;
+}
+
+body.order-success-modal-only .woocommerce-order {
+  min-height: 0;
+}
+
+/* إخفاء "(optional)" من ملاحظات الطلب */
+.woocommerce-additional-fields .optional {
+  display: none;
+}
+
+/* #order_review يأخذ تنسيق .products من payment.html */
+#order_review.products {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+#order_review.products .shop_table {
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+#order_review.products .shop_table thead th {
+  font-size: var(--y-space-16);
+  font-weight: 300;
+  color: var(--y-color-text);
+  text-align: center;
+  padding: 0 0 var(--y-space-12);
+  border: none;
+}
+#order_review.products .shop_table thead tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--y-space-16);
+  align-items: center;
+}
+#order_review.products .shop_table tbody .cart_item {
+  border-top: var(--y-border);
+  padding-top: var(--y-space-16);
+}
+#order_review.products .shop_table tbody .cart_item td {
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-text);
+  padding: 0;
+  border: none;
+  vertical-align: middle;
+}
+#order_review.products .shop_table tbody tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--y-space-16);
+  align-items: center;
+}
+#order_review.products .shop_table tfoot tr {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--y-space-16);
+  align-items: center;
+  border-top: var(--y-border);
+  padding-top: var(--y-space-12);
+}
+#order_review.products .shop_table tfoot th,
+#order_review.products .shop_table tfoot td {
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-text);
+  padding: 0;
+  border: none;
+}
+#order_review.products .shop_table tfoot .order-total {
+  padding-top: var(--y-space-16) !important;
+}
+#order_review.products #payment {
+  margin-top: var(--y-space-16);
+  padding-top: var(--y-space-16);
+  border-top: var(--y-border);
+}
+
+/* توسيط فورم الدفع مع هوامش متساوية من اليمين واليسار */
+main .checkout-section.payment-section {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: var(--y-space-24);
+  box-sizing: border-box;
+}
+main .checkout-section.payment-section form.woocommerce-checkout {
+  width: 100%;
+}
+
+/* تقسيم فورم الدفع إلى عمودين + توسيط في حجم الويب */
+@media (min-width: 769px) {
+  .checkout-section form.woocommerce-checkout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "billing order";
+    gap: var(--y-space-24);
+    align-items: start;
+  }
+  .checkout-section form.woocommerce-checkout .col2-set {
+    grid-area: billing;
+  }
+  .checkout-section form.woocommerce-checkout #order_review_heading,
+  .checkout-section form.woocommerce-checkout #order_review {
+    grid-area: order;
+  }
+  .checkout-section form.woocommerce-checkout #order_review_heading {
+    margin-top: 0;
+  }
+}
+/* عنوان order_review يطابق .products h3 */
+.checkout-section #order_review_heading {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-text);
+}
+
+#payment-method-group {
+  display: flex;
+    flex-direction: column;
+    gap: var(--y-space-14);
+    width: 100%;
+}
+.payment-section:not(.checkout-section) {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--y-space-24);
+  align-items: start;
+}
+
+.payment-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  background: var(--y-color-fg);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-24);
+}
+
+.payment-section form .link-button {
+  width: 100%;
+  text-align: center;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-text);
+  text-decoration: underline;
+}
+.payment-section h3 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  font-size: var(--y-space-24);
+  padding: var(--y-space-10) 0;
+  color: var(--y-color-text);
+}
+
+.payment-section form input,
+.payment-section form select,
+.payment-section form textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-14);
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+  transition: border-color var(--y-transition), box-shadow var(--y-transition);
+}
+.payment-section form input:focus,
+.payment-section form select:focus,
+.payment-section form textarea:focus {
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-border) 20%, transparent);
+  outline: none;
+}
+
+.payment-section form input[type="radio" i] {
+  accent-color: var(--y-color-primary);
+  border: 1px solid var(--y-color-border);
+  appearance: none;
+  width: var(--y-space-14);
+  height: var(--y-space-14);
+  background-color: var(--y-color-bg);
+  border-radius: var(--y-space-24);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  position: relative;
+}
+
+.payment-section form input[type="radio" i]:focus-visible {
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--y-color-primary) 25%, transparent);
+  outline: none;
+}
+
+.payment-section form input[type="radio" i]:checked {
+  background-color: var(--y-color-primary);
+  border-color: color-mix(in oklab, var(--y-color-primary) 60%, var(--y-color-border));
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--y-color-primary) 25%, transparent);
+    /*change*/
+  outline: 4px solid white;
+  /*end of change*/
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  width: 100%;
+  padding: var(--y-space-10);
+  padding-inline: var(--y-space-6);
+  padding-left: var(--y-space-32);
+  background-color: var(--y-color-bg);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-48);
+  color: var(--y-color-text);
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-group:has(input[type="radio"]:checked) {
+  background-color: var(--y-color-primary);
+  border-color: color-mix(in oklab, var(--y-color-primary) 65%, var(--y-color-border));
+  color: var(--y-color-text);
+}
+
+.card {
+  width: 100%;
+  padding: var(--y-space-4);
+  border-radius: var(--y-space-12);
+  display: none;
+  flex-direction: column;
+  gap: var(--y-space-20);
+  margin-top: var(--y-space-16);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transform: translateY(-20px);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s, padding 0.3s ease,
+    margin 0.3s ease;
+  pointer-events: none;
+}
+
+form:has(#visa:checked) .card {
+  display: flex;
+  max-height: 600px;
+  /*change*/
+  padding-bottom: var(--y-space-22);
+  /*end of change*/
+  opacity: 1;
+  transform: translateY(0);
+  margin-top: var(--y-space-16);
+  pointer-events: auto;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.15s, padding 0.3s ease,
+    margin 0.3s ease;
+}
+
+.card-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.card-field label,
+.cvv-header label {
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  font-weight: var(--y-text-normal);
+}
+
+.card input {
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-12);
+  padding: var(--y-space-14) var(--y-space-16);
+  font-size: var(--y-space-16);
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.card input::placeholder {
+  color: #9b9b9b;
+}
+
+.card input:focus {
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+  outline: none;
+}
+
+.card-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-16);
+}
+
+.cvv-field {
+  position: relative;
+}
+
+.cvv-header {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  justify-content: space-between;
+}
+
+.cvv-info {
+  width: var(--y-space-24) !important;
+  height: var(--y-space-24);
+  border-radius: var(--y-space-10);
+  border: 1px solid var(--y-color-text);
+  background: transparent;
+  color: var(--y-color-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  font-size: var(--y-space-12);
+}
+
+.cvv-info:hover {
+  background-color: color-mix(in oklab, var(--y-color-primary) 35%, transparent);
+}
+
+.expiry-field label {
+  margin-bottom: var(--y-space-8);
+}
+
+.expiry-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-12);
+}
+.radio-group img {
+  height: 20px;
+  object-fit: contain;
+}
+
+.payment-section form button,.payment-submit-btn {
+  width: 100%;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: var(--y-space-8);
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-12);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  font-weight: 700;
+}
+
+.payment-section form button:hover,.payment-submit-btn:hover {
+  filter: brightness(var(--y-opacity-95));
+  transform: translateY(-2px);
+  color: var(--y-color-bg);
+  background-color: var(--y-color-secondary);
+}
+
+.payment-section form .form-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--y-space-16);
+  width: 100%;
+}
+
+.payment-section form .form-group input {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .payment-section {
+    grid-template-columns: 1fr;
+  }
+  .checkout-section form.woocommerce-checkout {
+    display: block;
+    grid-template-areas: none;
+  }
+  .payment-section form button {
+    width: 100%;
+    justify-content: center;
+  }
+  .payment-section form input:not([type="radio"]) {
+    width: 100% !important;
+  }
+  .radio-group {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .card-row {
+    grid-template-columns: 1fr;
+  }
+  .expiry-inputs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 330px) {
+  .payment-section form .form-group {
+    grid-template-columns: 1fr;
+  }
+}
+/* Validation error labels */
+.just-validate-error-label {
+  font-size: 12px;
+  color: #dc3545;
+  white-space: nowrap;
+  margin-top: var(--y-space-4);
+}
+
+/* Card fields: reserve space for error labels */
+.card-field {
+  position: relative;
+  padding-bottom: var(--y-space-20);
+}
+
+.card-field .just-validate-error-label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* Expiry columns: contain error labels inside each column */
+.expiry-col {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.expiry-col input {
+  width: 100%;
+}
+
+.expiry-col .just-validate-error-label {
+  position: static;
+  margin-top: var(--y-space-4);
+}
+
+.quantity {
+  margin: auto;
+}

@@ -1,0 +1,204 @@
+<?php
+get_header();
+?>
+
+<?php if ( function_exists( 'woocommerce_checkout' ) && ( function_exists( 'is_checkout' ) && is_checkout() || ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'order-pay' ) ) ) ) : ?>
+	<main class="payment-page special-bg">
+		<div class="container y-u-py-32">
+			<div class="y-u-text-center y-u-m-b-40">
+				<h1 class="y-u-text-xl y-u-font-bold y-u-m-b-8">إتمام عملية الشراء</h1>
+				<p>أكمل بياناتك لإتمام عملية الشراء بأمان</p>
+			</div>
+			<?php woocommerce_checkout(); ?>
+			<div class="y-u-text-center y-u-m-t-24" id="yaamama-pay-now-wrapper" style="display:none;">
+				<button type="submit" form="checkout" class="btn main-button fw" id="yaamama-pay-now">
+					<i class="fa-solid fa-basket-shopping"></i>
+					ادفع الآن
+				</button>
+			</div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					var wrapper = document.getElementById('yaamama-pay-now-wrapper');
+					if (!wrapper) return;
+
+					function updateFallbackVisibility() {
+						var placeOrder = document.getElementById('place_order');
+						if (placeOrder) {
+							wrapper.style.display = 'none';
+							return;
+						}
+						wrapper.style.display = 'block';
+					}
+
+					setTimeout(updateFallbackVisibility, 300);
+
+					var observer = new MutationObserver(function () {
+						updateFallbackVisibility();
+					});
+					observer.observe(document.body, { childList: true, subtree: true });
+				});
+			</script>
+		</div>
+	</main>
+<?php else : ?>
+	<main class="payment-page special-bg">
+		<div class="container y-u-py-32">
+			<div class="y-u-text-center y-u-m-b-40">
+				<h1 class="y-u-text-xl y-u-font-bold y-u-m-b-8">إتمام عملية الشراء</h1>
+				<p>أكمل بياناتك لإتمام عملية الشراء بأمان</p>
+			</div>
+
+			<div class="payment-grid">
+				<div class="payment-forms">
+					<div class="border-card y-u-m-b-24">
+						<h3 class="card-title y-u-m-b-24">بيانات العميل</h3>
+						<form id="payment-customer-form" novalidate>
+							<div class="form-group">
+								<label class="form-label" for="cust-name">الاسم كامل*</label>
+								<input type="text" class="form-input" placeholder="أدخل اسمك الكامل" name="cust-name" id="cust-name" autocomplete="name">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="cust-email">البريد الإلكتروني*</label>
+								<input type="email" class="form-input" placeholder="Example@gmail.com" name="cust-email" id="cust-email"
+									oninput="this.value = this.value.replace(/[^a-zA-Z0-9@._+-]/g, '')" autocomplete="email">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="cust-phone">رقم الجوال*</label>
+								<input type="tel" class="form-input" placeholder="05xxxxxxxx" name="cust-phone" id="cust-phone" maxlength="14"
+									oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(this.value.startsWith('009665')) this.maxLength = 14; else if(this.value.startsWith('+9665')) this.maxLength = 13; else if(this.value.startsWith('9665')) this.maxLength = 12; else if(this.value.startsWith('05')) this.maxLength = 10; else this.maxLength = 14;" autocomplete="tel">
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="cust-password">كلمة المرور*</label>
+								<div class="y-u-relative">
+									<input type="password" class="form-input" id="cust-password" placeholder="أدخل كلمة المرور" name="cust-password" autocomplete="new-password">
+									<i class="fa-regular fa-eye y-u-absolute password-icon password-toggle" data-target="cust-password"></i>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<label class="form-label" for="cust-confirm-password">تأكيد كلمة المرور*</label>
+								<div class="y-u-relative">
+									<input type="password" class="form-input" id="cust-confirm-password" name="cust-confirm-password"
+										placeholder="أعد إدخال كلمة المرور" autocomplete="new-password">
+									<i class="fa-regular fa-eye y-u-absolute password-icon password-toggle" data-target="cust-confirm-password"></i>
+								</div>
+							</div>
+						</form>
+					</div>
+
+					<div class="border-card">
+						<h3 class="card-title y-u-m-b-24">طريقة الدفع</h3>
+
+						<div class="payment-methods-tabs y-u-grid y-u-grid-2 y-u-gap-16 y-u-m-b-24">
+							<div class="payment-option active" id="credit-card-option" onclick="switchPaymentMethod('credit-card')">
+								<div class="check-badge"><i class="fa-solid fa-check"></i></div>
+								<span class="y-u-font-bold y-u-m-b-4">بطاقة الائتمان</span>
+								<div class="card-icons">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+								</div>
+							</div>
+
+							<div class="payment-option" id="stc-pay-option" onclick="switchPaymentMethod('stc-pay')">
+								<span class="stc-logo" style="color: #4F008C; font-weight: bold; font-size: 20px;">stc pay</span>
+							</div>
+						</div>
+
+						<form class="card-details-form" id="credit-card-form" novalidate>
+							<h4 class="y-u-font-bold y-u-text-s y-u-m-b-16">بيانات البطاقة</h4>
+							<div class="form-group">
+								<label class="form-label" for="credit-card-number">رقم البطاقة*</label>
+								<input type="text" class="form-input" oninput="formatCardNumber(this)" placeholder="0000 0000 0000 0000"
+									name="credit-card-number" id="credit-card-number" maxlength="19" inputmode="numeric" autocomplete="cc-number">
+							</div>
+							<div class="form-group">
+								<label class="form-label" for="credit-card-holder-name">اسم حامل البطاقة*</label>
+								<input type="text" class="form-input" placeholder="الاسم كما هو مكتوب" name="credit-card-holder-name"
+									id="credit-card-holder-name" oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')" autocomplete="cc-name">
+							</div>
+							<div class="y-u-grid y-u-grid-2 y-u-gap-16">
+								<div class="form-group">
+									<label class="form-label" for="credit-card-cvv">CVV/CVC*</label>
+									<input type="text" class="form-input" placeholder="XXX" name="credit-card-cvv" id="credit-card-cvv" maxlength="3"
+										oninput="this.value = this.value.replace(/[^0-9]/g, '')" autocomplete="cc-csc">
+								</div>
+								<div class="form-group">
+									<label class="form-label" for="credit-card-expiry-date">تاريخ الانتهاء*</label>
+									<input type="text" class="form-input" name="credit-card-expiry-date" id="credit-card-expiry-date"
+										placeholder="MM / YY" maxlength="5" autocomplete="cc-exp"
+										oninput="let v = this.value.replace(/[^0-9]/g, ''); if(v.length >= 2) { let month = parseInt(v.slice(0,2)); if(month > 12) month = 12; else if(month < 1 && v.length >= 2) month = 1; this.value = String(month).padStart(2, '0') + '/' + v.slice(2,4); } else this.value = v;">
+								</div>
+							</div>
+						</form>
+
+						<form class="card-details-form" id="stc-pay-form" style="display: none;" novalidate>
+							<h4 class="y-u-font-bold y-u-text-s y-u-m-b-16" style="color: #4F008C;">دفع عبر STC Pay</h4>
+							<div class="form-group">
+								<label class="form-label" for="stc-mobile">رقم الجوال المسجل في STC Pay*</label>
+								<input type="tel" class="form-input" placeholder="05xxxxxxxx" name="stc-mobile" id="stc-mobile" maxlength="14"
+									oninput="this.value = this.value.replace(/[^0-9+]/g, ''); if(this.value.startsWith('009665')) this.maxLength = 14; else if(this.value.startsWith('+9665')) this.maxLength = 13; else if(this.value.startsWith('9665')) this.maxLength = 12; else if(this.value.startsWith('05')) this.maxLength = 10; else this.maxLength = 14;" autocomplete="tel">
+							</div>
+							<p class="y-u-text-xs y-u-text-muted">سيتم إرسال طلب الدفع إلى تطبيق STC Pay الخاص بك.</p>
+						</form>
+					</div>
+				</div>
+
+				<div class="order-summary">
+					<div class="border-card summary-card y-u-p-0">
+						<div class="summary-header">
+							<h2 class="y-u-font-bold y-u-text-l y-u-m-b-4">قالب خطي للأحذية</h2>
+							<p class="y-u-text-s">قالب احترافي جاهز للاستخدام</p>
+						</div>
+
+						<div class="summary-body y-u-p-24">
+							<div class="price-box y-u-m-b-24">
+								<div class="y-u-flex y-u-items-center y-u-gap-8">
+									<span class="price">99 ريال</span>
+									<span class="period">اشتراك شهري</span>
+								</div>
+								<p class="y-u-text-xs y-u-m-t-4">دفعة واحدة فقط</p>
+							</div>
+
+							<div class="divider y-u-m-b-24"></div>
+
+							<h4 class="y-u-font-bold y-u-text-s y-u-m-b-16">المميزات المتضمنة:</h4>
+							<ul class="features-list y-u-m-b-32">
+								<li>
+									<i class="fa-solid fa-circle-check"></i>
+									<span>تصميم متجاوب مع جميع الأجهزة</span>
+								</li>
+								<li>
+									<i class="fa-solid fa-circle-check"></i>
+									<span>لوحة تحكم سهلة الاستخدام</span>
+								</li>
+								<li>
+									<i class="fa-solid fa-circle-check"></i>
+									<span>دعم اللغة العربية RTL</span>
+								</li>
+								<li>
+									<i class="fa-solid fa-circle-check"></i>
+									<span>تكامل مع بوابات الدفع</span>
+								</li>
+								<li>
+									<i class="fa-solid fa-circle-check"></i>
+									<span>دعم فني لمدة 6 أشهر</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<button type="button" id="complete-order-btn" class="btn main-button fw">
+						<i class="fa-solid fa-basket-shopping"></i>
+						إتمام الشراء
+					</button>
+				</div>
+			</div>
+		</div>
+	</main>
+<?php endif; ?>
+
+<?php
+get_footer();
+?>

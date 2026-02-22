@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نسيت كلمة السر</title>
+    <link rel="Icon" type="image/png" href="/assets/Frame 5.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="y-forget-password.css">
+
+</head>
+
+<body>
+    <div class="y-c-sale-banner">
+        <p>خصم %20 على رسوم التوصيل</p>
+    </div>
+
+    <div id="header-placeholder" class="y-c-sticky-header"></div>
+
+    <section class="y-c-container">
+
+        <form class="y-c-pass-forget-field" data-y='forget-password-form' action="../password-confirm/layout.html"
+            method="GET">
+            <h1 class="y-c-header-title">نسيت كلمة السر</h1>
+            <br>
+            <label class="y-c-form-label">البريد الالكتروني<span class="y-c-required-mark">*</span></label>
+            <input type="email" class="y-c-form-input" required data-y='email-input' name="email"
+                pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                oninput="this.value = this.value.replace(/[^A-Za-z0-9.@_+\-]/g, '')">
+            <small>نسيت كلمة مرورك؟ فضلًا أدخل اسم المستخدم أو البريد الإلكتروني المسجل لدينا. سوف تستلم رابطاً
+                لإنشاء
+                كلمة
+                مرور جديدة عبر بريدك الإلكتروني.
+            </small>
+            <div class="y-c-login-btn-container">
+                <button type="submit" class="y-c-login-btn" data-y='submit-btn' id="resetPasswordBtn">إرسال</button>
+            </div>
+        </form>
+        <br>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+</body>
+
+</html>

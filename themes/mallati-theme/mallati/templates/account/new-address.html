@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mallati - مولاتي</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/empty.css" />
+  <link rel="stylesheet" href="./account.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main class="profile-main">
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full">
+        <div class="header y-u-flex y-u-flex-col y-u-py-32 y-u-p-t-24">
+          <h1 class="y-u-color-muted y-u-text-2xl"> إضافة عنوان جديد</h1>
+          <p class="y-u-text-2xl y-u-text-bold y-u-mb-16 y-u-color-muted breadcrumb"><a
+              href="../layout/index.html">الرئيسية</a> > إضافة عنوان جديد</p>
+
+        </div>
+
+        <div class="profile-layout">
+
+          <aside class="profile-sidebar">
+
+            <nav class="profile-nav">
+              <ul>
+                <li>
+                  <a href="../account/account.html" class="profile-nav__link">
+                    <span class="profile-nav__icon"><i class="fas fa-user-circle"></i></span>
+                    <span>حسابي</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="../account/order-empty.html" class="profile-nav__link">
+                    <span class="profile-nav__icon"><i class="fas fa-shopping-cart"></i></span>
+                    <span>طلباتي</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="../account/new-address.html" class="profile-nav__link active">
+                    <span class="profile-nav__icon"><i class="fas fa-map-marker-alt"></i></span>
+                    <span>عنواني</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="../login/login.html" class="profile-nav__link profile-nav__logout" role="button">
+                    <span class="profile-nav__icon"><i class="fas fa-sign-out-alt"></i></span>
+                    <span>تسجيل الخروج</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <a href="../login/login.html" class="profile-nav__logout">
+              <span class="profile-nav__icon"><i class="fas fa-sign-out-alt"></i></span>
+              <span>تسجيل الخروج</span>
+            </a>
+          </aside>
+
+
+          <section class="profile-content">
+            <h2>إضافة عنوان جديد</h2>
+            <form id="address-new-form" class="profile-form y-u-flex y-u-flex-col y-u-gap-16">
+              <div class="form-row">
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="fullName">الاسم الكامل</label>
+                  <input type="text" id="fullName" class="y-c-input" placeholder="الاسم الثلاثي" required />
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="phone">رقم الجوال</label>
+                  <input type="tel" id="phone" class="y-c-input" placeholder="05xxxxxxxx" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="country">الدولة</label>
+                  <input type="text" id="country" class="y-c-input" placeholder="المملكة العربية السعودية"
+                    value="المملكة العربية السعودية" />
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="city">المدينة</label>
+                  <input type="text" id="city" class="y-c-input" placeholder="الرياض" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="district">الحي</label>
+                  <input type="text" id="district" class="y-c-input" placeholder="الحي" required />
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="street">الشارع</label>
+                  <input type="text" id="street" class="y-c-input" placeholder="اسم الشارع" required />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="building">رقم المبنى</label>
+                  <input type="text" id="building" class="y-c-input" placeholder="رقم المبنى" inputmode="numeric" required />
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="apartment">رقم الشقة (اختياري)</label>
+                  <input type="text" id="apartment" class="y-c-input" placeholder="رقم الشقة" inputmode="numeric" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="postal">الرمز البريدي</label>
+                  <input type="text" id="postal" class="y-c-input" placeholder="12345" inputmode="numeric" required />
+                </div>
+                <div class="form-group y-c-field">
+                  <label class="y-c-label" for="additional">تعليمات إضافية (اختياري)</label>
+                  <input type="text" id="additional" class="y-c-input" placeholder="وصف مكان التسليم" />
+                </div>
+              </div>
+
+
+              <hr class="form-divider" />
+
+              <div class="form-footer">
+                <button type="submit" class="y-c-btn y-c-btn--primary">حفظ العنوان</button>
+              </div>
+            </form>
+          </section>
+        </div>
+
+    </section>
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/validation.js"></script>
+</body>
+
+</html>

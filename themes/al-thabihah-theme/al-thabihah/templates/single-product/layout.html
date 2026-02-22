@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>تفاصيل المنتج - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="./y-single-product.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-product-page" data-y="product-main">
+        <div class="y-u-container">
+            <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                <p>
+                    <a href="../home/layout.html">الرئيسية</a>
+                    <span>></span>
+                    <a href="../store/layout.html">المتجر</a>
+                    <span>></span>
+                    <span id="breadcrumb-product-name" data-y="bc-product-name">اسم المنتج</span>
+                </p>
+            </nav>
+
+
+            <div class="y-l-product-details-container" data-y="product-container">
+
+                <div class="y-c-product-gallery" data-y="product-gallery">
+                    <div class="y-c-main-image-wrapper" data-y="main-image-wrapper">
+                        <img src="../../assets/product.jpg" alt="Product Image" id="main-product-image"
+                            class="y-c-main-image" data-y="main-image">
+                    </div>
+                    <div class="y-c-thumbnails-list" id="product-thumbnails" data-y="thumbnails-list">
+                        <img src="../../assets/product.jpg" class="y-c-thumbnail active" onclick="changeImage(this.src)"
+                            data-y="thumb-1">
+                        <img src="../../assets/product2.png" class="y-c-thumbnail" onclick="changeImage(this.src)"
+                            data-y="thumb-2">
+                        <img src="../../assets/product.jpg" class="y-c-thumbnail" onclick="changeImage(this.src)"
+                            data-y="thumb-3">
+                    </div>
+                </div>
+
+                <div class="y-c-product-info-col" data-y="product-info-col">
+
+                    <h1 class="y-c-product-title-lg" id="product-name" data-y="product-name">ذبيحة نعيمي</h1>
+
+                    <p class="y-c-subtitle">وصف المنتج</p>
+
+                    <p class="y-c-product-desc" id="product-description" data-y="product-description">خروف نعيمي بلدي
+                        ترجع اصوله إلى شمال المملكة ويتميز بنكهة استثنائية وفريدة، بنسبة دهن منخفضة وقيمة
+                        غذائية عالية. يُذبح وفق الشريعة الإسلامية، يتم اعلافهم بعلف نباتي طبيعي بعيداً عن المركبات
+                        الصناعية لتعزيز الجودة.
+                    </p>
+
+                    <div class="y-c-product-price-lg" id="product-price-container" data-y="product-price">
+                        <span class="y-c-price-current" id="product-price">750</span>
+                        <img src="../../assets/coin.png" class="y-c-coin-icon" alt="ريال سعودي">
+                    </div>
+
+                    <hr class="y-c-divider">
+
+                    <form id="add-to-cart-form" class="y-c-product-options" data-y="product-options-form">
+
+                        <div class="y-c-option-group" data-y="option-cutting">
+                            <label class="y-c-option-label">طريقة التقطيع:</label>
+                            <div class="y-c-option-buttons">
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="whole" checked>
+                                    <span>كامل بدون تقطيع</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="halves">
+                                    <span>نصفين</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="quarters">
+                                    <span>أرباع</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="flattened">
+                                    <span>مفطح</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="soup">
+                                    <span>تقطيع شوربة</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="cutting" value="fridge">
+                                    <span>تقطيع ثلاجة</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="y-c-option-group" data-y="option-packaging">
+                            <label class="y-c-option-label">التغليف:</label>
+                            <div class="y-c-option-buttons">
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="packaging" value="none" checked>
+                                    <span>بدون تغليف</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="packaging" value="plates">
+                                    <span>أطباق مغلفة</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="packaging" value="bags">
+                                    <span>تكييس</span>
+                                </label>
+                                <label class="y-c-radio-btn">
+                                    <input type="radio" name="packaging" value="vacuum">
+                                    <span>أكياس فاكيوم (مفرغة من الهواء)</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="y-c-product-actions" data-y="product-actions">
+
+                            <div class="y-c-quantity-selector" data-y="quantity-selector">
+                                <button type="button" class="y-c-qty-btn" id="qty-plus">+</button>
+                                <input type="number" id="qty-input" value="1" min="1" readonly>
+                                <button type="button" class="y-c-qty-btn" id="qty-minus">-</button>
+                            </div>
+
+                            <button type="submit" class="y-c-outline-btn y-c-basic-btn" id="add-to-cart-btn"
+                                data-y="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart"></i>
+                                اضف للسلة
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <section class="y-c-related-products-section" data-y="related-products-section">
+                <div class="y-c-section-header" data-y="section-header">
+                    <h2 class="y-c-section-title" data-y="related-title">منتجات ذات صلة</h2>
+                    <div class="y-c-slider-nav" data-y="slider-nav">
+                        <button type="button" class="y-c-slider-arrow y-c-slider-prev" data-y="slider-prev"
+                            aria-label="السابق">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <button type="button" class="y-c-slider-arrow y-c-slider-next" data-y="slider-next"
+                            aria-label="التالي">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="y-c-products-slider" data-y="products-slider">
+                    <div class="y-c-slider-track" id="related-products-track" data-y="related-grid">
+                    </div>
+                </div>
+            </section>
+
+            <div class="y-l-features-section" data-y="features-section">
+
+                <div class="y-c-feature-card" data-y="feature-delivery">
+
+                    <div class="y-c-feature-text">
+                        <h3>توصيل سريع</h3>
+                        <p>توصيل سريع لجميع أنحاء المملكة وفي أسرع وقت</p>
+                    </div>
+                    <div class="y-c-feature-icon">
+                        <img src="../../assets/truck.png" class="y-c-truck-icon" alt="شاحنة توصيل">
+                    </div>
+                </div>
+
+                <div class="y-c-feature-card" data-y="feature-fresh">
+
+                    <div class="y-c-feature-text">
+                        <h3>منتجات طازجة</h3>
+                        <p>جميع منتجاتنا طازجة ومغلفة ومخزنة بأفضل الطرق</p>
+                    </div>
+                    <div class="y-c-feature-icon">
+                        <img src="../../assets/meat2.png" class="y-c-drumstick-icon" alt="دجاجة">
+                    </div>
+                </div>
+
+                <div class="y-c-feature-card" data-y="feature-payment">
+
+                    <div class="y-c-feature-text">
+                        <h3>طرق دفع متعددة</h3>
+                        <p>يمكنك اختيار أسهل طرق الدفع من بين الخيارات المتعددة</p>
+                    </div>
+                    <div class="y-c-feature-icon">
+                        <img src="../../assets/credit-card.png" class="y-c-payment-icon" alt="رمز دفع">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/single-product.js" data-y="single-product-script"></script>
+</body>
+
+</html>

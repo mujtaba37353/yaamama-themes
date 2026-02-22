@@ -1,0 +1,58 @@
+/* About Us Page Styles */
+h2 {
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-section__title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-section__content {
+    max-width: var(--y-breakpoint-md);
+    margin: 0 auto;
+}
+
+.y-c-section__content p {
+    color: var(--y-color-primary-text);
+    font-size: var(--y-font-size-md);
+    line-height: var(--y-line-height-lg);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-l-container {
+    padding: var(--y-spacing-xl) 0;
+    max-width: var(--y-max-width-default);
+    margin: 0 auto;
+    width: 90%;
+}
+
+.y-c-section {
+    padding: var(--y-spacing-xl) 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .y-l-container {
+        padding: var(--y-spacing-lg) 0;
+        width: 95%;
+    }
+
+    h2,
+    .y-c-section__title {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-section__content {
+        width: 100%;
+    }
+
+    .y-c-section__content p {
+        font-size: var(--y-font-size-sm);
+    }
+}

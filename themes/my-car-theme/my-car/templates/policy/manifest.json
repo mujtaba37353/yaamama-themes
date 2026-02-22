@@ -1,0 +1,14 @@
+{
+    "template": "policy",
+    "slots": {
+        "header-placeholder": "Header component placeholder",
+        "product-breadcrumb": "Breadcrumb navigation",
+        "main": "Main content area for the policy page",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

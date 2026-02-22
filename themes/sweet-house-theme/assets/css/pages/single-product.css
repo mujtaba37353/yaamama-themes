@@ -1,0 +1,260 @@
+/**
+ * Single Product page — design from beauty-care-theme/beauty-care (product-details).
+ * Enqueued only on single product page.
+ */
+
+/* Banner full width under header — مساحة علوية تمنع حجب المحتوى تحت الهيدر الثابت */
+.single-product-design-header {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  padding-top: 10rem; /* مساحة معقولة تحت الهيدر الثابت (حجم الويب) */
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.single-product-design-header .panner-img {
+  margin-top: 0; /* المساحة من padding-top أعلاه */
+}
+.single-product-design-header img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 0;
+}
+
+/* Container max-width utility (if not in theme) */
+.y-u-max-w-1200 {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Spacing/color fallbacks when theme tokens differ */
+.details-section .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24, 24px);
+}
+.details-section .container .imgs-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--y-space-12, 12px);
+  align-items: center;
+}
+.details-section .container .imgs-section .imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.details-section .container .imgs-section .imgs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--y-space-12, 12px);
+  cursor: pointer;
+}
+.details-section .container .imgs-section .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.details-section .container .imgs-section .main-img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--y-space-12, 12px);
+}
+.details-section .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20, 20px);
+}
+.details-section .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8, 8px);
+}
+.details-section .breadcrumbs.mobile {
+  display: none;
+  grid-column: 1 / -1;
+}
+.details-section .breadcrumbs a {
+  text-decoration: none;
+  color: var(--y-color-muted, #666);
+  font-size: var(--y-space-16, 16px);
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+.details-section .breadcrumbs a:hover {
+  color: var(--y-secondary, #FF8CB8);
+}
+.details-section .breadcrumbs a.active {
+  color: var(--y-secondary, #FF8CB8);
+}
+.details-section .content h3 {
+  font-size: var(--y-space-32, 32px);
+  color: var(--y-color-text, #333);
+  margin: 0;
+}
+.details-section .content > p {
+  font-size: var(--y-space-20, 20px);
+  color: var(--y-color-text, #333);
+  margin: 0;
+}
+.details-section .content .price {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8, 8px);
+}
+.details-section .content .price p {
+  font-size: var(--y-space-32, 32px);
+  color: var(--y-color-text, #333);
+  margin: 0;
+}
+.details-section .content .price img {
+  width: var(--y-space-24, 24px);
+  height: var(--y-space-24, 24px);
+}
+.details-section .content .buttons {
+  display: flex;
+  gap: var(--y-space-16, 16px);
+  align-items: center;
+}
+.details-section .content .buttons button {
+  background-color: var(--y-main, #55C1DF);
+  color: var(--y-color-text, #333);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--y-space-8, 8px);
+  padding: var(--y-space-12, 12px) var(--y-space-64, 64px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--y-main, #55C1DF);
+}
+.details-section .content .buttons button:hover {
+  background-color: var(--y-secondary, #FF8CB8);
+  color: #fff;
+  border: 2px solid var(--y-secondary, #FF8CB8);
+}
+.details-section .content .buttons button:last-child {
+  background-color: var(--y-color-fg, #f7f7f7);
+  color: var(--y-color-text, #333);
+  font-weight: 600;
+  border: 2px solid var(--y-color-border, rgba(0,0,0,0.1));
+  border-radius: var(--y-space-8, 8px);
+  padding: var(--y-space-12, 12px) var(--y-space-64, 64px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.details-section .content .buttons button:last-child:hover {
+  background-color: var(--y-color-border, #e0e0e0);
+  border: 2px solid var(--y-color-border, #e0e0e0);
+}
+
+/* Quantity — from beauty-care quantity.css */
+.details-section .content .quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16, 16px);
+}
+.details-section .content .quantity button {
+  color: var(--y-color-text, #333);
+  border: none;
+  cursor: pointer;
+  font-size: var(--y-space-22, 22px);
+  font-weight: 700;
+  background: transparent;
+}
+.details-section .content .quantity button i {
+  font-size: var(--y-space-18, 18px);
+}
+.details-section .content .quantity input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  font-size: var(--y-space-16, 16px);
+  font-weight: 700;
+  background-color: #263238;
+  color: #fff;
+  border-radius: var(--y-space-4, 4px);
+  -moz-appearance: textfield;
+}
+.details-section .content .quantity input::-webkit-outer-spin-button,
+.details-section .content .quantity input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.details-section .content .quantity input:focus-visible {
+  outline: none;
+}
+
+/* Related products section — same class as design */
+.products-section .container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+.products-section h2 {
+  font-size: var(--y-space-48, 48px);
+  color: var(--y-color-text, #333);
+  margin-bottom: var(--y-space-24, 24px);
+}
+
+@media (max-width: 768px) {
+  .details-section .container .content .breadcrumbs {
+    flex-wrap: wrap;
+  }
+  .details-section .container .imgs-section .imgs {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--y-space-14, 14px);
+    order: 2;
+  }
+  .details-section {
+    margin-top: var(--y-space-60, 60px);
+  }
+  .details-section .container {
+    grid-template-columns: 1fr;
+  }
+  .details-section .container .imgs-section {
+    grid-template-columns: 1fr;
+  }
+  .details-section .content .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .details-section .breadcrumbs.mobile {
+    display: flex;
+    margin-top: var(--y-space-24, 24px);
+  }
+  .details-section .breadcrumbs:not(.mobile) {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .details-section .content h3 {
+    font-size: var(--y-space-16, 16px);
+  }
+  .details-section .content > p {
+    font-size: var(--y-space-16, 16px);
+  }
+  .details-section .content .price p {
+    font-size: var(--y-space-16, 16px);
+  }
+  .details-section .content .price img {
+    width: var(--y-space-24, 24px);
+    height: var(--y-space-24, 24px);
+  }
+}

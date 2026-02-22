@@ -1,0 +1,18 @@
+/**
+ * Toggle / custom list checkbox — minimal shared styles.
+ * Detailed .custome-list styles live in process.css.
+ */
+.profile-section .custome-list input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.profile-section .custome-list label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-section .custome-list input:checked ~ .list {
+  display: block;
+}

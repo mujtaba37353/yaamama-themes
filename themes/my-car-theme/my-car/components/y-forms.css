@@ -1,0 +1,415 @@
+/* Form Container */
+.y-c-hero-form-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: var(--y-max-width-default);
+    background-color: transparent;
+    border-radius: var(--y-border-radius-lg);
+    overflow: visible;
+    margin-bottom: calc(var(--y-spacing-xl) * -1);
+}
+
+/* Tabs */
+.y-c-hero-tabs {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: transparent;
+}
+
+/* Form Content Area */
+.y-c-hero-form-content {
+    background-color: var(--y-color-hero-form);
+    padding: var(--y-spacing-xl);
+    border-bottom-left-radius: var(--y-border-radius-md);
+    border-bottom-right-radius: var(--y-border-radius-md);
+    display: flex;
+    flex-direction: column;
+}
+
+.y-l-form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: var(--y-spacing-lg);
+    align-items: flex-end;
+}
+
+.y-l-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xs);
+}
+
+.y-l-form-field label {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-l-form-field input[type="text"],
+.y-l-form-field input[type="date"],
+.y-l-form-field input[type="time"] {
+    background-color: transparent;
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    width: 100%;
+    box-sizing: border-box;
+    font-family: var(--y-font-family-primary);
+}
+
+.y-l-form-field input[type="date"]::-webkit-calendar-picker-indicator,
+.y-l-form-field input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.y-l-form-field-location {
+    flex: 3;
+}
+
+.y-l-form-field-location input[type="text"]::placeholder {
+    color: var(--y-color-primary-text);
+}
+
+.y-l-form-field-checkbox {
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    padding-bottom: var(--y-spacing-md);
+}
+
+.y-l-form-field-checkbox label {
+    color: var(--y-color-primary-text);
+    white-space: nowrap;
+}
+
+.y-l-form-field-checkbox input[type="checkbox"] {
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    accent-color: var(--y-color-primary);
+    cursor: pointer;
+}
+
+.y-l-form-field-datetime {
+    flex: 2;
+}
+
+.y-l-datetime-inputs {
+    display: flex;
+    gap: var(--y-spacing-sm);
+}
+
+.y-l-datetime-inputs input[type="date"] {
+    flex: 2;
+}
+
+.y-l-datetime-inputs input[type="time"] {
+    flex: 1;
+}
+
+.y-l-form-field-submit {
+    flex: 1;
+}
+
+/* Contact form specific styles */
+.y-l-contact-us-form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--y-spacing-sm);
+}
+
+.y-l-contact-us-form-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+    margin-top: var(--y-spacing-lg);
+    width: 100%;
+    color: var(--y-color-primary-text);
+}
+
+.y-l-contact-us-form-field input,
+.y-l-contact-us-form-field textarea {
+    width: 100%;
+    background-color: var(--y-color-background);
+    padding: var(--y-spacing-sm);
+    border: 1px solid var(--y-color-primary-text);
+    border-radius: var(--y-border-radius-lg);
+    font-size: var(--y-font-size-md);
+    box-sizing: border-box;
+}
+
+.y-l-contact-us-form-field input:focus,
+.y-l-contact-us-form-field textarea:focus {
+    border-color: var(--y-color-primary);
+    outline: none;
+    box-shadow: 0 0 var(--y-spacing-xs) var(--y-color-primary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .y-c-hero-form-container {
+        margin-top: calc(var(--y-spacing-6xl) * 6);
+    }
+
+    .y-l-form-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--y-spacing-md);
+    }
+
+    .y-l-form-field-checkbox {
+        padding-bottom: 0;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .y-l-datetime-inputs {
+        flex-direction: row;
+        /* UPDATED: Was 'row' */
+        gap: var(--y-spacing-md);
+        /* ADDED: To give space when stacked */
+    }
+}
+
+@media (max-width: 480px) {
+
+    .y-c-hero-form-content {
+        padding: var(--y-spacing-lg);
+    }
+}
+
+/* ===== Profile Form Styles ===== */
+.y-c-profile-form {
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-form-row {
+    display: flex;
+    gap: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-lg);
+    align-items: flex-end;
+}
+
+.y-c-form-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xs);
+    flex: 1;
+}
+
+.y-c-form-label {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-semibold);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+.y-c-form-input {
+    background-color: var(--y-color-background);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    font-family: var(--y-font-family-primary);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color var(--y-transition-duration) ease, box-shadow var(--y-transition-duration) ease;
+}
+
+.y-c-form-input:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+    box-shadow: 0 0 0 3px rgba(var(--y-color-primary-rgb), 0.1);
+}
+
+.y-c-form-input:hover {
+    border-color: var(--y-color-primary-light);
+}
+
+.y-c-form-input[type="date"],
+.y-c-form-input[type="email"],
+.y-c-form-input[type="tel"] {
+    appearance: none;
+}
+
+/* Select dropdown styling */
+.y-c-form-input[type="select"],
+select.y-c-form-input {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: left var(--y-spacing-sm) center;
+    background-size: 20px;
+    padding-left: var(--y-spacing-2xl);
+    cursor: pointer;
+}
+
+select.y-c-form-input option {
+    background-color: var(--y-color-background);
+    color: var(--y-color-primary-text);
+    padding: var(--y-spacing-sm);
+}
+
+.y-c-form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: var(--y-spacing-xl);
+}
+
+.y-c-save-btn {
+    padding: var(--y-spacing-md) var(--y-spacing-xl);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    min-width: 120px;
+}
+
+/* Profile Form Responsive Styles */
+@media (max-width: 768px) {
+    .y-c-form-row {
+        flex-direction: column;
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-form-input {
+        padding: var(--y-spacing-sm) var(--y-spacing-md);
+        font-size: var(--y-font-size-sm);
+    }
+
+    .y-c-form-label {
+        font-size: var(--y-font-size-sm);
+    }
+}
+
+@media (max-width: 640px) {
+    .y-c-form-actions {
+        justify-content: center;
+    }
+
+    .y-c-form-input {
+        padding: var(--y-spacing-xs) var(--y-spacing-sm);
+        font-size: var(--y-font-size-xs);
+    }
+
+    .y-c-form-label {
+        font-size: var(--y-font-size-xs);
+        margin-bottom: var(--y-spacing-xxs);
+    }
+
+    .y-c-form-row {
+        gap: var(--y-spacing-sm);
+        margin-bottom: var(--y-spacing-md);
+    }
+
+    .y-c-save-btn {
+        padding: var(--y-spacing-sm) var(--y-spacing-lg);
+        font-size: var(--y-font-size-sm);
+        min-width: 100px;
+    }
+
+    select.y-c-form-input {
+        background-size: 16px;
+        padding-left: var(--y-spacing-xl);
+    }
+}
+
+/* ===== Floating Label Form Styles ===== */
+.y-c-floating-field {
+    position: relative;
+    width: 100%;
+}
+
+.y-c-floating-input {
+    width: 100%;
+    padding: var(--y-spacing-md) var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    background-color: var(--y-color-background-light);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    box-sizing: border-box;
+    transition: border-color 0.2s ease;
+}
+
+.y-c-floating-label {
+    position: absolute;
+    top: 50%;
+    right: var(--y-spacing-md);
+    transform: translateY(-50%);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    background-color: var(--y-color-background-light);
+    padding: 0 var(--y-spacing-xs);
+    transition: all 0.2s ease;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+/* States for floating label */
+.y-c-floating-input:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+}
+
+.y-c-floating-input:focus+.y-c-floating-label,
+.y-c-floating-input.has-value+.y-c-floating-label {
+    top: 0;
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary);
+    transform: translateY(-50%) scale(0.9);
+}
+
+/* Adjust for placeholder (which acts as the label) */
+.y-c-floating-input::placeholder {
+    color: transparent;
+}
+
+.y-c-floating-input:focus::placeholder,
+.y-c-floating-input.has-value::placeholder {
+    color: var(--y-color-third-text);
+}
+
+.y-c-account-label {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-regular);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+/* Add your custom styles for the account inputs here */
+.y-c-account-input {
+    background-color: transparent;
+    border: 1px solid var(--y-color-primary);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    font-family: var(--y-font-family-primary);
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color var(--y-transition-default) ease, box-shadow var(--y-transition-default) ease;
+}
+
+.y-c-account-input:focus {
+    outline: none;
+    border-color: var(--y-color-primary);
+}
+
+.y-c-account-input:hover {
+    border-color: var(--y-color-primary-hover);
+}
+
+.y-c-account-input[disabled] {
+    background-color: var(--y-color-border-light);
+    color: var(--y-color-third-text);
+    border-color: var(--y-color-border);
+}

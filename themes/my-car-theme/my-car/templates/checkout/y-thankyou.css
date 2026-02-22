@@ -1,0 +1,513 @@
+/* ===== Thank You Page Styles ===== */
+
+/* Main Layout */
+.y-l-thankyou {
+    padding: var(--y-spacing-3xl) 0;
+    background-color: var(--y-color-background);
+    min-height: calc(100vh - 200px);
+    direction: rtl;
+}
+
+/* Success/Failed States */
+.y-c-thankyou-success,
+.y-c-thankyou-failed,
+.y-c-thankyou-empty {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.y-c-thankyou-header {
+    text-align: center;
+    margin-bottom: var(--y-spacing-3xl);
+}
+
+.y-c-thankyou-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--y-spacing-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--y-border-radius-full);
+    font-size: 60px;
+    animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.y-c-icon-success {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: white;
+    box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
+}
+
+.y-c-icon-failed {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    box-shadow: 0 10px 40px rgba(239, 68, 68, 0.3);
+}
+
+.y-c-thankyou-title {
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-thankyou-message {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-third-text);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Order Info Cards */
+.y-c-order-info-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--y-spacing-md);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-info-card {
+    background-color: var(--y-color-background-light);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-lg);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    transition: all var(--y-transition-fast);
+}
+
+.y-c-info-card:hover {
+    border-color: var(--y-color-primary);
+    box-shadow: var(--y-shadow-md);
+}
+
+.y-c-info-card-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--y-color-hero-form);
+    border-radius: var(--y-border-radius-md);
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-xl);
+}
+
+.y-c-info-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xxs);
+}
+
+.y-c-info-card-label {
+    font-size: var(--y-font-size-xs);
+    color: var(--y-color-third-text);
+}
+
+.y-c-info-card-value {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+}
+
+/* Section Styles */
+.y-c-thankyou-section {
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    border: 1px solid var(--y-color-border);
+    margin-bottom: var(--y-spacing-xl);
+    overflow: hidden;
+}
+
+.y-c-thankyou-section .y-c-section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    padding: var(--y-spacing-lg);
+    background-color: var(--y-color-hero-form);
+    border-bottom: 1px solid var(--y-color-border);
+}
+
+.y-c-thankyou-section .y-c-section-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-full);
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-thankyou-section .y-c-section-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    margin: 0;
+}
+
+.y-c-thankyou-section .y-c-section-content {
+    padding: var(--y-spacing-lg);
+}
+
+/* Booking Dates Display */
+.y-c-booking-dates-display {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-lg);
+    padding-bottom: var(--y-spacing-lg);
+    border-bottom: 1px solid var(--y-color-border);
+}
+
+.y-c-booking-date-card {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    padding: var(--y-spacing-md);
+    background-color: var(--y-color-background);
+    border-radius: var(--y-border-radius-md);
+    border: 1px solid var(--y-color-border);
+}
+
+.y-c-booking-date-card-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--y-color-hero-form);
+    border-radius: var(--y-border-radius-md);
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-lg);
+}
+
+.y-c-booking-date-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xxs);
+}
+
+.y-c-booking-date-card-label {
+    font-size: var(--y-font-size-xs);
+    color: var(--y-color-third-text);
+}
+
+.y-c-booking-date-card-value {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+}
+
+/* Order Items */
+.y-c-order-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-order-item {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    padding: var(--y-spacing-md);
+    background-color: var(--y-color-background);
+    border-radius: var(--y-border-radius-md);
+    border: 1px solid var(--y-color-border);
+}
+
+.y-c-order-item-image {
+    width: 80px;
+    height: 60px;
+    border-radius: var(--y-border-radius-sm);
+    overflow: hidden;
+    flex-shrink: 0;
+    background-color: var(--y-color-hero-form);
+}
+
+.y-c-order-item-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.y-c-order-item-details {
+    flex: 1;
+}
+
+.y-c-order-item-name {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    margin: 0 0 var(--y-spacing-xs) 0;
+}
+
+.y-c-order-item-meta {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+}
+
+.y-c-order-item-price {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+/* Customer Info Grid */
+.y-c-customer-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--y-spacing-md);
+}
+
+.y-c-customer-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--y-spacing-sm);
+    padding: var(--y-spacing-md);
+    background-color: var(--y-color-background);
+    border-radius: var(--y-border-radius-md);
+    border: 1px solid var(--y-color-border);
+}
+
+.y-c-customer-info-item i {
+    color: var(--y-color-primary);
+    font-size: var(--y-font-size-md);
+    margin-top: 2px;
+}
+
+.y-c-customer-info-item span {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary-text);
+    line-height: 1.5;
+}
+
+/* Steps List */
+.y-c-steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--y-spacing-md);
+    padding: var(--y-spacing-md);
+    background-color: var(--y-color-background);
+    border-radius: var(--y-border-radius-md);
+    border: 1px solid var(--y-color-border);
+    transition: all var(--y-transition-fast);
+}
+
+.y-c-step-item:hover {
+    border-color: var(--y-color-primary);
+}
+
+.y-c-step-number {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-full);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-bold);
+    flex-shrink: 0;
+}
+
+.y-c-step-content h4 {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    margin: 0 0 var(--y-spacing-xs) 0;
+}
+
+.y-c-step-content p {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Action Buttons */
+.y-c-thankyou-actions {
+    display: flex;
+    justify-content: center;
+    gap: var(--y-spacing-md);
+    margin-top: var(--y-spacing-2xl);
+}
+
+.y-c-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--y-spacing-sm);
+    padding: var(--y-spacing-md) var(--y-spacing-xl);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    font-family: var(--y-font-family-primary);
+    border-radius: var(--y-border-radius-md);
+    cursor: pointer;
+    transition: all var(--y-transition-fast);
+    text-decoration: none;
+}
+
+.y-c-btn-primary {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    border: none;
+}
+
+.y-c-btn-primary:hover {
+    background-color: var(--y-color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--y-shadow-lg);
+}
+
+.y-c-btn-secondary {
+    background-color: var(--y-color-background-light);
+    color: var(--y-color-primary);
+    border: 2px solid var(--y-color-primary);
+}
+
+.y-c-btn-secondary:hover {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+/* Empty/Failed States */
+.y-c-thankyou-failed,
+.y-c-thankyou-empty {
+    text-align: center;
+    padding: var(--y-spacing-4xl) var(--y-spacing-xl);
+}
+
+.y-c-thankyou-empty .y-c-thankyou-icon {
+    background: var(--y-color-hero-form);
+    color: var(--y-color-third-text);
+    box-shadow: none;
+}
+
+/* Hide default page title */
+.woocommerce-order-received .entry-title,
+.woocommerce-order-received .entry-header {
+    display: none !important;
+}
+
+/* Hide default WooCommerce order details */
+.woocommerce-order-received .woocommerce-order-details,
+.woocommerce-order-received .woocommerce-customer-details,
+.woocommerce-order-received section.woocommerce-order-details,
+.woocommerce-order-received section.woocommerce-customer-details {
+    display: none !important;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 1024px) {
+    .y-c-order-info-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-thankyou {
+        padding: var(--y-spacing-xl) 0;
+    }
+
+    .y-c-thankyou-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 50px;
+    }
+
+    .y-c-thankyou-title {
+        font-size: var(--y-font-size-2xl);
+    }
+
+    .y-c-thankyou-message {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-order-info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-booking-dates-display {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-customer-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-thankyou-actions {
+        flex-direction: column;
+    }
+
+    .y-c-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-thankyou {
+        padding: var(--y-spacing-lg) 0;
+    }
+
+    .y-c-thankyou-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+
+    .y-c-thankyou-title {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-thankyou-section .y-c-section-header {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-thankyou-section .y-c-section-content {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .y-c-order-item-image {
+        width: 100%;
+        height: 120px;
+    }
+
+    .y-c-order-item-price {
+        width: 100%;
+        text-align: left;
+        padding-top: var(--y-spacing-sm);
+        border-top: 1px dashed var(--y-color-border);
+    }
+}

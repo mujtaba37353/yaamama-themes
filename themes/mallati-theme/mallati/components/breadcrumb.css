@@ -1,0 +1,11 @@
+p.breadcrumb {
+  padding-bottom: var(--y-space-14);
+  color: gray;
+  font-size: var(--y-space-16);
+}
+@media (max-width: 768px) {
+  p.breadcrumb {
+    padding: var(--y-space-20);
+    padding-right: 0;
+  }
+}

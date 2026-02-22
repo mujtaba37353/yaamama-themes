@@ -1,0 +1,385 @@
+/* ============================================= */
+/* --- Home Hero Section --- */
+/* ============================================= */
+.y-l-home-hero {
+    position: relative;
+    height: var(--y-hero-height-desktop);
+    /* 80vh */
+    display: flex;
+    justify-content: flex-end;
+    border-radius: var(--y-border-radius-lg);
+    overflow: hidden;
+    background-color: transparent;
+    margin-top: var(--y-spacing-lg);
+}
+
+.y-l-home-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Use the image from the screenshot */
+    background-image: url('../../assets/hero.jpg');
+    /* Assumed path */
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.y-c-hero-content {
+    margin-top: var(--y-size-150);
+    position: relative;
+    z-index: 2;
+    color: var(--y-color-secondary-text);
+    text-align: center;
+}
+
+.y-c-hero-title {
+    font-size: var(--y-hero-title-size-tablet);
+    /* 3.75rem */
+    font-weight: var(--y-font-weight-bold);
+    line-height: var(--y-line-height-sm);
+    margin-bottom: var(--y-spacing-lg);
+    text-shadow: var(--y-shadow-text);
+}
+
+.y-c-hero-subtitle {
+    font-size: var(--y-hero-subtitle-size-desktop);
+    /* 2rem */
+    font-weight: var(--y-font-weight-regular);
+}
+
+/* ============================================= */
+/* --- Category Section --- */
+/* ============================================= */
+.y-l-category-section {
+    background-color: transparent;
+    padding-top: var(--y-spacing-3xl);
+    padding-bottom: var(--y-spacing-3xl);
+}
+
+.y-c-section-header {
+    text-align: center;
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-section-subtitle {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+.y-c-section-title {
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-xl);
+    text-align: center;
+    /* Override default right align from typography.css */
+    display: block;
+    /* Override default flex from typography.css */
+}
+
+.y-l-category-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    /* 5 columns */
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    text-decoration: none;
+    color: var(--y-color-primary-text);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-category-card:hover .y-c-category-icon {
+    transform: scale(var(--y-transform-scale-hover));
+    box-shadow: var(--y-shadow-sm);
+}
+
+.y-c-category-icon {
+    width: var(--y-size-120);
+    /* 120px */
+    height: var(--y-size-120);
+    /* 120px */
+    border-radius: var(--y-border-radius-full);
+    border: var(--y-border-width-sm) solid var(--y-color-border-blured);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--y-font-size-4xl);
+    /* 40px icon */
+    color: var(--y-color-error);
+    transition: var(--y-transition-fast);
+    cursor: pointer;
+}
+
+.y-c-category-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+}
+
+/* ============================================= */
+/* --- Featured Products Section --- */
+/* ============================================= */
+.y-l-featured-section {
+    background-color: var(--y-color-background);
+    padding-top: var(--y-spacing-3xl);
+    padding-bottom: var(--y-spacing-3xl);
+}
+
+.y-l-featured-section {
+    text-align: right;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+
+/* ============================================= */
+/* --- Responsive --- */
+/* ============================================= */
+
+@media (max-width: 992px) {
+    .y-l-home-hero {
+        height: var(--y-hero-height-tablet);
+        /* 60vh */
+        padding: 0 var(--y-spacing-3xl);
+    }
+
+    .y-c-hero-title {
+        font-size: var(--y-hero-title-size-tablet);
+        /* 3rem */
+    }
+
+    .y-c-hero-subtitle {
+        font-size: var(--y-hero-subtitle-size-tablet);
+        /* 1.5rem */
+    }
+
+    .y-l-category-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-home-hero {
+        padding: 0 var(--y-spacing-lg);
+        margin: var(--y-spacing-md);
+    }
+
+    .y-c-hero-content {
+        text-align: center;
+    }
+
+    .y-c-hero-title {
+        font-size: var(--y-hero-title-size-mobile);
+        /* 2.5rem */
+    }
+
+    .y-c-hero-subtitle {
+        font-size: var(--y-hero-subtitle-size-mobile);
+        /* 1.25rem */
+    }
+
+    .y-c-section-title {
+        font-size: var(--y-font-size-2xl);
+    }
+
+    .y-l-category-grid {
+        grid-template-columns: repeat(3, 1fr);
+        padding-bottom: 0;
+    }
+
+    .y-c-category-icon {
+        width: var(--y-size-90);
+        height: var(--y-size-90);
+        font-size: var(--y-font-size-3xl);
+    }
+
+    .y-c-category-title {
+        font-size: var(--y-font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-home-hero {
+        height: var(--y-hero-height-small);
+        /* 40vh */
+        margin: var(--y-spacing-sm);
+    }
+
+    .y-c-hero-title {
+        font-size: var(--y-font-size-3xl);
+        /* 2rem */
+    }
+
+    .y-c-hero-subtitle {
+        font-size: var(--y-font-size-lg);
+        /* 1.125rem */
+    }
+
+    .y-l-category-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on small mobile */
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-category-icon {
+        width: var(--y-size-100);
+        /* Let it be a bit larger on 2-col */
+        height: var(--y-size-100);
+    }
+}
+
+/* ============================================= */
+/* --- Promo Banner Section (New) --- */
+/* ============================================= */
+.y-l-promo-banner-section {
+    padding-top: var(--y-spacing-xl);
+    padding-bottom: var(--y-spacing-xl);
+}
+
+.y-c-promo-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align text to the right (RTL) */
+    padding: var(--y-spacing-3xl) var(--y-spacing-4xl);
+    border-radius: var(--y-border-radius-sm);
+    overflow: hidden;
+    background-image: url('../../assets/banner.jpg');
+    /* */
+    background-size: cover;
+    background-position: center;
+    height: var(--y-hero-height-tablet);
+}
+
+.y-c-promo-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, var(--y-opacity-overlay));
+    /* Darken the image slightly */
+}
+
+.y-c-promo-text {
+    position: relative;
+    z-index: 2;
+    color: var(--y-color-secondary-text);
+    text-align: right;
+    max-width: var(--y-percent-50);
+}
+
+.y-c-promo-title {
+    font-size: var(--y-font-size-4xl);
+    /* 40px */
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-sm);
+    text-shadow: var(--y-shadow-text);
+}
+
+.y-c-promo-subtitle {
+    font-size: var(--y-font-size-3xl);
+    /* 32px */
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xl);
+    text-shadow: var(--y-shadow-text);
+}
+
+/* ============================================= */
+/* --- Testimonials Section (New) --- */
+/* ============================================= */
+.y-l-testimonials-section {
+    background-color: var(--y-color-background);
+    padding: var(--y-spacing-3xl) 0;
+}
+
+.y-l-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-testimonial-card {
+    background-color: var(--y-color-background-light);
+    border: var(--y-border-width-sm) solid var(--y-color-error);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-xl);
+    text-align: center;
+    box-shadow: var(--y-shadow-xs);
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-testimonial-text {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+    line-height: var(--y-line-height-lg);
+    flex-grow: 1;
+    /* Ensures cards have equal height */
+}
+
+.y-c-testimonial-name {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-testimonial-stars {
+    color: var(--y-color-stars);
+    /* Gold color for stars */
+    font-size: var(--y-font-size-lg);
+}
+
+/* Responsive for Promo Banner */
+@media (max-width: 768px) {
+    .y-c-promo-banner {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    }
+
+    .y-c-promo-text {
+        max-width: var(--y-percent-100);
+    }
+
+    .y-c-promo-title {
+        font-size: var(--y-font-size-3xl);
+    }
+
+    .y-c-promo-subtitle {
+        font-size: var(--y-font-size-2xl);
+    }
+
+    .y-l-testimonials-grid {
+        grid-template-columns: repeat(3, 280px);
+        overflow-x: auto;
+        padding-bottom: var(--y-spacing-lg);
+        scrollbar-width: none;
+        scrollbar-color: var(--y-color-error) var(--y-color-background);
+        /* Stack on tablet */
+    }
+
+    .y-l-testimonials-grid::-webkit-scrollbar-thumb {
+        background-color: var(--y-color-error);
+        border-radius: var(--y-border-radius-md);
+    }
+
+    .y-l-testimonials-grid::-webkit-scrollbar-track {
+        background-color: var(--y-color-background);
+    }
+}

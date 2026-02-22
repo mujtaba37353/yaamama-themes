@@ -1,0 +1,58 @@
+.pagination {
+    display: grid
+;
+    grid-template-columns: repeat(5, 50px);
+    align-items: center;
+    gap: var(--y-space-12);
+    justify-content: center;
+    margin-bottom: var(--y-space-64);
+}
+.pagination button {
+  background-color: transparent;
+  color: var(--y-color-primary);
+  font-weight: 600;
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-8);
+  padding: var(--y-space-12);
+  cursor: pointer;
+  width: 100%;
+  appearance: none;
+  transition: all 0.3s ease;
+}
+.pagination button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border: 2px solid var(--y-color-border);
+  color: var(--y-color-border);
+}
+.pagination button.active {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg) !important;
+}
+.pagination .middle {
+  display: flex;
+  align-items: center;
+  color: var(--y-color-border);
+  font-weight: 600;
+  justify-content: center;
+  text-align: center;
+  border: none;
+}
+
+.pagination button:first-child{
+    border:2px solid var(--y-color-border);
+}
+
+.pagination button:first-child:hover{
+    border:2px solid var(--y-color-primary);
+}
+.pagination button:last-child{
+    border:2px solid var(--y-color-border);
+}
+.pagination button:last-child:hover{
+    border:2px solid var(--y-color-primary);
+}

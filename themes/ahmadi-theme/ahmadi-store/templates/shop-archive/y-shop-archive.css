@@ -1,0 +1,194 @@
+/* Shopping page */
+.y-c-header-title {
+    font-size: var(--y-font-size-xxl, 2.5rem);
+    font-weight: var(--y-font-weight-bold, 500);
+    margin: var(--y-spacing-md, 15px) 0;
+}
+
+.y-c-shopping-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: var(--y-spacing-md, 15px) 0;
+}
+
+.y-c-shopping-header-menu {
+    padding: var(--y-spacing-sm, 10px) var(--y-spacing-lg, 30px);
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md, 15px);
+    white-space: nowrap;
+    border-radius: var(--y-border-radius-lg, 10px);
+    border: var(--y-color-border, #000000) 1px solid;
+    background-color: transparent;
+}
+
+.y-c-shopping-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-inline-start: auto;
+}
+
+.y-c-shopping-dropdown .woocommerce-ordering {
+    margin: 0;
+}
+
+.y-c-shopping-dropdown .orderby {
+    font-size: 14px;
+    padding: 6px 8px;
+    border-radius: var(--y-border-radius-lg, 10px);
+    border: var(--y-color-border, #000000) 1px solid;
+    background-color: transparent;
+}
+
+.y-c-shopping-dropdown-btn {
+    cursor: pointer;
+    border-radius: var(--y-border-radius-sm, 5px);
+}
+
+.y-c-shopping-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--y-color-background-alt, #f9f9f9);
+    min-width: 160px;
+    box-shadow: var(--y-shadow-md, 0px 8px 16px 0px rgba(0, 0, 0, 0.2));
+    z-index: 1;
+    border-radius: var(--y-border-radius-md, 5px);
+}
+
+.y-c-shopping-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+}
+
+.y-c-shopping-dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.y-c-shopping-dropdown-content.y-c-show {
+    display: block;
+}
+
+.y-c-pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.y-c-pagination {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.y-c-pagination button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: var(--y-font-size-md);
+}
+
+.y-c-pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+.y-c-pagination button.y-c-active {
+    border-color: #cc3747;
+}
+
+.y-c-pagination button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .y-c-header-title {
+        font-size: 1.8rem;
+        margin: 12px 0;
+    }
+
+    .y-c-shopping-header {
+        margin: 12px 0;
+    }
+
+    .y-c-shopping-header-menu {
+        padding: 8px 20px;
+    }
+
+    .y-c-shopping-dropdown-content {
+        min-width: 140px;
+    }
+
+    .y-c-shopping-dropdown-content a {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .y-c-pagination button {
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-header-title {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    .y-c-shopping-header {
+        gap: 6px;
+        margin: 10px 0;
+    }
+
+    .y-c-shopping-header-menu {
+        height: 36px;
+        padding: 3px 4px;
+        font-size: 12px;
+        gap: 2px;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .y-c-shopping-dropdown .orderby {
+        height: 36px;
+        font-size: 12px;
+        padding: 3px 4px;
+        max-width: 140px;
+        border-radius: var(--y-border-radius-lg, 10px);
+        border: var(--y-color-border, #000000) 1px solid;
+        background-color: transparent;
+    }
+
+    .y-c-shopping-dropdown-content {
+        min-width: 120px;
+    }
+
+    .y-c-shopping-dropdown-content a {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .y-c-pagination-container {
+        margin-top: 30px;
+    }
+
+    .y-c-pagination {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
+    .y-c-pagination button {
+        padding: 8px 10px;
+    }
+}

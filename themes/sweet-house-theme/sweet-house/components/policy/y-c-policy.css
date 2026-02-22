@@ -1,0 +1,68 @@
+.policy-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.policy-container div {
+  margin-bottom: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.policy-container h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.policy-container p {
+  font-size: 1.2rem;
+  color: black;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 820px) {
+  .policy-container {
+    padding: 0 1rem;
+  }
+
+  .policy-container div {
+    margin-bottom: 1.5rem;
+  }
+
+  .policy-container h1 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-container p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgb(96, 95, 95);
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-container {
+    padding: 0 0.75rem;
+  }
+
+  .policy-container div {
+    margin-bottom: 1.25rem;
+  }
+
+  .policy-container h1 {
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+  }
+
+  .policy-container p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "template": "layout",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "header": "[data-y='header']",
+    "main": "[data-y='main']",
+    "shoes-sec": "[data-y='shoes-sec']",
+    "design-header": "[data-y='design-header']",
+    "bag-sec": "[data-y='bag-sec']",
+    "footer": "[data-y='footer']"
+  }
+}

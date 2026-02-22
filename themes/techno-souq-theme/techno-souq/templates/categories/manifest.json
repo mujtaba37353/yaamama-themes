@@ -1,0 +1,35 @@
+{
+    "template": "categories",
+    "slots": {
+        "page-title": "Categories page title",
+        "header-placeholder": "Header component placeholder",
+        "categories-main": "Main content container for categories page",
+        "categories-container": "Categories page container wrapper",
+        "vegetables-header": "Vegetables category header section",
+        "vegetables-title": "Vegetables category title",
+        "vegetables-view-all-btn": "Vegetables view all button",
+        "vegetables-product-grid": "Vegetables product grid container",
+        "vegetables-fruits-separator": "Separator between vegetables and fruits sections",
+        "fruits-header": "Fruits category header section",
+        "fruits-title": "Fruits category title",
+        "fruits-view-all-btn": "Fruits view all button",
+        "fruits-product-grid": "Fruits product grid container",
+        "fruits-dairy-separator": "Separator between fruits and dairy sections",
+        "dairy-header": "Dairy category header section",
+        "dairy-title": "Dairy category title",
+        "dairy-view-all-btn": "Dairy view all button",
+        "dairy-product-grid": "Dairy product grid container",
+        "dairy-bakery-separator": "Separator between dairy and bakery sections",
+        "bakery-header": "Bakery category header section",
+        "bakery-title": "Bakery category title",
+        "bakery-view-all-btn": "Bakery view all button",
+        "bakery-product-grid": "Bakery product grid container",
+        "bakery-bottom-separator": "Bottom separator after bakery section",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/shop-archive.js"
+    ]
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>الرئيسية - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="./y-home.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-home-main" data-y="home-main">
+
+        <section class="y-u-container y-l-home-hero" data-y="home-hero">
+            <div class="y-c-hero-content" data-y="hero-content">
+                <h1 class="y-c-hero-title" data-y="hero-title">من أول اختيارك لحد التوصيل</h1>
+                <p class="y-c-hero-subtitle" data-y="hero-subtitle">اختار.. نذبح.. نوصل</p>
+            </div>
+        </section>
+
+        <section class="y-l-category-section y-l-section" data-y="category-section">
+            <div class="y-u-container">
+                <div class="y-c-section-header" data-y="category-header">
+                    <p class="y-c-section-subtitle" data-y="category-subtitle">فئات المنتجات لدينا</p>
+                    <h2 class="y-c-section-title" data-y="category-title">تسوق حسب القسم</h2>
+                </div>
+                <div class="y-l-category-grid" data-y="category-grid">
+                    <a href="../offers/layout.html" class="y-c-category-card" data-y="category-card-offers">
+                        <div class="y-c-category-icon" data-y="category-icon-offers">
+                            <img src="../../assets/offers.png" alt="عروض" />
+                        </div>
+                        <h3 class="y-c-category-title" data-y="category-title-offers">العروض</h3>
+                    </a>
+                    <a href="../store/layout.html?category=naemi" class="y-c-category-card"
+                        data-y="category-card-naemi">
+                        <div class="y-c-category-icon" data-y="category-icon-naemi">
+                            <img src="../../assets/sheep.png" alt="نعيمي" />
+                        </div>
+                        <h3 class="y-c-category-title" data-y="category-title-naemi">نعيمي</h3>
+                    </a>
+                    <a href="../store/layout.html?category=tays" class="y-c-category-card" data-y="category-card-tays">
+                        <div class="y-c-category-icon" data-y="category-icon-tays">
+                            <img src="../../assets/tees.png" alt="تيس كشميري" />
+                        </div>
+                        <h3 class="y-c-category-title" data-y="category-title-tays">تيس كشميري</h3>
+                    </a>
+                    <a href="../store/layout.html?category=ejel" class="y-c-category-card" data-y="category-card-ejel">
+                        <div class="y-c-category-icon" data-y="category-icon-ejel">
+                            <img src="../../assets/cow.png" alt="عجل" />
+                        </div>
+                        <h3 class="y-c-category-title" data-y="category-title-ejel">عجل</h3>
+                    </a>
+                    <a href="../store/layout.html?category=cuts" class="y-c-category-card" data-y="category-card-cuts">
+                        <div class="y-c-category-icon" data-y="category-icon-cuts">
+                            <img src="../../assets/meat.png" alt="قطعيات لحم" />
+                        </div>
+                        <h3 class="y-c-category-title" data-y="category-title-cuts">قطعيات لحم</h3>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="y-l-featured-section y-l-section" data-y="featured-section">
+            <div class="y-u-container">
+                <h2 class="y-c-section-title y-u-text-center" data-y="featured-title">الأكثر طلبًا</h2>
+                <ul class="y-l-products-grid" id="featured-products-container" data-y="featured-grid">
+                </ul>
+
+                <div class="y-c-show-more-container" data-y="show-more-container">
+                    <a href="../store/layout.html" class="y-c-outline-btn y-c-basic-btn" data-y="show-more-btn">
+                        <span data-y="show-more-text">عرض المزيد</span>
+                        <i class="fas fa-arrow-left" data-y="show-more-arrow"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="y-l-promo-banner-section y-l-section" data-y="promo-banner-section">
+            <div class="y-u-container">
+                <div class="y-c-promo-banner" data-y="promo-banner-content">
+                    <div class="y-c-promo-text">
+                        <h2 class="y-c-promo-title" data-y="promo-banner-title-1">لحومنا طازجة</h2>
+                        <h3 class="y-c-promo-subtitle" data-y="promo-banner-title-2">طعمها يفرق معاك</h3>
+                        <a href="../store/layout.html" class="y-c-promo-btn" data-y="promo-banner-btn">تسوق
+                            الآن</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="y-l-featured-section y-l-section" data-y="featured-section">
+            <div class="y-u-container">
+                <h2 class="y-c-section-title y-u-text-center" data-y="featured-title">العروض</h2>
+                <ul class="y-l-products-grid" id="offers-products-container" data-y="offers-grid">
+                </ul>
+
+                <div class="y-c-show-more-container" data-y="show-more-container">
+                    <a href="../offers/layout.html" class="y-c-outline-btn y-c-basic-btn" data-y="show-more-btn">
+                        <span data-y="show-more-text">عرض المزيد</span>
+                        <i class="fas fa-arrow-left" data-y="show-more-arrow"></i>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="y-l-testimonials-section y-l-section" data-y="testimonials-section">
+            <div class="y-u-container">
+                <h2 class="y-c-section-title y-u-text-center" data-y="testimonials-title">آراء العملاء</h2>
+                <div class="y-l-testimonials-grid" data-y="testimonials-grid">
+
+                    <div class="y-c-testimonial-card" data-y="testimonial-card-1">
+                        <p class="y-c-testimonial-text" data-y="testimonial-text-1">
+                            اتعاملت معاهم أكتر من مرة وكل مرة نفس المستوى العالي اللي بيميزهم فعلاً إنهم بيسمعوا للعميل
+                            وبيعملوا الطلب زي ما هو عايز بالظبط.
+                        </p>
+                        <h3 class="y-c-testimonial-name" data-y="testimonial-name-1">احمد حسنين</h3>
+                        <div class="y-c-testimonial-stars" data-y="testimonial-stars-1">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="y-c-testimonial-card" data-y="testimonial-card-2">
+                        <p class="y-c-testimonial-text" data-y="testimonial-text-2">
+                            اتعاملت معاهم أكتر من مرة وكل مرة نفس المستوى العالي اللي بيميزهم فعلاً إنهم بيسمعوا للعميل
+                            وبيعملوا الطلب زي ما هو عايز بالظبط.
+                        </p>
+                        <h3 class="y-c-testimonial-name" data-y="testimonial-name-2">احمد حسنين</h3>
+                        <div class="y-c-testimonial-stars" data-y="testimonial-stars-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                    <div class="y-c-testimonial-card" data-y="testimonial-card-3">
+                        <p class="y-c-testimonial-text" data-y="testimonial-text-3">
+                            اتعاملت معاهم أكتر من مرة وكل مرة نفس المستوى العالي اللي بيميزهم فعلاً إنهم بيسمعوا للعميل
+                            وبيعملوا الطلب زي ما هو عايز بالظبط.
+                        </p>
+                        <h3 class="y-c-testimonial-name" data-y="testimonial-name-3">احمد حسنين</h3>
+                        <div class="y-c-testimonial-stars" data-y="testimonial-stars-3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/home.js" data-y="home-script"></script>
+</body>
+
+</html>

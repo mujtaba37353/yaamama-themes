@@ -1,0 +1,15 @@
+{
+    "template": "deliver",
+    "slots": {
+        "page-title": "Page title",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "breadcrumbs": "Breadcrumbs section",
+        "deliver-content": "Main content area for delivery policy",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components script"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "template": "offers",
+    "slots": {
+        "page-title": "Page title for Offers",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "offers-main": "Main content area for the offers page",
+        "breadcrumbs": "Breadcrumbs navigation",
+        "page-header-title": "Main title for the page",
+        "products-grid": "Grid container for offer products",
+        "show-more-container": "Container for the 'Show More' button",
+        "show-more-btn": "The 'Show More' button",
+        "show-more-text": "Text inside the 'Show More' button",
+        "show-more-arrow": "Arrow icon inside the 'Show More' button",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components JavaScript file",
+        "products-script": "Products data and functions script",
+        "favorite-script": "Favorite/wishlist functionality script",
+        "offers-script": "Offers page specific script"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/offers.js"
+    ]
+}

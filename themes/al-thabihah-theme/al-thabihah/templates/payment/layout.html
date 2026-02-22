@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>الدفع - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="./y-payment.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-payment-page" data-y="payment-main">
+
+        <div class="y-l-payment-container">
+
+            <section class="y-c-payment-forms-col">
+
+                <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                    <p>
+                        <a href="../home/layout.html">الرئيسية</a>
+                        <span>></span>
+                        <a href="../cart/layout.html">سلة المشتريات</a>
+                        <span>></span>
+                        <span data-y="bc-current">الدفع</span>
+                    </p>
+                    <a href="../cart/layout.html" class="y-c-back-link">
+                        <i class="fas fa-chevron-right"></i>
+                        الرجوع إلى السلة
+                    </a>
+                </nav>
+
+                <div class="y-c-form-section" data-y="delivery-info-section">
+                    <h2 class="y-c-section-header">معلومات التوصيل</h2>
+
+                    <div class="y-c-form-group">
+                        <input type="text" class="y-c-form-input" placeholder="الاسم الكامل" required
+                            data-y="full-name">
+                    </div>
+
+                    <div class="y-c-form-group">
+                        <input type="email" class="y-c-form-input" placeholder="البريد الإلكتروني" required
+                            data-y="email-input">
+                    </div>
+
+                    <div class="y-c-form-group">
+                        <input type="tel" class="y-c-form-input" placeholder="رقم الجوال" required data-y="phone-input">
+                    </div>
+
+                    <div class="y-c-form-group">
+                        <input type="text" class="y-c-form-input" placeholder="العنوان بالتفصيل" required
+                            data-y="address-input">
+                    </div>
+
+                    <div class="y-c-create-account-section">
+                        <div class="y-c-create-account-header" id="create-account-toggle">
+                            <h3 class="y-c-subsection-title">هل تود إنشاء حساب جديد ؟</h3>
+                            <i class="fas fa-chevron-down y-c-toggle-icon"></i>
+                        </div>
+                        <div class="y-c-form-group y-l-password-wrapper" id="create-account-password"
+                            style="display: none;">
+                            <input type="password" class="y-c-form-input" placeholder="كلمة المرور"
+                                data-y="password-input">
+                            <i class="fas fa-eye y-c-password-toggle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="y-c-form-section" data-y="payment-method-section">
+                    <h2 class="y-c-section-header">طريقة الدفع</h2>
+
+                    <div class="y-c-payment-methods">
+                        <label class="y-c-payment-option selected">
+                            <div class="y-c-radio-wrapper">
+                                <input type="radio" name="payment_method" value="cod" class="y-c-radio-input" checked>
+                                <span class="y-c-radio-checkmark"></span>
+                            </div>
+                            <span class="y-c-radio-label">
+                                الدفع عند الاستلام (COD)
+                            </span>
+                        </label>
+
+                        <label class="y-c-payment-option">
+                            <div class="y-c-radio-wrapper">
+                                <input type="radio" name="payment_method" value="bank" class="y-c-radio-input">
+                                <span class="y-c-radio-checkmark"></span>
+                            </div>
+                            <span class="y-c-radio-label">
+                                تحويل بنكي
+                            </span>
+                        </label>
+
+                        <label class="y-c-payment-option">
+                            <div class="y-c-radio-wrapper">
+                                <input type="radio" name="payment_method" value="card" class="y-c-radio-input">
+                                <span class="y-c-radio-checkmark"></span>
+                            </div>
+                            <div class="y-c-card-icons">
+                                <img src="../../assets/mada.png" alt="mada" style="height: 20px;">
+                                <i class="fab fa-cc-visa" style="color: #1a1f71;"></i>
+                                <i class="fab fa-cc-mastercard" style="color: #eb001b;"></i>
+                            </div>
+                        </label>
+
+                        <div class="y-c-card-details-form" id="card-details-form" data-y="card-details-form">
+                            <h3 class="y-c-subsection-title">رقم البطاقة</h3>
+                            <div class="y-c-form-group">
+                                <input type="text" class="y-c-form-input" placeholder="xxxx xxxx xxxx xxxx"
+                                    maxlength="19" data-y="card-number">
+                            </div>
+
+                            <h3 class="y-c-subsection-title">اسم حامل البطاقة</h3>
+                            <div class="y-c-form-group">
+                                <input type="text" class="y-c-form-input" placeholder="الاسم على البطاقة"
+                                    data-y="card-name">
+                            </div>
+
+                            <div class="y-c-form-row">
+                                <div class="y-c-form-field">
+                                    <h3 class="y-c-subsection-title">تاريخ الإنتهاء</h3>
+                                    <div class="y-c-date-inputs">
+                                        <input type="text" class="y-c-form-input" placeholder="الشهر" maxlength="2"
+                                            data-y="card-month">
+                                        <input type="text" class="y-c-form-input" placeholder="السنة" maxlength="2"
+                                            data-y="card-year">
+                                    </div>
+                                </div>
+                                <div class="y-c-form-field">
+                                    <h3 class="y-c-subsection-title">CVV</h3>
+                                    <div class="y-c-cvv-input-wrapper">
+                                        <input type="text" class="y-c-form-input" placeholder="xxx" maxlength="3"
+                                            data-y="card-cvv">
+                                        <i class="fas fa-question-circle y-c-cvv-hint"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="button" class="y-c-outline-btn y-c-btn-full" id="complete-order-btn">
+                    اكمل الطلب
+                </button>
+
+            </section>
+
+            <aside class="y-c-order-summary-sidebar" data-y="order-summary-sidebar">
+                <div class="y-c-summary-items" id="summary-items-container">
+                </div>
+
+                <div class="y-c-summary-totals">
+                    <div class="y-c-summary-row">
+                        <span>المجموع</span>
+                        <span class="y-c-value"><span id="summary-subtotal">0</span>
+                            <img src="../../assets/coin.png" alt="ر.س" class="y-c-coin-icon-small"></span>
+                    </div>
+                    <div class="y-c-summary-row">
+                        <span>ضريبة القيمة المضافة</span>
+                        <span class="y-c-value"><span id="summary-tax">0</span>
+                            <img src="../../assets/coin.png" alt="ر.س" class="y-c-coin-icon-small">
+                        </span>
+                    </div>
+                    <div class="y-c-summary-row">
+                        <span>رسوم التوصيل</span>
+                        <span class="y-c-value">
+                            <span id="summary-delivery">0</span>
+                            <img src="../../assets/coin.png" alt="ر.س" class="y-c-coin-icon-small">
+                        </span>
+                    </div>
+
+                    <div class="y-c-total-row-highlight">
+                        <span>
+                            إجمالي السعر
+                            <small>(شامل ضريبة القيمة المضافة)</small>
+                        </span>
+                        <span class="y-c-total-value"><span id="summary-total">0</span>
+                            <img src="../../assets/coin.png" alt="ر.س" class="y-c-coin-icon-small">
+                        </span>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/global-validation.js" data-y="global-validation-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/payment.js" data-y="payment-script"></script>
+</body>
+
+</html>

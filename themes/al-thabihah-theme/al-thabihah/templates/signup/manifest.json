@@ -1,0 +1,23 @@
+{
+    "template": "signup",
+    "slots": {
+        "page-title": "Page title for Sign Up",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "footer-placeholder": "Footer component placeholder",
+        "signup-page": "Main page wrapper",
+        "signup-card": "The centered white card",
+        "form-title": "Title of the sign-up form",
+        "signup-form": "The <form> element",
+        "form-group-email": "Form group for Email",
+        "form-submit-button-container": "Wrapper for the submit button",
+        "form-submit-btn": "The 'Create Account' button",
+        "auth-switch-container": "Wrapper for the 'Login' link",
+        "auth-switch-link": "The 'Login' link itself"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/auth-forms.js"
+    ]
+}

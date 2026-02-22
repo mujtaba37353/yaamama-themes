@@ -1,0 +1,426 @@
+/* Hero */
+.y-c-hero {
+    background: linear-gradient(135deg, #F8F1E9 0%, #f0e6d6 100%);
+    padding: 60px 0;
+    margin-top: 10px;
+}
+
+/* hero-container moved to common.y-c-css */
+
+.y-c-hero-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.y-c-hero-text {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.y-c-special-offer {
+    color: var(--y-color-primary);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.y-c-hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.y-c-hero-text p {
+    font-size: 1.1rem;
+    color: #cc3747;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    align-self: center;
+}
+
+.y-c-hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.y-c-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+/* Brands */
+.y-c-brands {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.y-c-brands-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+.y-c-brands-container img {
+    width: 15%;
+    height: auto;
+    opacity: 1;
+    transition: var(--y-transition-default);
+}
+
+.y-c-brands-container img:hover {
+    opacity: 0.7;
+}
+
+/* Categories Section Layout */
+.y-c-categories-section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.y-c-categories-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.y-c-categories-carousel {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.y-c-categories-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 30px;
+    width: 100%;
+    max-width: 100%;
+    will-change: transform;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.y-c-categories-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.y-c-categories-grid > .y-c-category-card {
+    flex: 0 0 260px;
+    width: 260px;
+}
+
+/* Marquee animation disabled; user scroll only. */
+
+.y-c-categories-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid var(--y-color-border);
+    background: var(--y-color-background);
+    color: var(--y-color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--y-shadow-sm);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-categories-arrow:hover {
+    background: var(--y-color-faded);
+}
+
+.y-c-categories-arrow:focus-visible {
+    outline: 2px solid var(--y-color-primary);
+    outline-offset: 2px;
+}
+
+.y-c-categories-arrow-prev {
+    right: -12px;
+}
+
+.y-c-categories-arrow-next {
+    left: -12px;
+}
+
+@media (max-width: 768px) {
+    .y-c-categories-arrow {
+        display: none;
+    }
+}
+
+/* Products Section Layout */
+.y-c-products-section {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.y-c-products-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.y-c-products-section h2 {
+    text-align: start;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0px 50px 0;
+}
+
+.y-c-view-more-btn {
+    text-decoration: none;
+    color: #cc3747;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Promo Banners Section Layout */
+.y-c-promo-banners {
+    padding: 60px 0;
+}
+
+.y-c-promo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Middle Banner Strip */
+.y-c-banner {
+    min-height: 40vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.y-c-banner-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.y-c-banner-container img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.y-c-middle-banner {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.y-c-middle-banner div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.y-c-middle-banner div h1 {
+    font-size: 30px;
+}
+
+.y-c-middle-banner div p {
+    color: var(--y-color-primary);
+    font-size: 20px;
+    padding: 15px;
+}
+
+.y-c-middle-banner img {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .y-c-hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--y-spacing-lg, 30px);
+    }
+
+    .y-c-hero-text {
+        align-items: center;
+    }
+
+    .y-c-hero-text h1 {
+        font-size: var(--y-font-size-xl, 1.8rem);
+    }
+
+    .y-c-categories-grid {
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding: 0 12px 10px;
+        width: 100%;
+    }
+
+    .y-c-categories-grid > .y-c-category-card {
+        flex: 0 0 calc((100% - 24px) / 3);
+        min-width: calc((100% - 24px) / 3);
+    }
+
+    .y-c-promo-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .y-c-brands-container {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 40px;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        box-sizing: border-box;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .y-c-brands-container::-webkit-scrollbar {
+        display: none;
+        overflow: hidden;
+    }
+
+    .y-c-brands-container img {
+        flex: 0 0 auto;
+        min-width: 60px;
+        height: 40px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+    .y-c-banner {
+        height: auto;
+        min-height: auto;
+        padding: 15px 0;
+        overflow: visible;
+    }
+
+    .y-c-banner-container {
+        gap: 15px;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        max-width: 95%;
+        box-sizing: border-box;
+    }
+
+    .y-c-middle-banner {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        padding: 0 10px;
+    }
+
+    .y-c-middle-banner div {
+        padding: 10px;
+        box-sizing: border-box;
+        overflow: visible;
+    }
+
+    .y-c-middle-banner div h1 {
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 0 0 10px;
+        padding: 0 5px;
+        word-break: break-word;
+    }
+
+    .y-c-middle-banner div p {
+        font-size: 14px;
+        padding: 0 5px;
+        margin: 0 0 10px;
+        line-height: 1.4;
+        word-break: break-word;
+    }
+
+    .y-c-middle-banner img {
+        object-fit: contain;
+    }
+
+    .y-c-banner-container img:first-child,
+    .y-c-banner-container img:last-child {
+        width: 25%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-hero-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .y-c-categories-section {
+        padding: 30px 0;
+    }
+
+    .y-c-categories-section h2,
+    .y-c-products-section h2 {
+        font-size: 2rem;
+    }
+
+    .y-c-middle-banner div h1 {
+        font-size: 16px;
+        line-height: 1.2;
+        padding: 0 5px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+    .y-c-middle-banner div p {
+        font-size: 12px;
+        padding: 0 2px;
+        margin-bottom: 8px;
+        max-width: 100%;
+    }
+
+}

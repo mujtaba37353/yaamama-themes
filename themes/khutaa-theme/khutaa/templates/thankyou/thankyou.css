@@ -1,0 +1,375 @@
+/* Thank You Page Styles */
+.thankyou-page {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2rem;
+  direction: rtl;
+}
+
+/* Thank You Message */
+.thankyou-message {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #fff5eb 0%, #ffe4cc 100%);
+  border-radius: 16px;
+  border: 2px solid var(--y-main);
+}
+
+.thankyou-icon {
+  font-size: 5rem;
+  color: #4caf50;
+  margin-bottom: 1.5rem;
+  animation: scaleIn 0.5s ease-out;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.thankyou-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--y-secondary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Error Message */
+.thankyou-error {
+  text-align: center;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-radius: 16px;
+  border: 2px solid #d32f2f;
+}
+
+.error-icon {
+  font-size: 5rem;
+  color: #d32f2f;
+  margin-bottom: 1.5rem;
+}
+
+.error-message {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #b71c1c;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-pay,
+.btn-account {
+  padding: 0.875rem 2.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-pay {
+  background: #ac5300;
+  color: white;
+  box-shadow: 0 4px 10px rgba(172, 83, 0, 0.2);
+}
+
+.btn-pay:hover {
+  background: #b18155;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(177, 129, 85, 0.3);
+  color: white;
+}
+
+.btn-account {
+  background: transparent;
+  color: var(--y-secondary);
+  border: 2px solid var(--y-secondary);
+}
+
+.btn-account:hover {
+  background: var(--y-secondary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Order Summary Card */
+.order-summary-card {
+  background: transparent;
+  border: 2px solid var(--y-secondary);
+  border-radius: 16px;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--y-secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.order-details-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.order-detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-detail-item:last-child {
+  border-bottom: none;
+}
+
+.order-total-item {
+  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+  border-top: 2px solid var(--y-secondary);
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--y-color-text-dark);
+}
+
+.detail-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--y-secondary);
+}
+
+.total-amount {
+  font-size: 1.5rem;
+  color: var(--y-secondary);
+}
+
+/* Order Details Table */
+.woocommerce-order-details {
+  margin-top: 3rem;
+}
+
+.woocommerce-order-details__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--y-secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.woocommerce-table.woocommerce-table--order-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.woocommerce-table.woocommerce-table--order-details thead {
+  background: transparent;
+  border-bottom: 2px solid var(--y-secondary);
+}
+
+.woocommerce-table.woocommerce-table--order-details th {
+  padding: 1rem;
+  text-align: right;
+  font-weight: 700;
+  color: var(--y-color-text-dark);
+  font-size: 1.1rem;
+}
+
+.woocommerce-table.woocommerce-table--order-details td {
+  padding: 1rem;
+  text-align: right;
+  border-bottom: 1px solid #e0e0e0;
+  color: var(--y-color-text-dark);
+}
+
+.woocommerce-table.woocommerce-table--order-details tfoot tr:last-child {
+  border-top: 2px solid var(--y-secondary);
+  font-weight: 700;
+}
+
+.woocommerce-table.woocommerce-table--order-details tfoot th,
+.woocommerce-table.woocommerce-table--order-details tfoot td {
+  padding-top: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--y-secondary);
+}
+
+/* Customer Details */
+.woocommerce-customer-details {
+  margin-top: 3rem;
+  background: transparent;
+  border: 2px solid var(--y-secondary);
+  border-radius: 16px;
+  padding: 2.5rem;
+}
+
+.woocommerce-customer-details__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--y-secondary);
+  margin-bottom: 2rem;
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.woocommerce-customer-details address {
+  font-style: normal;
+  line-height: 2;
+  color: var(--y-color-text-dark);
+}
+
+.woocommerce-customer-details address strong {
+  color: var(--y-secondary);
+  font-weight: 700;
+}
+
+/* Action Buttons */
+.thankyou-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.thankyou-actions .button {
+  padding: 0.875rem 2.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--y-secondary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(172, 83, 0, 0.2);
+}
+
+.thankyou-actions .button:hover {
+  background: var(--y-main);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(177, 129, 85, 0.3);
+  color: white;
+}
+
+.thankyou-actions .button i {
+  font-size: 1.2rem;
+}
+
+.btn-home {
+  background: var(--y-secondary) !important;
+  color: white !important;
+}
+
+.btn-home:hover {
+  background: var(--y-main) !important;
+  color: white !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .thankyou-page {
+    padding: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .thankyou-message,
+  .thankyou-error {
+    padding: 2rem 1.5rem;
+  }
+
+  .thankyou-icon,
+  .error-icon {
+    font-size: 4rem;
+  }
+
+  .thankyou-text {
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 1.1rem;
+  }
+
+  .order-summary-card,
+  .woocommerce-customer-details {
+    padding: 1.5rem;
+  }
+
+  .summary-title,
+  .woocommerce-order-details__title,
+  .woocommerce-customer-details__title {
+    font-size: 1.5rem;
+  }
+
+  .order-detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .detail-label,
+  .detail-value {
+    font-size: 1rem;
+  }
+
+  .total-amount {
+    font-size: 1.3rem;
+  }
+
+  .error-actions,
+  .thankyou-actions {
+    flex-direction: column;
+  }
+
+  .btn-pay,
+  .btn-account,
+  .thankyou-actions .button {
+    width: 100%;
+    text-align: center;
+  }
+
+  .woocommerce-table.woocommerce-table--order-details {
+    font-size: 0.9rem;
+  }
+
+  .woocommerce-table.woocommerce-table--order-details th,
+  .woocommerce-table.woocommerce-table--order-details td {
+    padding: 0.75rem 0.5rem;
+  }
+}

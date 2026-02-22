@@ -1,0 +1,1135 @@
+.profile-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+}
+.profile-section {
+  overflow: visible;
+}
+
+main:has(.profile-section) {
+  overflow: visible;
+}
+
+.profile-section .container .bottom > .content {
+  height: 100%;
+}
+
+.profile-section .container .bottom {
+  display: grid;
+  grid-template-columns: 246px 1fr;
+  gap: var(--y-space-48);
+  align-items: start;
+}
+
+.profile-section .sidbar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  justify-content: space-between;
+  height: 100%;
+  min-height: 32rem;
+}
+
+.profile-section h2 {
+  color: var(--y-color-primary);
+  border-bottom: 3px solid var(--y-color-primary-light);
+  padding-bottom: var(--y-space-6);
+}
+
+.profile-section .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.profile-section .sidbar .tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  background-color: var(--y-color-primary);
+  padding: var(--y-space-16);
+  border-radius: var(--y-space-22);
+}
+
+.profile-section .sidbar .tabs button,
+.profile-section .sidbar .tabs a {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16);
+  background-color: transparent;
+  color: var(--y-color-bg);
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  padding: var(--y-space-12) var(--y-space-12);
+  border-radius: var(--y-space-22);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.profile-section .sidbar .tabs button:hover,
+.profile-section .sidbar .tabs a:hover {
+  background-color: var(--y-color-muted);
+  color: var(--y-color-bg);
+}
+.profile-section .sidbar .tabs button.active,
+.profile-section .sidbar .tabs a.active {
+  background-color: var(--y-color-muted) !important;
+  color: var(--y-color-bg) !important;
+}
+.profile-section .sidbar .tabs button i {
+  font-size: var(--y-space-20);
+  color: var(--y-color-bg);
+}
+
+.profile-section .tab-content {
+  display: none;
+  height: 100%;
+  justify-content: space-between;
+}
+.profile-section .tab-content > button,
+.profile-section .tab-content > a {
+  align-self: flex-end;
+}
+
+.profile-section .sidbar .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  align-items: center;
+  justify-content: center;
+}
+.profile-section .sidbar .bottom p {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.profile-section .sidbar .bottom p i {
+  font-size: var(--y-space-20);
+  color: var(--y-color-primary);
+}
+
+.profile-section .tab-content.active {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+}
+
+.profile-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-26);
+}
+.profile-section form .form-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-10);
+}
+.profile-section .create-account-fields {
+  display: none;
+}
+.profile-section .create-account-fields.is-active {
+  display: grid;
+}
+.profile-section .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  cursor: pointer;
+}
+.profile-section .checkbox-label input {
+  width: auto;
+}
+.profile-section form .form-group .group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.profile-section form label {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+.profile-section form input:not([type="file"]) {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-primary);
+  border-radius: var(--y-space-40);
+  background: transparent;
+  color: var(--y-color-text);
+  opacity: 1;
+}
+
+.profile-section form input:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.profile-section form input:-webkit-autofill,
+.profile-section form input:-webkit-autofill:hover,
+.profile-section form input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--y-color-text);
+  transition: background-color 9999s ease-in-out 0s;
+}
+.profile-section form button {
+  width: fit-content;
+  padding: var(--y-space-12) var(--y-space-32);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-20);
+  font-weight: 500;
+}
+.profile-section form button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+}
+
+.profile-section .custome-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  position: relative;
+  width: fit-content;
+}
+.profile-section .custome-list.service-locked label {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+.profile-section .custome-list.service-locked .list {
+  display: none;
+}
+.profile-section .custome-list.service-locked .item {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.profile-section .custome-list.service-locked .service-locked-message {
+  margin: 0;
+  padding: var(--y-space-12) var(--y-space-16);
+  border: 1px dashed var(--y-color-primary-light);
+  border-radius: var(--y-space-16);
+  background-color: var(--y-color-primary-light);
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  line-height: 1.6;
+}
+
+.profile-section .custome-list input[type="checkbox"] {
+  display: none;
+}
+
+.profile-section .custome-list label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-20);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-18);
+  color: var(--y-color-text);
+}
+
+.profile-section .custome-list label:hover {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+}
+
+.profile-section .custome-list label i {
+  color: var(--y-color-primary);
+  transition: transform 0.3s ease;
+  font-size: var(--y-space-16);
+}
+
+.profile-section .custome-list input:checked + label {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+}
+
+.profile-section .custome-list input:checked + label i {
+  transform: rotate(180deg);
+}
+
+.profile-section .custome-list input:checked ~ .list {
+  display: flex;
+}
+
+.profile-section .custome-list .list {
+  display: none;
+  flex-direction: column;
+  gap: var(--y-space-12);
+  position: absolute;
+  top: calc(100% + var(--y-space-8));
+  left: 0;
+  right: 0;
+  background-color: var(--y-color-bg);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  padding: var(--y-space-16);
+  padding-right: var(--y-space-10);
+  z-index: 5;
+}
+
+.profile-section .custome-list .list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.profile-section .custome-list .list::-webkit-scrollbar-track {
+  background: var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  margin: var(--y-space-16) 0;
+}
+
+.profile-section .custome-list .list::-webkit-scrollbar-thumb {
+  background: var(--y-color-primary);
+  border-radius: var(--y-space-22);
+}
+
+.profile-section .custome-list .list .item {
+  display: flex;
+  align-items: center;
+  padding: var(--y-space-14) var(--y-space-16);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  background-color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: right;
+  width: 100%;
+}
+
+.profile-section .custome-list .list .item:hover {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+  transform: translateX(-4px);
+}
+
+.profile-section .custome-list .list .item.selected {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+}
+
+.profile-section .custome-list .list .item .service-name {
+  font-size: var(--y-space-18);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+
+.profile-section .data-time {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  width: 100%;
+}
+
+.profile-section .date-time-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  padding: var(--y-space-24);
+  background-color: var(--y-color-bg);
+}
+
+.profile-section .date-picker-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.profile-section .calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--y-space-12) 0;
+}
+
+.profile-section .calendar-header .nav-btn {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  border: none;
+  border-radius: var(--y-space-40);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: var(--y-space-16);
+}
+
+.profile-section .calendar-header .nav-btn:hover {
+  background-color: var(--y-color-muted);
+  transform: scale(1.05);
+}
+
+.profile-section .calendar-header .current-month-year {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+
+.profile-section .calendar-header .month-name {
+  font-size: var(--y-space-22);
+  font-weight: 700;
+  color: var(--y-color-primary);
+}
+
+.profile-section .calendar-header .year-name {
+  font-size: var(--y-space-18);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+
+.profile-section .calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--y-space-8);
+  margin-bottom: var(--y-space-8);
+}
+
+.profile-section .calendar-weekdays .weekday {
+  text-align: center;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-primary);
+  padding: var(--y-space-8);
+}
+
+.profile-section .calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--y-space-8);
+}
+
+.profile-section .calendar-days .day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--y-space-40);
+  font-size: var(--y-space-16);
+  font-weight: 500;
+  color: var(--y-color-text);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 2px solid transparent;
+}
+
+.profile-section .calendar-days .day:hover:not(.disabled):not(.selected) {
+  background-color: var(--y-color-primary-light);
+  border-color: var(--y-color-primary);
+}
+
+.profile-section .calendar-days .day.disabled {
+  color: var(--y-color-muted);
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.profile-section .calendar-days .day.selected {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  border-color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.profile-section .calendar-days .day.today {
+  border-color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.profile-section .time-picker-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.profile-section .time-picker-section h3 {
+  font-size: var(--y-space-20);
+  font-weight: 700;
+  color: var(--y-color-primary);
+  margin-bottom: var(--y-space-8);
+}
+
+.profile-section .time-input {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-16);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-bg);
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+}
+
+.profile-section .time-input:disabled {
+  background-color: var(--y-color-primary-light);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.profile-section .time-input-error {
+  margin: 0;
+  color: var(--y-color-primary);
+  font-size: var(--y-space-14);
+  line-height: 1.6;
+}
+
+.profile-section .time-slots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--y-space-12);
+  max-height: 300px;
+  overflow-y: auto;
+  padding: var(--y-space-8);
+}
+.profile-section .time-slots .time-slots-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--y-color-muted);
+  font-size: var(--y-space-16);
+  padding: var(--y-space-12) 0;
+}
+
+.profile-section .time-slots-meta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.profile-section .working-hours-range,
+.profile-section .working-hours-note {
+  margin: 0;
+  color: var(--y-color-text);
+  font-size: var(--y-space-14);
+  line-height: 1.6;
+}
+
+.profile-section .working-hours-note {
+  color: var(--y-color-muted);
+}
+
+.profile-section .working-hours-range.is-hidden {
+  display: none;
+}
+
+.profile-section .time-slots::-webkit-scrollbar {
+  width: 6px;
+}
+
+.profile-section .time-slots::-webkit-scrollbar-track {
+  background: var(--y-color-primary-light);
+  border-radius: var(--y-space-40);
+}
+
+.profile-section .time-slots::-webkit-scrollbar-thumb {
+  background: var(--y-color-primary);
+  border-radius: var(--y-space-40);
+}
+
+.profile-section .time-slot {
+  padding: var(--y-space-12) var(--y-space-16);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-40);
+  background-color: var(--y-color-bg);
+  color: var(--y-color-text);
+  font-size: var(--y-space-16);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.profile-section .time-slot:hover {
+  background-color: var(--y-color-primary-light);
+  border-color: var(--y-color-primary);
+  transform: translateY(-2px);
+}
+
+.profile-section .time-slot.selected {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  border-color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.profile-section .time-slot.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: var(--y-color-secondary);
+}
+
+.profile-section .time-slot.disabled:hover {
+  transform: none;
+  background-color: var(--y-color-secondary);
+  border-color: var(--y-color-primary-light);
+}
+
+.profile-section .selected-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  padding: var(--y-space-20);
+  background-color: var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  border: 2px solid var(--y-color-primary);
+}
+
+.profile-section .selected-date-info,
+.profile-section .selected-time-info {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-12);
+  font-size: var(--y-space-18);
+  color: var(--y-color-text);
+}
+
+.profile-section .selected-date-info i,
+.profile-section .selected-time-info i {
+  font-size: var(--y-space-20);
+  color: var(--y-color-primary);
+  width: 24px;
+  text-align: center;
+}
+
+.profile-section .selected-date-text,
+.profile-section .selected-time-text {
+  font-weight: 500;
+}
+
+.profile-section .selected-date-text.has-selection,
+.profile-section .selected-time-text.has-selection {
+  color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.profile-section .payment-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--y-space-20);
+  margin-bottom: var(--y-space-32);
+}
+
+.profile-section .payment-radio {
+  display: none;
+}
+
+.profile-section .payment-method-card {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-10);
+  padding: var(--y-space-12);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  background-color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: right;
+  position: relative;
+}
+
+.profile-section .payment-method-card:hover {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+}
+
+.profile-section .payment-radio:checked + .payment-method-card {
+  border-color: var(--y-color-primary);
+  background-color: var(--y-color-primary-light);
+}
+
+.profile-section .payment-method-card .payment-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  border-radius: var(--y-space-22);
+  font-size: var(--y-space-24);
+  flex-shrink: 0;
+}
+
+.profile-section .payment-method-card img {
+  height: 30px;
+  object-fit: contain;
+  aspect-ratio: 1;
+}
+.profile-section .payment-radio:checked + .payment-method-card .payment-icon {
+  background-color: var(--y-color-muted);
+}
+
+.profile-section .payment-method-card .payment-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-4);
+}
+
+.profile-section .payment-method-card .payment-info h3 {
+  font-size: var(--y-space-20);
+  font-weight: 700;
+  color: var(--y-color-primary);
+  margin: 0;
+}
+
+.profile-section .payment-method-card .payment-info p {
+  font-size: var(--y-space-16);
+  font-weight: 500;
+  color: var(--y-color-text);
+  margin: 0;
+}
+
+.profile-section .payment-method-card i.fa-check-circle {
+  font-size: var(--y-space-24);
+  color: var(--y-color-primary);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.profile-section
+  .payment-radio:checked
+  + .payment-method-card
+  i.fa-check-circle {
+  opacity: 1;
+}
+
+.profile-section .payment-form {
+  display: none;
+  margin-top: var(--y-space-32);
+  padding: var(--y-space-24);
+  background-color: var(--y-color-bg);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+}
+.profile-section .payment-form.is-active {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-section .payment-methods:has(#payment-cash:checked) ~ .cash-form {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-section .payment-methods:has(#payment-online:checked) ~ .online-form {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.profile-section .payment-methods:has(#payment-stc:checked) ~ .stc-form {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+.profile-section .payment-methods.has-selection ~ .payment-submit-btn {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.profile-section .payment-form h3 {
+  font-size: var(--y-space-22);
+  font-weight: 700;
+  color: var(--y-color-primary);
+  margin-bottom: var(--y-space-24);
+  padding-bottom: var(--y-space-12);
+  border-bottom: 2px solid var(--y-color-primary-light);
+}
+
+.profile-section .payment-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+}
+
+.profile-section .payment-form .form-group .group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.profile-section .payment-form .form-group .group.full-width {
+  width: 100%;
+}
+
+.profile-section .payment-form label {
+  font-size: var(--y-space-18);
+  font-weight: 600;
+  color: var(--y-color-text);
+}
+
+.profile-section .payment-form input:not([type="file"]),
+.profile-section .payment-form textarea,
+.profile-section .payment-form select {
+  width: 100%;
+  padding: var(--y-space-14) var(--y-space-16);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-40);
+  background: var(--y-color-bg);
+  font-size: var(--y-space-16);
+  color: var(--y-color-text);
+  transition: all 0.3s ease;
+  font-family: var(--y-font-sans);
+}
+
+.profile-section .payment-form input:focus,
+.profile-section .payment-form textarea:focus,
+.profile-section .payment-form select:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+
+.profile-section .payment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.profile-section .payment-form select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C67C73' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 16px center;
+  padding-right: var(--y-space-16);
+  padding-left: var(--y-space-40);
+}
+
+.profile-section .payment-form .group {
+  position: relative;
+}
+
+.profile-section .payment-form .group:has(.card-icon) input,
+.profile-section .payment-form .group:has(.stc-icon) input {
+  padding-left: var(--y-space-48);
+}
+
+.profile-section .payment-form .card-icon,
+.profile-section .payment-form .stc-icon {
+  position: absolute;
+  left: var(--y-space-16);
+  bottom: var(--y-space-14);
+  color: var(--y-color-primary);
+  font-size: var(--y-space-20);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.profile-section .stc-info-box {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-12);
+  padding: var(--y-space-16);
+  background-color: var(--y-color-primary-light);
+  border: 2px solid var(--y-color-primary);
+  border-radius: var(--y-space-22);
+  margin-top: var(--y-space-16);
+}
+
+.profile-section .stc-info-box i {
+  color: var(--y-color-primary);
+  font-size: var(--y-space-20);
+  flex-shrink: 0;
+}
+
+.profile-section .stc-info-box p {
+  font-size: var(--y-space-16);
+  color: var(--y-color-text);
+  margin: 0;
+  font-weight: 500;
+}
+
+.profile-section .payment-submit-btn {
+  margin-top: var(--y-space-24);
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-32);
+  font-size: var(--y-space-20);
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.profile-section .payment-submit-btn {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.profile-section .top:has(.payment-radio:checked) ~ .payment-submit-btn {
+  opacity: 1;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.profile-section .payment-submit-btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px
+    color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+}
+
+.profile-section .success-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-32);
+}
+
+.profile-section .appointment-confirmation {
+  background-color: var(--y-color-bg);
+  border: 2px solid var(--y-color-primary-light);
+  border-radius: var(--y-space-22);
+  padding: var(--y-space-40);
+  text-align: center;
+}
+
+.profile-section .celebration-icon {
+  font-size: var(--y-space-48);
+  margin-bottom: var(--y-space-16);
+  line-height: 1;
+}
+
+.profile-section .congratulations {
+  font-size: var(--y-space-32);
+  font-weight: 700;
+  color: var(--y-color-text);
+  margin: 0 0 var(--y-space-16) 0;
+}
+
+.profile-section .appointment-id {
+  font-size: var(--y-space-18);
+  color: var(--y-color-text);
+  margin: 0 0 var(--y-space-32) 0;
+}
+
+.profile-section .appointment-id strong {
+  color: var(--y-color-primary);
+  font-weight: 700;
+}
+
+.profile-section .appointment-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-32);
+  margin: var(--y-space-32) 0;
+  text-align: right;
+}
+
+.profile-section .details-column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+}
+
+.profile-section .details-column.labels-column {
+  text-align: left;
+}
+
+.profile-section .details-column.values-column {
+  text-align: right;
+}
+
+.profile-section .details-column p {
+  font-size: var(--y-space-16);
+  color: var(--y-color-text);
+  margin: 0;
+  min-height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-section .details-column.values-column p {
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+
+.profile-section .divider {
+  height: 1px;
+  background-color: var(--y-color-text);
+  width: 100%;
+  margin: var(--y-space-8) 0;
+}
+
+.profile-section .appointment-footer {
+  margin-top: var(--y-space-32);
+  display: flex;
+  justify-content: center;
+}
+
+.profile-section .appointment-footer .btn {
+  padding: var(--y-space-14) var(--y-space-32);
+  border-radius: var(--y-space-40);
+  font-size: var(--y-space-18);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  min-width: 180px;
+}
+
+.profile-section .appointment-footer .btn-primary {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.profile-section .appointment-footer .btn-primary:hover {
+  background-color: var(--y-color-muted);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px
+    color-mix(in oklab, var(--y-color-primary) 30%, transparent);
+}
+
+@media (max-width: 768px) {
+  .profile-section .container .bottom {
+    grid-template-columns: 1fr;
+  }
+  .profile-section form .form-group {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section .date-time-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--y-space-24);
+  }
+
+  .profile-section .time-slots {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-section .calendar-header .month-name {
+    font-size: var(--y-space-20);
+  }
+
+  .profile-section .calendar-header .year-name {
+    font-size: var(--y-space-16);
+  }
+
+  .profile-section .calendar-days .day {
+    font-size: var(--y-space-14);
+  }
+
+  .profile-section .time-slot {
+    font-size: var(--y-space-14);
+    padding: var(--y-space-10) var(--y-space-12);
+  }
+
+  .profile-section .payment-methods {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-section .payment-method-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-section .payment-method-card .payment-info {
+    align-items: center;
+  }
+
+  .profile-section .payment-form .form-group .group {
+    width: 100%;
+  }
+
+  .profile-section .success-content {
+    max-width: 100%;
+  }
+
+  .profile-section .appointment-confirmation {
+    padding: var(--y-space-24);
+  }
+
+  .profile-section .celebration-icon {
+    font-size: var(--y-space-40);
+  }
+
+  .profile-section .congratulations {
+    font-size: var(--y-space-26);
+  }
+
+  .profile-section .appointment-details {
+    grid-template-columns: 1fr;
+    gap: var(--y-space-24);
+  }
+
+  .profile-section .details-column.labels-column {
+    text-align: right;
+  }
+
+  .profile-section .appointment-footer .btn {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .profile-section .sidbar {
+    height: 100%;
+    min-height: 0;
+  }
+  .profile-section .sidbar .bottom {
+    display: none;
+  }
+
+  .profile-section .sidbar .tabs {
+    order: 2;
+  }
+
+  .profile-section .sidbar .bottom {
+    order: 1;
+  }
+
+  .profile-section .custome-list {
+    width: 100%;
+  }
+
+  .profile-section .custome-list label {
+    width: 100%;
+  }
+
+  .profile-section .selected-info {
+    padding: var(--y-space-16);
+  }
+
+  .profile-section .selected-date-info,
+  .profile-section .selected-time-info {
+    font-size: var(--y-space-16);
+  }
+
+  .profile-section .payment-form {
+    padding: var(--y-space-16);
+  }
+
+  .profile-section .payment-form h3 {
+    font-size: var(--y-space-20);
+  }
+}
+

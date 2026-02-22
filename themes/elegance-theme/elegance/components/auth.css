@@ -1,0 +1,474 @@
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  padding: var(--y-space-28) var(--y-space-42);
+}
+
+.signup-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.signup-form .form-group label {
+  font-size: var(--y-space-16);
+  font-weight: 600;
+  color: var(--y-color-txt);
+  text-align: right;
+}
+
+label .required {
+  color: #ff0000;
+  margin-right: var(--y-space-4);
+}
+
+.signup-form .form-group input {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: var(--y-space-16);
+  transition: border-color 0.3s ease;
+}
+
+.signup-form .form-group input:focus {
+  border-color: var(--y-color-primary);
+  outline: none;
+}
+
+.signup-form .signup-button {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border-radius: 5px;
+  background-color: #8a63e6;
+  color: #ffffff;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-form .signup-button:hover {
+  background-color: #7a53d6;
+}
+
+.signup-form .login-link {
+  text-align: center;
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+}
+
+.signup-form .login-link span {
+  margin-left: var(--y-space-8);
+}
+
+.signup-form .login-link a {
+  color: #8a63e6;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-form .login-link a:hover {
+  color: #7a53d6;
+  text-decoration: underline;
+}
+
+
+.login-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  padding: var(--y-space-28) var(--y-space-42);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.form-group label {
+  font-size: var(--y-space-16);
+  font-weight: 600;
+  color: var(--y-color-txt);
+  text-align: right;
+}
+
+.form-group label .required {
+  color: #ff0000;
+  margin-right: var(--y-space-4);
+}
+
+.form-group input {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: var(--y-space-16);
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: var(--y-color-primary);
+  outline: none;
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: var(--y-space-48);
+}
+
+.password-toggle {
+  position: absolute;
+  right: var(--y-space-16);
+  top: 27px;
+  right: auto;
+  left: 0;
+  transform: translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: var(--y-space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--y-space-18);
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: var(--y-color-primary);
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--y-space-16);
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.remember-me input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+}
+
+.remember-me input[type="checkbox"]:checked {
+  background-color: #8a63e6;
+  border-color: #8a63e6;
+}
+
+.remember-me input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.forgot-password {
+  color: var(--y-color-txt);
+  text-decoration: underline;
+  font-size: var(--y-space-16);
+  transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--y-color-primary);
+}
+
+.login-button {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border-radius: 5px;
+  background-color: #8a63e6;
+  color: #ffffff;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #7a53d6;
+}
+
+.signup-link {
+  text-align: center;
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+}
+
+.signup-link span {
+  margin-left: var(--y-space-8);
+}
+
+.signup-link a {
+  color: #8a63e6;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #7a53d6;
+}
+
+.forget-password-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+  padding: var(--y-space-28) var(--y-space-42);
+}
+
+.forget-password-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+
+.forget-password-form .form-group label {
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  text-align: right;
+}
+
+.forget-password-form .form-group label .required {
+  color: #ff0000;
+  margin-right: var(--y-space-4);
+}
+
+.forget-password-form .form-group input {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: var(--y-space-16);
+  transition: border-color 0.3s ease;
+}
+
+.forget-password-form .form-group input:focus {
+  border-color: var(--y-color-primary);
+  outline: none;
+}
+
+.forget-password-form .description {
+  font-size: var(--y-space-16);
+  color: var(--y-color-txt);
+  text-align: right;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.forget-password-form .reset-button {
+  width: 100%;
+  padding: var(--y-space-16) var(--y-space-16);
+  border-radius: 5px;
+  background-color: #8a63e6;
+  color: #ffffff;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.forget-password-form .reset-button:hover {
+  background-color: #7a53d6;
+}
+
+@media (max-width: 768px) {
+  .forget-password-form {
+    padding: 0;
+    gap: var(--y-space-20);
+  }
+
+  .forget-password-form .description {
+    font-size: var(--y-space-14);
+  }
+}
+
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--y-space-30) 0;
+  margin-bottom: 0;
+}
+.auth-section .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth-section .container .right {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.auth-section .container .right h2 {
+  width: 100%;
+  padding-right: var(--y-space-44);
+  padding-bottom: 0;
+  font-weight: 600;
+}
+.auth-section .container .left {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.auth-section .container .right p {
+  font-size: var(--y-space-32);
+  font-weight: 400;
+  text-align: justify;
+}
+.auth-section .container .left img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: var(--y-space-30);
+}
+.auth-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-32);
+  padding: var(--y-space-28) var(--y-space-42);
+  width: 100%;
+}
+.auth-section form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.auth-section form .form-group input {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+}
+.auth-section form .form-group input:focus {
+  border-color: var(--y-color-primary);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.auth-section form .form-group input:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form .form-group input:read-only {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form > button {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border-radius: var(--y-space-8);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+@media (max-width: 768px) {
+  .auth-section .container {
+    flex-direction: column-reverse;
+    gap: var(--y-space-44);
+  }
+  .auth-section .container .right {
+    width: 100%;
+  }
+  .auth-section .container .left {
+    width: 100%;
+  }
+  .auth-section .container .right p {
+    font-size: var(--y-space-24);
+  }
+  .auth-section .container .left img {
+    height: 300px;
+  }
+  .auth-section form {
+    padding: 0;
+  }
+  .auth-section .container .right h2 {
+    padding-right: 0;
+    padding-bottom: var(--y-space-24);
+  }
+}
+
+/* Styled Woo notices for auth flows */
+.auth-section .woocommerce-notices-wrapper {
+  width: 100%;
+  padding: 0 var(--y-space-42);
+}
+
+.auth-section .woocommerce-notices-wrapper > * {
+  list-style: none;
+  margin: 0 0 var(--y-space-16);
+  padding: var(--y-space-14) var(--y-space-16);
+  border-radius: var(--y-space-10);
+  font-size: var(--y-space-14);
+  font-weight: 600;
+  line-height: 1.6;
+  border: 1px solid transparent;
+}
+
+.auth-section .woocommerce-error {
+  background: #fff1f2;
+  border-color: #fecdd3;
+  color: #9f1239;
+}
+
+.auth-section .woocommerce-message,
+.auth-section .woocommerce-info {
+  background: #f5f3ff;
+  border-color: #d8ccff;
+  color: #4c1d95;
+}
+
+@media (max-width: 768px) {
+  .auth-section .woocommerce-notices-wrapper {
+    padding: 0;
+  }
+}

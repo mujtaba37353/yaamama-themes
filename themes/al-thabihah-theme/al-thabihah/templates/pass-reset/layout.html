@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>إعادة تعيين كلمة المرور - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-auth.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="./y-pass-reset.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-auth-page" data-y="password-reset-page">
+        <div class="y-c-auth-card" data-y="password-reset-card">
+
+            <h1 class="y-c-form-title" data-y="form-title">إعادة تعيين كلمة المرور</h1>
+
+            <form id="forgetPasswordForm" action="#" method="POST" data-y="password-reset-form">
+
+                <div class="y-c-form-group" data-y="form-group-email">
+                    <label for="email" class="y-c-form-label">البريد الإلكتروني <span
+                            class="y-c-required">*</span></label>
+                    <input type="email" id="email" name="email" class="y-c-form-input" required data-y="email-input">
+                </div>
+
+                <p class="y-c-form-description-small" data-y="form-description">
+                    أدخل بريدك الإلكتروني ليتسنى لنا إعادة تعيين كلمة المرور. تأكد من إدخال البريد المسجل لدينا لسلامة
+                    الوصول إلى خدمات سيرفرك.
+                </p>
+
+                <div class="y-l-form-button" data-y="form-submit-button-container">
+                    <button type="submit" class="y-c-outline-btn" data-y="form-submit-btn">إعادة تعيين كلمة
+                        المرور</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div class="y-c-popup-overlay" id="successPopup" data-y="popup-overlay">
+        <div class="y-c-popup-content" data-y="popup-content">
+            <button class="y-c-modal-close-btn" id="closePopupBtn" data-y="popup-close-btn">&times;</button>
+            <i class="fas fa-check-circle" style="color: var(--y-color-success); font-size: 50px;"
+                data-y="popup-icon"></i>
+            <h2 data-y="popup-title">تم إرسال الرابط بنجاح</h2>
+            <p data-y="popup-message">يرجى التحقق من بريدك الإلكتروني لإعادة تعيين كلمة المرور.</p>
+        </div>
+    </div>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/global-validation.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+</body>
+
+</html>

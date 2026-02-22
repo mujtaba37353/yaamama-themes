@@ -1,0 +1,330 @@
+.y-l-footer {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    padding: var(--y-spacing-2xl) var(--y-spacing-lg) var(--y-spacing-lg);
+    font-family: var(--y-font-family-primary);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.y-l-footer-container {
+    max-width: var(--y-breakpoint-xl);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-xl);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* --- Top Section: Logo --- */
+.y-c-footer-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-footer-logo {
+    width: var(--y-size-150);
+    height: auto;
+}
+
+/* --- Middle Section: Links Grid --- */
+.y-l-footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--y-spacing-xl);
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-sizing: border-box;
+}
+
+.y-c-footer-links h3 {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-hover);
+    /* Orange color for titles */
+    margin-bottom: var(--y-spacing-md);
+    padding-bottom: var(--y-spacing-xs);
+}
+
+/* Helper to keep grid aligned even if title is hidden */
+.y-c-footer-hidden-title {
+    visibility: hidden;
+    font-size: var(--y-font-size-lg);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.y-c-footer-links li {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-footer-links a {
+    color: var(--y-color-secondary-text);
+    text-decoration: none;
+    font-size: var(--y-font-size-md);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-footer-links a:hover {
+    color: var(--y-color-primary-hover);
+}
+
+/* --- Social Icons --- */
+.y-c-socials-title {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-secondary-text);
+    margin: 0 0 var(--y-spacing-md) 0;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.y-c-footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--y-spacing-md);
+    margin-top: var(--y-spacing-md);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 100%;
+}
+
+/* Container for social icons row */
+.y-c-footer-socials-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--y-spacing-sm);
+    flex-wrap: wrap;
+}
+
+.y-c-footer-socials-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--y-size-35);
+    height: var(--y-size-35);
+    background-color: var(--y-color-secondary-text);
+    border-radius: 50%;
+    color: var(--y-color-primary);
+    transition: transform var(--y-transition-fast);
+}
+
+.y-c-footer-socials-icons a:hover {
+    transform: translateY(var(--y-transform-hover-up));
+    background-color: var(--y-color-primary-hover);
+    color: var(--y-color-secondary-text);
+}
+
+/* --- Bottom Section: Copyright & Payments --- */
+.y-c-footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--y-spacing-xl);
+    padding-top: var(--y-spacing-lg);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    /* Removed border-top as per image style which looks clean */
+}
+
+.y-c-footer-copyright p {
+    margin: 0;
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-footer-payments {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-payment-label {
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-payment-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    font-size: var(--y-size-24);
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    max-width: 100%;
+    flex-wrap: wrap;
+    /* Size for font icons */
+}
+
+.y-c-payment-icons i {
+    color: var(--y-color-secondary-text);
+    /* White icons */
+}
+
+.y-c-payment-img {
+    height: var(--y-size-20) !important;
+    max-height: var(--y-size-20) !important;
+    width: auto !important;
+    max-width: 80px !important;
+    min-width: 0 !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+    /* Make STC Pay logo white to match design */
+    filter: brightness(0) invert(1);
+}
+
+/* Ensure payment image size is consistent on account pages - override any account page styles */
+.woocommerce-account .y-c-payment-img,
+body.woocommerce-account .y-c-payment-img,
+.woocommerce-account footer .y-c-payment-img,
+body.woocommerce-account footer .y-c-payment-img,
+.woocommerce-account .y-c-payment-icons .y-c-payment-img,
+body.woocommerce-account .y-c-payment-icons .y-c-payment-img,
+.woocommerce-account .y-c-footer-payments .y-c-payment-img,
+body.woocommerce-account .y-c-footer-payments .y-c-payment-img {
+    height: var(--y-size-20) !important;
+    max-height: var(--y-size-20) !important;
+    width: auto !important;
+    max-width: 80px !important;
+    min-width: 0 !important;
+    object-fit: contain !important;
+    display: inline-block !important;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 992px) {
+    .y-l-footer-links-grid {
+        gap: var(--y-spacing-md);
+    }
+}
+
+@media (max-width: 768px) {
+    .y-l-footer {
+        padding: var(--y-spacing-xl) var(--y-spacing-md) var(--y-spacing-md);
+    }
+    
+    .y-l-footer-links-grid {
+        grid-template-columns: 1fr;
+        gap: var(--y-spacing-xl);
+        text-align: right;
+        max-width: 100vw;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .y-c-footer-hidden-title {
+        display: none;
+        /* Remove spacing on mobile */
+    }
+
+    .y-c-socials-title {
+        font-size: var(--y-font-size-sm);
+    }
+
+    .y-c-footer-socials {
+        justify-content: flex-start;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        max-width: 100%;
+    }
+
+    .y-c-footer-bottom {
+        flex-direction: column-reverse;
+        gap: var(--y-spacing-lg);
+        text-align: right;
+        max-width: 100vw;
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding: 0 var(--y-spacing-sm);
+        box-sizing: border-box;
+    }
+
+    .y-c-footer-payments {
+        width: 100%;
+        max-width: 100%;
+        justify-content: space-between;
+        gap: var(--y-spacing-xs);
+        overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        box-sizing: border-box;
+    }
+}
+
+/* --- WhatsApp Floating Button --- */
+.y-c-whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.y-c-whatsapp-float:hover {
+    background-color: #20BA5A;
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.y-c-whatsapp-float i {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .y-c-whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+        bottom: 15px;
+        left: 15px;
+    }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تسجيل الدخول | Yamama</title>
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="icon" href="../../assets/icon.png" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/auth.css" />
+  <link rel="stylesheet" href="./style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main class="special-bg">
+    <section class="auth-section">
+      <div class="container y-u-max-w-1200 right-left">
+        <div class="right">
+          <form id="login-form" class="auth-form">
+            <h2>تسجيل الدخول</h2>
+
+            <div class="form-group">
+              <label for="email">البريد الإلكتروني <span class="required">*</span></label>
+              <input type="email" id="email" name="email" placeholder="Example@gmail.com">
+            </div>
+
+            <div class="form-group password-group">
+              <label for="password">كلمة المرور <span class="required">*</span></label>
+              <div class="password-input-wrapper">
+                <i class="fa-regular fa-eye password-toggle" data-target="password"></i>
+                <input type="password" id="password" name="password" placeholder="أدخل كلمة المرور">
+              </div>
+            </div>
+            <div class="auth-actions">
+              <div class="auth-remember">
+                <label for="remember">تذكرني</label>
+                <input type="checkbox" id="remember" name="remember">
+              </div>
+              <a class="auth-forgot" href="../forget-password/index.html">هل نسيت كلمة المرور؟</a>
+            </div>
+            <button type="submit" class="btn main-button fw">تسجيل الدخول</button>
+            <p class="new-account">ليس لديك حساب؟ <a href="../signup/index.html">إنشاء حساب</a></p>
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+  <script src="https://unpkg.com/just-validate@4.3.0/dist/just-validate.production.min.js"></script>
+  <script src="../../js/form-validation.js"></script>
+</body>
+
+</html>

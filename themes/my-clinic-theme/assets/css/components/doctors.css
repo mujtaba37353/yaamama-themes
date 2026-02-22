@@ -1,0 +1,329 @@
+.doctor-page .lists {
+  position: relative;
+  bottom: auto;
+  width: 100%;
+}
+
+/* Doctors page layout: specialty filter + search input + search button in one row on desktop */
+.doctor-page .lists .bottom {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  gap: var(--y-space-24);
+  width: 100%;
+}
+
+.doctor-page .bottom input[type="text"] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--y-space-16);
+  background-color: var(--y-color-bg);
+  box-shadow: var(--y-color-shadow);
+  border-radius: var(--y-radius-l);
+  color: var(--y-color-txt);
+  font-size: var(--y-space-20);
+  cursor: pointer;
+}
+
+/* Mobile layout for doctors page */
+@media (max-width: 768px) {
+  .doctor-page .lists .bottom {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+  }
+  
+  /* Search button in second row, centered, fit-content width */
+  /* Override .btn.fw to make button fit-content width */
+  .doctor-page .lists .bottom #search-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: fit-content !important;
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: var(--y-space-14) var(--y-space-24);
+  }
+}
+
+@media (max-width: 476px) {
+  .doctor-page .lists .bottom {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+  /* Search button in second row, centered, fit-content width */
+  .doctor-page .lists .bottom #search-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: fit-content !important;
+    min-width: fit-content;
+    max-width: fit-content;
+    padding: var(--y-space-14) var(--y-space-24);
+  }
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--y-space-24);
+  width: 100%;
+}
+
+.doctors-page .bottom .content .left {
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+}
+
+.doctor-page.doctors-page .container > .bottom {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.doctor-page.doctors-page .bottom > .content {
+  grid-template-columns: 1fr !important;
+  max-width: 100%;
+  width: 100%;
+}
+
+.doctor-page.doctors-page .bottom > .content .right {
+  display: none !important;
+}
+
+/* Only hide right sidebar on clinic listing pages (clinic-page.php), not single clinic pages */
+/* The listing page uses .clinic-page without .doctor-page, single pages use both */
+body:not(.single-clinic) .clinic-page .bottom > .content {
+  grid-template-columns: 1fr !important;
+  max-width: 100%;
+  width: 100%;
+}
+
+body:not(.single-clinic) .clinic-page .bottom > .content .right {
+  display: none !important;
+}
+
+/* Ensure single clinic pages show the right sidebar */
+.doctor-page.clinic-page .bottom > .content {
+  grid-template-columns: 2fr 1fr !important;
+}
+
+.doctor-page.clinic-page .bottom > .content .right {
+  display: flex !important;
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic,
+.clinic-page .bottom .content .left .doctors-box-clinic {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic .main-box,
+.doctors-page .bottom .content .left .doctors-box-clinic .clinic-box,
+.clinic-page .bottom .content .left .doctors-box-clinic .main-box,
+.clinic-page .bottom .content .left .doctors-box-clinic .clinic-box {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic .main-box *,
+.doctors-page .bottom .content .left .doctors-box-clinic .clinic-box *,
+.clinic-page .bottom .content .left .doctors-box-clinic .main-box *,
+.clinic-page .bottom .content .left .doctors-box-clinic .clinic-box * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.doctors-page .bottom .content .left .doctors-box-clinic .main-box p,
+.doctors-page .bottom .content .left .doctors-box-clinic .clinic-box p,
+.doctors-page .bottom .content .left .doctors-box-clinic .main-box h3,
+.doctors-page .bottom .content .left .doctors-box-clinic .clinic-box h3,
+.clinic-page .bottom .content .left .doctors-box-clinic .main-box p,
+.clinic-page .bottom .content .left .doctors-box-clinic .clinic-box p,
+.clinic-page .bottom .content .left .doctors-box-clinic .main-box h3,
+.clinic-page .bottom .content .left .doctors-box-clinic .clinic-box h3 {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.doctors-page .bottom .content .right .box > p {
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-16);
+}
+.doctors-page .bottom .content .right .box .types {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--y-space-16);
+  align-items: stretch;
+}
+.doctors-page .bottom .content .right .box .types button {
+  font-size: var(--y-space-16);
+  font-weight: 400;
+  color: var(--y-color-txt);
+  background-color: lightgray;
+  appearance: none;
+  padding-block: var(--y-space-8);
+  border-radius: var(--y-radius-s);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.doctors-page .bottom .content .right .box .types button:hover {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.doctors-page .bottom .content .right .box .types button.active {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.doctors-page .bottom .content .right .box .range {
+  --track-height: 8px;
+  --thumb-size: 20px;
+  --thumb-color: var(--y-color-primary);
+  --track-color: #7e8fd3;
+  --track-active-color: #8a94d3;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.doctors-page .bottom .content .right .box .range input[type="range"] {
+  width: 100%;
+  height: var(--track-height);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.doctors-page
+  .bottom
+  .content
+  .right
+  .box
+  .range
+  input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: var(--track-height);
+  background: var(--track-color);
+  border-radius: 5px;
+}
+
+.doctors-page
+  .bottom
+  .content
+  .right
+  .box
+  .range
+  input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: var(--track-height);
+  background: var(--track-color);
+  border-radius: 5px;
+}
+
+.doctors-page
+  .bottom
+  .content
+  .right
+  .box
+  .range
+  input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  margin-top: calc((var(--track-height) - var(--thumb-size)) / 2);
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  background-color: var(--y-color-primary);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.doctors-page
+  .bottom
+  .content
+  .right
+  .box
+  .range
+  input[type="range"]::-moz-range-thumb {
+  width: var(--thumb-size);
+  height: var(--thumb-size);
+  background-color: var(--y-color-primary);
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.doctors-page
+  .bottom
+  .content
+  .right
+  .box
+  .range
+  input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.1);
+}
+
+.doctors-page .bottom .content .right .box .range output {
+  position: absolute;
+  background-color: #7e8fd3;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  bottom: calc(100% + 10px);
+  left: calc(var(--value, 100) / 500 * 100%);
+  transform: translateX(-50%);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.doctors-page .bottom .content .right .box .range output::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #7e8fd3;
+}
+
+[dir="rtl"] .doctors-page .bottom .content .right .box .range output {
+  left: auto;
+  right: calc(var(--value, 100) / 500 * 100%);
+  transform: translateX(50%);
+}
+
+.doctors-page .container::before {
+  top: 327px;
+}
+
+.clinic-box .top .content h3 {
+  font-size: var(--y-space-20);
+}
+.clinic-box .top .content p {
+  font-size: var(--y-space-14);
+  color: var(--y-color-txt);
+}
+
+@media (max-width: 768px) {
+  .doctors-page .bottom .content .left .doctors-box-clinic {
+    grid-template-columns: 1fr;
+  }
+}

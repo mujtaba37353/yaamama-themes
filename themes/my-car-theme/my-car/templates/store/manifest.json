@@ -1,0 +1,18 @@
+{
+    "template": "store",
+    "slots": {
+        "page-title": "Title of the store page",
+        "header-placeholder": "Header component placeholder",
+        "store-main": "Main content area of the store page",
+        "product-breadcrumb": "Breadcrumb navigation for the store page",
+        "store-container": "Main container for store products",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/store.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

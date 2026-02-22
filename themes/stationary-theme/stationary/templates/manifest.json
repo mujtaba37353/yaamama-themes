@@ -1,0 +1,33 @@
+{
+  "name": "Stationary",
+  "short_name": "Stationary",
+  "description": "متجر Stationary يقدم منتجات مكتبية بجودة عالية وسعر يناسبك.",
+  "dir": "rtl",
+  "lang": "ar",
+  "display": "standalone",
+  "start_url": "../layout/index.html",
+  "scope": "../",
+  "background_color": "#F3F4F6",
+  "theme_color": "#6D28D9",
+  "icons": [
+    {
+      "src": "../assets/icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "../assets/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "prefer_related_applications": false,
+  "categories": [
+    "stationary",
+    "office",
+    "school",
+    "education"
+  ]
+}

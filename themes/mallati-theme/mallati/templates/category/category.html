@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mallati - مولاتي</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/hero.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/indicators.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="./category.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+  <main>
+    <section class=" container y-u-max-w-1200 y-u-flex y-u-flex-col y-u-justify-center y-u-flex-col  hero-section">
+      <p class="y-u-text-2xl y-u-text-bold y-u-mb-16 y-u-color-muted"><a href="../layout/index.html">الرئيسية</a> > <a
+          href="../category/category.html">إلكترونيات</a></p>
+      <div class="hero-slider-container">
+        <div class="hero-slider">
+          <div class="hero-slide active">
+            <img src="../../assets/hero1.png" alt="Hero Image 1" class="y-u-w-full" />
+          </div>
+          <div class="hero-slide">
+            <img src="../../assets/hero1.png" alt="Hero Image 2" class="y-u-w-full" />
+          </div>
+          <div class="hero-slide">
+            <img src="../../assets/hero1.png" alt="Hero Image 3" class="y-u-w-full" />
+          </div>
+        </div>
+
+        <div class="hero-slider-indicators">
+          <button class="hero-indicator active" data-slide="0" aria-label="Go to slide 1"></button>
+          <button class="hero-indicator" data-slide="1" aria-label="Go to slide 2"></button>
+          <button class="hero-indicator" data-slide="2" aria-label="Go to slide 3"></button>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="container y-u-w-full categories-section">
+      <h2>تسوق حسب الفئات</h2>
+      <div class="categories-slider">
+        <a href="./sub-category.html" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat1.png" alt="Category 1" />
+          <p>المكياج</p>
+        </a>
+        <a href="./sub-category.html" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat1.png" alt="Category 1" />
+          <p>المكياج</p>
+        </a>
+        <a href="./sub-category.html" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat2.png" alt="Category 1" />
+          <p>وصل حديثا</p>
+        </a>
+        <a href="./sub-category.html" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat3.png" alt="Category 1" />
+          <p>العطور</p>
+        </a>
+        <a href="#" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat4.png" alt="Category 1" />
+          <p>الاكثر مبيعا</p>
+        </a>
+        <a href="./sub-category.html" class="y-u-flex y-u-flex-col y-u-justify-center y-u-items-center">
+          <img src="../../assets/cat5.png" alt="Category 1" />
+          <p>منتجات العناية</p>
+        </a>
+      </div>
+      <div class="indecators">
+        <button class="indecator">
+          <img src="../../assets/arrow-right.svg" alt="" />
+        </button>
+        <button class="indecator">
+          <img src="../../assets/arrow-left.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <section class="banner-section container y-u-w-full">
+      <img src="../../assets/banner1.jpg" alt="Wave" class="y-u-w-full" />
+      <img src="../../assets/banner 2.jpg" alt="Wave" class="y-u-w-full" />
+    </section>
+    <section class="container y-u-w-full categories-section">
+      <div class="filtration">
+        <h2>الألكترونيات</h2>
+        <div class="selects">          <!-- Product Classification Filter Dropdown -->
+          <div class="filtration-button">
+            <button aria-haspopup="true" aria-expanded="false">
+              تصنيفة المنتجات
+              <img src="../../assets/arrow-right.svg" alt="" />
+            </button>
+            <div class="filtration-menu filter-menu-wide" role="menu">
+              <!-- Categories Section -->
+              <details class="filter-group">
+                <summary>
+                  <span>فئات المنتجات</span>
+                  <div class="toggle-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </summary>
+                <div class="filter-content">
+                  <label class="filter-row">
+                    <input type="radio" name="category" value="audio_visual" />
+                    <span>الصوتيات والمرئيات</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="category" value="home_theater" checked />
+                    <span>المسارح المنزلية</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="category" value="tablets" />
+                    <span>الأجهزة اللوحية</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="category" value="tv" />
+                    <span>التلفزيونات</span>
+                  </label>
+                </div>
+              </details>
+
+              <!-- Brands Section -->
+              <details class="filter-group" open>
+                <summary>
+                  <span>الماركات</span>
+                  <div class="toggle-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </summary>
+                <div class="filter-content">
+                  <label class="filter-row">
+                    <input type="radio" name="brand" value="lg" />
+                    <span>ال جي</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="brand" value="tcl" checked />
+                    <span>تي سي ال</span>
+                  </label>
+                </div>
+              </details>
+
+              <!-- Rating Section -->
+              <details class="filter-group">
+                <summary>
+                  <span>التقييم</span>
+                  <div class="toggle-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </summary>
+                <div class="filter-content">
+                  <label class="filter-row rating-row">
+                    <input type="radio" name="rating" value="5" />
+                    <div class="stars">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                    </div>
+                  </label>
+                  <label class="filter-row rating-row">
+                    <input type="radio" name="rating" value="4" />
+                    <div class="stars">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star empty"></i>
+                    </div>
+                  </label>
+                  <label class="filter-row rating-row">
+                    <input type="radio" name="rating" value="3" />
+                    <div class="stars">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                    </div>
+                  </label>
+                  <label class="filter-row rating-row">
+                    <input type="radio" name="rating" value="2" />
+                    <div class="stars">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                    </div>
+                  </label>
+                  <label class="filter-row rating-row">
+                    <input type="radio" name="rating" value="1" />
+                    <div class="stars">
+                      <i class="fas fa-star filled"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                      <i class="fas fa-star empty"></i>
+                    </div>
+                  </label>
+                </div>
+              </details>
+
+              <!-- Price Section -->
+              <details class="filter-group" open>
+                <summary>
+                  <span>السعر</span>
+                  <div class="toggle-icon">
+                    <i class="fas fa-plus"></i>
+                    <i class="fas fa-minus"></i>
+                  </div>
+                </summary>
+                <div class="filter-content">
+                  <label class="filter-row">
+                    <input type="radio" name="price_range" value="under_2100" />
+                    <span>أقل من 2100</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="price_range" value="2100_2100_1" checked />
+                    <span>من 2100 إلى 2100</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="price_range" value="2100_2100_2" />
+                    <span>من 2100 إلى 2100</span>
+                  </label>
+                  <label class="filter-row">
+                    <input type="radio" name="price_range" value="over_2100" />
+                    <span>أكثر من 2100</span>
+                  </label>
+
+                  <div class="price-inputs-row">
+                    <div class="price-input-group">
+                      <input type="number" placeholder=" " pattern="[0-9]*" />
+                      <span class="currency">ر.س</span>
+                      <span class="label">من</span>
+                    </div>
+                    <div class="price-input-group">
+                      <input type="number" placeholder=" " pattern="[0-9]*" />
+                      <span class="currency">ر.س</span>
+                      <span class="label">من</span>
+                    </div>
+                  </div>
+                </div>
+              </details>
+
+              <button class="delete-filter-btn">حذف الفلتر</button>
+              <button class="apply-filter-btn">تطبيق الفلتر</button>
+            </div>
+          </div>
+          <!-- Sort By Dropdown -->
+          <div class="filtration-button">
+            <button aria-haspopup="true" aria-expanded="false">
+              ترتيب حسب
+              <img src="../../assets/arrow-right.svg" alt="" />
+            </button>
+            <div class="filtration-menu" role="menu">
+              <label class="filtration-option">
+                <input type="radio" name="sort" value="recommended" checked />
+                مقترحاتنا
+              </label>
+              <label class="filtration-option">
+                <input type="radio" name="sort" value="best-selling" />
+                الأكثر مبيعا
+              </label>
+              <label class="filtration-option">
+                <input type="radio" name="sort" value="top-rated" />
+                الأعلى تقييما
+              </label>
+              <label class="filtration-option">
+                <input type="radio" name="sort" value="price-high-low" />
+                السعر من الأعلى إلى الأقل
+              </label>
+              <label class="filtration-option">
+                <input type="radio" name="sort" value="price-low-high" />
+                السعر من الأقل إلى الأعلى
+              </label>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-mb-32">
+        <h2 class="y-u-text-3xl y-u-text-bold y-u-mb-16 y-u-color-muted"> المنتجات الأفضل مبيعاً</h2>
+      </div>
+      <ul class="products-grid">
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+      </ul>
+      <div class="indecators">
+        <button class="indecator">
+          <img src="../../assets/arrow-right.svg" alt="" />
+        </button>
+        <button class="indecator">
+          <img src="../../assets/arrow-left.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-mb-32">
+        <h2 class="y-u-text-3xl y-u-text-bold y-u-mb-16 y-u-color-muted">المنتجات الأحدث</h2>
+      </div>
+      <ul class="products-grid">
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+      </ul>
+      <div class="indecators">
+        <button class="indecator">
+          <img src="../../assets/arrow-right.svg" alt="" />
+        </button>
+        <button class="indecator">
+          <img src="../../assets/arrow-left.svg" alt="" />
+        </button>
+      </div>
+    </section>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-mb-32">
+        <h2 class="y-u-text-3xl y-u-text-bold y-u-mb-16 y-u-color-muted">الالكترونيات</h2>
+      </div>
+      <ul class="products-grid">
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+              <div class="discount">خصم 20%</div>
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span><span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+        <li class="product-card">
+          <a href="../product-details/product-details.html" class="product-link">
+            <div class="product-img">
+              <img src="../../assets/cat1.png" alt="Product 1" />
+            </div>
+            <div class="product-content">
+              <p class="product-description">بنطلون رجالي كاجوال بجيوب سوستة وشريط فضي</p>
+              <p class="product-price">
+                <span>200.50 ر.س</span>
+              </p>
+            </div>
+          </a>
+          <div class="product-actions">
+            <button class="y-c-btn y-c-btn--primary product-add-to-cart">أضف إلى السلة <img
+                src="../../assets/cart-details.svg" alt=""></button>
+            <label class="product-add-to-wishlist">
+              <input type="checkbox" class="wishlist-checkbox">
+              <i class="far fa-heart"></i>
+            </label>
+          </div>
+        </li>
+
+      </ul>
+      <div class="pagination">
+        <button class="pagination-button">
+          <img src="../../assets/arrow-right.svg" alt="">
+        </button>
+        <button class="pagination-button active">1</button>
+        <button class="pagination-button">2</button>
+        <p>...</p>
+        <button class="pagination-button">9</button>
+        <button class="pagination-button">10</button>
+        <button class="pagination-button">
+          <img src="../../assets/arrow-left.svg" alt="">
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/y-hero-slider.js"></script>
+  <script src="../../js/brands-slider.js"></script>
+</body>
+
+</html>

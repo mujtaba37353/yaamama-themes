@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الاضافات | My Car</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <!-- Components -->
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <!-- Additions Page Styles -->
+    <link rel="stylesheet" href="y-additions.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main data-y="additions-main">
+        <div class="y-u-container">
+
+            <!-- ===== Stepper Navigation ===== -->
+            <nav class="y-l-stepper" data-y="additions-stepper">
+                <ol>
+                    <li class="y-c-step completed">
+                        <a href="/templates/store/layout.html">نتائج البحث</a>
+                    </li>
+
+                    <li class="y-c-step active">
+                        <span>الاضافات</span>
+                    </li>
+
+                    <li class="y-c-step"><a href="/templates/use-conditions/layout.html">شروط الاستخدام</a>
+                    </li>
+
+                    <li class="y-c-step"><a href="/templates/payment/layout.html">الدفع</a>
+                    </li>
+
+                    <li class="y-c-step">
+                        <span>التأكيد</span>
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="y-l-additions-content">
+
+                <!-- Location/Time Info -->
+                <div class="y-l-info-boxes" data-y="info-boxes">
+
+                    <div class="y-c-info-box y-c-info-box--pickup" data-y="pickup-box">
+                        <div class="y-c-info-box-header">
+                            <span>الاستلام</span>
+                        </div>
+
+                        <div class="y-c-additions-row">
+                            <div class="y-c-info-box-body">
+                                <p>Thu, 20 Nov, 01:00 PM</p>
+                                <p class="y-c-info-location">مكان الاستلام</p>
+                                <div class="y-c-location-dropdown">
+                                    <ul>
+                                        <li>الرياض الاحمدية</li>
+                                        <li>الرياض غرناطة</li>
+                                        <li>الرياض</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <i class="fas fa-chevron-down y-c-arrow"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="y-c-info-box y-c-info-box--delivery" data-y="delivery-box">
+
+                        <div class="y-c-info-box-header">
+                            <span>التسليم</span>
+                        </div>
+
+                        <div class="y-c-additions-row">
+
+                            <div class="y-c-info-box-body">
+                                <p>Wed, 26 Nov, 01:00 PM</p>
+                                <p class="y-c-info-location">مكان التسليم</p>
+                                <div class="y-c-location-dropdown">
+                                    <ul>
+                                        <li>الرياض الاحمدية</li>
+                                        <li>الرياض غرناطة</li>
+                                        <li>الرياض</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <i class="fas fa-chevron-down y-c-arrow"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Car Details -->
+                <div class="y-c-product-card" data-y="product-card">
+                    <div class="y-c-card-layout">
+
+                        <div class="y-c-card-info">
+                            <div>
+                                <div class="y-c-card-category" data-y="product-category">
+                                    <i class="fa-solid fa-car"></i>
+                                    سيدان صغيرة
+                                </div>
+                                <h3 class="y-c-card-name" data-y="product-title">نيسان صني 2025</h3>
+                                <div class="y-c-card-similar" data-y="product-similar">أو مشابهة</div>
+                            </div>
+                            <div class="y-c-card-features" data-y="product-features">
+                                <span class="y-c-card-feature-item" title="ركاب">
+                                    <i class="fa-solid fa-users"></i>
+                                    4
+                                </span>
+                                <span class="y-c-card-feature-item" title="حقائب">
+                                    <i class="fa-solid fa-suitcase"></i>
+                                    3
+                                </span>
+                                <span class="y-c-card-feature-item" title="ناقل حركة">
+                                    <i class="fa-solid fa-gear"></i>
+                                    A
+                                </span>
+                                <span class="y-c-card-feature-item" title="أبواب">
+                                    <i class="fa-solid fa-door-closed"></i>
+                                    4
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="y-c-card-image">
+                            <a href="/templates/single-product/layout.html?id=1" class="y-c-card-link"
+                                data-y="product-link">
+                                <img src="/assets/product.png" alt="نيسان صني" loading="lazy" data-y="product-image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additions List -->
+                <div class="y-l-additions-list" data-y="additions-list">
+                    <h3 class_="y-c-section-title">الاضافات</h3>
+
+                    <label class="y-c-addition-item" for="addon-km">
+
+                        <div class="y-c-addition-info">
+
+                            <i class="fas fa-infinity y-c-addition-icon"></i>
+                            <div>
+                                <span class="y-c-addition-title">كيلو متر مفتوح</span>
+                                <span class="y-c-addition-desc">تجول بلا قيود!</span>
+                            </div>
+
+                        </div>
+
+                        <span class="y-c-addition-price">400 ريال</span>
+
+                        <div>
+                            <input type="checkbox" id="addon-km" class="y-c-addition-checkbox">
+                        </div>
+
+                    </label>
+
+                    <label class="y-c-addition-item" for="addon-shield">
+
+                        <div class="y-c-addition-info">
+
+                            <i class="fas fa-shield-alt y-c-addition-icon"></i>
+                            <div>
+                                <span class="y-c-addition-title">درع ماي كار</span>
+                                <span class="y-c-addition-desc">أمن نفسك!</span>
+                            </div>
+
+                        </div>
+
+                        <span class="y-c-addition-price">400 ريال</span>
+
+                        <div>
+                            <input type="checkbox" id="addon-shield" class="y-c-addition-checkbox">
+                        </div>
+
+                    </label>
+
+                    <label class="y-c-addition-item" for="addon-seat">
+
+                        <div class="y-c-addition-info">
+
+                            <i class="fas fa-baby y-c-addition-icon"></i>
+                            <div>
+                                <span class="y-c-addition-title">مقعد الأطفال</span>
+                                <span class="y-c-addition-desc">لا تتنازل عن أمانهم!</span>
+                            </div>
+
+                        </div>
+
+                        <span class="y-c-addition-price y-c-price-free">مجاني</span>
+
+                        <div>
+                            <input type="checkbox" id="addon-seat" class="y-c-addition-checkbox" checked>
+                        </div>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- Summary -->
+            <aside class="y-l-summary-sidebar">
+                <div class="y-c-includes-card" data-y="includes-card">
+                    <h3 class="y-c-section-title">يتضمن الآتي</h3>
+                    <ul class="y-c-includes-list">
+                        <li><img src="/assets/check.png" alt="check"> سيارة معتمدة من الوكيل</li>
+                        <li><img src="/assets/check.png" alt="check"> تأمين اساسي</li>
+                        <li><img src="/assets/check.png" alt="check"> ضمان محدود</li>
+                        <li><img src="/assets/check.png" alt="check"> قواعد كهربائية</li>
+                        <li><img src="/assets/check.png" alt="check"> سيارة معتمدة من الوكيل</li>
+                        <li><img src="/assets/check.png" alt="check"> تأمين اساسي</li>
+                        <li><img src="/assets/check.png" alt="check"> ضمان محدود</li>
+                        <li><img src="/assets/check.png" alt="check"> قواعد كهربائية</li>
+                    </ul>
+                </div>
+                <a href="/templates/use-conditions/layout.html" class="y-c-basic-btn y-c-confirm-btn"
+                    data-y="confirm-button">
+                    تأكيد
+                </a>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <!-- JS -->
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+</body>
+
+</html>

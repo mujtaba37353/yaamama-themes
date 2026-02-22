@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>سوبر ماركت</title>
+    <link rel="Icon" type="img/text" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-home.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main data-y="home-main">
+        <div class="y-c-home-hero" data-y="home-hero">
+            <img src="/assets/hero-image.png" alt="Hero Image" data-y="hero-image">
+        </div>
+        <br>
+        <section class="y-l-slider-container y-l-container" aria-label="Newest Devices Slider"
+            data-y="devices-slider-section">
+            <div class="y-l-slider-wrapper" data-y="slider-wrapper">
+                <div class="y-c-slide" data-y="slide-1">
+                    <div class="y-c-slide-text" data-y="slide-1-text">
+                        <h1 data-y="slide-1-title">أحدث الأجهزة</h1>
+                        <p data-y="slide-1-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+                    </div>
+                    <div class="y-c-slide-image" data-y="slide-1-image-container">
+                        <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="slide-1-image">
+                    </div>
+                </div>
+                <div class="y-c-slide" data-y="slide-2">
+                    <div class="y-c-slide-text" data-y="slide-2-text">
+                        <h1 data-y="slide-2-title">أحدث الأجهزة</h1>
+                        <p data-y="slide-2-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+                    </div>
+                    <div class="y-c-slide-image" data-y="slide-2-image-container">
+                        <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="slide-2-image">
+                    </div>
+                </div>
+                <div class="y-c-slide" data-y="slide-3">
+                    <div class="y-c-slide-text" data-y="slide-3-text">
+                        <h1 data-y="slide-3-title">أحدث الأجهزة</h1>
+                        <p data-y="slide-3-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+                    </div>
+                    <div class="y-c-slide-image" data-y="slide-3-image-container">
+                        <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="slide-3-image">
+                    </div>
+                </div>
+            </div>
+
+            <button class="y-c-slider-btn y-c-slider-prev" aria-label="Previous Slide" data-y="slider-prev-btn"><i
+                    class="fas fa-chevron-left"></i></button>
+            <button class="y-c-slider-btn y-c-slider-next" aria-label="Next Slide" data-y="slider-next-btn"><i
+                    class="fas fa-chevron-right"></i></button>
+
+            <div class="y-c-slider-dots" data-y="slider-dots"></div>
+        </section>
+        <br>
+        <section class="y-l-brands-slider y-l-container" data-y="brands-section">
+            <h2 class="y-c-brands-title" data-y="brands-title">تصفح من خلال العلامات التجارية</h2>
+            <div class="y-c-brands-scroller" data-animated="true" data-y="brands-scroller">
+                <ul class="y-c-scroller-inner" data-y="brands-list">
+                    <li data-y="brand-item-1"><img src="/assets/10.png" alt="Vestel" data-y="brand-logo-1"></li>
+                    <li data-y="brand-item-2"><img src="/assets/10.png" alt="Brand 1" data-y="brand-logo-2"></li>
+                    <li data-y="brand-item-3"><img src="/assets/10.png" alt="Brand 2" data-y="brand-logo-3"></li>
+                    <li data-y="brand-item-4"><img src="/assets/10.png" alt="Vestel" data-y="brand-logo-4"></li>
+                    <li data-y="brand-item-5"><img src="/assets/10.png" alt="Brand 3" data-y="brand-logo-5"></li>
+                    <li data-y="brand-item-6"><img src="/assets/10.png" alt="Brand 4" data-y="brand-logo-6"></li>
+                    <li data-y="brand-item-7"><img src="/assets/10.png" alt="Brand 5" data-y="brand-logo-7"></li>
+                    <li data-y="brand-item-8"><img src="/assets/10.png" alt="Vestel" data-y="brand-logo-8"></li>
+                    <li data-y="brand-item-9"><img src="/assets/10.png" alt="Brand 5" data-y="brand-logo-9"></li>
+                    <li data-y="brand-item-10"><img src="/assets/10.png" alt="Brand 6" data-y="brand-logo-10"></li>
+                </ul>
+            </div>
+        </section>
+        <br>
+        <section class="y-l-categories y-l-container" data-y="categories-section">
+            <h2 class="y-c-categories-title" data-y="categories-title">تصفح من خلال الفئات</h2>
+            <div class="y-c-categories-grid" data-y="categories-grid">
+                <div class="y-c-category-card" data-y="category-card-1">
+                    <img src="/assets/tv.png" alt="Category 1" data-y="category-image-1">
+                    <h3 data-y="category-title-1">الهواتف الذكية</h3>
+                </div>
+                <div class="y-c-category-card" data-y="category-card-2">
+                    <img src="/assets/wash.png" alt="Category 2" data-y="category-image-2">
+                    <h3 data-y="category-title-2">الأجهزة اللوحية</h3>
+                </div>
+                <div class="y-c-category-card" data-y="category-card-3">
+                    <img src="/assets/vacup_cleaner.png" alt="Category 3" data-y="category-image-3">
+                    <h3 data-y="category-title-3">الكمبيوترات المحمولة</h3>
+                </div>
+                <div class="y-c-category-card" data-y="category-card-4">
+                    <img src="/assets/20.png" alt="Category 4" data-y="category-image-4">
+                    <h3 data-y="category-title-4">الإكسسوارات</h3>
+                </div>
+                <div class="y-c-category-card" data-y="category-card-5">
+                    <img src="/assets/conditioner.png" alt="Category 4" data-y="category-image-5">
+                    <h3 data-y="category-title-5">الإكسسوارات</h3>
+                </div>
+            </div>
+
+        </section>
+        <br>
+        <div class="y-l-home-promo y-l-container" data-y="home-promo-1">
+            <div class="y-c-slide-text" data-y="promo-1-text">
+                <h1 data-y="promo-1-title">أحدث الأجهزة</h1>
+                <p data-y="promo-1-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+            </div>
+            <div class="y-c-slide-image" data-y="promo-1-image-container">
+                <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="promo-1-image">
+            </div>
+        </div>
+        <br>
+        <section class="y-l-bestsellers y-l-container" data-y="bestsellers-section">
+            <h2 class="y-c-section-title" data-y="bestsellers-title">الاكثر مبيعا</h2>
+
+            <div id="product-container-bestsellers" class="y-l-product-grid y-c-slider-container-js" data-limit="4"
+                data-y="bestsellers-grid">
+            </div>
+
+        </section>
+        <br>
+        <div class="y-l-home-promo y-l-container" data-y="home-promo-2">
+            <div class="y-c-slide-text" data-y="promo-2-text">
+                <h1 data-y="promo-2-title">أحدث الأجهزة</h1>
+                <p data-y="promo-2-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+            </div>
+            <div class="y-c-slide-image" data-y="promo-2-image-container">
+                <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="promo-2-image">
+            </div>
+        </div>
+        <br>
+        <section class="y-l-bestsellers y-l-container" data-y="newest-products-section">
+            <h2 class="y-c-section-title" data-y="newest-products-title">أحدث المنتجات</h2>
+
+            <ul id="product-container-newest" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="newest-products-grid">
+            </ul>
+
+        </section>
+        <br>
+        <section class="y-l-cta-banner" data-y="cta-banner-section">
+            <div class="y-l-cta-content y-l-container" data-y="cta-content">
+                <h2 data-y="cta-title">مكنسة كهربائية عمودية لاسلكية U10 من دريم</h2>
+                <br>
+                <p data-y="cta-description">شفط قوي 19000 باسكال، رأس فرشاة دوار 180 درجة، خفيفة الوزن مثبتة على الحائط
+                    مع ضوء LED للارضيات .
+                </p>
+                <br>
+                <a href="/templates/categories/layout.html" class="y-c-btn-banner" data-y="cta-main-button">اشتري
+                    الآن</a>
+            </div>
+
+            <!-- New Infinite Slider Structure -->
+            <div class="y-c-features-slider y-l-container" data-y="cta-features-container">
+                <div class="y-c-features-track">
+                    <!-- Original Set of Cards -->
+                    <div class="y-c-home-feature-card" data-y="cta-feature-1">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" data-y="cta-feature-2">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" data-y="cta-feature-3">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" data-y="cta-feature-4">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        نظام ترشيح فعال
+                    </div>
+
+                    <!-- Duplicated Set for Seamless Loop -->
+                    <div class="y-c-home-feature-card" aria-hidden="true">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" aria-hidden="true">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" aria-hidden="true">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        سهلة الاستخدام
+                    </div>
+                    <div class="y-c-home-feature-card" aria-hidden="true">
+                        <i class="fa-solid fa-check"></i>
+                        <br>
+                        نظام ترشيح فعال
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/home.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/product-slider.js"></script>
+</body>
+
+</html>

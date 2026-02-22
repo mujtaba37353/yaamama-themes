@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>المفضلة</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-favorite.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="favorite-main">
+        <div class="y-l-container" data-y="favorite-container">
+            <h2 class="y-c-page-title" data-y="favorite-page-title">المفضلة</h2>
+            <p class="y-c-breadcrumb" data-y="favorite-breadcrumb"><a href="/templates/home/layout.html"
+                    data-y="breadcrumb-home">الرئيسية</a><span data-y="breadcrumb-separator"> > </span> المفضلة</p>
+
+            <div class="y-l-favorites-container" data-y="favorites-container">
+                <div class="y-c-empty-favorites" id="empty-favorites-message" data-y="empty-favorites-message">
+                    <i class="far fa-heart y-c-empty-icon" data-y="empty-favorites-icon"></i>
+                    <h3 data-y="empty-favorites-title">لا توجد منتجات في المفضلة</h3>
+                    <p data-y="empty-favorites-description">يمكنك إضافة المنتجات إلى المفضلة بالضغط على أيقونة القلب
+                        الموجودة على المنتج</p>
+                    <a href="/templates/shop-archive/layout.html" class="y-c-btn y-c-btn-primary y-c-checkout-btn"
+                        data-y="browse-products-btn">تصفح
+                        المنتجات</a>
+                </div>
+
+                <!-- Favorites products grid -->
+                <ul class="y-l-favorites-grid" id="favorites-grid" data-y="favorites-grid"></ul>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/favorite.js" data-y="favorite-script"></script>
+</body>
+
+</html>

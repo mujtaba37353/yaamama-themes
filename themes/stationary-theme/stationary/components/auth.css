@@ -1,0 +1,254 @@
+.auth-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--y-space-30) 0;
+  margin-bottom: 0;
+}
+.auth-section .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-26);
+}
+.auth-section .container.special {
+  grid-template-columns: 1fr;
+}
+.auth-section .container .right {
+
+  display: grid;
+  place-items: center;
+  color: var(--y-color-text);
+  background-color: var(--y-color-fg);
+  padding-block: var(--y-space-30);
+  padding-inline: var(--y-space-20);
+  border-radius: var(--y-space-14);
+}
+
+.auth-section .container .right.secondary {
+
+  display: grid;
+  place-items: center;
+  color: var(--y-color-text);
+  border: 2px solid var(--y-color-primary);
+  background-color: transparent;
+  padding: var(--y-space-20);
+  border-radius: var(--y-space-20);
+}
+.auth-section .container .right h2 {
+  width: 100%;
+  padding-bottom: 0;
+  font-weight: 600;
+}
+.auth-section .container .left {
+
+  display: grid;
+  place-items: center;
+}
+.auth-section .container .right p {
+  font-size: var(--y-space-32);
+  font-weight: 400;
+  text-align: justify;
+}
+.auth-section .container .left img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--y-space-18);
+}
+.auth-section .container.special .left img {
+  height: 479px;
+  width: 100%;
+}
+.auth-section form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+  width: 100%;
+}
+.auth-section form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.auth-section form .form-group label {
+  font-weight: 600;
+  font-size: var(--y-text-md);
+}
+.auth-section form .form-group input::placeholder {
+  font-size: var(--y-text-md);
+}
+.auth-section form a {
+  font-size: var(--y-text-md);
+  color: var(--y-color-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.auth-section form .form-group input ,.auth-section form .form-group textarea{
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 2px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  background-color: var(--y-color-bg);
+}
+.auth-section form .form-group input:focus,.auth-section form .form-group textarea:focus {
+  border-color: var(--y-color-border);
+  box-shadow: 0 0 0 3px
+    color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+  outline: none;
+}
+.auth-section form .form-group input:disabled,.auth-section form .form-group textarea:disabled {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form .form-group input:read-only,.auth-section form .form-group textarea:read-only {
+  background-color: var(--y-color-border);
+  cursor: not-allowed;
+}
+.auth-section form > button {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  padding: var(--y-space-12) var(--y-space-20);
+  border-radius: var(--y-space-8);
+  background-color: var(--y-color-button);
+  color: var(--y-color-text);
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.auth-section .secondary form button {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.auth-section form > button:hover {
+  transform: scale(1.05);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+.auth-section .secondary form > button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+  box-shadow: -6px 6px 9px 0px var(--y-color-bg);
+}
+
+
+.auth-section form .auth-switch {
+  width: 100%;
+  text-align: center !important;
+  font-weight: 700;
+  color: #000;   font-size: var(--y-space-16) !important;
+}
+.auth-section form .auth-switch a {
+  color: var(--y-color-primary);
+  text-decoration: none;
+  font-weight: 700;
+
+}
+.auth-section form .auth-switch a:hover {
+  color: var(--y-color-secondary);
+}
+
+.auth-section form .auth-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--y-space-12);
+  width: 100%;
+}
+.auth-section form .auth-remember {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--y-space-8);
+  font-weight: 700;
+}
+.auth-section form .auth-remember input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--y-color-primary);
+}
+.auth-section form .auth-note {
+  font-size: var(--y-space-16) !important;
+  line-height: var(--y-line-normal);
+  font-weight: 500 !important;
+  color: #000;
+}
+.auth-section form .auth-actions .auth-forgot {
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+}
+.auth-section form .auth-actions .auth-forgot:hover {
+  color: var(--y-color-secondary);
+}
+
+@media (max-width: 768px) {
+  .auth-section .container {
+    gap: var(--y-space-44);
+    grid-template-columns: 1fr;
+}
+  .auth-section .container .right {
+    width: 100%;
+  }
+  .auth-section .container .right.secondary {
+    width: 100%;
+  }
+  .auth-section .container .left:not(.special-img) {
+    width: 100%;
+    display: none;
+  }
+  .auth-section .container .left.special-img img{
+    height: 208px !important;
+  }
+  .auth-section .container .right p {
+    font-size: var(--y-space-24);
+  }
+  .auth-section .container .left img {
+    height: 300px;
+  }
+  .auth-section form {
+    padding: 0;
+  }
+  .auth-section .container .right h2 {
+    padding-right: 0;
+    padding-bottom: var(--y-space-24);
+  }
+}
+
+
+
+.password-group {
+  position: relative;
+}
+
+.password-input-wrapper {
+  position: relative;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: var(--y-space-48);
+}
+
+.password-toggle {
+  position: absolute;
+  right: var(--y-space-16);
+  top: 27px;
+  right: auto;
+  left: 0;
+  transform: translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: var(--y-space-8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--y-space-18);
+  transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+  color: var(--y-color-primary);
+}

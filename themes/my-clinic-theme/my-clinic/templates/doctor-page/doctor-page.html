@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Clinic</title>
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/box.css" />
+  <link rel="stylesheet" href="../../components/icons-badge.css" />
+  <link rel="stylesheet" href="../../components/doctor-page.css" />
+  <link rel="stylesheet" href="../../components/calendar.css" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="doctor-page">
+      <div class="container y-u-max-w-1200">
+
+        <div class="top">
+          <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+          <div class="content">
+            <h3>دكتور يوسف منصور</h3>
+            <p>استاذ جامعي تخصص عظام</p>
+            <div class="icons">
+              <div class="rating">
+                <strong>5</strong>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="views">
+                <p>5000</p>
+                <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+
+
+          <div class="content">
+            <div class="right">
+              <div class="box main-box">
+                <h3>عيادة دكتور يوسف منصور</h3>
+                <p>حي العليا، شارع الملك فهد، الرياض</p>
+                <div class="infos">
+                  <div class="info">
+                    <img src="../../assets/clock.svg" alt="مواعيد العمل">
+                    <p>مدة الانتظار</p>
+                    <p>30 دقيقه</p>
+                  </div>
+                  <div class="info">
+                    <img src="../../assets/ryal-primary.svg" alt="سعر الكشف">
+                    <p>سعر الكشف</p>
+                    <p>100 ريال</p>
+                  </div>
+                  <div class="info">
+                    <img src="../../assets/phone-primary.svg" alt="رقم الهاتف">
+                    <p>اتصل احجز</p>
+                    <p>+966 12 345 6789</p>
+                  </div>
+                </div>
+                <p class="grey">
+                  الكشف بأسبقية الحضور للعيادة
+                </p>
+                <!-- <button class="btn disabled fw">لا توجد مواعيد متاحه خلال الشهر القادم</button> -->
+                <!-- <div class="another-time">
+                    <p>لا توجد مواعيد متاحه</p>
+                  </div> -->
+                <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءً - 07:00
+                  مساءً) </a>
+
+                <button class="btn succend-button fw" id="open-calendar-btn">اختر موعد آخر</button>
+
+                <div id="calendar-popover" class="calendar-popover">
+                  <div class="calendar-header">
+                    <button class="prev-month">&lt;</button>
+                    <h3 class="month-year">نوفمبر 2025</h3>
+                    <button class="next-month">&gt;</button>
+                  </div>
+                  <div class="calendar-body">
+                    <div class="day-names">
+                      <span>الأحد</span>
+                      <span>الاثنين</span>
+                      <span>الثلاثاء</span>
+                      <span>الأربعاء</span>
+                      <span>الخميس</span>
+                      <span>الجمعة</span>
+                      <span>السبت</span>
+                    </div>
+                    <div class="days-grid">
+
+                    </div>
+                  </div>
+                  <div class="calendar-footer">
+                    <a href="../booking/booking-doctor.html" class="btn main-button fw" id="reservation-link">احجز في
+                      15/11/2025 (04:00 مساءً - 07:00 مساءً)</a>
+                  </div>
+                </div>
+              </div>
+              <h2>يمكنك الحجز مع أطباء أخريين</h2>
+              <div class="box doctor-info">
+
+                <div class="top">
+                  <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+                  <div class="desc">
+                    <p>دكتور يوسف منصور</p>
+                    <p>استاذ جامعي تخصص عظام</p>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="rating">
+                    <strong>5</strong>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="views">
+                    <p>5000</p>
+                    <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+                  </div>
+                  <div class="price">
+                    <p>300</p>
+                    <img src="../../assets/ryal.svg" alt="سعر الكشف بالريال">
+                  </div>
+                </div>
+                <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءً - 07:00
+                  مساءً) </a>
+
+              </div>
+              <div class="box doctor-info">
+
+                <div class="top">
+                  <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+                  <div class="desc">
+                    <p>دكتور يوسف منصور</p>
+                    <p>استاذ جامعي تخصص عظام</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <div class="rating">
+                    <strong>5</strong>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="views">
+                    <p>5000</p>
+                    <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+                  </div>
+                  <div class="price">
+                    <p>300</p>
+                    <img src="../../assets/ryal.svg" alt="سعر الكشف بالريال">
+                  </div>
+                </div>
+                <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءً - 07:00
+                  مساءً) </a>
+              </div>
+              <div class="box doctor-info">
+
+                <div class="top">
+                  <img src="../../assets/doctor-img.jpg" alt="صورة الطبيب">
+                  <div class="desc">
+                    <p>دكتور يوسف منصور</p>
+                    <p>استاذ جامعي تخصص عظام</p>
+                  </div>
+                </div>
+
+                <div class="bottom">
+                  <div class="rating">
+                    <strong>5</strong>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                  <div class="views">
+                    <p>5000</p>
+                    <img src="../../assets/eye.svg" alt="عدد المشاهدات">
+                  </div>
+                  <div class="price">
+                    <p>300</p>
+                    <img src="../../assets/ryal.svg" alt="سعر الكشف بالريال">
+                  </div>
+                </div>
+                <a href="../booking/booking-doctor.html" class="btn main-button fw">احجز اليوم (04:00 مساءً - 07:00
+                  مساءً) </a>
+              </div>
+            </div>
+            <div class="left">
+              <input type="radio" name="tab" id="about" checked>
+              <input type="radio" name="tab" id="rating">
+              <div class="tabs">
+
+                <label for="about">عن العيادة</label>
+
+
+                <label for="rating">تقييمات </label>
+
+
+              </div>
+              <div class="about-box">
+                <div class="box">
+                  <p class="title">عن الطبيب</p>
+                  <p>استاذ جراحة العظام والعمود الفقري وخبرة واسعة في الجراحات التقويمية واستبدال مفاصل الحوض والركبة</p>
+                </div>
+
+                <div class="box">
+                  <p class="title"> متخصص فى</p>
+                  <p>علاج الرباط الصليبى - عملية مفصل الكوع - عملية الغضروف - عملية تبديل مفصل الحوض - إعادة تسوية سطح
+                    مفصل الحوض - قطع عظمي في الركبة - استبدال مفصل الكتف - عملية تغيير مفصل الركبة</p>
+                </div>
+                <div class="box">
+                  <p class="title"> المؤهلات العلمية</p>
+                  <p>ماجستير ودكتوراه جراحة عظام وعمود فقري وعضوية عدة جمعيات عالميه للعظام والعمود الفقري</p>
+                </div>
+                <div class="box">
+                  <p class="title"> مميزات العيادة</p>
+                  <div class="featuers">
+                    <div class="feature">
+                      <img src="../../assets/elevator.png" alt="مصعد متاح">
+                      <p>مصعد</p>
+                    </div>
+                    <div class="feature">
+                      <img src="../../assets/tv.png" alt="شاشة تلفزيون">
+                      <p>شاشة تلفزيون</p>
+                    </div>
+                    <div class="feature">
+                      <img src="../../assets/air-cond.png" alt="تكييف هواء">
+                      <p>تكييف</p>
+                    </div>
+                    <div class="feature">
+                      <img src="../../assets/credit.png" alt="الدفع ببطاقة الائتمان">
+                      <p>الدفع الإلكترونى</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="title"> صور العيادة</p>
+                  <div class="imgs">
+                    <img src="../../assets/small-hospital.jpg" alt="صورة من داخل العيادة">
+                    <img src="../../assets/small-hospital.jpg" alt="صورة من داخل العيادة">
+                    <img src="../../assets/small-hospital.jpg" alt="صورة من داخل العيادة">
+                    <img src="../../assets/small-hospital.jpg" alt="صورة من داخل العيادة">
+                    <img src="../../assets/small-hospital.jpg" alt="صورة من داخل العيادة">
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="rating-box">
+                <div class="box">
+                  <p class="title"> التقييم العام</p>
+                  <div class="bottom">
+                    <div class="right">
+                      <div class="ratings">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                      </div>
+                      <p class="grey"> 4.9 التقييم من 1000 زائر </p>
+                    </div>
+                    <div class="left">
+                      <div class="rate">
+                        <p>الخدمة الطبية</p>
+                        <div class="ratings">
+                          <span>5</span>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+
+                        </div>
+                      </div>
+                      <div class="rate">
+                        <p>مكان الانتضار</p>
+                        <div class="ratings">
+                          <span>4.5</span>
+                          <i class="fa-solid fa-star-half-stroke"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+
+                        </div>
+                      </div>
+                      <div class="rate">
+                        <p>مساعد الطبيب</p>
+                        <div class="ratings">
+                          <span>4</span>
+                          <i class="fa-regular fa-star inactive"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+                          <i class="fa-solid fa-star"></i>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div class="box">
+                  <p class="title">رحمة أحمد <span>10 تقييمات</span></p>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="title">رحمة أحمد <span>10 تقييمات</span></p>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="title">رحمة أحمد <span>10 تقييمات</span></p>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="title">رحمة أحمد <span>10 تقييمات</span></p>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div class="box">
+                  <p class="title">رحمة أحمد <span>10 تقييمات</span></p>
+                  <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+
+                <button class="btn main-button center"> المزيد</button>
+
+
+
+
+
+              </div>
+
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+  <script src="../../js/calendar.js"></script>
+</body>
+
+</html>

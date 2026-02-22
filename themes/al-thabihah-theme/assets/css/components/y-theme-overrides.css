@@ -1,0 +1,72 @@
+:root {
+    --y-header-bg: var(--y-color-primary);
+    --y-footer-bg: var(--y-color-primary);
+    --y-add-to-cart-bg: var(--y-color-btn);
+    --y-add-to-cart-border: var(--y-color-error);
+    --y-add-to-cart-text: var(--y-color-error);
+    --y-checkout-bg: var(--y-color-btn);
+    --y-checkout-border: var(--y-color-error);
+    --y-checkout-text: var(--y-color-error);
+    --y-payment-bg: var(--y-color-btn);
+    --y-payment-border: var(--y-color-error);
+    --y-payment-text: var(--y-color-error);
+    --y-page-bg: var(--y-color-background);
+    --y-home-hero-image: url('../../../al-thabihah/assets/hero.jpg');
+}
+
+body {
+    background-color: var(--y-page-bg);
+}
+
+.y-l-header {
+    background: var(--y-header-bg);
+}
+
+.y-l-site-footer {
+    background: var(--y-footer-bg);
+}
+
+.y-c-add-to-cart {
+    background-color: var(--y-add-to-cart-bg);
+    color: var(--y-add-to-cart-text);
+    border-color: var(--y-add-to-cart-border);
+}
+
+.y-c-checkout-btn {
+    background-color: var(--y-checkout-bg);
+    color: var(--y-checkout-text);
+    border-color: var(--y-checkout-border);
+}
+
+#place_order,
+#complete-order-btn {
+    background-color: var(--y-payment-bg);
+    color: var(--y-payment-text);
+    border-color: var(--y-payment-border);
+}
+
+.y-l-home-hero::before {
+    background-image: var(--y-home-hero-image);
+}
+
+.y-c-floating-actions {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+}
+
+.y-c-floating-actions a {
+    background: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    padding: 10px 14px;
+    border-radius: 999px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}

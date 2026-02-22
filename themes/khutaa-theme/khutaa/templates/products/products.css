@@ -1,0 +1,23 @@
+main {
+  padding: 0 10rem;
+}
+@media (max-width: 820px) {
+  main {
+    padding: 0 1rem;
+  }
+}
+
+/* Remove ::before pseudo-element from products list that causes empty space */
+ul.products::before,
+ul.products.columns-4::before,
+ul.products.columns-5::before,
+ul.products.columns-6::before,
+.woocommerce ul.products::before,
+.woocommerce ul.products.columns-4::before {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

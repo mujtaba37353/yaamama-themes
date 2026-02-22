@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المفضلة</title>
+    <link rel="Icon" type="image/png" href="/assets/Frame 5.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="y-favorite.css">
+</head>
+
+<body>
+    <div class="y-c-sale-banner">
+        <p>خصم %20 على رسوم التوصيل</p>
+    </div>
+
+    <div id="header-placeholder" class="y-c-sticky-header"></div>
+
+    <section class="y-c-container">
+        <h1 class="y-c-header-title">المفضلة</h1>
+        <table data-y='favorites-table'>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>اسم المنتج</th>
+                    <th>سعر الوحدة</th>
+                    <th>حالة المخزون</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody data-y="favorites-body"></tbody>
+        </table>
+        <p class="y-c-empty-favorites" data-y="favorites-empty">لا توجد منتجات في المفضلة حتى الآن.</p>
+
+        <div class="y-c-share">
+            <div class="y-c-share-btns">
+                <span>مشاركة علي :</span>
+                <div class="y-c-icons">
+                    <a href="#" class="y-c-whatsapp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:sales@example.com" class="email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#" class="y-c-instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="y-c-twitter"><i class="fa-solid fa-x"></i></a>
+                    <a href="#" class="y-c-facebook"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+</body>
+
+</html>

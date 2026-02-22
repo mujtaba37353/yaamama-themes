@@ -1,0 +1,237 @@
+.footer {
+  width: 100%;
+  background: white;
+}
+.footer .container {
+  padding-top: var(--y-space-32);
+  padding-bottom: var(--y-space-32);
+  margin: var(--y-space-0) auto;
+  padding-left: var(--y-space-24);
+  padding-right: var(--y-space-24);
+  text-align: center;
+}
+.footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--y-space-22);
+}
+.footer .logo img {
+  width: var(--y-space-64);
+  object-fit: contain;
+  transition: transform var(--y-transition);
+  cursor: pointer;
+}
+.footer .logo img:hover {
+  transform: scale(1.1);
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--y-space-24);
+  padding-block: var(--y-space-40);
+}
+.footer-links ul {
+  list-style: none;
+  gap: var(--y-space-28);
+  display: grid;
+  color: var(--y-color-text);
+}
+
+.footer-links a {
+  color: var(--y-color-text);
+  transition: color var(--y-transition), transform var(--y-transition);
+}
+.footer-links a:hover {
+  color: var(--y-color-primary);
+  transform: translateX(-var(--y-space-2));
+}
+
+footer p {
+  color: var(--y-color-text);
+  text-align: center;
+  font-size: var(--y-text-sm);
+}
+footer li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    padding-top: var(--y-space-32);
+    padding-bottom: var(--y-space-32);
+  }
+
+  .footer-links-container {
+    justify-content: center;
+    text-align: center;
+    gap: var(--y-space-40);
+    order: 1;
+  }
+
+  .footer-logo {
+    order: 3;
+    align-items: center;
+  }
+
+  .footer-contact {
+    align-items: center;
+    text-align: center;
+    order: 2;
+  }
+
+  .footer-contact .map-image img {
+    width: var(--y-space-280);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    padding-top: var(--y-space-24);
+    padding-bottom: var(--y-space-24);
+    padding-left: var(--y-space-15);
+    padding-right: var(--y-space-15);
+  }
+
+  .footer-top {
+    gap: var(--y-space-24);
+  }
+
+  .footer-links-container {
+    gap: var(--y-space-24);
+  }
+
+  .footer-links h4 {
+    margin-bottom: var(--y-space-12);
+  }
+
+  .footer-links ul {
+    gap: var(--y-space-16);
+  }
+
+  .footer-links a {
+    padding: var(--y-space-8) var(--y-space-16);
+  }
+
+  .footer-logo img {
+    width: var(--y-space-80);
+    height: var(--y-space-80);
+  }
+
+  .footer-contact .map-image img {
+    width: 100%;
+    max-width: var(--y-space-280);
+  }
+}
+
+@media (max-width: 767px) {
+  .footer .container {
+    padding: var(--y-space-24) var(--y-space-12);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: var(--y-space-20);
+    padding-block: var(--y-space-24);
+  }
+
+  .footer-links ul {
+    gap: var(--y-space-16);
+    text-align: center;
+    padding-bottom: var(--y-space-24);
+  }
+
+  .footer .logo img {
+    width: var(--y-space-64);
+    height: var(--y-space-64);
+  }
+
+  .footer-links a {
+    padding: var(--y-space-6) var(--y-space-12);
+  }
+
+  footer p {
+    margin-top: var(--y-space-16);
+  }
+}
+
+@media (max-width: 575px) {
+  .footer .container {
+    padding: var(--y-space-20) var(--y-space-8);
+  }
+
+  .footer-links {
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: var(--y-space-16);
+    padding-block: var(--y-space-20);
+  }
+
+  .footer-links ul {
+    gap: var(--y-space-12);
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-links ul:nth-child(1) {
+    order: 3;
+  }
+  .footer-links ul:nth-child(2) {
+    order: 1;
+  }
+  .footer-links ul:nth-child(3) {
+    order: 2;
+  }
+
+  .footer .logo img {
+    width: var(--y-space-56);
+    height: var(--y-space-56);
+  }
+
+  .footer-links a {
+    padding: var(--y-space-4) var(--y-space-8);
+  }
+
+  footer p {
+    margin-top: var(--y-space-12);
+  }
+}
+
+@media (max-width: 375px) {
+  .footer .container {
+    padding: var(--y-space-16) var(--y-space-6);
+  }
+
+  .footer-links {
+    gap: var(--y-space-12);
+    padding-block: var(--y-space-16);
+  }
+
+  .footer-links ul {
+    gap: var(--y-space-8);
+  }
+
+  .footer .logo img {
+    width: var(--y-space-48);
+    height: var(--y-space-48);
+  }
+
+  .footer-links a {
+    padding: var(--y-space-2) var(--y-space-6);
+    font-size: var(--y-text-xs);
+  }
+
+  footer p {
+    font-size: 10px;
+    margin-top: var(--y-space-8);
+  }
+  footer li {
+    justify-content: flex-start;
+  }
+  .footer .logo {
+    justify-content: flex-start;
+  }
+}

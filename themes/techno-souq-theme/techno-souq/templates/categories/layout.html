@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">تسوّق</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-categories.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="categories-main">
+        <section class="y-l-container" data-y="categories-container">
+            <!-- Category sections with product cards -->
+            <div class="y-l-categories-header" data-y="vegetables-header">
+                <h2 data-y="vegetables-title">خضراوات:</h2>
+                <a href="/templates/shop-archive/layout.html" class="y-c-categories-btn"
+                    data-y="vegetables-view-all-btn">شاهد الكل</a>
+            </div>
+            <!-- Added 'y-c-slider-container-js' class here -->
+            <div id="product-container-vegetables" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="vegetables-product-grid"></div>
+
+            <br data-y="vegetables-fruits-separator">
+            <div class="y-l-categories-header" data-y="fruits-header">
+                <h2 data-y="fruits-title">فواكه:</h2>
+                <a href="/templates/shop-archive/layout.html" class="y-c-categories-btn"
+                    data-y="fruits-view-all-btn">شاهد الكل</a>
+            </div>
+            <!-- Added 'y-c-slider-container-js' class here -->
+            <div id="product-container-fruits" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="fruits-product-grid">
+            </div>
+
+            <br data-y="fruits-dairy-separator">
+            <div class="y-l-categories-header" data-y="dairy-header">
+                <h2 data-y="dairy-title">منتجات ألبان:</h2>
+                <a href="/templates/shop-archive/layout.html" class="y-c-categories-btn"
+                    data-y="dairy-view-all-btn">شاهد الكل</a>
+            </div>
+            <!-- Added 'y-c-slider-container-js' class here -->
+            <div id="product-container-dairy" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="dairy-product-grid"></div>
+
+            <br data-y="dairy-bakery-separator">
+            <div class="y-l-categories-header" data-y="bakery-header">
+                <h2 data-y="bakery-title">مخبوزات:</h2>
+                <a href="/templates/shop-archive/layout.html" class="y-c-categories-btn"
+                    data-y="bakery-view-all-btn">شاهد الكل</a>
+            </div>
+            <!-- Added 'y-c-slider-container-js' class here -->
+            <ul id="product-container-bakery" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="bakery-product-grid"></ul>
+            <br data-y="bakery-bottom-separator">
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/shop-archive.js"></script>
+    <script src="../../js/product-slider.js"></script>
+</body>
+
+</html>

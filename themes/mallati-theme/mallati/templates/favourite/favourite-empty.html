@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>mallati - مولاتي</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/breadcrumb.css" /> 
+   <link rel="stylesheet" href="../../components/empty.css" />
+  <link rel="stylesheet" href="./favourite.css" />
+
+  <!-- Add the empty state CSS here if created as a new file -->
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full fav-page">
+        <div class="header y-u-flex y-u-flex-col y-u-py-32 y-u-p-t-24">
+          <h1 class="y-u-color-muted y-u-text-2xl"> قائمة المفضلة</h1>
+          <p class="y-u-text-2xl y-u-text-bold y-u-mb-16 y-u-color-muted breadcrumb"><a
+              href="../layout/index.html">الرئيسية</a> > قائمة المفضلة</p>
+        </div>
+
+        <!-- Empty State Content -->
+        <div class="empty-state">
+            <i class="fa-solid fa-heart"></i>
+            <h3>لا توجد عناصر</h3>
+            <p>لم تقم بإضافة أي منتجات إلى قائمة المفضلة الخاصة بك.<br> تصفح المنتجات وأضفها إلى قائمتك لحفظها هنا.</p>
+            <a href="../layout/index.html" class="btn-empty-action">عودة للتسوق</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+</html>

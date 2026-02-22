@@ -1,0 +1,136 @@
+/* Thank You Page – مشابه لـ success popup في التصميم */
+.thank-you-page {
+  padding: var(--y-space-48) var(--y-space-24);
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-content {
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--y-color-bg);
+  padding: var(--y-space-40);
+  border-radius: var(--y-radius-m);
+  box-shadow: var(--y-color-shadow);
+}
+
+.thank-you-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto var(--y-space-24);
+  border-radius: 50%;
+  background-color: var(--y-color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-icon i {
+  color: var(--y-color-bg);
+  font-size: 2rem;
+}
+
+.thank-you-title {
+  font-size: var(--y-space-28);
+  font-weight: 700;
+  color: var(--y-color-txt);
+  margin-bottom: var(--y-space-32);
+}
+
+.thank-you-booking {
+  text-align: right;
+  margin-bottom: var(--y-space-32);
+  padding: var(--y-space-24);
+  background: color-mix(in oklab, var(--y-color-primary) 8%, transparent);
+  border-radius: var(--y-radius-m);
+}
+
+.thank-you-booking .booking-label {
+  font-size: var(--y-space-14);
+  color: var(--y-color-txt);
+  opacity: 0.7;
+  margin-bottom: var(--y-space-8);
+}
+
+.thank-you-booking .booking-name {
+  display: block;
+  font-size: var(--y-space-22);
+  font-weight: 600;
+  color: var(--y-color-primary);
+  margin-bottom: var(--y-space-12);
+  text-decoration: none;
+}
+
+.thank-you-booking .booking-name:hover {
+  text-decoration: underline;
+}
+
+.thank-you-booking .booking-date {
+  font-size: var(--y-space-18);
+  color: var(--y-color-txt);
+  margin: 0;
+}
+
+.thank-you-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--y-space-16);
+  justify-content: center;
+  margin-bottom: var(--y-space-32);
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-radius-m);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--y-space-18);
+  transition: opacity 0.2s;
+}
+
+.contact-btn:hover {
+  opacity: 0.9;
+}
+
+.contact-whatsapp {
+  background: #25d366;
+  color: #fff;
+}
+
+.contact-whatsapp i {
+  font-size: 1.4rem;
+}
+
+.contact-phone {
+  background: var(--y-color-primary);
+  color: var(--y-color-bg);
+}
+
+.contact-phone i {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .thank-you-content {
+    padding: var(--y-space-24);
+  }
+
+  .thank-you-title {
+    font-size: var(--y-space-24);
+  }
+
+  .thank-you-contact {
+    flex-direction: column;
+  }
+
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

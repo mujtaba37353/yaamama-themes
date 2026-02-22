@@ -1,0 +1,37 @@
+{
+    "template": "about-us",
+    "slots": {
+        "page-title": "About us page title",
+        "header-placeholder": "Header component placeholder",
+        "about-main": "Main content container for about us page",
+        "about-container": "About us page container wrapper",
+        "about-title-top-separator": "Top separator before about title",
+        "about-title": "About us main title",
+        "about-title-separator": "Separator after about title",
+        "about-content": "About us content section",
+        "about-paragraph-1": "First about us paragraph",
+        "about-paragraph-1-separator": "Separator after first paragraph",
+        "about-paragraph-2": "Second about us paragraph",
+        "about-paragraph-2-separator": "Separator after second paragraph",
+        "about-paragraph-3": "Third about us paragraph",
+        "vision-section-separator": "Separator before vision section",
+        "vision-title": "Vision section title",
+        "vision-title-separator": "Separator after vision title",
+        "vision-content": "Vision content section",
+        "vision-paragraph": "Vision paragraph text",
+        "values-section-separator": "Separator before values section",
+        "values-title": "Values section title",
+        "values-title-separator": "Separator after values title",
+        "values-content": "Values content section",
+        "values-item-1": "First values item",
+        "values-item-2": "Second values item",
+        "values-item-3": "Third values item",
+        "values-item-4": "Fourth values item",
+        "bottom-separator-1": "First bottom separator",
+        "bottom-separator-2": "Second bottom separator",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

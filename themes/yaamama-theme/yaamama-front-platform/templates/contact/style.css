@@ -1,0 +1,66 @@
+.info-card {
+  background-color: var(--y-color-primary-subtle);
+  border: 1px solid var(--y-color-primary-subtle);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  color: var(--y-color-primary);
+  font-size: 20px;
+  border: 1px solid var(--y-color-primary-subtle);
+}
+
+.info-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  color: var(--y-color-txt);
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 1px solid var(--y-color-primary-subtle);
+}
+
+.social-icons a:hover {
+  background-color: var(--y-color-primary);
+  color: #fff;
+}
+
+.info-card,
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-12);
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h1 {
+    font-size: var(--font-l);
+  }
+
+  .contact-section>p {
+    font-size: var(--font-s);
+  }
+
+  .info-card h2 {
+    font-size: var(--font-l) !important;
+    margin-bottom: var(--y-space-0) !important;
+    padding: 0 !important;
+  }
+}

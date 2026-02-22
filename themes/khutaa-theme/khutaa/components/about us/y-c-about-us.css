@@ -1,0 +1,48 @@
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 5rem;
+  margin: 3rem 0;
+}
+
+.about-card img {
+  width: 70%;
+  height: auto;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.about-card p {
+  font-size: 1.4rem;
+  line-height: 2.5rem;
+  color: black;
+  font-weight: 600;
+}
+
+.about-card:nth-child(even) p {
+  order: 2;
+}
+
+.about-card:nth-child(even) img {
+  order: 1;
+}
+@media (max-width: 820px) {
+  .about-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-card img {
+    width: 100%;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .about-card p {
+    font-size: 1.5rem;
+    font-weight: 650;
+    line-height: 3rem;
+    order: 2;
+  }
+}

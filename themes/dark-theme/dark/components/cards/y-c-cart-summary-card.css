@@ -1,0 +1,134 @@
+.cart-summary {
+  width: 400px;
+  background: transparent;
+  border: 1px solid var(--y-main);
+  border-radius: 15px;
+  padding: 20px;
+  padding-bottom: 0;
+  box-sizing: border-box;
+}
+.cart-summary p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+.cart-summary hr {
+  border: none;
+  border-top: 1px solid var(--y-main);
+  margin: 10px 0;
+}
+.cart-summary div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: var(--y-radius-8);
+}
+.cart-summary .order-summary-price{
+  width: 100px;
+  justify-content: flex-start;
+align-self: flex-start;
+
+}
+.cart-summary a {
+  width: 100%;
+  text-align: center;
+}
+
+.order-summary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.order-summary-title {
+  margin: 0 0 12px;
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.order-summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-top: 1px solid var(--y-main);
+}
+
+.order-summary-item:last-of-type {
+  padding-bottom: 0;
+}
+
+.order-summary-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-summary-name {
+  margin: 0;
+}
+
+.order-summary-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.order-summary-currency {
+  height: 28px;
+}
+
+.order-summary-image-wrapper {
+  position: relative;
+}
+
+.order-summary-image {
+  width: 97px;
+  height: 97px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.order-summary-qty {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ff3333;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.order-summary-divider {
+  border: none;
+  border-top: 1px solid var(--y-main);
+  margin: 16px 0 0;
+}
+
+@media (max-width: 820px) {
+  .cart-summary {
+    width: 95%;
+    min-width: 300px;
+    margin: 20px auto 0;
+  }
+  .cart-summary .title {
+    font-size: 1.8em;
+    font-weight: 700;
+  }
+  .cart-summary p {
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: right;
+    margin: 10px 40px;
+  }
+}
+

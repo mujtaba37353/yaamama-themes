@@ -1,0 +1,87 @@
+<header class="y-u-flex y-u-justify-center y-u-items-center y-u-fixed header y-u-top-left">
+  <div class="container y-u-flex y-u-justify-between y-u-items-center y-u-w-full y-u-max-w-1200 top">
+    <div class="logo y-u-flex y-u-justify-end y-u-items-center">
+      <a href="/my-kitchen/" class="y-u-text-3xl y-u-font-bold y-u-color-primary">
+        <img src="../../assets/logo.png" alt="navbar-icon">
+      </a>
+      <form class="search-input" action="/my-kitchen/shop/" method="get">
+        <button type="submit" class="search-input__button" aria-label="بحث">
+          <i class="fa-solid fa-search"></i>
+        </button>
+        <input type="text" name="s" placeholder="ابحث عن منتج" />
+        <input type="hidden" name="post_type" value="product" />
+      </form>
+    </div>
+
+    <div class="user-nav y-u-flex y-u-justify-end y-u-items-center">
+      <a href="/my-kitchen/wishlist/">
+        <i class="fa fa-heart"></i>
+      </a>
+      <a href="/my-kitchen/cart/">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span class="myk-cart-count" data-y="cart-count">0</span>
+      </a>
+      <a href="/my-kitchen/my-account/">
+        <i class="fa fa-user"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="mobile-menu-overlay">
+    <ul class="mobile-menu y-u-flex y-u-justify-start y-u-flex-col y-u-gap-16">
+      <li><a href="/my-kitchen/">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a></li>
+
+      <li><a href="/my-kitchen/shop/">
+          <i class="fa-solid fa-store"></i> المتجر
+        </a></li>
+
+      <li><a href="/my-kitchen/offers/">
+          <i class="fa-solid fa-tags"></i> العروض
+        </a></li>
+
+      <li data-y="nav-categories-anchor"></li>
+
+    </ul>
+
+  </div>
+
+
+  <div class="container y-u-flex y-u-justify-between y-u-items-center y-u-w-full y-u-max-w-1200 bottom">
+    <ul class="desktop-menu y-u-flex y-u-justify-end y-u-items-center">
+      <li><a href="/my-kitchen/">
+          <i class="fa-solid fa-house"></i> الرئيسية
+        </a></li>
+
+      <li><a href="/my-kitchen/shop/">
+          <i class="fa-solid fa-store"></i> المتجر
+        </a></li>
+
+      <li><a href="/my-kitchen/offers/">
+          <i class="fa-solid fa-tags"></i> العروض
+        </a></li>
+
+      <li data-y="nav-categories-anchor"></li>
+
+    </ul>
+    <button class="mobile-menu-btn y-u-flex-col y-u-justify-between" aria-label="Toggle mobile menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="user-nav y-u-flex y-u-justify-end y-u-items-center mobile">
+      <a href="/my-kitchen/wishlist/">
+        <i class="fa fa-heart"></i>
+      </a>
+      <a href="/my-kitchen/cart/">
+        <i class="fa-solid fa-basket-shopping"></i>
+        <span class="myk-cart-count" data-y="cart-count">0</span>
+      </a>
+      <a href="/my-kitchen/my-account/">
+        <i class="fa fa-user"></i>
+      </a>
+    </div>
+  </div>
+
+</header>

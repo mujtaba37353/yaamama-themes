@@ -1,0 +1,183 @@
+.y-l-additions-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+.y-l-summary-sidebar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--y-spacing-lg);
+}
+
+/* ========== Info Boxes ========== */
+.y-l-info-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-info-box {
+    padding: var(--y-spacing-md);
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-info-box--delivery {
+    background-color: var(--y-color-warning);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-info-box--pickup {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-info-box-header {
+    display: flex;
+    align-items: center;
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-lg);
+    margin-bottom: var(--y-spacing-xs);
+    cursor: pointer;
+}
+
+.y-c-additions-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.y-c-arrow {
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-xl);
+    margin-bottom: var(--y-spacing-xs);
+    cursor: pointer;
+}
+
+.y-c-info-box-body p {
+    font-size: var(--y-font-size-md);
+    margin: 0;
+}
+
+.y-c-info-box-body .y-c-info-location {
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-c-info-box-body {
+    position: relative;
+    width: 100%;
+}
+
+/* ========== Additions List ========== */
+.y-l-additions-list {
+    background-color: var(--y-color-background-light);
+    border: 2px solid var(--y-color-border-blured);
+    border-radius: var(--y-border-radius-sm);
+    padding: var(--y-spacing-lg);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-section-title {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-addition-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--y-color-hero-form);
+    border-radius: var(--y-border-radius-md);
+    margin-bottom: var(--y-spacing-md);
+    padding: var(--y-spacing-md);
+    cursor: pointer;
+}
+
+.y-c-addition-info {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-addition-icon {
+    font-size: var(--y-font-size-2xl);
+    color: var(--y-color-primary);
+    width: var(--y-size-30);
+    text-align: center;
+}
+
+.y-c-addition-title {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+    display: block;
+}
+
+.y-c-addition-desc {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+}
+
+.y-c-addition-price {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-addition-checkbox {
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    accent-color: var(--y-color-primary);
+}
+
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+    .y-l-info-boxes {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-car-details-card {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .y-l-summary-sidebar {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-car-name {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-car-features {
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-addition-info {
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-addition-title {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-addition-price {
+        font-size: var(--y-font-size-md);
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-includes-list {
+        grid-template-columns: 1fr;
+    }
+}

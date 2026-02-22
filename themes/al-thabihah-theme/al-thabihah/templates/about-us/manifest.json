@@ -1,0 +1,20 @@
+{
+    "template": "about-us",
+    "slots": {
+        "page-title": "Page title for About Us",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "about-us-content": "Main content container for the page",
+        "about-text-content": "Container for the text content",
+        "about-title": "The 'About Us' heading",
+        "about-description": "The 'About Us' paragraph",
+        "about-image-container": "Container for the image",
+        "about-image": "The image itself",
+        "footer-placeholder": "Footer component placeholder",
+        "shared-components-script": "Shared components JavaScript file"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js"
+    ]
+}

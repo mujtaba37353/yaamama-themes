@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">انشاء حساب</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-signup.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main class="y-l-container" data-y="signup-main">
+        <div class="y-l-login-page" data-y="signup-page">
+            <div class="y-c-auth-card" data-y="signup-card">
+
+                <div class="y-l-auth-grid" data-y="signup-grid">
+                    <div class="y-l-auth-form" data-y="signup-form-section">
+                        <h2 class="y-c-auth-card__title" data-y="signup-title">إنشاء حساب جديد</h2>
+                        <div class="y-c-auth-form-group" data-y="email-form-group">
+                            <label for="email" class="y-c-auth-form-label" data-y="email-label">البريد
+                                الإلكتروني</label>
+                            <input type="email" id="email" class="y-c-form-input" placeholder="" data-y="email-input">
+                        </div>
+                        <div class="y-c-auth-form-group" data-y="password-form-group">
+                            <label for="password" class="y-c-auth-form-label" data-y="password-label">كلمة السر</label>
+                            <input type="password" id="password" class="y-c-form-input" placeholder=""
+                                data-y="password-input">
+                        </div>
+                        <div class="y-c-auth-form-group" data-y="confirm-password-form-group">
+                            <label for="confirm-password" class="y-c-auth-form-label"
+                                data-y="confirm-password-label">تأكيد كلمة السر</label>
+                            <input type="password" id="confirm-password" class="y-c-form-input" placeholder=""
+                                data-y="confirm-password-input">
+                            <div class="y-c-auth-options" data-y="login-options">
+                                <span>
+                                    <input type="checkbox" name="remember" id="remember" data-y="remember-checkbox" />
+                                    تذكرني
+                                </span>
+
+                                <div class="y-l-signup-link">
+                                    <span>
+                                        لديك حساب؟
+                                    </span>
+                                    <a href="/templates/login/layout.html" class="y-c-auth-link" data-y="signup-link">
+                                        سجل الآن</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <button class="y-c-btn y-c-btn-primary y-c-btn-full" data-y="signup-submit-btn">إنشاء
+                            حساب</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+</body>
+
+</html>

@@ -1,0 +1,326 @@
+.details-section .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+}
+.details-section .container .imgs-section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: var(--y-space-12);
+  align-items: center;
+}
+.details-section .container .imgs-section .imgs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.details-section .container .imgs-section .imgs img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--y-space-12);
+}
+.details-section .container .imgs-section .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.details-section .container .imgs-section .main-img img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--y-space-12);
+}
+.details-section .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-20);
+}
+.details-section .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+
+.details-section .breadcrumbs.mobile {
+  display: none;
+}
+.details-section .breadcrumbs a {
+  text-decoration: none;
+  color: var(--y-color-muted);
+  font-size: var(--y-space-16);
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.details-section .breadcrumbs a:hover {
+  color: var(--y-color-pink);
+}
+.details-section .breadcrumbs a.active {
+  color: var(--y-color-pink);
+}
+.details-section .container .content .rating {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .container .content .rating .stars {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .container .content .rating .stars i {
+  color: #ebd71e;
+}
+.details-section .container .content .rating p {
+  font-size: var(--y-space-16);
+}
+.details-section .container .content .rating p:nth-child(2) {
+  font-weight: 700;
+}
+
+.details-section .content h3 {
+  font-size: var(--y-space-32);
+  color: var(--y-color-text);
+}
+.details-section .content > p {
+  font-size: var(--y-space-20);
+  color: var(--y-color-text);
+}
+.details-section .content .price {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.details-section .content .price p {
+  font-size: var(--y-space-32);
+  color: var(--y-color-text);
+}
+.details-section .content .price img {
+  width: var(--y-space-24);
+  height: var(--y-space-24);
+}
+.details-section .content .buttons {
+  display: flex;
+  gap: var(--y-space-16);
+  align-items: center;
+}
+.details-section .content .buttons button {
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  font-weight: 600;
+  border: none;
+  border-radius: var(--y-space-8);
+  padding: var(--y-space-12) var(--y-space-64);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid var(--y-color-primary);
+}
+.details-section .content .buttons button:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-bg);
+  border: 2px solid var(--y-color-secondary);
+}
+.details-section .content .buttons button:last-child {
+  background-color: var(--y-color-fg);
+  color: var(--y-color-text);
+  font-weight: 600;
+  border: none;
+  border: 2px solid var(--y-color-border);
+  border-radius: var(--y-space-8);
+  padding: var(--y-space-12) var(--y-space-64);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.details-section .content .buttons button:last-child:hover {
+  background-color: var(--y-color-border);
+  border: 2px solid var(--y-color-border);
+}
+.ingredients-section .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+}
+.ingredients-section .container .details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+.ingredients-section .container .details h2 {
+  font-size: var(--y-space-48);
+  color: var(--y-color-text);
+}
+.ingredients-section .container .details .grid-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+}
+.ingredients-section .container .details .grid-items .item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.ingredients-section .container .details .grid-items .item p {
+  font-size: var(--y-space-24);
+  color: var(--y-color-text);
+  font-weight: 600;
+}
+.ingredients-section .container .details .grid-items .item p:last-child {
+  color: var(--y-color-muted);
+  font-size: var(--y-space-20);
+  font-weight: 400;
+}
+
+.ingredients-section .container > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--y-space-20);
+}
+.way-section .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-24);
+}
+.way-section .container h2, .products-section h2 {
+  font-size: var(--y-space-48);
+  color: var(--y-color-text);
+}
+.way-section .container .way-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--y-space-24);
+}
+.way-section .container .way-grid .item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--y-space-24);
+  align-items: center;
+}
+.way-section .container .way-grid .item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--y-space-20);
+}
+.way-section .container .way-grid .item .info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-8);
+}
+.way-section .container .way-grid .item .info p {
+  font-size: var(--y-space-24);
+  color: var(--y-color-text);
+  font-weight: 700;
+}
+.way-section .container .way-grid .item .info p:last-child {
+  color: var(--y-color-muted);
+  font-size: var(--y-space-20);
+  font-weight: 400;
+}
+
+
+
+@media (max-width: 768px) {
+  .details-section .container .content .breadcrumbs {
+    flex-wrap: wrap;
+  }
+  .details-section .container .imgs-section .imgs {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--y-space-14);
+    order: 2;
+  }
+  .details-section {
+    margin-top: var(--y-space-60);
+  }
+  .details-section .container {
+    grid-template-columns: 1fr;
+  }
+  .details-section .container .imgs-section {
+    grid-template-columns: 1fr;
+  }
+  .details-section .content .buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .ingredients-section .container {
+    grid-template-columns: 1fr;
+  }
+  .way-section .container {
+    grid-template-columns: 1fr;
+  }
+  .way-section .container .way-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .way-section .container .way-grid .item .info {
+    grid-template-columns: 1fr;
+  }
+  .way-section .container .way-grid .item .info p {
+    font-size: var(--y-space-20);
+  }
+  .details-section .breadcrumbs.mobile {
+    display: flex;
+    margin-top: var(--y-space-24);
+  }
+  .details-section .breadcrumbs:not(.mobile) {
+    display: none;
+  }
+
+  .payment-methods .container{
+    grid-template-columns: 1fr;
+  }
+  .payment-methods .container .payment-method p {
+    font-size: var(--y-space-16);
+  }
+  .ingredients-section .container > img {
+    order: -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .ingredients-section .container .details .grid-items {
+    grid-template-columns: 1fr;
+  }
+  .way-section .container .way-grid .item {
+    grid-template-columns: 1fr;
+  }
+  .ingredients-section .container .details .grid-items .item {
+    align-items: center;
+  }
+  .ingredients-section .container .details {
+    align-items: center;
+  }
+  .way-section .container {
+    align-items: center;
+  }
+
+  .details-section .content h3 {
+    font-size: var(--y-space-16);
+  }
+  .details-section .content > p {
+    font-size: var(--y-space-16);
+  }
+  .details-section .content .price p {
+    font-size: var(--y-space-16);
+  }
+  .details-section .content .price img {
+    width: var(--y-space-24);
+    height: var(--y-space-24);
+  }
+
+  .payment-methods .container .payment-method{
+    grid-template-columns: 1fr;
+  }
+  .payment-methods .container .payment-method img {
+    order: 1;
+  }
+  .payment-methods .container .payment-method p {
+    order: 2;
+  }
+
+}
+

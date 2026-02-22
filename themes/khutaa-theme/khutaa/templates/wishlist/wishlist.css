@@ -1,0 +1,18 @@
+main {
+  padding: 0 10rem;
+}
+
+.wishlist-page .wishlist-btn i {
+  font-weight: 800 !important;
+  color: var(--y-color-btn);
+}
+
+.wishlist-btn i {
+  font-weight: 800 !important;
+}
+
+@media (max-width: 820px) {
+  main {
+    padding: 0 1rem;
+  }
+}

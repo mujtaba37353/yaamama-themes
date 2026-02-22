@@ -1,0 +1,23 @@
+.policy-container div {
+    margin-bottom: 2rem;
+}
+.policy-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+.policy-container p {
+    font-size: 1.2rem;
+    color: black
+}
+@media (max-width: 820px) {
+    .policy-container h1 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .policy-container p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        color: rgb(96, 95, 95);
+    }
+}

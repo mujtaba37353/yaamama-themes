@@ -1,0 +1,28 @@
+.quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16);
+}
+.quantity button {
+  color: var(--y-color-text);
+  border: none;
+  cursor: pointer;
+  font-size: var(--y-space-22);
+  font-weight: 700;
+}
+.quantity button i {
+  font-size: var(--y-space-18);
+}
+.quantity input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  font-size: var(--y-space-16);
+  font-weight: 700;
+  background-color: #263238;
+  color: var(--y-color-bg);
+  border-radius: var(--y-space-4);
+}
+.quantity input:focus-visible {
+  outline: none;
+}

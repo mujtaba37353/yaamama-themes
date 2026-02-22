@@ -1,0 +1,305 @@
+/* =================================================================
+   Authentication Pages Styles (Login, Register, Lost Password, Reset Password)
+   ================================================================= */
+
+.y-l-auth-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--y-spacing-4xl) var(--y-spacing-xl);
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.y-l-auth-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--y-spacing-4xl);
+    width: 100%;
+}
+
+.y-c-auth-column {
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-3xl);
+    box-shadow: var(--y-shadow-md);
+}
+
+.y-c-auth-column--single {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.y-c-auth-title {
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0 0 var(--y-spacing-2xl) 0;
+    text-align: center;
+}
+
+.y-c-auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-auth-info {
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-md);
+    line-height: var(--y-line-height-md);
+    margin-bottom: var(--y-spacing-lg);
+    text-align: center;
+}
+
+.y-c-auth-link {
+    text-align: center;
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-auth-link a {
+    color: var(--y-color-primary);
+    text-decoration: none;
+    font-size: var(--y-font-size-md);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-auth-link a:hover {
+    color: var(--y-color-primary-hover);
+    text-decoration: underline;
+}
+
+/* Checkbox Styles */
+.y-c-form-field--checkbox {
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    cursor: pointer;
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    accent-color: var(--y-color-primary);
+}
+
+.y-c-checkbox-label span {
+    user-select: none;
+}
+
+/* Form Field Overrides for Auth Pages */
+.y-c-auth-form .y-c-form-field {
+    margin-bottom: var(--y-spacing-lg);
+}
+
+.y-c-auth-form .y-c-form-label {
+    font-size: var(--y-font-size-md);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-auth-form .y-c-form-input {
+    font-size: var(--y-font-size-md);
+    padding: var(--y-spacing-md);
+}
+
+/* Button Styles */
+.y-c-auth-form .y-c-btn {
+    margin-top: var(--y-spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .y-l-auth-container {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+        min-height: calc(100vh - 150px);
+    }
+
+    .y-l-auth-columns {
+        grid-template-columns: 1fr;
+        gap: var(--y-spacing-2xl);
+    }
+
+    .y-c-auth-column {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    }
+
+    .y-c-auth-title {
+        font-size: var(--y-font-size-2xl);
+        margin-bottom: var(--y-spacing-xl);
+    }
+
+    .y-c-auth-form {
+        gap: var(--y-spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-auth-container {
+        padding: var(--y-spacing-xl) var(--y-spacing-md);
+    }
+
+    .y-c-auth-column {
+        padding: var(--y-spacing-xl) var(--y-spacing-md);
+    }
+
+    .y-c-auth-title {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-auth-info {
+        font-size: var(--y-font-size-sm);
+    }
+}
+
+/* Hide default WooCommerce form styles */
+.woocommerce-form-row {
+    margin-bottom: 0;
+}
+
+.woocommerce-form-row label {
+    display: block;
+    margin-bottom: var(--y-spacing-sm);
+}
+
+/* Error Messages */
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+    background-color: var(--y-color-background-light);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    padding: var(--y-spacing-md);
+    margin-bottom: var(--y-spacing-lg);
+    color: var(--y-color-primary-text);
+    font-size: var(--y-font-size-md);
+}
+
+.woocommerce-error {
+    border-color: var(--y-color-error);
+    background-color: rgba(255, 49, 49, 0.1);
+}
+
+.woocommerce-info {
+    border-color: var(--y-color-primary);
+    background-color: var(--y-color-primary-light);
+}
+
+.woocommerce-message {
+    border-color: var(--y-color-success);
+    background-color: rgba(75, 181, 67, 0.1);
+}
+
+/* Password Validation Error Styles */
+.y-c-password-error {
+    display: block;
+    color: var(--y-color-error);
+    font-size: var(--y-font-size-sm);
+    margin-top: var(--y-spacing-xs);
+    font-weight: var(--y-font-weight-regular);
+}
+
+.y-c-input-error {
+    border-color: var(--y-color-error) !important;
+    box-shadow: 0 0 0 2px rgba(255, 49, 49, 0.1) !important;
+}
+
+.y-c-input-error:focus {
+    border-color: var(--y-color-error) !important;
+    box-shadow: 0 0 0 2px rgba(255, 49, 49, 0.2) !important;
+}
+
+/* Password Reset Confirmation Box */
+.y-c-password-reset-confirmation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+.y-c-password-reset-box {
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-4xl) var(--y-spacing-3xl);
+    box-shadow: var(--y-shadow-md);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-xl);
+}
+
+.y-c-password-reset-icon {
+    font-size: 4rem;
+    color: var(--y-color-primary);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-password-reset-icon i {
+    display: block;
+}
+
+.y-c-password-reset-title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin: 0;
+    text-align: center;
+}
+
+.y-c-password-reset-message {
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-md);
+    line-height: var(--y-line-height-lg);
+    margin: 0;
+    text-align: center;
+}
+
+.y-c-password-reset-home-btn {
+    margin-top: var(--y-spacing-lg);
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Responsive for Password Reset Confirmation */
+@media (max-width: 768px) {
+    .y-c-password-reset-box {
+        padding: var(--y-spacing-3xl) var(--y-spacing-xl);
+    }
+
+    .y-c-password-reset-icon {
+        font-size: 3rem;
+    }
+
+    .y-c-password-reset-title {
+        font-size: var(--y-font-size-xl);
+    }
+
+    .y-c-password-reset-message {
+        font-size: var(--y-font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-password-reset-box {
+        padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    }
+
+    .y-c-password-reset-icon {
+        font-size: 2.5rem;
+    }
+
+    .y-c-password-reset-title {
+        font-size: var(--y-font-size-lg);
+    }
+}

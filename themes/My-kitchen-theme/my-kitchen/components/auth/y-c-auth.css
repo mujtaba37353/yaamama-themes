@@ -1,0 +1,191 @@
+.auth-container {
+  width: 70%;
+  max-width: none;
+  margin: 4rem auto;
+  display: block;
+}
+.auth-container .form {
+  width: 100%;
+}
+form {
+  width: 100%;
+  min-width: 600px;
+  background: #fff;
+  padding: 3rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+form h1 {
+  color: var(--y-secondary);
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.auth-message {
+  border-radius: 12px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.auth-message--error {
+  background: #ffe9e9;
+  color: #8d1f1f;
+  border: 1px solid #f1b6b6;
+}
+
+.auth-message--success {
+  background: #e9fff1;
+  color: #1f6b3a;
+  border: 1px solid #b6f1c6;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+input {
+  padding: 0.8rem;
+  border: 1px solid #2e2e2e;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+  border-color: var(--y-secondary);
+  box-shadow: 0 0 0 3px rgba(190, 134, 71, 0.1),
+    0 4px 12px rgba(190, 134, 71, 0.15);
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+input:hover {
+  border-color: rgba(190, 134, 71, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+div.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+label.checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label.checkbox .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #2e2e2e;
+  margin-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+label.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+label.checkbox input:checked ~ .checkmark {
+  background-color: #333;
+  border-color: #333;
+}
+
+label.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+label.checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+@media (max-width: 820px) {
+  .auth-container {
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 0.75rem;
+  }
+
+  form {
+    min-width: auto;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+  .img-container {
+    display: none;
+  }
+  form h1 {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+  form label {
+    font-size: 1rem;
+  }
+  form .checkbox {
+    font-size: 0.95rem;
+  }
+  input {
+    margin: 0 0 1rem 0;
+    padding: 0.75rem;
+    border-radius: 16px;
+    font-size: 1rem;
+  }
+  form p {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  div.checkbox,
+  label.checkbox {
+    margin-left: 0;
+    margin-inline-start: 0;
+  }
+
+  label.checkbox {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+}

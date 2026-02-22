@@ -1,0 +1,179 @@
+/* Favorites page styles (no header/footer) */
+
+.y-c-header-title {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 15px 0;
+}
+
+.y-c-empty-favorites {
+    text-align: center;
+    color: #666;
+    margin: 20px 0 40px;
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+td img {
+    width: 3.5rem;
+    object-fit: contain;
+}
+
+td a {
+    text-decoration: none;
+    color: #289BFF;
+}
+
+.y-c-status {
+    color: green;
+    font-weight: bold;
+}
+
+.y-c-add-btn {
+    background-color: #cc3747;
+    color: #fff;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.y-c-add-btn:hover {
+    background-color: #a71d2a;
+}
+
+.y-c-delete {
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.y-c-share {
+    margin: 20px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.y-c-share span {
+    font-weight: bold;
+}
+
+.y-c-share-btns {
+    text-align: right;
+}
+
+.y-c-icons {
+    margin-top: 8px;
+}
+
+.y-c-icons a {
+    margin-left: 10px;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.y-c-icons a.y-c-whatsapp {
+    color: #25D366;
+}
+
+.y-c-icons a.y-c-email {
+    color: #6c757d;
+}
+
+.y-c-icons a.y-c-instagram {
+    color: #E1306C;
+}
+
+.y-c-icons a.y-c-twitter {
+    color: #000;
+}
+
+.y-c-icons a.y-c-facebook {
+    color: #1877F2;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .y-c-header-title {
+        font-size: 1.8rem;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    td img {
+        width: 2.5rem;
+    }
+
+    .y-c-add-btn {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .y-c-delete {
+        font-size: 18px;
+    }
+
+    .y-c-icons a {
+        font-size: 20px;
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-header-title {
+        font-size: 1.5rem;
+        margin: 10px 0;
+    }
+
+    th,
+    td {
+        padding: 6px 4px;
+        font-size: 12px;
+    }
+
+    td img {
+        width: 2rem;
+    }
+
+    .y-c-add-btn {
+        padding: 4px 8px;
+        font-size: 11px;
+    }
+
+    .y-c-delete {
+        font-size: 16px;
+    }
+
+    .y-c-share {
+        margin: 15px 0;
+    }
+
+    .y-c-icons a {
+        font-size: 18px;
+        margin-left: 6px;
+    }
+}

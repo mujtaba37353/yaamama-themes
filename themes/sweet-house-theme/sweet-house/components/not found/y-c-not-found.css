@@ -1,0 +1,92 @@
+/* Space below fixed header when 404 is the only content */
+.main-page-404 {
+  padding-top: 10rem;
+}
+
+.not-found-container {
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 60vh;
+}
+
+.not-found-404-number {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--y-secondary, #555);
+  line-height: 1;
+  margin: 0;
+}
+
+.not-found-container img {
+  width: 400px;
+  height: auto;
+  max-width: 90%;
+}
+
+.not-found-container p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0;
+}
+
+.not-found-container .btn-auth {
+  background-color: var(--y-secondary);
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-container .btn-auth:hover {
+  background-color: var(--y-main);
+}
+
+.not-found-container .btn-auth-secondary {
+  background-color: transparent;
+  color: var(--y-secondary);
+  border: 2px solid var(--y-secondary);
+}
+
+.not-found-container .btn-auth-secondary:hover {
+  background-color: var(--y-secondary);
+  color: white;
+  border-color: var(--y-secondary);
+}
+
+@media (max-width: 820px) {
+  .main-page-404 {
+    padding-top: 8rem;
+  }
+
+  .not-found-container {
+    padding: 15px;
+    min-height: 50vh;
+    gap: 15px;
+  }
+
+  .not-found-404-number {
+    font-size: 4rem;
+  }
+
+  .not-found-container img {
+    width: 280px;
+  }
+
+  .not-found-container p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .not-found-container .btn-auth {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+  }
+}

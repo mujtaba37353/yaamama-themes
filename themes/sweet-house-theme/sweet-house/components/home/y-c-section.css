@@ -1,0 +1,722 @@
+
+.hero-section {
+  padding: 10rem 0 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+[class*="col-"] {
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 576px) {
+  .col-sm-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+  
+  .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  
+  .col-lg-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-xl-2 {
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+
+.m-2 {
+  margin: 0.5rem !important;
+}
+
+.m-3 {
+  margin: 1rem !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.mx-lg-0 {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .mx-lg-0 {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.mb-lg-0 {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 992px) {
+  .mb-lg-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.mb-md-0 {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .mb-md-0 {
+    margin-bottom: 0 !important;
+  }
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.me-2 {
+  margin-inline-end: 0.5rem !important;
+}
+
+/* Padding */
+.py-2 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.px-3 {
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+}
+
+.px-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.px-lg-4 {
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.px-lg-5 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
+}
+
+@media (min-width: 992px) {
+  .px-lg-4 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  .px-lg-5 {
+    padding-left: 3rem !important;
+    padding-right: 3rem !important;
+  }
+}
+
+/* Gap */
+.gap-2 {
+  gap: 0.5rem !important;
+}
+
+.gap-3 {
+  gap: 1rem !important;
+}
+
+.gap-lg-3 {
+  gap: 1rem !important;
+}
+
+.gap-lg-5 {
+  gap: 3rem !important;
+}
+
+@media (min-width: 992px) {
+  .gap-lg-3 {
+    gap: 1rem !important;
+  }
+  
+  .gap-lg-5 {
+    gap: 3rem !important;
+  }
+}
+
+/* ============================================
+   Typography Utilities
+   ============================================ */
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.text-lg-start {
+  text-align: start !important;
+}
+
+@media (min-width: 992px) {
+  .text-lg-start {
+    text-align: start !important;
+  }
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Font Sizes */
+.fs-2 {
+  font-size: 1.75rem !important;
+}
+
+.fs-3 {
+  font-size: 1.5rem !important;
+}
+
+.fs-4 {
+  font-size: 1.5rem !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+
+/* About section heading color (light blue) */
+.y-u-bluetxt {
+  color: var(--y-main) !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+.fs-lg-1 {
+  font-size: 2.5rem !important;
+}
+
+.fs-lg-2 {
+  font-size: 2rem !important;
+}
+
+.fs-lg-4 {
+  font-size: 1.5rem !important;
+}
+
+.fs-lg-5 {
+  font-size: 1.25rem !important;
+}
+
+.fs-md-5 {
+  font-size: 1.25rem !important;
+}
+
+@media (min-width: 768px) {
+  .fs-md-5 {
+    font-size: 1.25rem !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .fs-lg-1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .fs-lg-2 {
+    font-size: 2rem !important;
+  }
+  
+  .fs-lg-4 {
+    font-size: 1.5rem !important;
+  }
+  
+  .fs-lg-5 {
+    font-size: 1.25rem !important;
+  }
+}
+
+/* ============================================
+   Image Utilities
+   ============================================ */
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.rounded {
+  border-radius: 0.25rem !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-4 {
+  border-radius: 0.5rem !important;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.shadow {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+
+/* ============================================
+   Position Utilities
+   ============================================ */
+
+.position-absolute {
+  position: absolute !important;
+}
+
+/* ============================================
+   Category Section Styles
+   ============================================ */
+
+.category-item {
+  transition: all 0.4s ease;
+  border-radius: 20px;
+  padding: 15px;
+  font-family: "Cairo", sans-serif;
+}
+
+.category-item img,
+.category-item p {
+  transition: transform 0.4s ease;
+}
+
+.category-item:hover {
+  background-color: var(--y-u-babyPink) !important;
+  cursor: pointer;
+  box-shadow: 0 0.125rem 1rem 3px rgba(0, 0, 0, 0.075);
+}
+
+.category-item:hover img,
+.category-item:hover p {
+  transform: translateY(10px);
+}
+
+.category-img {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+}
+
+/* ============================================
+   Button Styles
+   ============================================ */
+
+.btn {
+  border-color: var(--y-u-blue) !important;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+header .btn {
+  color: var(--y-u-blue) !important;
+}
+
+.btn-lg {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border-radius: 0.3rem;
+}
+
+.btn-add {
+  color: var(--y-u-blue) !important;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ============================================
+   Product Card Styles
+   ============================================ */
+
+.product-card img[alt="منتج"] {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ============================================
+   Section Styles
+   ============================================ */
+
+section h1,
+section h2,
+section h3,
+section h4,
+section h5,
+section h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+section p {
+  font-family: "Cairo", sans-serif;
+}
+
+.pink-border {
+  margin-right: 150px;
+  border: 1px solid;
+  border-color: var(--y-u-pink);
+  width: 50%;
+}
+
+.header-txt {
+  font-size: 96px;
+  line-height: 1.2;
+  font-family: "Gulzar", sans-serif !important;
+  color: var(--y-secondary);
+  font-weight: 700;
+}
+.hero-section a{
+  background: var(--y-main);
+  color: white !important;
+}
+.categories-filter button.active{
+  background: var(--y-secondary);
+  color: white !important;
+}
+.categories-filter button:hover{
+  background: var(--y-secondary);
+  color: white !important;
+}
+.categories-filter button{
+  background: white;
+  color: var(--y-main) !important;
+  border: 1px solid var(--y-main);
+}
+main > .main-container {
+  margin-top: 1rem;
+}
+/* Header section font */
+.y-u-bg {
+  font-family: "Cairo", sans-serif;
+}
+
+.y-u-bg h1,
+.y-u-bg h2,
+.y-u-bg h3,
+.y-u-bg h4,
+.y-u-bg h5,
+.y-u-bg h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.y-u-bg p {
+  font-family: "Cairo", sans-serif;
+}
+
+.y-u-bg .btn {
+  font-family: "Cairo", sans-serif;
+}
+
+/* About section font */
+.about-section {
+  font-family: "Cairo", sans-serif;
+}
+
+.about-section h1,
+.about-section h2,
+.about-section h3,
+.about-section h4,
+.about-section h5,
+.about-section h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.about-section p {
+  font-family: "Cairo", sans-serif;
+}
+.about-section .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.about-section .container > div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+.about-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+.about-img {
+  width: 100%;
+  height: auto;
+}
+
+/* Features section font */
+.features-section {
+  font-family: "Cairo", sans-serif;
+}
+.features-section .container .row > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-section h1,
+.features-section h2,
+.features-section h3,
+.features-section h4,
+.features-section h5,
+.features-section h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.features-section p {
+  font-family: "Cairo", sans-serif;
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Filter buttons */
+.filter-btn {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Carousel/Slider specific font declarations */
+.carousel-item {
+  font-family: "Cairo", sans-serif;
+}
+
+.carousel-item p,
+.carousel-item h1,
+.carousel-item h2,
+.carousel-item h3,
+.carousel-item h4,
+.carousel-item h5,
+.carousel-item h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.carousel-item .btn {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Product cards in carousel */
+.product-card {
+  font-family: "Cairo", sans-serif;
+}
+
+.product-card p,
+.product-card h1,
+.product-card h2,
+.product-card h3,
+.product-card h4,
+.product-card h5,
+.product-card h6 {
+  font-family: "Cairo", sans-serif;
+}
+
+.product-card .btn {
+  font-family: "Cairo", sans-serif;
+}
+
+/* Carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  font-family: "Cairo", sans-serif;
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .header-txt {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-txt {
+    font-size: 60px;
+  }
+  
+  .pink-border {
+    margin-right: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-txt {
+    font-size: 48px;
+  }
+  
+  .category-img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+  
+  .about-img {
+    width: 200px !important;
+    height: auto;
+  }
+  
+  .feature-icon {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  
+  .payment-icon {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .about-section .container > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+}
+
+@media (max-width: 576px) {
+  .header-txt {
+    font-size: 36px;
+  }
+  
+  .payment-icon {
+    width: 25px !important;
+    height: 25px !important;
+  }
+}
+
+/* Category item responsive adjustments */
+.category-item {
+  margin-bottom: 20px;
+}

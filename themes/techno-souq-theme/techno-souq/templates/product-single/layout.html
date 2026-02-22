@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">تفاصيل المنتج</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <link rel="stylesheet" href="y-product-single.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="product-main">
+        <section class="y-l-container" data-y="product-container">
+            <p class="y-c-breadcrumb" data-y="product-breadcrumb">الرئيسية > الصوتيات والمرئيات > التليفزيونات > تي سي
+                ال - تلفزيون، 55 بوصة، كيو دي
+                مني ليد ، 144هرتز
+            </p>
+
+            <div class="y-l-product-detail" data-y="product-detail-section">
+
+                <!-- Left Column (Images) -->
+                <div class="y-l-product-images" data-product-id="2" data-y="product-images-section">
+                    <div class="y-c-single-slider-container">
+                        <span class="y-c-single-discount" data-y="product-discount-badge">خصم 20%</span>
+                        <a href="#" class="y-c-single-fav-btn" data-favorite-toggle data-y="product-favorite-btn">
+                            <i class="fas fa-heart" data-y="product-favorite-icon"></i>
+                        </a>
+
+                        <button class="y-c-single-slider-btn y-c-single-slider-next" data-y="slider-next-btn">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+
+                        <button class="y-c-single-slider-btn y-c-single-slider-prev" data-y="slider-prev-btn">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+
+                        <div class="y-c-single-image-wrapper" data-y="product-image-container">
+                            <img src="/assets/wash.png" alt="product image" class="y-c-single-main-image"
+                                data-y="product-image" id="main-product-image">
+                        </div>
+
+                        <div class="y-c-single-dots">
+                            <span class="y-c-single-dot active" data-index="0"></span>
+                            <span class="y-c-single-dot" data-index="1"></span>
+                            <span class="y-c-single-dot" data-index="2"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (Info) -->
+                <div class="y-l-product-info" data-y="product-info-section">
+                    <h2 class="y-c-category-title" data-y="product-category-title">التليفزيونات</h2>
+
+                    <h1 class="y-c-product-title" data-y="product-title">تخيل امتلاك هاتف ذكي لا يعرف حدودًا للإبداع
+                        يجمع بين التصميم الفاخر والأداء الفائق والتقنيات الثورية</h1>
+
+                    <div class="y-c-product-meta">
+                        <span class="y-c-meta-label">حصريًا لدى العيسائي للإلكترونيات</span>
+                    </div>
+
+                    <div class="y-c-price-section">
+                        <h3 class="y-c-section-label">السعر</h3>
+                        <div class="y-c-product-price-large" data-y="product-price-container">
+                            3000
+                            <img src="/assets/coin-black.png" alt="currency" class="y-c-price-icon"
+                                data-y="price-currency-icon">
+                        </div>
+                    </div>
+
+                    <div class="y-l-product-purchase" data-y="product-purchase-section">
+                        <div class="y-c-product-quantity-wrapper">
+                            <div class="y-c-section-label" data-y="quantity-label">الكمية</div>
+                            <div class="y-c-quantity-control" data-y="quantity-controls">
+                                <button class="y-c-quantity-btn" id="decrease-quantity"
+                                    data-y="quantity-decrease-btn">-</button>
+                                <input type="number" class="y-c-quantity-input" value="1" min="1" max="10"
+                                    data-y="quantity-input">
+                                <button class="y-c-quantity-btn" id="increase-quantity"
+                                    data-y="quantity-increase-btn">+</button>
+                            </div>
+                        </div>
+
+                        <div class="y-c-product-buttons">
+                            <button class="y-c-btn y-c-btn-primary y-c-btn-full" data-y="add-to-cart-btn">
+                                <i class="fas fa-shopping-cart" data-y="cart-icon"></i>
+                                إضافة إلى السلة
+                            </button>
+
+                            <a href="/templates/payment/layout.html" class="y-c-btn y-c-btn-primary y-c-btn-full"
+                                data-y="buy-now-btn">
+                                <i class="fas fa-wallet" data-y="wallet-icon"></i>
+                                اشتري الآن
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="y-l-reviews-section" data-y="reviews-section">
+                <div class="y-u-flex y-u-justify-between y-u-align-center">
+                    <div class="y-c-rating-wrapper">
+                        <h3 class="y-c-section-label">تقييمك</h3>
+                        <div class="y-c-rating-stars" id="user-rating" data-y="rating-stars">
+                            <i class="far fa-star" data-rating="1"></i>
+                            <i class="far fa-star" data-rating="2"></i>
+                            <i class="far fa-star" data-rating="3"></i>
+                            <i class="far fa-star" data-rating="4"></i>
+                            <i class="far fa-star" data-rating="5"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="y-c-reviews-container">
+                    <h3 class="y-c-section-label">مراجعات</h3>
+                    <textarea class="y-c-review-textarea" placeholder="لا توجد مراجعات بعد"></textarea>
+                    <div class=" y-c-review-submit">
+                        <button class="y-c-btn y-c-btn-primary">إرسال</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordions Section -->
+            <div class="y-l-accordions" data-y="accordions-section">
+
+                <!-- Description Accordion (Open by default) -->
+                <div class="y-c-accordion-item active" data-accordion="description">
+                    <div class="y-c-accordion-header">
+                        <h3>وصف المنتج</h3>
+                        <i class="fas fa-minus y-c-accordion-icon"></i>
+                    </div>
+                    <div class="y-c-accordion-content">
+                        <p>يعمل شامبو كي 18 بيبتيد بريب ديتوكس على تنظيف الشعر وفروة الرأس بعمق ويزيل التراكمات والمواد
+                            الضارة من على الفروة . للحصول على شعر منتعش وخالٍ من السموم دون تجريد الشعر من الرطوبة.</p>
+                    </div>
+                </div>
+
+                <!-- Info Accordion -->
+                <div class="y-c-accordion-item" data-accordion="info">
+                    <div class="y-c-accordion-header">
+                        <h3>معلومات عن المنتج</h3>
+                        <i class="fas fa-plus y-c-accordion-icon"></i>
+                    </div>
+                    <div class="y-c-accordion-content">
+                        <p>يعمل شامبو كي 18 بيبتيد بريب ديتوكس على تنظيف الشعر وفروة الرأس بعمق ويزيل التراكمات والمواد
+                            الضارة من على الفروة . للحصول على شعر منتعش وخالٍ من السموم دون تجريد الشعر من الرطوبة.</p>
+                    </div>
+                </div>
+
+                <!-- Features Accordion -->
+                <div class="y-c-accordion-item" data-accordion="features">
+                    <div class="y-c-accordion-header">
+                        <h3>مميزات المنتج</h3>
+                        <i class="fas fa-plus y-c-accordion-icon"></i>
+                    </div>
+                    <div class="y-c-accordion-content">
+                        <p>يعمل شامبو كي 18 بيبتيد بريب ديتوكس على تنظيف الشعر وفروة الرأس بعمق ويزيل التراكمات والمواد
+                            الضارة من على الفروة . للحصول على شعر منتعش وخالٍ من السموم دون تجريد الشعر من الرطوبة.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Related Products -->
+            <div class="y-l-similar-products-header" data-y="related-products-header">
+                <h2 class="y-c-section-title y-u-text-right">منتجات ذات صلة:</h2>
+                <a href="/templates/shop-archive/layout.html" class="y-c-categories-btn"
+                    data-y="related-products-view-all">شاهد الكل</a>
+            </div>
+
+            <ul id="product-container-bakery" class="y-l-product-grid y-c-slider-container-js" data-limit="8"
+                data-y="related-products-grid">
+            </ul>
+
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/single-product.js"></script>
+    <script src="../../js/favorite.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/product-slider.js"></script>
+</body>
+
+</html>

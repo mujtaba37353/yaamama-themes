@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nafhat - متجر العطور</title>
+  <link rel="icon" href="../../assets/icon.png" />
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+  <link rel="stylesheet" href="../../components/toggle.css" />
+  <link rel="stylesheet" href="../../components/forms.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="./cart.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="container y-u-w-full y-u-flex y-u-justify-center y-u-flex-col">
+      <div class="y-u-max-w-1200 y-u-w-full cart-page">
+        <div class="header y-u-flex y-u-justify-between y-u-items-center y-u-p-y-56 y-u-p-t-24">
+          <h1 class="y-u-color-primary y-u-text-2xl">سلة التسوق</h1>
+        </div>
+
+        <div class="cart-page-grid">
+
+          <div class="cart-items-container">
+            <div class="cart-list">
+
+              <div class="cart-item">
+                <div class="item-image-wrapper">
+                  <img src="../../assets/pro1.png" alt="غوتشي" class="item-image" />
+                </div>
+                <div class="item-details">
+                  <div class="item-header">
+                    <h3 class="item-brand">غوتشي</h3>
+                    <p class="item-title">عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100 مل</p>
+                  </div>
+                  <div class="item-actions">
+                    <div class="qty-selector">
+                      <button class="qty-btn" aria-label="decrease">-</button>
+                      <input class="qty-input" type="number" min="1" value="1" readonly />
+                      <button class="qty-btn" aria-label="increase">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-pricing">
+                  <div class="price-group">
+                    <span class="price-label">السعر</span>
+                    <span class="price-value">100 ر.س</span>
+                  </div>
+                  <button class="item-remove">حذف المنتج</button>
+                </div>
+              </div>
+
+              <div class="cart-item">
+                <div class="item-image-wrapper">
+                  <img src="../../assets/pro2.png" alt="غوتشي" class="item-image" />
+                </div>
+                <div class="item-details">
+                  <div class="item-header">
+                    <h3 class="item-brand">غوتشي</h3>
+                    <p class="item-title">عطر فلورا جورجس جاردينيا إنتنس من غوتشي أو دو برفيوم للنساء 100 مل</p>
+                  </div>
+                  <div class="item-actions">
+                    <div class="qty-selector">
+                      <button class="qty-btn" aria-label="decrease">-</button>
+                      <input class="qty-input" type="number" min="1" value="1" readonly />
+                      <button class="qty-btn" aria-label="increase">+</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="item-pricing">
+                  <div class="price-group">
+                    <span class="price-label">السعر</span>
+                    <span class="price-value">100 ر.س</span>
+                  </div>
+                  <button class="item-remove">حذف المنتج</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="cart-summary-container">
+            <div class="summary-card">
+              <h2 class="summary-title">ملخص الطلب</h2>
+              <div class="summary-items">
+                <div class="summary-row">
+                  <span class="summary-value">100 ر.س</span>
+                  <span class="summary-label">إجمالي العناصر</span>
+                </div>
+                <div class="divider"></div>
+                <div class="summary-row">
+                  <span class="summary-value">100 ر.س</span>
+                  <span class="summary-label">الشحن</span>
+                </div>
+                <div class="divider"></div>
+                <div class="summary-row total">
+                  <span class="total-value">100 ر.س</span>
+                  <span class="total-label-group">
+                    <span class="total-label">الإجمالي</span>
+                    <span class="vat-text">(شامل ضريبة القيمة المضافة )</span>
+                  </span>
+                </div>
+              </div>
+
+              <a href="../payment/payment.html" class="checkout-btn">انتقل إلى الدفع</a>
+            </div>
+          </aside>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+  <y-footer></y-footer>
+
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+
+</html>

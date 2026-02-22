@@ -1,0 +1,692 @@
+/* Shop Archive Page Styles */
+
+/* .y-l-shop-grid removed - standard full width layout now */
+
+/* =========================================
+   Dropdown Filter Styles
+   ========================================= */
+
+.y-c-shop-menu {
+    position: relative;
+    z-index: 1000;
+    overflow: visible !important;
+    /* Allow dropdown to overflow parent containers */
+}
+
+.y-c-shop-menu-button {
+    min-width: var(--y-card-min-width-md);
+    background-color: var(--y-color-secondary-text);
+    border: 1px solid var(--y-color-border);
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+    border-radius: var(--y-border-radius-sm);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--y-spacing-sm);
+}
+
+/* Ensure all text inside buttons is 1rem */
+.y-c-shop-menu-button span,
+.y-c-shop-menu-button .y-c-shop-menu-text {
+    font-size: 1rem;
+}
+
+.y-c-shop-menu-button i {
+    transition: transform var(--y-transition-fast);
+}
+
+.y-c-shop-menu-button.active i:last-child {
+    transform: rotate(180deg);
+}
+
+.y-c-shop-menu-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    /* Align right because of RTL */
+    background-color: var(--y-color-secondary-text);
+    border: 1px solid var(--y-color-border);
+    border-radius: var(--y-border-radius-sm);
+    min-width: var(--y-size-200);
+    box-shadow: var(--y-shadow-lg);
+    /* Larger shadow for better visibility */
+    display: none;
+    flex-direction: column;
+    margin-top: var(--y-spacing-xs);
+    z-index: 99999 !important;
+    /* Very high z-index to appear above everything */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.y-c-shop-menu-dropdown.active {
+    display: flex !important;
+}
+
+/* Specific styles for the content-rich filter dropdown */
+.y-c-filter-dropdown-content {
+    width: 300px;
+    /* Fixed width for the filter panel */
+    padding: var(--y-spacing-lg);
+    /* Scrollable if content is too long */
+}
+
+.y-c-filter-section {
+    margin-bottom: var(--y-spacing-lg);
+    border-bottom: 1px solid var(--y-color-border);
+    padding-bottom: var(--y-spacing-md);
+}
+
+.y-c-filter-section:last-of-type {
+    border-bottom: none;
+}
+
+/* Accordion Header */
+.y-c-filter-section details>summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: var(--y-font-size-md);
+    /* Slightly smaller in dropdown */
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-filter-section details>summary::-webkit-details-marker {
+    display: none;
+}
+
+.y-c-accordion-icon {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary-text);
+}
+
+/* Category Groups with Subcategories */
+.y-c-category-group {
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-category-parent {
+    font-weight: var(--y-font-weight-bold);
+}
+
+.y-c-subcategories {
+    margin-right: var(--y-spacing-lg);
+    margin-top: var(--y-spacing-xs);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-category-child {
+    font-weight: var(--y-font-weight-regular);
+    opacity: 0.9;
+}
+
+.y-c-category-child .y-c-radio-label {
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+    padding-right: var(--y-spacing-xs);
+}
+
+/* Custom Radio Button Styling */
+.y-c-custom-radio {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-right: 25px;
+    /* Space for the circle */
+    cursor: pointer;
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-primary-text);
+    user-select: none;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+/* Hide default browser radio */
+.y-c-custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio circle */
+.y-c-radio-checkmark {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    /* Adjusted for RTL/positioning relative to padding */
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    background-color: #fff;
+    border: 2px solid var(--y-color-primary);
+    border-radius: 50%;
+    transition: var(--y-transition-fast);
+}
+
+/* On checked */
+.y-c-custom-radio input:checked~.y-c-radio-checkmark {
+    background-color: var(--y-color-primary);
+}
+
+/* Create the inner dot/indicator for checked state */
+.y-c-custom-radio input:checked~.y-c-radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    transform: translate(-50%, -50%);
+}
+
+.y-c-radio-label {
+    flex: 1;
+    text-align: right;
+}
+
+/* Rating Specific Styling */
+.y-c-rating-radio {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.y-c-stars {
+    display: flex;
+    gap: 2px;
+    color: #FFA500;
+    /* Orange/Gold for stars */
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-stars i {
+    margin: 0 1px;
+}
+
+.y-c-stars i.far {
+    color: #ccc;
+}
+
+/* Price Inputs */
+.y-c-price-inputs {
+    display: flex;
+    gap: var(--y-spacing-sm);
+    margin-top: var(--y-spacing-sm);
+}
+
+.y-c-price-input-sm {
+    width: 100%;
+    padding: var(--y-spacing-xs) var(--y-spacing-sm);
+    font-size: var(--y-font-size-sm);
+    text-align: center;
+    border: 1px solid var(--y-color-primary);
+    border-radius: var(--y-border-radius-sm);
+}
+
+/* Filter Actions Container */
+.y-c-filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+    margin-top: var(--y-spacing-md);
+}
+
+/* Apply Filter Button */
+.y-c-apply-filter-btn {
+    background-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    font-weight: var(--y-font-weight-bold);
+    border: none;
+}
+
+.y-c-apply-filter-btn:hover {
+    background-color: var(--y-color-primary-hover);
+}
+
+/* Delete Filter Button */
+.y-c-delete-filter-btn {
+    background-color: var(--y-color-background);
+    color: var(--y-color-primary-text);
+    font-weight: var(--y-font-weight-bold);
+    border: 1px solid var(--y-color-border);
+}
+
+.y-c-delete-filter-btn:hover {
+    background-color: var(--y-color-bg-hover);
+    border-color: var(--y-color-primary);
+}
+
+/* Existing Styles Below */
+
+.y-c-shop-promo {
+    text-align: center;
+    background-image: var(--y-color-background-gradient);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: var(--y-spacing-2xl) var(--y-spacing-lg);
+    border-radius: var(--y-border-radius-sm);
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-slide-image {
+    max-width: var(--y-size-400);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.y-c-slide-image img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.y-c-subtitle {
+    font-size: var(--y-font-size-sm);
+    margin-bottom: var(--y-spacing-3xl);
+    color: var(--y-color-third-text);
+}
+
+.y-l-shop-section {
+    margin-top: var(--y-spacing-xl);
+    padding-top: var(--y-spacing-xl);
+    position: relative;
+    overflow: visible !important;
+    /* Allow dropdowns to overflow */
+}
+
+.y-c-section-title {
+    font-size: var(--y-font-size-xl);
+    color: var(--y-color-text-primary);
+}
+
+/* Simple link item styling (for Sort dropdown) */
+.y-c-shop-menu-item {
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+    text-decoration: none;
+    color: var(--y-color-text-primary);
+    transition: background-color var(--y-transition-fast);
+}
+
+.y-c-shop-menu-item:hover,
+.y-c-shop-menu-item.active {
+    background-color: var(--y-color-bg-hover);
+    color: var(--y-color-primary);
+}
+
+/* Pagination */
+.y-l-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    margin: var(--y-spacing-xl) 0;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+/* WooCommerce pagination nested ul */
+.y-l-pagination ul.page-numbers {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+}
+
+.y-l-pagination ul.page-numbers li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block;
+}
+
+.y-l-pagination ul.page-numbers li .page-numbers,
+.y-l-pagination ul.page-numbers li a.page-numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: var(--y-icon-size-md);
+    height: var(--y-icon-size-md);
+    padding: var(--y-spacing-xs) var(--y-spacing-sm);
+    border: 1px solid var(--y-color-border);
+    background-color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-sm);
+    color: var(--y-color-primary-text);
+    text-decoration: none;
+    transition: var(--y-transition-fast);
+    font-size: var(--y-font-size-sm);
+}
+
+.y-l-pagination ul.page-numbers li a.page-numbers:hover {
+    background-color: var(--y-color-primary-light);
+    border-color: var(--y-color-primary);
+    color: var(--y-color-primary);
+}
+
+.y-l-pagination ul.page-numbers li .page-numbers.current {
+    background-color: var(--y-color-primary);
+    border-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+    cursor: default;
+}
+
+.y-l-pagination ul.page-numbers li a.page-numbers.next,
+.y-l-pagination ul.page-numbers li a.page-numbers.prev {
+    min-width: var(--y-icon-size-md);
+}
+
+.y-c-pagination-button {
+    width: var(--y-icon-size-md);
+    height: var(--y-icon-size-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--y-color-border);
+    background-color: var(--y-color-secondary-text);
+    border-radius: var(--y-border-radius-sm);
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-pagination-button:hover:not(.disabled) {
+    background-color: var(--y-color-primary-light);
+    border-color: var(--y-color-primary);
+    color: var(--y-color-primary);
+}
+
+.y-c-pagination-button.active {
+    background-color: var(--y-color-primary);
+    border-color: var(--y-color-primary);
+    color: var(--y-color-secondary-text);
+}
+
+.y-c-pagination-button.disabled {
+    opacity: var(--y-opacity-secondary);
+    cursor: not-allowed;
+}
+
+.y-c-pagination-ellipsis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--y-icon-size-md);
+    height: var(--y-icon-size-md);
+}
+
+.y-l-header-filter-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: var(--y-spacing-lg) 0;
+    z-index: 1000;
+    /* Ensure container is above products */
+    overflow: visible !important;
+    /* Allow dropdowns to overflow */
+}
+
+.y-l-header-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--y-spacing-md);
+    position: relative;
+    z-index: 1001;
+    /* Higher than container */
+    overflow: visible !important;
+    /* Allow dropdowns to overflow */
+}
+
+.y-c-shop-menu-text {
+    font-size: var(--y-font-size-sm);
+}
+
+.y-c-shop-menu-icon {
+    display: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+    .y-c-shop-promo {
+        flex-direction: column;
+        text-align: center;
+        padding: var(--y-spacing-xl) var(--y-spacing-md);
+    }
+
+    .y-c-slide-image {
+        max-width: var(--y-size-300);
+        order: -1;
+    }
+
+    /* On mobile, dropdowns might need to be full width or positioned differently */
+    .y-c-filter-dropdown-content {
+        width: calc((100vw - 2rem) * 0.6);
+        max-width: 60%;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Center the dropdown and prevent it from covering the sort button */
+    }
+
+    /* Ensure sort dropdown doesn't overflow on mobile */
+    .y-c-shop-menu-dropdown:not(.y-c-filter-dropdown-content) {
+        width: auto;
+        min-width: 200px;
+        max-width: calc((100vw - 2rem) * 0.6);
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        /* Center the dropdown */
+    }
+
+    /* Increase font size for filter section titles on mobile */
+    .y-c-filter-section details>summary {
+        font-size: var(--y-font-size-lg) !important;
+    }
+
+    .y-c-section-title {
+        font-size: var(--y-font-size-lg);
+    }
+
+    .y-l-header-filter {
+        gap: var(--y-spacing-sm);
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .y-l-header-filter-container {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--y-spacing-md);
+    }
+
+    /* Ensure filter button text is visible on mobile */
+    .y-c-shop-menu-text,
+    .y-c-shop-menu-button span:not(.y-c-shop-menu-text) {
+        display: inline !important;
+        font-size: 1rem !important;
+        white-space: nowrap;
+    }
+
+    /* Show icon on mobile */
+    .y-c-shop-menu-icon {
+        display: inline-block !important;
+        margin-left: var(--y-spacing-xs);
+    }
+
+    /* Make buttons equal width on mobile and center text */
+    .y-c-shop-menu-button {
+        flex: 1 !important;
+        width: auto !important;
+        min-width: 0 !important;
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .y-c-section-title {
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-l-pagination {
+        flex-wrap: wrap;
+    }
+
+    .y-c-shop-menu-button {
+        flex: 1 !important;
+        width: auto !important;
+        min-width: 0 !important;
+        padding: var(--y-spacing-xs) var(--y-spacing-sm);
+        font-size: var(--y-font-size-xs);
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap;
+    }
+
+    /* Show icon alongside text on mobile */
+    .y-c-shop-menu-icon {
+        display: inline-block;
+        margin-left: var(--y-spacing-xs);
+    }
+
+    /* Keep text visible on mobile with 1rem font size and prevent wrapping */
+    .y-c-shop-menu-text,
+    .y-c-shop-menu-button span:not(.y-c-shop-menu-text) {
+        display: inline !important;
+        font-size: 1rem !important;
+        white-space: nowrap;
+    }
+
+    /* Ensure buttons stay in one row on very small screens */
+    .y-l-header-filter {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+    }
+
+    /* Ensure dropdowns fit on screen - 60% width and centered */
+    .y-c-shop-menu-dropdown {
+        width: calc((100vw - 1rem) * 0.6) !important;
+        max-width: calc((100vw - 1rem) * 0.6) !important;
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .y-c-filter-dropdown-content {
+        width: calc((100vw - 1rem) * 0.6) !important;
+        max-width: calc((100vw - 1rem) * 0.6) !important;
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    /* Increase font size for filter section titles on very small screens */
+    .y-c-filter-section details>summary {
+        font-size: var(--y-font-size-xl) !important;
+    }
+
+    /* Make header filter container stack vertically on very small screens */
+    .y-l-header-filter {
+        width: 100%;
+        flex-direction: column;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-shop-menu {
+        width: 100%;
+    }
+}
+
+/* Product Grid Styles - Override WooCommerce defaults */
+.y-l-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--y-spacing-lg);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    /* Lower z-index to ensure dropdowns appear above */
+}
+
+.y-l-product-grid.products {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: var(--y-spacing-lg) !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Override WooCommerce columns class */
+.y-l-product-grid.columns-4,
+.y-l-product-grid.products.columns-4 {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: var(--y-spacing-lg) !important;
+}
+
+/* Ensure list items don't have default list styling */
+.y-l-product-grid li,
+.y-l-product-grid.products li {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    float: none !important;
+    display: block !important;
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 768px) {
+    .y-l-product-grid,
+    .y-l-product-grid.products,
+    .y-l-product-grid.columns-4 {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)) !important;
+        gap: var(--y-spacing-md) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .y-l-product-grid,
+    .y-l-product-grid.products,
+    .y-l-product-grid.columns-4 {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)) !important;
+        gap: var(--y-spacing-sm) !important;
+    }
+}

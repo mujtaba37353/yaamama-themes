@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--y-font-family-primary);
+    line-height: 1.6;
+    color: var(--y-color-primary-text);
+    background-color: var(--y-color-background);
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+i {
+    color: var(--y-color-primary);
+}
+
+/* Prevent horizontal scrolling on all elements */
+* {
+    max-width: 100%;
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Prevent containers from overflowing */
+.container,
+.y-l-container,
+[class*="container"] {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Exception: Allow dropdowns to overflow */
+.y-l-container .y-c-shop-menu,
+.y-l-container .y-l-header-filter-container,
+.y-l-container .y-l-header-filter {
+    overflow: visible !important;
+}
+
+/* Prevent tables from causing horizontal scroll */
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Prevent pre and code from overflowing */
+pre,
+code {
+    max-width: 100%;
+    overflow-x: auto;
+    word-wrap: break-word;
+}

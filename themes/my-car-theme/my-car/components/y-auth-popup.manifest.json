@@ -1,0 +1,16 @@
+{
+    "component": "y-auth-popup",
+    "description": "Modal popup component for Login, Signup, and Password Reset forms.",
+    "slots": {
+        "auth-popup-modal": "The main modal overlay",
+        "auth-popup-content": "The content container for the forms",
+        "auth-popup-close": "The close button '×'",
+        "login-form": "Login form container",
+        "signup-form": "Signup form container",
+        "pass-reset-form": "Password reset form container"
+    },
+    "js": [
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

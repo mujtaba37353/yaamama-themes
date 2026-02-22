@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حسابي</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+
+    <link rel="stylesheet" href="y-account.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <div id="y-l-page-hero" data-y="main">
+    </div>
+
+    <section class="y-u-container">
+        <section class="y-c-Profile-container" data-y="account-profile-container">
+            <div class="y-c-Profile-menu" data-y="menu-links">
+
+                <div class="y-c-profile-header" data-y="profile-header">
+
+                    <div class="y-c-profile-image-container" data-y="profile-image-container">
+
+                        <img src="/assets/profile.png" alt="صورة الملف الشخصي" class="y-c-profile-image"
+                            data-y="profile-image">
+
+                        <button class="y-c-edit-image-btn" data-y="edit-image-btn">
+                            <i class="fas fa-camera"></i>
+                        </button>
+
+                    </div>
+
+                    <div class="y-c-profile-name" data-y="profile-name">
+                        <h3>عبدالله محمد</h3>
+                    </div>
+
+                </div>
+
+                <a href="#" id="account-details-link" class="y-c-active" data-title="تفاصيل الحساب"
+                    data-y="account-details-link">
+                    <i class="fas fa-user"></i>
+                    <p>الملف الشخصي</p>
+                </a>
+
+                <a href="#" id="reservations-link" data-title="الحجوزات" data-y="reservations-link">
+                    <i class="fas fa-calendar-check"></i>
+                    <p>الحجوزات</p>
+                </a>
+
+                <a href="#" id="contracts-link" data-title="العقود" data-y="contracts-link">
+                    <i class="fas fa-file-contract"></i>
+                    <p>العقود</p>
+                </a>
+
+                <a href="../home/layout.html" class="y-c-logout-link" data-y="logout-link">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <p>تسجيل خروج</p>
+                </a>
+            </div>
+
+            <div class="y-c-Profile-info" id="profile-content-placeholder" data-y="profile-content-placeholder">
+                <div id="account-details-content" class="y-c-content-section active" data-y="account-details-content">
+                </div>
+
+                <div id="reservations-content" class="y-c-content-section" data-y="reservations-content">
+                </div>
+
+                <div id="contracts-content" class="y-c-content-section" data-y="contracts-content">
+                </div>
+            </div>
+
+        </section>
+    </section>
+
+    <div id="delete-account-popup" class="y-c-popup-overlay" data-y="delete-account-popup">
+        <div class="y-c-popup-content y-c-delete-popup">
+
+            <button class="y-c-popup-close" id="close-delete-popup">&times;</button>
+
+            <div class="y-c-popup-icon-wrapper">
+                <i class="fas fa-exclamation-triangle" style="font-size: 48px; color: #FF3B3B;"></i>
+            </div>
+
+            <h3 class="y-c-popup-title">
+                هل أنت متأكد من تعطيل الحساب
+            </h3>
+
+            <p class="y-c-popup-description">
+                هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال
+            </p>
+
+            <div class="y-c-popup-actions">
+                <button id="confirm-delete-btn" class="y-c-basic-btn"
+                    style="background-color: #FF3B3B; border: none; color: white;">
+                    تعطيل
+                </button>
+
+                <button id="cancel-delete-btn" class="y-c-basic-btn"
+                    style="background-color: #588B2A; border: none; color: white;">
+                    لا
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/account.js"></script>
+    <script src="../../js/contracts.js"></script>
+
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+</body>
+
+</html>

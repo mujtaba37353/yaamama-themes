@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-y="contact-us-page">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">تواصل معنا</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-contact-us.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body data-y="contact-us-body">
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="contact-main">
+        <section class="y-l-container" data-y="contact-container">
+            <h2 data-y="contact-title">اترك لنا رسالة:</h2>
+            <p data-y="contact-subtitle">فريقنا دائما هنا للرد على استفساراتك واقتراحاتك.</p>
+            <br data-y="title-form-separator">
+            <div class="y-l-form-container" data-y="contact-form-container">
+                <form action="#" method="POST" class="y-c-contact-form" data-y="contact-form">
+                    <div class="y-c-form-group" data-y="name-form-group">
+                        <label for="fullName" data-y="name-label">الاسم</label>
+                        <input type="text" id="fullName" name="fullName"
+                            class="y-c-form-input y-c-form-input--underline" data-y="name-input" required />
+                    </div>
+                    <div class="y-c-form-group" data-y="email-form-group">
+                        <label for="email" data-y="email-label">البريد الالكتروني</label>
+                        <input type="email" id="email" name="email" class="y-c-form-input y-c-form-input--underline"
+                            data-y="email-input" required />
+                    </div>
+                    <div class="y-c-form-group" data-y="phone-form-group">
+                        <label for="phone" data-y="phone-label">رقم الهاتف</label>
+                        <input type="tel" id="phone" name="phone" class="y-c-form-input y-c-form-input--underline"
+                            data-y="phone-input" required />
+                    </div>
+                    <div class="y-c-form-group" data-y="message-form-group">
+                        <label for="message" data-y="message-label">الرسالة</label>
+                        <textarea id="message" name="message" class="y-c-form-textarea y-c-form-input--underline"
+                            data-y="message-textarea" required></textarea>
+                    </div>
+
+                    <div class=" y-c-form-button">
+                        <button type="submit" class="y-c-btn y-c-btn-primary" data-y="submit-btn">
+                            إرسال الرسالة
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+            <div class="y-l-contact-info" data-y="contact-info-section">
+                <div class="y-c-contact-card" data-y="contact-info-card">
+                    <h3 data-y="contact-info-title">بيانات التواصل</h3>
+                    <p data-y="address-info"><i class="fas fa-map-marker-alt"></i> العنوان: 1234 شارع التكنولوجيا،
+                        المدينة، الدولة</p>
+                    <a href="tel:+0000000000" data-y="phone-link"><i class="fas fa-phone-alt"></i> الهاتف: +000 000
+                        0000</a>
+                    <a href="mailto:support@technosouq.com" data-y="email-link"><i class="fas fa-envelope"></i> البريد
+                        الإلكتروني:
+                        support@technosouq.com</a>
+                    <a href="http://www.technosouq.com" target="_blank" rel="noopener noreferrer" data-y="website-link">
+                        <i class="fas fa-globe"></i> الموقع الإلكتروني:
+                        www.technosouq.com</a>
+                </div>
+                <div class="y-c-social-container" data-y="social-media-section">
+                    <h3 data-y="social-media-title">تابعنا على:</h3>
+                    <div class="y-c-social-icons" data-y="social-icons-container">
+                        <a href="#" class="y-c-social-icon" aria-label="Facebook" data-y="facebook-link"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="y-c-social-icon" aria-label="Instagram" data-y="instagram-link"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="y-c-social-icon" aria-label="snapchat" data-y="snapchat-link"><i
+                                class="fab fa-snapchat"></i></a>
+                    </div>
+                </div>
+            </div>
+            <br data-y="contact-map-separator">
+            <h2 data-y="map-title">موقعنا على الخريطة</h2>
+            <br data-y="map-title-separator">
+            <div class="y-c-map-container" data-y="map-container">
+                <img src="/assets/map.png" alt="" data-y="map-image">
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" class="y-c-footer" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+</body>
+
+</html>

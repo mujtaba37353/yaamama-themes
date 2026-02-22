@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stationary</title>
+  <link rel="manifest" href="../manifest.json" />
+
+  <link rel="icon" href="../../assets/icon.png" />
+
+  <link rel="stylesheet" href="../../base/reset.css" />
+  <link rel="stylesheet" href="../../base/tokens.css" />
+
+  <link rel="stylesheet" href="../../base/utilities.css" />
+  <link rel="stylesheet" href="../../base/typography.css" />
+  <link rel="stylesheet" href="../../components/header.css" />
+  <link rel="stylesheet" href="../../components/footer.css" />
+
+  <link rel="stylesheet" href="../../components/products.css" />
+  <link rel="stylesheet" href="../../components/buttons.css" />
+  <link rel="stylesheet" href="../../components/panner.css" />
+  <link rel="stylesheet" href="../../components/fav-icon.css" />
+  <link rel="stylesheet" href="./layout.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <y-navbar></y-navbar>
+
+  <main>
+    <section class="hero-section container y-u-max-w-1200">
+      <div class="carsousel">
+        <div class="imgs">
+          <img src="../../assets/hero1.jpg" alt="عرض المنتجات المكتبية المميزة">
+          <img src="../../assets/hero2.jpg" alt="مجموعة الأدوات المكتبية الحديثة">
+        </div>
+        <div class="content">
+          <h2>نظم يومك مع أدواتنا المكتبية الأنيقة</h2>
+          <h2>كل ما تحتاجه للدراسة أو العمل في مكان واحد.</h2>
+        </div>
+      </div>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+      </div>
+
+    </section>
+
+    <section class="category-section">
+      <div class="container y-u-max-w-1200">
+        <h2>جميع الفئات</h2>
+        <ul>
+          <a href="../store/store.html">
+            <li>
+              <div class="img"><img src="../../assets/cat1.png" alt="أيقونة أقلام و أدوات الكتابة"></div>
+
+              <p>أقلام و أدوات الكتابة</p>
+            </li>
+          </a>
+          <a href="../store/store.html">
+            <li>
+              <div class="img"><img src="../../assets/cat2.png" alt="أيقونة الأدوات المدرسية"></div>
+              <p>الأدوات المدرسية</p>
+            </li>
+          </a>
+          <a href="../store/store.html">
+            <li>
+              <div class="img"><img src="../../assets/cat3.png" alt="أيقونة آلات حاسبة"></div>
+              <p>آلات حاسبة</p>
+            </li>
+          </a>
+          <a href="../store/store.html">
+            <li>
+              <div class="img"><img src="../../assets/cat4.png" alt="أيقونة أطقم المكتب"></div>
+              <p>أطقم المكتب</p>
+            </li>
+          </a>
+          <a href="../store/store.html">
+            <li>
+              <div class="img"><img src="../../assets/cat5.png" alt="أيقونة كراسات و منتجات ورقية"></div>
+              <p>كراسات و منتجات ورقية</p>
+            </li>
+          </a>
+        </ul>
+      </div>
+
+    </section>
+
+    <section class="products-section">
+
+      <div class="container y-u-max-w-1200">
+        <div class="header">
+          <h2>الأكثر مبيعًا</h2>
+          <a href="../store/store.html" class="y-u-text-primary"> اطلع على المزيد</a>
+        </div>
+        <ul class="grid">
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span>
+                      50 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
+
+    </section>
+
+    <section class="panner panner-image panner-image2 hero-panner">
+      <div class="div container y-u-max-w-1200">
+        <img src="../../assets/panner-img.jpg" alt="عرض خاص على الكشاكيل والأقلام">
+        <div class="content">
+          <p>
+            <span>حضّر مكتبك... وابدأ يومك بإبداع!</span>
+            <br>
+            اكتشف مجموعتنا من الكشاكيل والأقلام المميزة
+          </p>
+          <a href="../store/store.html">تسوق الآن</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="products-section">
+      <div class="container y-u-max-w-1200">
+        <div class="header">
+          <h2> عروض وتخفيضات</h2>
+          <a href="../store/offers.html" class="y-u-text-primary link"> اطلع على المزيد</a>
+        </div>
+        <ul class="grid">
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="card">
+            <a href="../product-details/product-details.html">
+              <div class="img">
+                <label class="favorite-toggle">
+                  <input type="checkbox" class="favorite-toggle__checkbox">
+                  <span class="favorite-toggle__icon">
+                    <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                  </span>
+                </label>
+                <img src="../../assets/product-1.png" alt="نوت بوك مسطر غلاف ورق 100 ورقة">
+              </div>
+              <div class="content">
+                <div class="top y-u-flex y-u-justify-between y-u-flex-col  y-u-gap-8">
+                  <p>نوت بوك مسطر غلاف ورق 100 ورقة</p>
+                </div>
+                <div class="bottom">
+                  <p>
+                    <span class="grey-ryal">
+                      100 <img src="../../assets/grey-ryal.svg" alt="ريال">
+                    </span>
+                    <span>
+                      80 <img src="../../assets/ryal.svg" alt="ريال">
+                    </span>
+                  </p>
+                  <button class="button"> أضف إلى السلة </button>
+                </div>
+              </div>
+            </a>
+          </li>
+
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <y-footer></y-footer>
+
+  <script src="../../js/y-app-init.js"></script>
+</body>
+</html>

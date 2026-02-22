@@ -1,0 +1,17 @@
+.icon-wrapper {
+    background-color: var(--y-color-danger);
+}
+
+.main-button {
+    background-color: var(--y-color-danger);
+    border: 1px solid var(--y-color-danger);
+}
+
+.main-button:hover {
+    background-color: color-mix(in srgb, var(--y-color-danger) 80%, black) !important;
+    border: 1px solid color-mix(in srgb, var(--y-color-danger) 80%, black) !important;
+}
+
+.confirmation-card {
+    border: 2px solid var(--y-color-danger);
+}

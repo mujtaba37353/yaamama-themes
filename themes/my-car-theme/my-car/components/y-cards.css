@@ -1,0 +1,513 @@
+.y-c-map-card {
+    height: max-content;
+    padding: var(--y-spacing-md);
+    margin: var(--y-spacing-md);
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-map-card a {
+    color: var(--y-color-link);
+}
+
+.y-c-map-card a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Category Card (Home Page) ===== */
+.y-c-category-card {
+    background-color: transparent;
+    border-radius: var(--y-border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--y-transition-default);
+    text-align: center;
+}
+
+.y-c-category-image img {
+    width: var(--y-width-percentage-full);
+    height: auto;
+    aspect-ratio: var(--y-aspect-ratio-4-3);
+    object-fit: contain;
+    display: block;
+}
+
+.y-c-category-content {
+    padding: var(--y-spacing-lg);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.y-c-category-title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-category-description {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    line-height: var(--y-line-height-lg);
+    margin-bottom: var(--y-spacing-lg);
+    flex-grow: 1;
+}
+
+
+/* ===== Fleet Section (Restored Old Style) ===== */
+.y-c-fleet-card {
+    background-color: transparent;
+    border: 1px solid var(--y-color-border-dark);
+    border-radius: var(--y-border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--y-transition-default);
+    text-align: right;
+    padding: var(--y-spacing-sm);
+}
+
+.y-c-fleet-card:hover {
+    transform: translateY(var(--y-transform-hover-up));
+}
+
+.y-c-fleet-category {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    text-align: center;
+    margin-bottom: var(--y-spacing-xs);
+    display: block;
+}
+
+.y-c-fleet-card-image img {
+    width: var(--y-width-percentage-full);
+    height: auto;
+    aspect-ratio: var(--y-aspect-ratio-16-10);
+    object-fit: cover;
+    display: block;
+    border-radius: var(--y-border-radius-md);
+    margin-bottom: var(--y-spacing-sm);
+}
+
+.y-c-fleet-card-content {
+    padding: 0 var(--y-spacing-sm) var(--y-spacing-sm);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.y-c-fleet-name {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-sm);
+    flex-grow: 1;
+}
+
+.y-l-fleet-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--y-spacing-sm);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-fleet-price {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-md);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xxs);
+}
+
+.y-c-coin-icon {
+    width: var(--y-icon-size-xs);
+    height: var(--y-icon-size-xs);
+    object-fit: contain;
+    filter: hue-rotate(45deg) brightness(1.2);
+}
+
+.y-c-offer-time {
+    color: var(--y-color-third-text);
+    font-size: var(--y-font-size-lg);
+}
+
+
+/* ===== NEW Product Card Styles (List View) ===== */
+.y-c-product-card {
+    background-color: var(--y-color-card-background);
+    border: none;
+    border-radius: var(--y-border-radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--y-transition-default);
+    text-align: right;
+    padding: var(--y-spacing-md);
+    margin: var(--y-spacing-sm) 0;
+}
+
+.y-c-card-layout {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: stretch;
+    gap: var(--y-spacing-md);
+    width: var(--y-width-percentage-full);
+}
+
+.y-c-card-image {
+    height: var(--y-size-image-md);
+    flex-basis: var(--y-percent-35);
+    flex-shrink: 0;
+    background-color: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+}
+
+.y-c-card-image img {
+    width: var(--y-width-percentage-full);
+    height: var(--y-width-percentage-full);
+    aspect-ratio: var(--y-aspect-ratio-16-10);
+    object-fit: contain;
+    display: block;
+    border-radius: var(--y-border-radius-md);
+}
+
+.y-c-card-details {
+    display: flex;
+    flex-direction: row;
+    flex-basis: var(--y-percent-65);
+    flex-grow: 1;
+    gap: var(--y-spacing-lg);
+}
+
+.y-c-card-pricing {
+    display: flex;
+    flex-direction: column;
+    flex-basis: var(--y-percent-30);
+    flex-shrink: 0;
+    align-items: flex-end;
+    justify-content: center;
+    gap: var(--y-spacing-md);
+}
+
+.y-c-card-price-label {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-xxs);
+}
+
+.y-c-offer-kms {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-error);
+    margin: var(--y-spacing-xxs) 0;
+}
+
+.y-c-card-price-old {
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-third-text);
+    text-decoration: line-through;
+    display: flex;
+    align-items: center;
+    margin: var(--y-spacing-xxs) 0;
+}
+
+.y-c-card-price-amount {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    display: flex;
+    align-items: baseline;
+    gap: var(--y-spacing-xs);
+}
+
+.y-c-card-price-currency {
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-regular);
+}
+
+.y-c-card-pricing .y-c-basic-btn {
+    width: var(--y-width-percentage-full);
+    flex-shrink: 0;
+    font-size: var(--y-font-size-md);
+    padding: var(--y-spacing-sm) var(--y-spacing-lg);
+    margin-top: var(--y-spacing-md);
+}
+
+.y-c-card-info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: var(--y-percent-70);
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-left: var(--y-spacing-lg);
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-card-category {
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+}
+
+.y-c-card-category .fa-solid {
+    color: var(--y-color-primary-text);
+}
+
+.y-c-card-name {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+.y-c-card-similar {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-top: var(--y-spacing-xs);
+}
+
+.y-c-card-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--y-spacing-lg);
+    margin-top: auto;
+    color: var(--y-color-primary-text);
+}
+
+.y-c-card-feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-semibold);
+}
+
+.y-c-card-feature-item .fa-solid {
+    font-size: var(--y-font-size-lg);
+    width: var(--y-size-20);
+    text-align: center;
+}
+
+/* Old styles no longer needed for .y-c-product-card */
+.y-c-product-discount-badge,
+.y-c-product-image-container,
+.y-c-product-info,
+.y-c-product-title,
+.y-c-product-price,
+.y-c-price-current,
+.y-c-price-old,
+.y-c-price-icon,
+.y-c-price-icon-old,
+.y-c-product-card .y-c-add-to-cart {
+    all: unset;
+}
+
+.y-c-booking-card {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 1.5fr;
+    /* Columns: Summary | Details | Image */
+    gap: var(--y-spacing-lg);
+    padding: var(--y-spacing-lg);
+    background-color: var(--y-color-hero-form);
+    border-radius: var(--y-border-radius-md);
+    align-items: center;
+}
+
+/* Column 1: Summary (Total & Button) */
+.y-c-booking-card__summary {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Aligns content to the right (start in RTL) */
+    gap: var(--y-spacing-md);
+    justify-content: center;
+    padding-left: var(--y-spacing-lg);
+}
+
+.y-c-booking-total {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-third-text);
+    font-weight: var(--y-font-weight-regular);
+}
+
+.y-c-booking-card__summary .y-c-basic-btn {
+    width: var(--y-width-full);
+    font-size: var(--y-font-size-md);
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+}
+
+/* Column 2: Details (ID, Name, Locations) */
+.y-c-booking-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-booking-id {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+    margin-bottom: var(--y-spacing-xs);
+}
+
+.y-c-booking-name {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-regular);
+    color: var(--y-color-primary-text);
+    margin-bottom: var(--y-spacing-md);
+}
+
+.y-c-booking-location {
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-booking-location-title {
+    font-weight: var(--y-font-weight-regular);
+    display: inline-block;
+    margin-left: var(--y-spacing-xs);
+}
+
+.y-c-booking-location-text,
+.y-c-booking-location-date {
+    display: block;
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-top: var(--y-spacing-xxs);
+}
+
+/* Column 3: Image */
+.y-c-booking-card__image {
+    text-align: center;
+}
+
+.y-c-booking-card__image img {
+    width: var(--y-width-full);
+    height: auto;
+    max-height: var(--y-size-150);
+    object-fit: contain;
+    border-radius: var(--y-border-radius-sm);
+}
+
+/* Mobile Overrides */
+@media (max-width: 768px) {
+    .y-c-product-card {
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-card-layout {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-card-image {
+        flex-basis: auto;
+        width: var(--y-width-percentage-full);
+    }
+
+    .y-c-card-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    .y-c-card-details {
+        flex-direction: column-reverse;
+        flex-basis: auto;
+        gap: var(--y-spacing-md);
+    }
+
+    .y-c-card-pricing {
+        flex-direction: row;
+        flex-basis: auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .y-c-card-pricing .y-c-basic-btn {
+        width: auto;
+        margin-top: 0;
+    }
+
+    .y-c-card-info {
+        flex-basis: auto;
+        padding-left: 0;
+        justify-content: flex-start;
+    }
+
+    .y-c-card-features {
+        margin-top: var(--y-spacing-md);
+        gap: var(--y-spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .y-c-product-card {
+        padding: var(--y-spacing-sm);
+        margin: var(--y-spacing-xs) 0;
+    }
+
+    .y-c-card-pricing .y-c-basic-btn {
+        font-size: var(--y-font-size-sm);
+        padding: var(--y-spacing-xs) var(--y-spacing-md);
+    }
+
+    .y-c-card-name {
+        font-size: var(--y-font-size-lg);
+    }
+
+    .y-c-card-features {
+        margin-top: var(--y-spacing-sm);
+    }
+
+    .y-c-card-feature-item {
+        font-size: var(--y-font-size-xs);
+    }
+}
+
+/* ===== Includes Card ===== */
+.y-c-includes-card {
+    background-color: var(--y-color-background-light);
+    border: 2px solid var(--y-color-border-blured);
+    border-radius: var(--y-border-radius-lg);
+    padding: var(--y-spacing-lg);
+}
+
+.y-c-includes-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-includes-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+}
+
+.y-c-includes-list li img {
+    width: var(--y-size-20);
+    height: var(--y-size-20);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .y-c-includes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .y-c-includes-card {
+        width: var(--y-width-percentage-full);
+    }
+}

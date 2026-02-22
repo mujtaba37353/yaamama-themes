@@ -1,0 +1,79 @@
+<h3 class="y-c-address-list-title" style="display: none;" id="address-list-title">العناوين التالية سيتم استخدامها في
+    صفحة الدفع</h3>
+
+<div class="y-l-address-list" id="address-list" style="display: none;">
+</div>
+
+<div class="y-c-empty-state" id="empty-address-state" data-y="empty-address-container" style="display: none;">
+    <div class="y-c-empty-icon-wrapper">
+        <i class="fas fa-map-marker-alt y-c-empty-icon"></i>
+    </div>
+    <h3 class="y-c-empty-title">لا يوجد عنوان</h3>
+    <button class="y-c-btn y-c-btn-primary y-c-empty-btn">أضف عنوانا جديدا</button>
+</div>
+
+<div class="y-c-add-address-action" id="add-address-action" style="display: none;">
+    <button class="y-c-btn y-c-btn-primary y-c-btn-full">أدخل عنوان الفاتورة
+        الجديد</button>
+</div>
+
+<form class="y-c-account-details-form-container" data-y='address-form' id="address-form" style="display: none;">
+
+    <h3 class="y-c-section-title">عنواني</h3>
+
+    <div class="y-c-form-row">
+        <div class="y-c-form-field">
+            <label class="y-c-form-label">الاسم الأول <span class="y-c-required-mark">*</span></label>
+            <input type="text" class="y-c-form-input" id="new-first-name" required data-y='first-name-input'>
+        </div>
+        <div class="y-c-form-field">
+            <label class="y-c-form-label">اسم العائلة <span class="y-c-required-mark">*</span></label>
+            <input type="text" class="y-c-form-input" id="new-last-name" required data-y='last-name-input'>
+        </div>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">الدولة/المنطقة <span class="y-c-required-mark">*</span></label>
+        <input type="text" class="y-c-form-input" id="new-country" value="المملكة العربية السعودية" readonly
+            data-y='country-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">العنوان <span class="y-c-required-mark">*</span></label>
+        <input type="text" class="y-c-form-input" id="new-street" placeholder="عنوان الشارع/رقم المنزل" required
+            style="margin-bottom:10px;" data-y='street-address-input'>
+        <input type="text" class="y-c-form-input" id="new-apartment" placeholder="رقم الشقة (اختياري)"
+            data-y='apartment-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">المدينة <span class="y-c-required-mark">*</span></label>
+        <input type="text" class="y-c-form-input" id="new-city" required data-y='city-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">المحافظة <span class="y-c-required-mark">*</span></label>
+        <input type="text" class="y-c-form-input" id="new-state" required data-y='state-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">الرمز البريدي <span class="y-c-required-mark">*</span></label>
+        <input type="text" class="y-c-form-input" id="new-postal-code" required data-y='postal-code-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">الهاتف <span class="y-c-required-mark">*</span></label>
+        <input type="tel" class="y-c-form-input" id="new-phone" required data-y='phone-input'>
+    </div>
+
+    <div class="y-c-form-field">
+        <label class="y-c-form-label">البريد الإلكتروني <span class="y-c-required-mark">*</span></label>
+        <input type="email" class="y-c-form-input" id="new-email" required data-y='email-input'>
+    </div>
+
+    <div class="y-c-form-actions" data-y='address-submit-container'>
+        <button type="submit" class="y-c-btn y-c-btn-primary y-c-btn-outline" data-y='address-submit-btn'>حفظ
+            العنوان</button>
+        <button type="button" class="y-c-btn  y-c-btn-cancel" style="margin-right: 10px;">إلغاء</button>
+    </div>
+</form>

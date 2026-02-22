@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">تسوّق</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-popups.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="../../components/y-date-picker.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-forms.css">
+    <link rel="stylesheet" href="../../components/y-range-slider.css">
+
+
+    <link rel="stylesheet" href="y-store.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main data-y="store-main">
+
+        <div id="y-l-page-hero" data-y="home-hero">
+
+            <!-- Booking Form Container -->
+            <div class="y-c-hero-form-container" data-y="hero-form-container">
+
+                <!-- Tabs -->
+                <div class="y-c-hero-tabs" data-y="hero-tabs">
+
+                    <button class="y-c-hero-tab-btn" data-y="hero-tab-booking">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span>الحجز</span>
+                    </button>
+
+                    <button class="y-c-hero-tab-btn active" data-y="hero-tab-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <span>إبحث الان</span>
+                    </button>
+
+                </div>
+
+                <!-- Form Content -->
+                <form class="y-c-hero-form-content" data-y="hero-form-content">
+
+                    <div class="y-l-form-field y-l-form-field-checkbox">
+                        <input type="checkbox" id="different-location">
+                        <label for="different-location">الرجوع لموقع مختلف</label>
+                    </div>
+
+                    <div class="y-l-form-row y-l-form-row-bottom">
+
+                        <div class="y-l-form-field y-l-form-field-location">
+
+                            <input type="text" id="pickup-location" placeholder="النوع">
+
+                        </div>
+
+
+                        <div class="y-l-form-field y-l-form-field-datetime">
+                            <label for="pickup-date">تاريخ ووقت الخروج</label>
+                            <div class="y-l-datetime-inputs">
+                                <input type="date" id="pickup-date" aria-label="تاريخ الخروج">
+                                <input type="time" id="pickup-time" aria-label="وقت الخروج">
+                            </div>
+                        </div>
+
+                        <div class="y-l-form-field y-l-form-field-datetime">
+                            <label for="dropoff-date">تاريخ ووقت الرجوع</label>
+                            <div class="y-l-datetime-inputs">
+                                <input type="date" id="dropoff-date" aria-label="تاريخ الرجوع">
+                                <input type="time" id="dropoff-time" aria-label="وقت الرجوع">
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="y-l-form-field y-l-form-field-submit">
+                        <!-- This label is visually hidden but good for accessibility -->
+                        <label for="hero-search-btn" style="visibility: hidden; height: 0;">&nbsp;</label>
+                        <button type="submit" class="y-c-submit-button" id="hero-search-btn" data-y="hero-search-btn">
+                            <span>إبحث</span>
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <div class="y-u-container" data-y="store-content-container">
+            <section class="y-l-store-filters" data-y="store-filters">
+
+                <!-- Category Filter Tabs -->
+                <div class="y-c-category-filter-tabs" data-y="category-filter-tabs">
+                    <button class="y-c-category-filter-btn active" data-y="filter-all">جميع الاسطول</button>
+                    <button class="y-c-category-filter-btn" data-y="filter-small">السيارات الصغيرة</button>
+                    <button class="y-c-category-filter-btn" data-y="filter-sedan">سيدان & كومباكت</button>
+                    <button class="y-c-category-filter-btn" data-y="filter-suv">دفع رباعي & كروس اوفر</button>
+                    <button class="y-c-category-filter-btn" data-y="filter-luxury">فخمة</button>
+                    <button class="y-c-category-filter-btn" data-y="filter-family">عائلية</button>
+                </div>
+
+                <!-- Sorting and Price Controls -->
+                <div class="y-l-sorting-controls" data-y="sorting-controls">
+
+                    <div class="y-c-sort-group" data-y="sort-by-category">
+                        <label>حسب الفئة</label>
+                        <div class="y-c-dropdown">
+                            <button type="button" class="y-c-dropdown-toggle" data-value="all">
+                                <span class="y-c-dropdown-selected">الفئة</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="y-c-dropdown-menu">
+                                <li><button type="button" data-value="all">الفئة</button></li>
+                                <li><button type="button" data-value="small">السيارات الصغيرة</button></li>
+                                <li><button type="button" data-value="sedan">سيدان & كومباكت</button></li>
+                                <li><button type="button" data-value="suv">دفع رباعي & كروس اوفر</button></li>
+                                <li><button type="button" data-value="luxury">فخمة</button></li>
+                                <li><button type="button" data-value="family">عائلية</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="y-c-sort-group" data-y="sort-by-price">
+                        <label>الترتيب حسب</label>
+                        <div class="y-c-dropdown">
+                            <button type="button" class="y-c-dropdown-toggle" data-value="default">
+                                <span class="y-c-dropdown-selected">السعر من الاعلى الى الاقل</span>
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <ul class="y-c-dropdown-menu">
+                                <li><button type="button" data-value="default">السعر من الاعلى الى الاقل</button></li>
+                                <li><button type="button" data-value="price-asc">السعر من الاقل الى الاعلى</button></li>
+                                <li><button type="button" data-value="name-asc">الاسم (أ - ي)</button></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="y-c-price-range" data-y="price-range">
+                        <div class="y-c-range-value" data-y="price-range-value">
+                            <span>نطاق السعر</span>
+                            <span class="y-c-range-values">
+                                <span id="min-value">100</span>
+                                ريال -
+                                <span id="max-value">1500</span>
+                                ريال
+                            </span>
+                        </div>
+                        <div class="y-c-range-slider-wrapper">
+                            <div class="y-c-slider-track">
+                                <div class="y-c-slider-point" id="minPoint"></div>
+                                <div class="y-c-slider-line"></div>
+                                <div class="y-c-slider-point" id="maxPoint"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <div class="y-l-products-section">
+                <ul class="y-l-products-list" id="products-container">
+                    <!-- Products will be loaded here by store.js -->
+                </ul>
+
+                <div class="y-l-show-more-container">
+                    <button class="y-c-basic-btn" id="show-more-btn" data-y="show-more-btn">
+                        عرض المزيد
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/range-slider.js"></script>
+    <script src="../../js/store.js"></script>
+    <script src="../../js/auth-forms.js"></script>
+    <script src="../../js/auth-popup.js"></script>
+</body>
+
+</html>

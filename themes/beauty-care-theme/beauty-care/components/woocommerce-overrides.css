@@ -1,0 +1,93 @@
+/* WooCommerce overrides to match Beauty Care design */
+
+.woocommerce-Price-currencySymbol img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-inline-start: 0.25em;
+}
+
+.woocommerce-Price-amount {
+  white-space: nowrap;
+}
+
+.woocommerce ul.products {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.woocommerce .woocommerce-info,
+.woocommerce .woocommerce-message,
+.woocommerce .woocommerce-error {
+  padding: var(--y-space-16);
+  margin: var(--y-space-16) 0;
+  border-radius: var(--y-space-8);
+  border: 1px solid var(--y-color-border);
+}
+
+/* My Account: make content visible (link-based nav, not radio tabs) */
+.profile-section .woocommerce-MyAccount-content {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  padding: var(--y-space-16);
+  border: 2px solid var(--y-color-border-profile-content, #e5e5e5);
+  border-radius: var(--y-space-16);
+  background-color: var(--y-color-bg-profile-content, #fdfbff);
+}
+
+.profile-section .sidbar .links a.active {
+  background-color: var(--y-color-primary);
+  box-shadow: none;
+}
+
+/* Checkout: match Beauty Care design */
+.woocommerce-checkout .form-row input,
+.woocommerce-checkout .form-row select,
+.woocommerce-checkout .form-row textarea {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-12);
+  border: 1px solid var(--y-color-border);
+  border-radius: var(--y-space-14);
+  background: var(--y-color-bg);
+  color: var(--y-color-text);
+}
+.woocommerce-checkout .form-row input:focus,
+.woocommerce-checkout .form-row select:focus,
+.woocommerce-checkout .form-row textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--y-color-primary) 20%, transparent);
+}
+.woocommerce-checkout .form-row label {
+  color: var(--y-color-text);
+  font-weight: 600;
+}
+.woocommerce-checkout #order_review_heading,
+.woocommerce-checkout .woocommerce-billing-fields h3 {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-text);
+}
+.woocommerce-checkout #payment .payment_methods {
+  border: none;
+  padding: 0;
+}
+.woocommerce-checkout #place_order {
+  width: 100%;
+  padding: var(--y-space-12) var(--y-space-24);
+  border-radius: var(--y-space-12);
+  background-color: var(--y-color-primary);
+  color: var(--y-color-text);
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+.woocommerce-checkout #place_order:hover {
+  filter: brightness(var(--y-opacity-95));
+  background-color: var(--y-color-secondary);
+}

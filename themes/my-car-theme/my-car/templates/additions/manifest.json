@@ -1,0 +1,30 @@
+{
+    "template": "additions",
+    "description": "Additions page for checkout process",
+    "slots": {
+        "page-title": "Page title",
+        "header-placeholder": "Header component placeholder",
+        "additions-main": "Main content area",
+        "additions-stepper": "Checkout step navigator",
+        "step-search": "Search step",
+        "step-additions": "Add-ons step (active)",
+        "step-terms": "Terms step",
+        "step-payment": "Payment step",
+        "step-confirmation": "Confirmation step",
+        "additions-layout": "Main layout grid",
+        "additions-content": "Main content column",
+        "info-boxes": "Container for delivery/pickup info",
+        "delivery-box": "Delivery info box",
+        "pickup-box": "Pickup info box",
+        "car-details-card": "Card showing selected car details",
+        "additions-list": "List of available additions",
+        "summary-sidebar": "Sidebar for summary and confirmation",
+        "includes-card": "Card showing included features",
+        "confirm-button": "Button to proceed to next step"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

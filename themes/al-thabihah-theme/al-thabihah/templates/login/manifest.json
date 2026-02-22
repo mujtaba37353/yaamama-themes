@@ -1,0 +1,25 @@
+{
+    "template": "login",
+    "slots": {
+        "page-title": "Page title for Login",
+        "favicon": "Favicon icon",
+        "header-placeholder": "Header component placeholder",
+        "footer-placeholder": "Footer component placeholder",
+        "login-page": "Main page wrapper",
+        "login-card": "The centered white card",
+        "form-title": "Title of the login form",
+        "login-form": "The <form> element",
+        "form-group-email": "Form group for Email",
+        "form-group-password": "Form group for Password",
+        "password-toggle-icon": "The eye icon to show/hide password",
+        "forgot-password-link-container": "Wrapper for the 'Forgot Password' link",
+        "forgot-password-link": "The 'Forgot Password' link itself",
+        "form-submit-button-container": "Wrapper for the submit button",
+        "form-submit-btn": "The 'Login' button",
+        "auth-switch-container": "Wrapper for the 'Create Account' link",
+        "auth-switch-link": "The 'Create Account' link itself"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

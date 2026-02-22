@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y="page-title">تسوّق</title>
+    <link rel="Icon" type="image/png" href="/assets/logo.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="y-shop-archive.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" class="y-c-sticky-header" data-y="header-placeholder"></div>
+
+    <main data-y="shop-main">
+        <section class="y-l-container" data-y="shop-container">
+            <div class="y-l-shop-section" data-y="shop-section">
+                <p class="y-c-subtitle" data-y="shop-breadcrumb">الرئيسية > الصوتيات والمرئيات</p>
+
+                <!-- Product List Area -->
+                <div class="y-l-shop-content">
+                    <div class="y-c-shop-promo" data-y="shop-promo-banner">
+                        <div class="y-c-slide-text" data-y="promo-text-section">
+                            <h1 data-y="promo-title">أحدث الأجهزة</h1>
+                            <p data-y="promo-subtitle">الجيل الجديد من الأجهزة بين يديك الآن</p>
+                        </div>
+                        <div class="y-c-slide-image" data-y="promo-image-section">
+                            <img src="/assets/phone-slider.png" alt="Latest Devices" data-y="promo-image">
+                        </div>
+                    </div>
+                    <br data-y="promo-products-separator">
+
+                    <!-- Controls Header -->
+                    <div class="y-l-header-filter-container" data-y="products-header">
+                        <h2 class="y-c-section-title" data-y="products-title">جميع المنتجات</h2>
+
+                        <div class="y-l-header-filter" data-y="shop-controls">
+
+                            <!-- New Comprehensive Filter Dropdown -->
+                            <div class="y-c-shop-menu" id="filter-dropdown" data-y="filter-dropdown">
+                                <button class="y-c-shop-menu-button" data-y="filter-dropdown-btn">
+
+                                    <i class="fas fa-filter y-c-shop-menu-icon" data-y="filter-icon"></i>
+
+                                    <span class="y-c-shop-menu-text" data-y="filter-dropdown-text">
+                                        تصنيفة المنتجات
+                                    </span>
+                                    <i class="fas fa-chevron-down y-c-shop-menu-text"
+                                        data-y="filter-dropdown-arrow"></i>
+
+                                </button>
+
+                                <div class="y-c-shop-menu-dropdown y-c-filter-dropdown-content"
+                                    data-y="filter-dropdown-content">
+
+                                    <!-- Category Filter -->
+                                    <div class="y-c-filter-section">
+                                        <details open>
+                                            <summary class="y-c-filter-title">
+                                                فئات المنتجات
+                                                <i class="fas fa-minus y-c-accordion-icon"></i>
+                                            </summary>
+                                            <div class="y-c-filter-content">
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="category" value="audio">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">الصوتيات والمرئيات</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="category" value="hometheater">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">المسارح المنزلية</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="category" value="tablets">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">الأجهزة اللوحية</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="category" value="tv">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">التلفزيونات</span>
+                                                </label>
+                                            </div>
+                                        </details>
+                                    </div>
+
+                                    <!-- Brands Filter -->
+                                    <div class="y-c-filter-section">
+                                        <details open>
+                                            <summary class="y-c-filter-title">
+                                                الماركات
+                                                <i class="fas fa-minus y-c-accordion-icon"></i>
+                                            </summary>
+                                            <div class="y-c-filter-content">
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="brand" value="lg">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">ال جي</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="brand" value="tcl" checked>
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">تي سي ال</span>
+                                                </label>
+                                            </div>
+                                        </details>
+                                    </div>
+
+                                    <!-- Rating Filter -->
+                                    <div class="y-c-filter-section">
+                                        <details open>
+                                            <summary class="y-c-filter-title">
+                                                التقييم
+                                                <i class="fas fa-minus y-c-accordion-icon"></i>
+                                            </summary>
+                                            <div class="y-c-filter-content">
+                                                <label class="y-c-custom-radio y-c-rating-radio">
+                                                    <input type="radio" name="rating" value="5">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <div class="y-c-stars">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i>
+                                                    </div>
+                                                </label>
+                                                <label class="y-c-custom-radio y-c-rating-radio">
+                                                    <input type="radio" name="rating" value="4">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <div class="y-c-stars">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="far fa-star"></i>
+                                                    </div>
+                                                </label>
+                                                <label class="y-c-custom-radio y-c-rating-radio">
+                                                    <input type="radio" name="rating" value="3" checked>
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <div class="y-c-stars">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i>
+                                                    </div>
+                                                </label>
+                                                <label class="y-c-custom-radio y-c-rating-radio">
+                                                    <input type="radio" name="rating" value="2">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <div class="y-c-stars">
+                                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i>
+                                                    </div>
+                                                </label>
+                                                <label class="y-c-custom-radio y-c-rating-radio">
+                                                    <input type="radio" name="rating" value="1">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <div class="y-c-stars">
+                                                        <i class="fas fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i><i class="far fa-star"></i><i
+                                                            class="far fa-star"></i>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </details>
+                                    </div>
+
+                                    <!-- Price Filter -->
+                                    <div class="y-c-filter-section">
+                                        <details open>
+                                            <summary class="y-c-filter-title">
+                                                السعر
+                                                <i class="fas fa-minus y-c-accordion-icon"></i>
+                                            </summary>
+                                            <div class="y-c-filter-content">
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="price" value="under-2100">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">أقل من 2100</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="price" value="2100-2100" checked>
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">من 2100 إلى 2100</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="price" value="2100-2100-2">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">من 2100 إلى 2100</span>
+                                                </label>
+                                                <label class="y-c-custom-radio">
+                                                    <input type="radio" name="price" value="over-2100">
+                                                    <span class="y-c-radio-checkmark"></span>
+                                                    <span class="y-c-radio-label">أكثر من 2100</span>
+                                                </label>
+
+                                                <div class="y-c-price-inputs">
+                                                    <input type="number" placeholder="من ر.س"
+                                                        class="y-c-form-input y-c-price-input-sm">
+                                                    <input type="number" placeholder="الى ر.س"
+                                                        class="y-c-form-input y-c-price-input-sm">
+                                                </div>
+                                            </div>
+                                        </details>
+                                    </div>
+
+                                    <!-- Action Button -->
+                                    <button class="y-c-btn y-c-btn-primary y-c-btn-full y-c-delete-filter-btn">حذف
+                                        الفلتر</button>
+
+                                </div>
+                            </div>
+
+                            <!-- Sort Dropdown -->
+                            <div class="y-c-shop-menu" id="sort-dropdown" data-y="sort-dropdown">
+                                <button class="y-c-shop-menu-button" data-y="sort-dropdown-btn">
+                                    <span data-y="sort-dropdown-text">فرز حسب</span>
+                                    <i class="fas fa-chevron-down" data-y="sort-dropdown-icon"></i>
+                                </button>
+                                <div class="y-c-shop-menu-dropdown" data-y="sort-dropdown-menu">
+                                    <a href="#" class="y-c-shop-menu-item active" data-sort="newest"
+                                        data-y="sort-newest">الأحدث</a>
+                                    <a href="#" class="y-c-shop-menu-item" data-sort="price-asc"
+                                        data-y="sort-price-asc">السعر: من الأقل إلى الأعلى</a>
+                                    <a href="#" class="y-c-shop-menu-item" data-sort="price-desc"
+                                        data-y="sort-price-desc">السعر: من الأعلى إلى الأقل</a>
+                                    <a href="#" class="y-c-shop-menu-item" data-sort="name-asc"
+                                        data-y="sort-name-asc">الاسم: أ-ي</a>
+                                    <a href="#" class="y-c-shop-menu-item" data-sort="name-desc"
+                                        data-y="sort-name-desc">الاسم: ي-أ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Products grid -->
+                    <div class="y-l-product-grid" id="featured-products-container" data-y="products-grid"></div>
+
+                    <!-- Pagination -->
+                    <ul class="y-l-pagination" id="pagination-container" data-y="pagination-container"></ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/products.js"></script>
+    <script src="../../js/shop-archive.js"></script>
+</body>
+
+</html>

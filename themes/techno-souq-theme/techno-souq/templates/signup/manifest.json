@@ -1,0 +1,22 @@
+{
+    "template": "signup",
+    "slots": {
+        "signup-hero": "Hero section for the signup page",
+        "signup-form-section": "Main form container for signup",
+        "signup-header": "Header of the signup form",
+        "signup-title": "Title of the signup form",
+        "signup-email-field": "Email field container",
+        "signup-email-input": "Email input field",
+        "signup-password-field": "Password field container",
+        "signup-password-input": "Password input field",
+        "signup-confirm-password-field": "Confirm password field container",
+        "signup-confirm-password-input": "Confirm password input field",
+        "signup-submit-container": "Submit button container",
+        "signup-submit-btn": "Submit button for form",
+        "signup-login-link-container": "Container for login link",
+        "signup-login-link": "Link to login page"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

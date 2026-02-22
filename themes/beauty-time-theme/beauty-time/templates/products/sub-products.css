@@ -1,0 +1,103 @@
+.sub-products-section .product-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--y-space-16);
+  justify-content: center;
+  padding: var(--y-space-16);
+}
+
+.sub-products-section .product-content p:not(.product-title) {
+  font-size: var(--y-space-24);
+  font-weight: 600;
+  color: var(--y-color-text);
+}
+
+.sub-products-section .product-content p.product-title {
+  font-size: var(--y-space-18);
+  font-weight: 400;
+  color: var(--y-color-text);
+  line-height: 1.6;
+}
+
+.sub-products-section .product-content .price {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-16);
+  margin-top: var(--y-space-8);
+}
+
+.sub-products-section .product-content .price p:first-child {
+  font-size: var(--y-space-20);
+  font-weight: 500;
+  color: var(--y-color-text);
+}
+
+.sub-products-section .product-content .price p:last-child {
+  font-size: var(--y-space-24);
+  font-weight: 700;
+  color: var(--y-color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-4);
+}
+
+.sub-products-section .product-content .price p:last-child img {
+  width: var(--y-space-22);
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+@media (max-width: 1024px) {
+  .sub-products-section .container .products-grid .product-card {
+    max-width: 100%;
+  }
+
+  .sub-products-section .product-content p:not(.product-title) {
+    font-size: var(--y-space-22);
+  }
+
+  .sub-products-section .product-content p.product-title {
+    font-size: var(--y-space-16);
+  }
+}
+
+@media (max-width: 768px) {
+  .sub-products-section .container .products-grid .product-card {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .sub-products-section .product-img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .sub-products-section .product-content {
+    text-align: center;
+    align-items: center;
+  }
+
+  .sub-products-section .product-content p:not(.product-title) {
+    font-size: var(--y-space-20);
+  }
+
+  .sub-products-section .product-content p.product-title {
+    font-size: var(--y-space-16);
+    text-align: center;
+  }
+
+  .sub-products-section .product-content .price {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-space-8);
+  }
+
+  .sub-products-section .product-content .price p:first-child {
+    font-size: var(--y-space-18);
+  }
+
+  .sub-products-section .product-content .price p:last-child {
+    font-size: var(--y-space-22);
+  }
+}

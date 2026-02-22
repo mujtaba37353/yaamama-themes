@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="Icon" type="image/png" href="/assets/Frame 5.png">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+
+    <link rel="stylesheet" href="y-product-single.css">
+</head>
+
+<body>
+    <div class="y-c-sale-banner">
+        <p>خصم %20 على رسوم التوصيل</p>
+    </div>
+
+    <div id="header-placeholder" class="y-c-sticky-header"></div>
+
+    <section class="y-c-container">
+        <div class="y-c-Element-row">
+            <img src="/assets/image 43.png" alt="نقانق دجاج" data-y="product-image">
+
+            <div class="y-c-Element-col">
+                <h1 data-y="product-title">لحم غنم طازج
+                </h1>
+                <p class="y-c-price" data-y="product-price">89.99 ر.س
+                </p>
+                <small class="y-c-" id="stock" data-y="product-stock-display">15 متوفر في المخزون
+                </small>
+
+                <div class="y-c-actions">
+                    <div class="y-c-quantity">
+                        <input type="number" value="1" min="1" data-y="quantity-input">
+                    </div>
+                    <button class="y-c-add-cart" data-y="add-to-cart-btn">إضافة إلى السلة</button>
+                </div>
+
+                <button class="y-c-fav" data-y="favorite-btn">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="y-c-fav-text" data-y="fav-text">إضافة إلى المفضلة</span>
+                </button>
+
+                <div class="y-c-details" data-y="details-section">
+                    <p data-y="product-id">رمز المنتج: SKU1702</p>
+                    <p data-y="product-category">التصنيف: لحوم</p>
+                    <h4 data-y="product-packaging">كرتون</h4>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="y-c-reviews">
+            <h2 data-y="reviews-title">المراجعات (0)</h2>
+            <p class="y-c-be-first" data-y="first-review-text">كن أول من يقيم </p>
+
+            <div class="y-c-rating">
+                <label data-y="rating-label">تقييمك: </label>
+                <div class="y-c-stars" data-y="star-rating-container">
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+            </div>
+
+            <textarea placeholder="اكتب مراجعتك هنا..." data-y="review-textarea"></textarea>
+            <button class="y-c-submit-review" data-y="submit-review-btn">إرسال المراجعة</button>
+        </section>
+
+        <section class="y-c-products-section">
+            <div class="y-c-products-header">
+                <h3 data-y="related-products-title">منتجات ذات صلة</h3>
+                <a href="#" class="y-c-view-more-btn" data-y="view-more-related">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    انظر أكثر
+                </a>
+            </div>
+
+            <ul class="y-c-products-grid" data-y="related-products-grid">
+            </ul>
+        </section>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js"></script>
+    <script src="../../js/single-product.js"></script>
+    <script src="../../js/products.js"></script>
+</body>
+
+</html>

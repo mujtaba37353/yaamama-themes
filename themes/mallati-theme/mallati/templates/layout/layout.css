@@ -1,0 +1,22 @@
+/* Layout (home) page styles */
+.hero-section {
+  padding-top: var(--y-space-96);
+}
+.categories-section h2 {
+  margin-bottom: var(--y-space-16);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--y-space-24);
+}
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 576px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

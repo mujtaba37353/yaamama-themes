@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-y='page-title'>المتجر - الذبيحة</title>
+    <link rel="Icon" type="image/png" href="../../assets/logo.png" data-y="favicon">
+
+    <link rel="stylesheet" href="../../base/reset.css">
+    <link rel="stylesheet" href="../../base/tokens.css">
+    <link rel="stylesheet" href="../../base/typography.css">
+    <link rel="stylesheet" href="../../base/utilities.css">
+
+    <link rel="stylesheet" href="../../assets/fontawesome/css/all.min.css">
+
+    <link rel="stylesheet" href="../../components/y-header.css">
+    <link rel="stylesheet" href="../../components/y-footer.css">
+    <link rel="stylesheet" href="../../components/y-cards.css">
+    <link rel="stylesheet" href="../../components/y-buttons.css">
+
+    <link rel="stylesheet" href="./y-store.css">
+    <link rel="manifest" href="./manifest.json">
+</head>
+
+<body>
+    <div id="header-placeholder" data-y="header-placeholder"></div>
+
+    <main class="y-l-store-page" data-y="store-main">
+        <div class="y-u-container">
+
+            <nav class="y-c-breadcrumbs" aria-label="breadcrumb" data-y="breadcrumbs">
+                <p>
+                    <a href="../home/layout.html" data-y="bc-home-link">الرئيسية</a>
+                    <span data-y="bc-separator">></span>
+                    <span data-y="bc-current-page">جميع المنتجات</span>
+                </p>
+            </nav>
+
+            <section class="y-l-category-bar-section" data-y="category-section">
+
+                <button id="category-menu-trigger" class="y-c-category-trigger-btn">
+                    <span>الأقسام</span>
+                </button>
+
+                <h2 class="y-c-section-title" data-y="category-title">الأقسام</h2>
+
+
+                <div id="category-overlay" class="y-c-category-overlay"></div>
+
+                <div class="y-l-store-category-grid" id="category-grid" data-y="category-grid">
+
+                    <div class="y-c-sidebar-header">
+                        <button id="category-menu-close" class="y-c-sidebar-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        <h3>الأقسام</h3>
+                    </div>
+
+                    <a href="../store/layout.html" class="y-c-store-category-card" data-category="all"
+                        data-y="category-card-all">
+                        <div class="y-c-store-category-icon" data-y="category-icon-all"><i class="fas fa-box"></i></div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-all">جميع المنتجات</h3>
+                    </a>
+
+                    <a href="../store/layout.html?category=cuts" class="y-c-store-category-card" data-category="cuts"
+                        data-y="category-card-cuts">
+                        <div class="y-c-store-category-icon" data-y="category-icon-cuts"><img src="/assets/meat.png"
+                                alt="لحوم بالكيلو"></div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-cuts">لحوم بالكيلو</h3>
+                    </a>
+
+                    <a href="../store/layout.html?category=naemi" class="y-c-store-category-card" data-category="naemi"
+                        data-y="category-card-naemi">
+                        <div class="y-c-store-category-icon" data-y="category-icon-naemi"><img src="/assets/sheep.png"
+                                alt="نعيمي"></div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-naemi">نعيمي</h3>
+                    </a>
+
+                    <a href="../store/layout.html?category=tays" class="y-c-store-category-card" data-category="tays"
+                        data-y="category-card-tays">
+                        <div class="y-c-store-category-icon" data-y="category-icon-tays"><img src="/assets/tees.png"
+                                alt="تيس كشميري"></div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-tays">تيس كشميري</h3>
+                    </a>
+
+                    <a href="../store/layout.html?category=ejel" class="y-c-store-category-card" data-category="ejel"
+                        data-y="category-card-ejel">
+                        <div class="y-c-store-category-icon" data-y="category-icon-ejel"><img src="/assets/cow.png"
+                                alt="عجل"></div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-ejel">عجل</h3>
+                    </a>
+
+                    <a href="../store/layout.html?category=bbq" class="y-c-store-category-card" data-category="bbq"
+                        data-y="category-card-bbq">
+                        <div class="y-c-store-category-icon" data-y="category-icon-bbq">
+                            <i class="fa-brands fa-gripfire"></i>
+                        </div>
+                        <h3 class="y-c-store-category-title" data-y="category-title-bbq">مجهز للشواء</h3>
+                    </a>
+                </div>
+            </section>
+
+            <section class="y-l-products-section" data-y="products-section">
+                <h2 class="y-c-section-title" id="products-section-title" data-y="products-section-title">جميع المنتجات
+                </h2>
+
+                <ul class="y-l-products-grid" id="products-container" data-y="products-grid">
+                </ul>
+
+                <div class="y-c-show-more-container" id="show-more-container" data-y="show-more-container">
+                    <button class="y-c-outline-btn y-c-basic-btn" id="show-more-btn" data-y="show-more-btn">
+                        <span data-y="show-more-text">عرض المزيد</span>
+                        <i class="fas fa-arrow-left" data-y="show-more-arrow"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder" data-y="footer-placeholder"></div>
+
+    <script src="../../js/shared-components.js" data-y="shared-components-script"></script>
+    <script src="../../js/products.js" data-y="products-script"></script>
+    <script src="../../js/store.js" data-y="store-script"></script>
+</body>
+
+</html>

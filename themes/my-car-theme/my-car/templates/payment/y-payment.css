@@ -1,0 +1,275 @@
+/* ========== Payment Form ========== */
+.y-l-payment-form-container {
+    background: var(--y-color-background-light);
+    border-radius: var(--y-border-radius-lg);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    padding: var(--y-spacing-3xl);
+    box-shadow: var(--y-shadow-sm);
+    max-width: var(--y-size-1000);
+    margin: 0 auto;
+    width: var(--y-width-percentage-80);
+    position: relative;
+}
+
+.y-c-back-link {
+    position: absolute;
+    top: var(--y-spacing-lg);
+    left: var(--y-spacing-lg);
+    font-size: var(--y-font-size-lg);
+    color: var(--y-color-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-xs);
+}
+
+.y-l-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--y-spacing-xl);
+}
+
+.y-c-radio-option {
+    width: var(--y-width-percentage-xl);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-md);
+    padding: var(--y-spacing-sm) var(--y-spacing-md);
+    transition: var(--y-transition-fast);
+}
+
+.y-c-payment-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: var(--y-spacing-md);
+    border-radius: var(--y-border-radius-md);
+
+}
+
+.y-c-payment-label-text {
+    flex: 1;
+    text-align: right;
+    margin-right: var(--y-spacing-md);
+}
+
+.y-c-payment-label-text span {
+    font-size: var(--y-font-size-lg);
+    font-weight: var(--y-font-weight-bold);
+    display: block;
+    color: var(--y-color-primary-text);
+}
+
+.y-c-payment-label-text p {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-top: var(--y-spacing-xs);
+    line-height: 1.4;
+}
+
+.y-c-payment-icons {
+    display: flex;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+}
+
+.y-c-payment-icons img {
+    height: var(--y-size-28);
+    width: auto;
+}
+
+/* Payment Provider Badges */
+.y-c-mada-badge {
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-xs);
+    border: var(--y-border-width-xs) solid var(--y-color-border);
+    padding: var(--y-spacing-xs) var(--y-spacing-sm);
+    border-radius: var(--y-border-radius-sm);
+    background: var(--y-color-background-light);
+}
+
+.y-c-tabby-badge {
+    color: #00e5bc;
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-lg);
+    text-transform: lowercase;
+}
+
+.y-c-tamara-badge {
+    color: #d69e2e;
+    font-weight: var(--y-font-weight-bold);
+    font-size: var(--y-font-size-lg);
+    text-transform: lowercase;
+}
+
+/* ========== Custom Radio ========== */
+.y-c-payment-label input[type="radio"] {
+    appearance: none;
+    width: var(--y-size-18);
+    height: var(--y-size-18);
+    border: var(--y-border-width-sm) solid var(--y-color-border);
+    border-radius: var(--y-border-radius-full);
+    position: relative;
+    cursor: pointer;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-payment-label input[type="radio"]:checked {
+    border-color: var(--y-color-primary);
+}
+
+.y-c-payment-label input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: var(--y-size-10);
+    height: var(--y-size-10);
+    background-color: var(--y-color-primary);
+    border-radius: var(--y-border-radius-full);
+    transform: translate(-50%, -50%);
+}
+
+/* ========== Payment Form Fields ========== */
+.y-c-payment-card-details,
+.y-c-stc-pay-details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--y-spacing-lg);
+    margin-top: var(--y-spacing-md);
+}
+
+.y-l-info-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--y-spacing-lg);
+}
+
+.y-l-form-row {
+    display: flex;
+    gap: var(--y-spacing-lg);
+}
+
+.y-l-form-row .y-c-floating-field {
+    flex: 1;
+}
+
+/* ========== Payment Summary ========== */
+.y-l-payment-summary {
+    background: none;
+    border: none;
+    padding-top: var(--y-spacing-3xl);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--y-spacing-md);
+}
+
+.y-l-summary-title-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.y-c-summary-price {
+    font-size: var(--y-font-size-xl);
+    font-weight: var(--y-font-weight-bold);
+    color: var(--y-color-primary);
+}
+
+.y-c-summary-detail {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--y-spacing-md);
+    font-size: var(--y-font-size-md);
+    font-weight: var(--y-font-weight-semibold);
+    color: var(--y-color-primary-text);
+}
+
+.y-c-pay-type {
+    font-weight: var(--y-font-weight-regular);
+}
+
+
+/* ========== Responsive ========== */
+@media (max-width: 992px) {
+    .y-l-payment-form-container {
+        width: var(--y-width-percentage-full);
+        padding: var(--y-spacing-lg);
+    }
+
+    .y-c-radio-option {
+        width: var(--y-width-percentage-full);
+    }
+
+    .y-l-form-container {
+        flex-direction: column-reverse;
+        align-items: flex-end;
+        margin-top: var(--y-spacing-2xl);
+    }
+
+    .y-l-payment-summary {
+        position: static;
+        margin-top: var(--y-spacing-2xl);
+        padding-top: var(--y-spacing-2xl);
+        width: var(--y-width-percentage-full);
+    }
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 480px) {
+
+    .y-l-payment-summary {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--y-spacing-md);
+        padding: var(--y-spacing-md);
+    }
+
+    .y-c-summary-text-content {
+        align-items: center;
+    }
+
+    .y-l-info-row {
+        flex-direction: column;
+    }
+
+    .y-c-summary-actions {
+        flex-direction: column-reverse;
+        /* Stack button on top of link */
+        gap: var(--y-spacing-md);
+        width: 100%;
+    }
+
+    .y-c-change-method-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .y-c-payment-label {
+        gap: var(--y-spacing-sm);
+    }
+
+    .y-c-payment-card-details,
+    .y-c-stc-pay-details {
+        padding-right: var(--y-spacing-md);
+        /* Less indent on mobile */
+    }
+
+    .y-l-form-row {
+        flex-direction: column;
+    }
+
+    .y-c-payment-icons img {
+        height: var(--y-size-28);
+        width: var(--y-size-28);
+    }
+
+    .y-c-summary-price {
+        font-size: var(--y-font-size-2xl);
+    }
+}

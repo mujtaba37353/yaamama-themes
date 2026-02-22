@@ -1,0 +1,57 @@
+/*
+Theme Name: Nafhat
+Theme URI: https://yamama-solutions.com
+Author: Yamama Solutions
+Author URI: https://yamama-solutions.com
+Description: قالب متجر عطور عصري ومتجاوب باللغة العربية مع دعم RTL
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: nafhat
+Tags: e-commerce, woocommerce, rtl, arabic, perfume, shop, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* Import Base Styles */
+@import url('assets/css/base/reset.css');
+@import url('assets/css/base/tokens.css');
+@import url('assets/css/base/typography.css');
+@import url('assets/css/base/utilities.css');
+
+/* Import Component Styles */
+@import url('assets/css/components/header.css');
+@import url('assets/css/components/footer.css');
+@import url('assets/css/components/hero.css');
+@import url('assets/css/components/products.css');
+@import url('assets/css/components/buttons.css');
+@import url('assets/css/components/forms.css');
+@import url('assets/css/components/cards.css');
+@import url('assets/css/components/badges.css');
+@import url('assets/css/components/auth.css');
+@import url('assets/css/components/indicators.css');
+@import url('assets/css/components/brands.css');
+@import url('assets/css/components/reviews.css');
+@import url('assets/css/components/contact.css');
+@import url('assets/css/components/content-pages.css');
+@import url('assets/css/components/my-account.css');
+@import url('assets/css/components/checkout.css');
+@import url('assets/css/components/shop.css');
+@import url('assets/css/components/product-details.css');
+
+/* WordPress Specific Styles */
+.wp-block-group {
+  margin-bottom: var(--y-space-32);
+}
+
+.alignwide {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.alignfull {
+  max-width: 100%;
+  width: 100%;
+}

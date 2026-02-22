@@ -1,0 +1,13 @@
+{
+    "template": "contact-us",
+    "slots": {
+        "page-title": "title",
+        "contact-us-title": "[data-y='contact-us-title']",
+        "contact-us-text": "[data-y='contact-us-text']",
+        "whatsapp-section": "[data-y='whatsapp-section']",
+        "map-section": "[data-y='map-section']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

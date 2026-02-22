@@ -1,0 +1,206 @@
+/* Category Section Container */
+.y-l-category-bar-section {
+    margin-bottom: var(--y-spacing-2xl);
+    position: relative;
+}
+
+.y-l-store-page .y-c-section-title {
+    text-align: right;
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: 0;
+    /* Flex handles spacing */
+}
+
+/* Default Desktop Grid */
+.y-l-store-category-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: var(--y-spacing-md);
+    padding-bottom: var(--y-spacing-md);
+    scrollbar-width: thin;
+    scrollbar-color: var(--y-color-error) var(--y-color-background);
+}
+
+/* Elements hidden on Desktop */
+.y-c-category-trigger-btn,
+.y-c-sidebar-header,
+.y-c-category-overlay {
+    display: none;
+}
+
+.y-c-store-category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--y-spacing-sm);
+    text-decoration: none;
+    color: var(--y-color-primary-text);
+    transition: var(--y-transition-fast);
+    padding: var(--y-spacing-sm);
+    border: var(--y-border-width-sm) solid transparent;
+    border-radius: var(--y-border-radius-md);
+    min-width: var(--y-size-120);
+    cursor: pointer;
+}
+
+/* --- Card Styling (Shared) --- */
+.y-c-store-category-icon {
+    width: var(--y-size-80);
+    height: var(--y-size-80);
+    border-radius: var(--y-border-radius-full);
+    border: var(--y-border-width-sm) solid var(--y-color-border-blured);
+    background-color: var(--y-color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--y-transition-fast);
+    cursor: pointer;
+}
+
+.y-c-store-category-icon img {
+    width: var(--y-percent-60);
+    height: var(--y-percent-60);
+    object-fit: contain;
+}
+
+.y-c-store-category-icon i {
+    font-size: var(--y-font-size-3xl);
+    color: var(--y-color-error);
+}
+
+.y-c-store-category-title {
+    font-size: var(--y-font-size-sm);
+    font-weight: var(--y-font-weight-semibold);
+    text-align: center;
+}
+
+.y-c-store-category-card:hover .y-c-store-category-icon,
+.y-c-store-category-icon {
+    border-color: var(--y-color-error);
+    box-shadow: var(--y-shadow-xs);
+}
+
+/* --- Mobile Responsive Sdebar --- */
+@media (max-width: 768px) {
+
+    /* Show Trigger Button */
+    .y-c-category-trigger-btn {
+        width: var(--y-width-percentage-full);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: var(--y-spacing-sm);
+        padding: var(--y-spacing-xs) var(--y-spacing-lg);
+        border: var(--y-border-width-thin) solid var(--y-color-error);
+        background: var(--y-color-background-light);
+        border-radius: var(--y-border-radius-lg);
+        color: var(--y-color-primary-text);
+        font-weight: var(--y-font-weight-regular);
+        cursor: pointer;
+        font-size: var(--y-font-size-lg);
+    }
+
+    /* Hide scrollbars on desktop grid logic to prepare for sidebar */
+    .y-l-store-category-grid {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Start hidden off-screen */
+        width: var(--y-size-280);
+        height: 100vh;
+        background: var(--y-color-background-light);
+        z-index: var(--y-z-index-side-bar);
+        flex-direction: column;
+        overflow-y: auto;
+        box-shadow: var(--y-shadow-md);
+        transition: right var(--y-transition-default);
+        gap: 0;
+        padding: var(--y-spacing-sm) var(--y-spacing-md);
+    }
+
+    /* Active State (Slide In) */
+    .y-l-store-category-grid.active {
+        right: 0;
+    }
+
+    .y-c-store-category-card.active {
+        background: var(--y-color-primary);
+        color: var(--y-color-secondary-text);
+        border-radius: var(--y-border-radius-lg);
+    }
+
+    .y-c-store-category-card.active i {
+        color: var(--y-color-secondary-text);
+    }
+
+    /* Sidebar Header */
+    .y-c-sidebar-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: var(--y-spacing-lg);
+        padding: var(--y-spacing-xl);
+        margin-bottom: var(--y-spacing-lg);
+        border-bottom: var(--y-border-width-thin) solid var(--y-color-border-blured);
+    }
+
+    .y-c-sidebar-header h3 {
+        font-weight: var(--y-font-weight-bold);
+        font-size: var(--y-font-size-md);
+    }
+
+    .y-c-sidebar-close {
+        background: none;
+        border: none;
+        font-size: var(--y-font-size-lg);
+        color: var(--y-color-third-text);
+        cursor: pointer;
+    }
+
+    /* Transform Cards into List Items for Sidebar */
+    .y-c-store-category-card {
+        flex-direction: row;
+        width: 100%;
+        border-radius: 0;
+        border: none;
+        padding: var(--y-spacing-md) var(--y-spacing-xl);
+        justify-content: flex-start;
+        min-width: auto;
+    }
+
+    .y-c-store-category-icon {
+        width: var(--y-size-40);
+        height: var(--y-size-40);
+        border: none;
+        background: transparent;
+    }
+
+    .y-c-store-category-icon i {
+        font-size: var(--y-font-size-lg);
+    }
+
+    .y-c-store-category-title {
+        font-size: var(--y-font-size-md);
+    }
+
+    /* Overlay */
+    .y-c-category-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--y-overlay-bg, rgba(0, 0, 0, 0.5));
+        z-index: var(--y-z-index-popup);
+        opacity: 0;
+        transition: opacity var(--y-transition-default);
+    }
+
+    .y-c-category-overlay.active {
+        display: block;
+        opacity: 1;
+    }
+}

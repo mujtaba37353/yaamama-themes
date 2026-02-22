@@ -1,0 +1,13 @@
+{
+  "template": "layout",
+  "slots": {
+    "navbar": "[data-y='navbar']",
+    "header": "[data-y='header']",
+    "main": "[data-y='main']",
+    "product-sec": "[data-y='product-sec']",
+    "offers-sec": "[data-y='offers-sec']",
+    "last-chance-sec": "[data-y='last-chance-sec']",
+    "brands": "[data-y='brands']",
+    "footer": "[data-y='footer']"
+  }
+}

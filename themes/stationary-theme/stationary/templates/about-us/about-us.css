@@ -1,0 +1,26 @@
+.about-us-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--y-space-40) 0;
+}
+.about-us-section .container {
+  display: flex;
+  justify-content: center;
+  gap: var(--y-space-38);
+  flex-direction: column;
+}
+.about-us-section .container p {
+  font-size: var(--y-space-32);
+  text-align: center;
+  line-height: var(--y-space-64);
+}
+@media (max-width: 768px) {
+  .about-us-section .container p {
+    font-size: var(--y-space-20);
+    line-height: var(--y-space-38);
+  }
+  .about-us-section .container h2 {
+    font-size: var(--y-space-24);
+  }
+}

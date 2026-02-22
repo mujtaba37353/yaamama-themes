@@ -1,0 +1,104 @@
+/* Section Titles */
+.y-c-section-title {
+    text-align: center;
+    font-size: var(--y-font-size-3xl);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-c-brands-title {
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-c-categories-title {
+    text-align: center;
+    font-size: var(--y-font-size-2xl);
+    font-weight: var(--y-font-weight-bold);
+    margin-bottom: var(--y-spacing-xl);
+}
+
+/* Grid Utilities */
+/* Note: For WooCommerce shop page, grid is applied to ul.products inside this container */
+/* This class is a wrapper only - actual grid is on the ul.products element */
+.y-l-product-grid {
+    display: block;
+    width: 100%;
+    margin-bottom: var(--y-spacing-xl);
+}
+
+.y-c-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: var(--y-spacing-xl);
+    padding: 0 var(--y-spacing-lg);
+    align-items: center;
+}
+
+/* Responsive Design */
+/* Note: For WooCommerce shop, grid is on ul.products inside .y-l-product-grid */
+/* When .y-l-product-grid is directly on <ul>, apply responsive grid */
+@media (max-width: 991px) {
+    ul.y-l-product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .y-c-categories-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    ul.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .y-c-categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .y-c-section-title {
+        font-size: var(--y-font-size-2xl);
+    }
+
+    .y-c-brands-title {
+        font-size: var(--y-font-size-xl);
+        margin-bottom: var(--y-spacing-lg);
+    }
+}
+
+@media (max-width: 479px) {
+    ul.y-l-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .y-c-categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Page Title Component */
+.y-c-page-title {
+    font-size: var(--y-font-size-2xl);
+    margin-bottom: var(--y-spacing-md);
+    color: var(--y-color-text-primary);
+    font-weight: var(--y-font-weight-bold);
+}
+
+/* Breadcrumb Component */
+.y-c-breadcrumb {
+    font-size: var(--y-font-size-sm);
+    color: var(--y-color-third-text);
+    margin-bottom: var(--y-spacing-2xl);
+}
+
+.y-c-breadcrumb a {
+    color: var(--y-color-third-text);
+    text-decoration: none;
+    transition: var(--y-transition-fast);
+}
+
+.y-c-breadcrumb a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,19 @@
+{
+    "template": "home",
+    "slots": {
+        "page-title": "Title of the home page",
+        "header-placeholder": "Header component placeholder",
+        "hero-title": "Main title in hero section",
+        "hero-subtitle": "Subtitle in hero section",
+        "browse-products-btn": "Button to browse products",
+        "main": "Main content area for the home page",
+        "footer-placeholder": "Footer component placeholder"
+    },
+    "js": [
+        "../../js/shared-components.js",
+        "../../js/products.js",
+        "../../js/home.js",
+        "../../js/auth-forms.js",
+        "../../js/auth-popup.js"
+    ]
+}

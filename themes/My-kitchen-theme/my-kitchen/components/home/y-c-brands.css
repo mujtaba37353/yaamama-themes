@@ -1,0 +1,14 @@
+.brands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.brands img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+}

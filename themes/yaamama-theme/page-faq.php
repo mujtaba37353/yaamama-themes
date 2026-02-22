@@ -1,0 +1,85 @@
+<?php
+get_header();
+?>
+
+<main class="special-bg">
+	<section class="container y-u-max-w-1200 faq-section y-u-py-40">
+		<h1 class="u-font-bold y-u-m-b-24">الأسئلة الشائعة</h1>
+
+		<div class="faq-list">
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">هل يمكنني تعديل القالب بعد الشراء؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>نعم، جميع القوالب لدينا قابلة للتعديل بالكامل لتناسب احتياجات متجرك الخاصة.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">ما هي القوالب المتاحة لديكم؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>نقدم مجموعة متنوعة من القوالب لقطاعات مختلفة مثل الأزياء، الإلكترونيات، العطور وغيرها.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">هل أحتاج خبرة تقنية لاستخدام القالب؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>لا، القوالب مصممة لتكون سهلة الاستخدام ويمكن تركيبها وتخصيصها دون الحاجة لخبرة في البرمجة.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">هل تقدمون تصميم متجر مخصص؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>نعم، يمكننا العمل على تصميم قوالب مخصصة بالكامل حسب طلب العميل وتوجه علامته التجارية.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">هل التصميم متوافق مع الجوال؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>بالتأكيد، جميع تصاميمنا "Responsive" ومتوافقة تماماً مع جميع أحجام الشاشات والجوالات.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">كيف يتم استلام القالب بعد الشراء؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>بعد إتمام عملية الدفع، ستتمكن من تحميل الملفات مباشرة من لوحة التحكم الخاصة بك.</p>
+				</div>
+			</div>
+
+			<div class="faq-item">
+				<button class="faq-question">
+					<span class="faq-text">ماذا يشمل الدعم الفني؟</span>
+					<span class="faq-icon">+</span>
+				</button>
+				<div class="faq-answer">
+					<p>يشمل الدعم الفني المساعدة في التركيب، حل أي مشاكل برمجية في القالب، والتحديثات الدورية.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+
+<?php
+get_footer();
+?>

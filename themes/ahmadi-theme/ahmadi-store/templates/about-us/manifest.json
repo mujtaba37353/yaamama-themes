@@ -1,0 +1,14 @@
+{
+    "template": "about-us",
+    "slots": {
+        "page-title": "title",
+        "about-us-text": "[data-y='about-us-text']",
+        "experience-counter": "[data-y='experience-counter']",
+        "happy-customers-counter": "[data-y='happy-customers-counter']",
+        "delivery-customers-counter": "[data-y='delivery-customers-counter']",
+        "wholesale-customers-counter": "[data-y='wholesale-customers-counter']"
+    },
+    "js": [
+        "../../js/shared-components.js"
+    ]
+}

@@ -1,0 +1,200 @@
+.y-c-btn {
+  gap: var(--y-space-8);
+  padding: calc(var(--y-space-8) + 2px) var(--y-space-16);
+  border-radius: var(--y-radius-8);
+  border: 1px solid var(--y-color-transparency);
+  background: var(--y-color-surface);
+  color: var(--y-color-text);
+  box-shadow: var(--y-shadow-xs);
+  transition: background var(--y-transition), color var(--y-transition),
+    border-color var(--y-transition), box-shadow var(--y-transition);
+}
+
+.y-c-btn:disabled {
+  opacity: var(--y-opacity-60);
+  cursor: not-allowed;
+}
+
+.y-c-btn--primary {
+  background: var(--y-color-primary);
+  color: white;
+}
+.y-c-btn--primary:hover {
+  filter: brightness(var(--y-opacity-95));
+}
+
+.y-c-btn--secondary {
+  background: var(--y-color-secondary);
+  color: var(--y-color-primary-contrast);
+}
+.y-c-btn--secondary:hover {
+  filter: brightness(var(--y-opacity-95));
+}
+
+.y-c-btn--outline {
+  background: var(--y-color-transparency);
+  border-color: var(--y-color-border);
+}
+.y-c-btn--ghost {
+  background: var(--y-color-transparency);
+  box-shadow: var(--y-shadow-none);
+}
+.y-c-btn--ghost:hover {
+  background: var(--y-color-border);
+}
+
+.y-c-btn--danger {
+  background: var(--y-color-danger);
+  color: var(--y-color-primary-contrast);
+}
+.y-c-btn--success {
+  background: var(--y-color-success);
+  color: var(--y-color-primary-contrast);
+}
+.y-c-btn--warning {
+  background: var(--y-color-warning);
+  color: var(--y-color-primary-contrast);
+}
+
+.y-c-btn--sm {
+  padding: var(--y-space-6) var(--y-space-12);
+  font-size: var(--y-text-sm);
+}
+.y-c-btn--lg {
+  padding: var(--y-space-12) var(--y-space-24);
+  font-size: var(--y-text-lg);
+}
+
+.y-c-btn__icon {
+  width: var(--y-space-16);
+  height: var(--y-space-16);
+}
+
+.call-action {
+  display: grid;
+  place-items: center;
+  padding-block: var(--y-space-16);
+}
+.call-action .buttons {
+  display: flex;
+  gap: var(--y-space-16);
+}
+.call-action .buttons a {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+  background-color: white;
+  padding: var(--y-space-20) var(--y-space-40);
+  box-shadow: 0px 5px 5px 1px var(--y-color-border);
+  border-radius: var(--y-space-10);
+  transition: background-color 500ms, color 500ms, box-shadow 500ms;
+}
+.call-action .buttons a:hover {
+  background-color: var(--y-color-primary);
+  color: white;
+  box-shadow: 0px 3px 15px 0px var(--y-color-primary);
+}
+.call-action .buttons a:hover img {
+  filter: brightness(0) invert(1);
+}
+.call-action .buttons a i {
+  font-size: var(--y-space-16);
+  font-weight: bold;
+}
+.call-action .buttons button {
+  display: flex;
+  align-items: center;
+  gap: var(--y-space-8);
+}
+.call-action .buttons button img,
+.call-action .buttons button i {
+  width: 20px;
+  height: 20px;
+}
+
+.buttons-section .buttons {
+  display: flex;
+  gap: var(--y-space-16);
+  height: 146px;
+}
+.buttons-section .buttons a {
+  border-radius: var(--y-radius-8);
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--y-space-32);
+}
+
+
+.btn {
+  font-size: var(--font-m);
+  font-weight: var(--y-text-bold);
+  padding: var(--y-space-10) var(--y-space-64);
+  border-radius: var(--y-space-16);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  appearance: none;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--y-space-8);
+}
+
+.main-button {
+  background: var(--y-color-primary);
+  color: var(--y-color-bg);
+  border: 1px solid var(--y-color-primary);
+}
+
+.main-button:hover {
+  background-color: var(--y-color-secondary);
+}
+
+.secondary-button {
+  background: var(--y-color-secondary);
+  color: var(--y-color-primary);
+  border: 1px solid var(--y-color-secondary);
+}
+
+
+.outline-secondary {
+  background: transparent;
+  color: var(--y-color-secondary);
+  border: 1px solid var(--y-color-secondary);
+}
+
+.outline-secondary:hover {
+  background-color: var(--y-color-secondary);
+  color: var(--y-color-primary);
+}
+
+.btn.outline{
+  background: transparent !important;
+  color: var(--y-color-text);
+  border: 1px solid var(--y-color-text);
+}
+
+.btn.outline:hover {
+  background-color: var(--y-color-text) !important;
+  color: var(--y-color-bg) !important;
+}
+
+.fw{
+width: 100% !important;
+}
+
+.btn-black {
+  color: #000 !important;
+}
+
+@media (max-width: 768px) {
+  .btn {
+    font-size: var(--y-space-16) !important;
+  }
+}

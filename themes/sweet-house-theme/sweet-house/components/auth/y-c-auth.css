@@ -1,0 +1,260 @@
+/* Two-column login + register layout (WooCommerce) */
+#customer_login.u-columns.col2-set {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+#customer_login.u-columns.col2-set .u-column1,
+#customer_login.u-columns.col2-set .u-column2 {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  #customer_login.u-columns.col2-set {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* منع تداخل الفوتر والبانر مع النموذج — ضمان إمكانية النقر */
+body:has(.auth-container) main[data-y="main"] {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 6rem;
+  min-height: 0;
+}
+body:has(.auth-container) .auth-container {
+  position: relative;
+  z-index: 2;
+}
+
+.auth-container {
+  width: 70%;
+  max-width: none;
+  margin: 10rem auto 4rem;
+  display: block;
+  scroll-margin-top: 10rem;
+}
+
+/* صفحة إنشاء حساب: نفس سلوك تسجيل الدخول ونسيت كلمة المرور — ارتفاع الصفحة حسب المحتوى، لا scroll داخلي */
+html:has(form.woocommerce-form-register),
+body:has(form.woocommerce-form-register) {
+  height: auto;
+  min-height: 100vh;
+}
+body:has(form.woocommerce-form-register) main[data-y="main"] {
+  overflow: visible;
+  min-height: auto;
+  flex: 1 0 auto;
+}
+body:has(form.woocommerce-form-register) main > .main-container {
+  margin-top: 0;
+}
+form {
+  width: 100%;
+  min-width: 600px;
+  background: #fff;
+  padding: 3rem 4rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+form h1 {
+  color: var(--y-secondary);
+  font-weight: 600;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+input {
+  padding: 0.8rem;
+  border: 1px solid #2e2e2e;
+  border-radius: 20px;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:hover {
+  border-color: rgba(190, 134, 71, 0.6);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* زر إظهار/إخفاء كلمة المرور — صفحات المصادقة (WooCommerce styles معطلة في الثيم) */
+.woocommerce form .password-input,
+.woocommerce-page form .password-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.woocommerce form .password-input input[type="password"],
+.woocommerce-page form .password-input input[type="password"] {
+  padding-inline-end: 3rem;
+}
+.woocommerce form .show-password-input,
+.woocommerce-page form .show-password-input {
+  position: absolute;
+  inset-inline-end: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.woocommerce form .show-password-input::before,
+.woocommerce-page form .show-password-input::before {
+  content: '';
+  display: block;
+  width: 22px;
+  height: 22px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.3 3.3C16.9 2.9 16.2 2.9 15.7 3.3L13.3 5.7C12.2437 5.3079 11.1267 5.1048 10 5.1C6.2 5.2 2.8 7.2 1 10.5C1.2 10.9 1.5 11.3 1.8 11.7C2.6 12.8 3.6 13.7 4.7 14.4L3 16.1C2.6 16.5 2.5 17.2 3 17.7C3.4 18.1 4.1 18.2 4.6 17.7L17.3 4.9C17.7 4.4 17.7 3.7 17.3 3.3ZM6.7 12.3L5.4 13.6C4.2 12.9 3.1 11.9 2.3 10.7C3.5 9 5.1 7.8 7 7.2C5.7 8.6 5.6 10.8 6.7 12.3ZM10.1 9C9.6 8.5 9.7 7.7 10.2 7.2C10.7 6.8 11.4 6.8 11.9 7.2L10.1 9ZM18.3 9.5C17.8 8.8 17.2 8.1 16.5 7.6L15.5 8.6C16.3 9.2 17 9.9 17.6 10.8C15.9 13.4 13 15 9.9 15H9.1L8.1 16C8.8 15.9 9.4 16 10 16C13.3 16 16.4 14.4 18.3 11.7C18.6 11.3 18.8 10.9 19.1 10.5C18.8 10.2 18.6 9.8 18.3 9.5ZM14 10L10 14C12.2 14 14 12.2 14 10Z" fill="%23333"/></svg>');
+}
+.woocommerce form .show-password-input.display-password::before,
+.woocommerce-page form .show-password-input.display-password::before {
+  background-image: url('data:image/svg+xml,<svg width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.3 9.5C15 4.9 8.5 3.8 3.9 7.2C2.7 8.1 1.7 9.3 0.9 10.6C1.1 11 1.4 11.4 1.7 11.8C5 16.4 11.3 17.4 15.9 14.2C16.8 13.5 17.6 12.8 18.3 11.8C18.6 11.4 18.8 11 19.1 10.6C18.8 10.2 18.6 9.8 18.3 9.5ZM10.1 7.2C10.6 6.7 11.4 6.7 11.9 7.2C12.4 7.7 12.4 8.5 11.9 9C11.4 9.5 10.6 9.5 10.1 9C9.6 8.5 9.6 7.7 10.1 7.2ZM10 14.9C6.9 14.9 4 13.3 2.3 10.7C3.5 9 5.1 7.8 7 7.2C6.3 8 6 8.9 6 9.9C6 12.1 7.7 14 10 14C12.2 14 14.1 12.3 14.1 10V9.9C14.1 8.9 13.7 7.9 13 7.2C14.9 7.8 16.5 9 17.7 10.7C16 13.3 13.1 14.9 10 14.9Z" fill="%23333"/></svg>');
+}
+.woocommerce form .show-password-input:hover,
+.woocommerce-page form .show-password-input:hover {
+  opacity: 0.8;
+}
+div.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+label.checkbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  margin-left: 5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+label.checkbox input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+label.checkbox .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 4px;
+  border: 1px solid #2e2e2e;
+  margin-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+label.checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+label.checkbox input:checked ~ .checkmark {
+  background-color: #333;
+  border-color: #333;
+}
+
+label.checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+label.checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+@media (max-width: 820px) {
+  .auth-container {
+    width: 95%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  form {
+    min-width: auto;
+    padding: 2rem;
+  }
+  .img-container {
+    display: none;
+  }
+  form h1 {
+    text-align: center;
+    font-size: 2.5rem;
+  }
+  form label {
+    font-size: 1.7rem;
+  }
+  form input {
+    font-size: 1.7rem;
+    margin: 0;
+  }
+  form .checkbox,
+  form label.checkbox {
+    font-size: 1.3rem;
+  }
+  .form-group {
+    margin-bottom: 2rem;
+  }
+  form p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .woocommerce-form-login .woocommerce-form-login__rememberme {
+    font-size: 1em;
+  }
+  .woocommerce-form-login .y-u-d-flex a {
+    font-size: 1em;
+  }
+}
