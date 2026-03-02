@@ -7,6 +7,8 @@
 
 define( 'SWEET_HOUSE_THEME_VERSION', '1.0.0' );
 
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
 /**
  * Cart page: use static design (Phase 1) or WooCommerce (Phase 2).
  * false = WooCommerce integration active — design preserved via theme templates & CSS.

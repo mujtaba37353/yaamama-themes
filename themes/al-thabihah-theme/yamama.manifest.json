@@ -1,0 +1,28 @@
+{
+  "theme_slug": "al-thabihah-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "logo_header": {"source": "option", "key": "al_thabihah_home_settings", "path": "logo"},
+    "logo_footer": {"source": "option", "key": "al_thabihah_footer_settings", "path": "logo"},
+    "footer_paragraph": {"source": "option", "key": "al_thabihah_footer_settings", "path": "paragraph"},
+    "contact_phones": {"source": "option", "key": "al_thabihah_contact_settings", "path": "phones"},
+    "contact_email": {"source": "option", "key": "al_thabihah_contact_settings", "path": "email"},
+    "contact_address": {"source": "option", "key": "al_thabihah_contact_settings", "path": "address"},
+    "hero_title": {"source": "option", "key": "al_thabihah_home_settings", "path": "hero_title"},
+    "hero_description": {"source": "option", "key": "al_thabihah_home_settings", "path": "hero_desc"},
+    "hero_image": {"source": "option", "key": "al_thabihah_home_settings", "path": "hero_image"},
+    "about_content": {"source": "option", "key": "al_thabihah_about_settings", "path": "content"},
+    "privacy_content": {"source": "option", "key": "al_thabihah_site_settings", "path": "privacy"},
+    "shipping_policy_content": {"source": "option", "key": "al_thabihah_site_settings", "path": "shipping"},
+    "return_policy_content": {"source": "option", "key": "al_thabihah_site_settings", "path": "return"},
+    "color_primary": {"source": "option", "key": "al_thabihah_site_colors", "path": "primary"},
+    "smtp_host": {"source": "option", "key": "al_thabihah_smtp_settings", "path": "host"},
+    "smtp_port": {"source": "option", "key": "al_thabihah_smtp_settings", "path": "port"},
+    "smtp_user": {"source": "option", "key": "al_thabihah_smtp_settings", "path": "user"},
+    "smtp_pass": {"source": "option", "key": "al_thabihah_smtp_settings", "path": "pass"}
+  },
+  "supported_sections": ["logo", "header", "hero", "contact", "footer", "about", "policies"],
+  "missing_fields": ["hero_button_text", "hero_button_link", "contact_whatsapp", "contact_facebook_url", "contact_instagram_url", "working_hours", "mid_banner", "home_banner_1_text", "home_banner_2_text"],
+  "notes": "Uses grouped options: al_thabihah_*_settings. Paths are inferred from admin page structure; verify in inc/admin-content.php."
+}

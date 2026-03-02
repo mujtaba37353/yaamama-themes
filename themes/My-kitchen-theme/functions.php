@@ -5,6 +5,8 @@ if (!defined('ABSPATH')) {
 }
 
 define('MYK_THEME_URI', get_template_directory_uri());
+
+require_once get_template_directory() . '/inc/ydash-bridge.php';
 define('MYK_ASSETS_URI', MYK_THEME_URI . '/my-kitchen');
 
 function mykitchen_setup_theme(): void

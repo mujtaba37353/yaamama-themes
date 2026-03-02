@@ -460,7 +460,7 @@ add_filter( 'woocommerce_pay_order_button_text', 'yaamama_translate_pay_order_bu
 
 function yaamama_handle_profile_update() {
 	if ( ! is_user_logged_in() ) {
-		wp_safe_redirect( wp_login_url( home_url( '/my-account' ) ) );
+		wp_safe_redirect( home_url( '/login?redirect_to=' . rawurlencode( home_url( '/my-account' ) ) ) );
 		exit;
 	}
 
@@ -1109,7 +1109,14 @@ function yaamama_force_currency_symbol( $symbol, $currency ) {
 function yaamama_order_received_redirect( $url, $order ) {
 	$thank_you_page = get_page_by_path( 'thank-you' );
 	if ( $thank_you_page ) {
-		return get_permalink( $thank_you_page->ID );
+		$thank_url = get_permalink( $thank_you_page->ID );
+		if ( $order instanceof WC_Order ) {
+			$sub_id = (int) $order->get_meta( 'yaamama_subscription_id' );
+			if ( $sub_id ) {
+				$thank_url = add_query_arg( 'sub', $sub_id, $thank_url );
+			}
+		}
+		return $thank_url;
 	}
 
 	return $url;
@@ -1182,3 +1189,39 @@ add_filter( 'site_url', 'yaamama_fix_local_home_url', 20, 4 );
 add_filter( 'option_home', 'yaamama_fix_local_option_url', 20, 2 );
 add_filter( 'option_siteurl', 'yaamama_fix_local_option_url', 20, 2 );
 add_action( 'woocommerce_before_pay_action', 'yaamama_update_pay_order_phone' );
+
+function yaamama_custom_login_url( $login_url, $redirect, $force_reauth ) {
+	$custom = home_url( '/login' );
+	if ( ! empty( $redirect ) ) {
+		$custom = add_query_arg( 'redirect_to', rawurlencode( $redirect ), $custom );
+	}
+	return $custom;
+}
+add_filter( 'login_url', 'yaamama_custom_login_url', 20, 3 );
+
+function yaamama_custom_register_url( $register_url ) {
+	return home_url( '/signup' );
+}
+add_filter( 'register_url', 'yaamama_custom_register_url', 20, 1 );
+
+function yaamama_block_wp_login() {
+	if ( is_admin() ) {
+		return;
+	}
+	global $pagenow;
+	if ( $pagenow !== 'wp-login.php' ) {
+		return;
+	}
+	$action = isset( $_GET['action'] ) ? $_GET['action'] : '';
+	if ( in_array( $action, array( 'postpass', 'logout', 'lostpassword', 'retrievepassword', 'resetpass', 'rp', 'confirmaction' ), true ) ) {
+		return;
+	}
+	$redirect_to = isset( $_GET['redirect_to'] ) ? $_GET['redirect_to'] : '';
+	$url = home_url( '/login' );
+	if ( $redirect_to ) {
+		$url = add_query_arg( 'redirect_to', rawurlencode( $redirect_to ), $url );
+	}
+	wp_safe_redirect( $url );
+	exit;
+}
+add_action( 'init', 'yaamama_block_wp_login' );

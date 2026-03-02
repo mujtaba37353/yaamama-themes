@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+defined('ABSPATH') || exit;
+
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
 function ahmadi_theme_asset(string $path): string
 {
     $path = ltrim($path, '/');

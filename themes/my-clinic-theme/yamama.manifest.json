@@ -1,0 +1,18 @@
+{
+  "theme_slug": "my-clinic-theme",
+  "store_type": "booking",
+  "storage_profile": "option",
+  "mappings": {
+    "hero_card1_image": {"source": "option", "key": "hero_card1_image"},
+    "hero_card1_title": {"source": "option", "key": "hero_card1_title"},
+    "why_section_title": {"source": "option", "key": "why_section_title"},
+    "banner_image": {"source": "option", "key": "banner_image"},
+    "logo_footer": {"source": "option", "key": "footer_logo"},
+    "footer_phone": {"source": "option", "key": "footer_contact_phone"},
+    "smtp_host": {"source": "option", "key": "smtp_host"},
+    "contact_email": {"source": "option", "key": "contact_receive_email"}
+  },
+  "supported_sections": ["logo", "hero", "banners", "contact", "footer", "about", "services"],
+  "missing_fields": ["logo_header", "hero_title", "hero_description", "hero_image", "about_content", "privacy_content", "hero_card1_text", "working_hours_weekly", "working_hours_note", "homepage_settings", "color_*", "smtp_port", "smtp_user", "smtp_pass", "specialty*"],
+  "notes": "Flat option keys; some match unified id (hero_card1_*, why_section_title, banner_image). specialty1_name etc. are theme-specific. Inc: admin-homepage-settings, admin-contact-settings."
+}

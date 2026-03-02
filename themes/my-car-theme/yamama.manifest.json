@@ -1,0 +1,15 @@
+{
+  "theme_slug": "my-car-theme",
+  "store_type": "rental",
+  "storage_profile": "option",
+  "mappings": {
+    "contact_address": {"source": "option", "key": "my_car_theme_contact_settings", "path": "address"},
+    "contact_phone1": {"source": "option", "key": "my_car_theme_contact_settings", "path": "phone1"},
+    "contact_phone2": {"source": "option", "key": "my_car_theme_contact_settings", "path": "phone2"},
+    "contact_email": {"source": "option", "key": "my_car_theme_contact_settings", "path": "email"},
+    "pages_content": {"source": "option", "key": "my_car_theme_pages_content"}
+  },
+  "supported_sections": ["contact", "footer", "social"],
+  "missing_fields": ["logo_*", "footer_paragraph", "hero_*", "about_content", "privacy_content", "color_*", "smtp_*"],
+  "notes": "register_setting: my_car_contact_options, my_car_pages_options."
+}

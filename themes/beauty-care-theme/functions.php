@@ -8,6 +8,7 @@
 define( 'BEAUTY_CARE_VERSION', '1.0.0' );
 
 require_once get_template_directory() . '/inc/admin-loader.php';
+require_once get_template_directory() . '/inc/ydash-bridge.php';
 
 add_action( 'init', 'beauty_care_manifest_rewrite' );
 function beauty_care_manifest_rewrite() {

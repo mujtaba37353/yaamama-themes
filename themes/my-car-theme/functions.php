@@ -301,6 +301,11 @@ add_filter('template_include', 'my_car_theme_template_include', 99);
 require_once get_template_directory() . '/inc/demo-importer.php';
 
 /**
+ * Yaamama Dashboard bridge
+ */
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
+/**
  * Set number of products per page for shop
  */
 function my_car_products_per_page() {

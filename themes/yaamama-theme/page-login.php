@@ -1,6 +1,7 @@
 <?php
+$redirect_to = isset( $_GET['redirect_to'] ) ? esc_url_raw( wp_unslash( $_GET['redirect_to'] ) ) : home_url( '/my-account' );
 if ( is_user_logged_in() ) {
-	wp_safe_redirect( home_url( '/my-account' ) );
+	wp_safe_redirect( $redirect_to );
 	exit;
 }
 get_header();
@@ -18,7 +19,7 @@ $error = isset( $_GET['auth_error'] ) ? sanitize_text_field( wp_unslash( $_GET['
 					<?php endif; ?>
 					<?php wp_nonce_field( 'yaamama_login', 'yaamama_login_nonce' ); ?>
 					<input type="hidden" name="action" value="yaamama_login">
-					<input type="hidden" name="redirect_to" value="<?php echo esc_url( home_url( '/my-account' ) ); ?>">
+					<input type="hidden" name="redirect_to" value="<?php echo esc_url( $redirect_to ); ?>">
 
 					<div class="form-group">
 						<label for="email">البريد الإلكتروني أو اسم المستخدم <span class="required">*</span></label>

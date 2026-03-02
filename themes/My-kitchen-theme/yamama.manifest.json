@@ -1,0 +1,19 @@
+{
+  "theme_slug": "My-kitchen-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "contact_phones": {"source": "option", "key": "mykitchen_contact_settings", "path": "phones"},
+    "contact_email": {"source": "option", "key": "mykitchen_contact_settings", "path": "email"},
+    "contact_address": {"source": "option", "key": "mykitchen_contact_settings", "path": "address"},
+    "privacy_content": {"source": "option", "key": "mykitchen_policy_settings", "path": "privacy"},
+    "shipping_policy_content": {"source": "option", "key": "mykitchen_policy_settings", "path": "shipping"},
+    "return_policy_content": {"source": "option", "key": "mykitchen_policy_settings", "path": "return"},
+    "logo_header": {"source": "option", "key": "mykitchen_site_settings", "path": "logo"},
+    "hero_title": {"source": "option", "key": "mykitchen_homepage_settings", "path": "hero_title"},
+    "footer_paragraph": {"source": "option", "key": "mykitchen_site_settings", "path": "footer_text"}
+  },
+  "supported_sections": ["logo", "hero", "contact", "footer", "policies"],
+  "missing_fields": ["logo_footer", "hero_description", "hero_image", "hero_button_*", "about_content", "color_*", "smtp_*", "mid_banner", "home_banner_*", "contact_*_url", "footer_phone", "footer_whatsapp", "working_hours"],
+  "notes": "Grouped: mykitchen_contact_settings, mykitchen_policy_settings, mykitchen_site_settings, mykitchen_homepage_settings. Paths inferred; verify in theme admin."
+}

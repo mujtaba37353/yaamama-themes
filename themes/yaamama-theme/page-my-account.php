@@ -161,7 +161,7 @@ $updated      = isset( $_GET['profile_updated'] );
 						$user_id = get_current_user_id();
 						$subs    = $wpdb->get_results(
 							$wpdb->prepare(
-								"SELECT * FROM {$tables['subs']} WHERE user_id = %d AND status != 'cancelled' ORDER BY id DESC",
+								"SELECT * FROM {$tables['subs']} WHERE user_id = %d ORDER BY id DESC",
 								$user_id
 							),
 							ARRAY_A
@@ -171,116 +171,260 @@ $updated      = isset( $_GET['profile_updated'] );
 							<?php if ( empty( $subs ) ) : ?>
 								<p>لا توجد اشتراكات حالياً.</p>
 							<?php else : ?>
-								<?php foreach ( $subs as $sub ) : ?>
-									<?php
-									$product     = get_post( $sub['product_id'] );
-									$store_name  = ! empty( $sub['store_name'] ) ? $sub['store_name'] : ( $product ? $product->post_title : '' );
-									$product_image_id  = get_post_thumbnail_id( $sub['product_id'] );
-									$product_image_url = $product_image_id
-										? wp_get_attachment_image_url( $product_image_id, 'medium' )
-										: $assets_uri . '/product.png';
-									$price_row   = yaamama_subscriptions_get_price( $sub['plan_price_id'] );
-									$plan        = $price_row ? yaamama_subscriptions_get_plan( $price_row['plan_id'] ) : null;
-									$pay_url     = '';
-									if ( 'pending_payment' === $sub['status'] && ! empty( $sub['last_order_id'] ) ) {
-										$order = wc_get_order( (int) $sub['last_order_id'] );
-										if ( $order ) {
-											$pay_url = $order->get_checkout_payment_url();
+							<?php foreach ( $subs as $sub ) : ?>
+								<?php
+								$product     = get_post( $sub['product_id'] );
+								$store_name  = ! empty( $sub['store_name'] ) ? $sub['store_name'] : '';
+								$store_name_en = '';
+								if ( ! empty( $sub['last_order_id'] ) ) {
+									$_order = wc_get_order( (int) $sub['last_order_id'] );
+									if ( $_order ) {
+										if ( $store_name === '' ) {
+											$store_name = (string) $_order->get_meta( 'yaamama_store_name' );
+										}
+										$store_name_en = (string) $_order->get_meta( 'yaamama_store_name_en' );
+									}
+								}
+								$has_custom_name = ( $store_name !== '' );
+								$product_image_id  = get_post_thumbnail_id( $sub['product_id'] );
+								$product_image_url = $product_image_id
+									? wp_get_attachment_image_url( $product_image_id, 'medium' )
+									: $assets_uri . '/product.png';
+								$price_row   = yaamama_subscriptions_get_price( $sub['plan_price_id'] );
+								$plan        = $price_row ? yaamama_subscriptions_get_plan( $price_row['plan_id'] ) : null;
+								$pay_url     = '';
+								if ( 'pending_payment' === $sub['status'] && ! empty( $sub['last_order_id'] ) ) {
+									$order = wc_get_order( (int) $sub['last_order_id'] );
+									if ( $order ) {
+										$current_gw = $order->get_payment_method();
+										$enabled_gw = function_exists( 'yaamama_subscriptions_get_payment_gateways' ) ? yaamama_subscriptions_get_payment_gateways() : array();
+										if ( $current_gw && $enabled_gw && ! isset( $enabled_gw[ $current_gw ] ) ) {
+											$sub_settings = function_exists( 'yaamama_subscriptions_settings' ) ? yaamama_subscriptions_settings() : array();
+											$new_gw_id = $sub_settings['payment_gateway_id'] ?? '';
+											$all_gw = WC_Payment_Gateways::instance()->payment_gateways();
+											if ( $new_gw_id && isset( $all_gw[ $new_gw_id ] ) ) {
+												$order->set_payment_method( $all_gw[ $new_gw_id ] );
+												$order->save();
+											}
+										}
+										$pay_url = $order->get_checkout_payment_url();
+									}
+								}
+								$start_date = ! empty( $sub['starts_at'] ) ? date_i18n( 'j F Y', strtotime( $sub['starts_at'] ) ) : '';
+
+								$store_id     = get_option( "yaamama_store_for_sub_{$sub['id']}", '' );
+								$store_url    = get_option( "yaamama_store_url_for_sub_{$sub['id']}", '' );
+								$store_status = get_option( "yaamama_store_status_for_sub_{$sub['id']}", '' );
+								$job_id       = get_option( "yaamama_job_for_sub_{$sub['id']}", '' );
+
+								if ( $store_id && ( ! $store_url || ! $store_status ) ) {
+									if ( function_exists( 'yaamama_factory_api_call' ) ) {
+										$_store_data = yaamama_factory_api_call( 'GET', "/stores/{$store_id}" );
+										if ( ! is_wp_error( $_store_data ) && ! empty( $_store_data['store_url'] ) ) {
+											$store_url    = $_store_data['store_url'];
+											$store_status = $_store_data['status'] ?? 'active';
+											update_option( "yaamama_store_url_for_sub_{$sub['id']}", $store_url );
+											update_option( "yaamama_store_status_for_sub_{$sub['id']}", $store_status );
 										}
 									}
-									$start_date = ! empty( $sub['starts_at'] ) ? date_i18n( 'j F Y', strtotime( $sub['starts_at'] ) ) : '';
-									$status_map = array(
-										'active'          => array( 'label' => 'جاهز', 'class' => 'ready' ),
-										'pending_payment' => array( 'label' => 'بانتظار الدفع', 'class' => 'preparing' ),
-										'pending'         => array( 'label' => 'قيد التفعيل', 'class' => 'preparing' ),
-										'past_due'        => array( 'label' => 'متأخر', 'class' => 'preparing' ),
-										'failed'          => array( 'label' => 'فشل', 'class' => 'preparing' ),
-										'cancelled'       => array( 'label' => 'ملغي', 'class' => 'preparing' ),
-									);
-									$status_data  = $status_map[ $sub['status'] ] ?? array( 'label' => $sub['status'], 'class' => 'preparing' );
-									$status_label = $status_data['label'];
-									$status_class = $status_data['class'];
-									$plan_prices  = $price_row
-										? $wpdb->get_results(
-											$wpdb->prepare( "SELECT * FROM {$tables['plan_prices']} WHERE plan_id = %d AND status = 'active'", $price_row['plan_id'] ),
-											ARRAY_A
-										)
-										: array();
-									?>
-									<div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col">
-										<div class="status-badge <?php echo esc_attr( $status_class ); ?> y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
-											<span class="status-dot"></span>
-											<?php echo esc_html( $status_label ); ?>
-										</div>
+									if ( ! $store_url ) {
+										$store_url    = 'https://' . $store_id . '.staging.yaamama.store';
+										$store_status = $store_status ?: 'active';
+										update_option( "yaamama_store_url_for_sub_{$sub['id']}", $store_url );
+										update_option( "yaamama_store_status_for_sub_{$sub['id']}", $store_status );
+									}
+								}
 
-										<div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
-											<div class="image-wrapper y-u-rounded-f y-u-p-4" style="border: 2px solid var(--y-color-primary);">
-												<img src="<?php echo esc_url( $product_image_url ); ?>" alt="<?php echo esc_attr( $store_name ?: 'Store' ); ?>" class="y-u-rounded-f"
-													style="width: 120px; height: 120px; object-fit: cover;">
+								$is_suspended = ( $sub['status'] === 'cancelled' && $store_id );
+								$local_store_status = get_option( "yaamama_store_status_for_sub_{$sub['id']}", '' );
+								if ( $local_store_status === 'suspended' ) {
+									$is_suspended = true;
+								}
+
+								$status_map = array(
+									'active'          => array( 'label' => 'جاهز', 'class' => 'ready' ),
+									'pending_payment' => array( 'label' => 'بانتظار الدفع', 'class' => 'preparing' ),
+									'pending'         => array( 'label' => 'قيد التفعيل', 'class' => 'preparing' ),
+									'past_due'        => array( 'label' => 'متأخر', 'class' => 'preparing' ),
+									'failed'          => array( 'label' => 'فشل', 'class' => 'preparing' ),
+									'cancelled'       => array( 'label' => 'ملغي', 'class' => 'preparing' ),
+								);
+								if ( $is_suspended ) {
+									$status_data = array( 'label' => 'معلّق', 'class' => 'suspended' );
+								} else {
+									$status_data = $status_map[ $sub['status'] ] ?? array( 'label' => $sub['status'], 'class' => 'preparing' );
+								}
+								$status_label = $status_data['label'];
+								$status_class = $status_data['class'];
+								$plan_prices  = $price_row
+									? $wpdb->get_results(
+										$wpdb->prepare( "SELECT * FROM {$tables['plan_prices']} WHERE plan_id = %d AND status = 'active'", $price_row['plan_id'] ),
+										ARRAY_A
+									)
+									: array();
+								?>
+								<div class="store-card y-u-rounded-m y-u-p-24 y-u-relative y-u-flex y-u-flex-col <?php echo $is_suspended ? 'is-suspended' : ''; ?>">
+									<div class="status-badge <?php echo esc_attr( $status_class ); ?> y-u-absolute y-u-top-24 y-u-left-24 y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">
+										<span class="status-dot"></span>
+										<?php echo esc_html( $status_label ); ?>
+									</div>
+
+									<div class="y-u-flex y-u-justify-center y-u-m-b-24 y-u-m-t-24">
+										<div class="image-wrapper y-u-rounded-f y-u-p-4" style="border: 2px solid var(--y-color-primary);">
+											<img src="<?php echo esc_url( $product_image_url ); ?>" alt="<?php echo esc_attr( $store_name ?: 'Store' ); ?>" class="y-u-rounded-f"
+												style="width: 120px; height: 120px; object-fit: cover;">
+										</div>
+									</div>
+
+									<div class="y-u-text-center y-u-m-b-16">
+										<h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4"><?php echo esc_html( $store_name ?: 'متجري' ); ?></h3>
+										<?php if ( $store_name_en !== '' ) : ?>
+											<p class="y-u-text-s y-u-m-0" style="color:#6b7280;direction:ltr;"><?php echo esc_html( $store_name_en ); ?></p>
+										<?php endif; ?>
+										<p class="y-u-text-muted y-u-text-s">الباقة: <?php echo esc_html( $plan['name'] ?? '-' ); ?></p>
+									</div>
+
+									<div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
+										<span class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة اليمامة</span>
+										<?php if ( $start_date ) : ?>
+											<p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : <?php echo esc_html( $start_date ); ?></p>
+										<?php endif; ?>
+									</div>
+
+									<div class="divider y-u-m-b-24"></div>
+
+								<?php if ( $is_suspended ) : ?>
+									<div class="yaamama-store-suspended y-u-m-b-16 y-u-text-center y-u-p-24 y-u-rounded-s" style="background:linear-gradient(135deg,#fef3c7 0%,#fffbeb 100%);border:2px solid #f59e0b;">
+										<div style="font-size:36px;margin-bottom:8px;">⏸️</div>
+										<p class="y-u-text-s y-u-font-bold y-u-m-0" style="color:#d97706;margin-bottom:8px!important;">تم تعليق متجرك</p>
+										<p class="y-u-text-xs y-u-m-0" style="color:#92400e;margin-bottom:16px!important;">تم إيقاف المتجر بسبب إلغاء الاشتراك. يمكنك تجديد اشتراكك لإعادة تفعيله.</p>
+										<?php
+										$reactivate_product_url = '';
+										if ( ! empty( $sub['product_id'] ) ) {
+											$reactivate_product_url = get_permalink( $sub['product_id'] );
+										}
+										if ( $reactivate_product_url ) : ?>
+											<a class="btn main-button" href="<?php echo esc_url( $reactivate_product_url ); ?>"
+												style="display:inline-block;background:#d97706;border-color:#d97706;padding:12px 32px;border-radius:8px;color:#fff;text-decoration:none;font-weight:bold;font-size:14px;">
+												تجديد الاشتراك
+											</a>
+										<?php endif; ?>
+									</div>
+								<?php elseif ( $store_url && $store_status !== 'failed' && $store_status !== 'provisioning' ) : ?>
+									<div class="yaamama-store-ready y-u-m-b-16 y-u-text-center y-u-p-24 y-u-rounded-s" style="background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%);border:2px solid #86efac;">
+										<div style="font-size:36px;margin-bottom:8px;">🎉</div>
+										<p class="y-u-text-s y-u-font-bold y-u-m-0" style="color:#059669;margin-bottom:12px!important;">متجرك جاهز ويعمل!</p>
+										<div style="display:flex;gap:8px;margin-top:12px;">
+											<a class="btn main-button" href="<?php echo esc_url( $store_url ); ?>" target="_blank"
+												style="flex:1;display:block;text-align:center;background:#059669;border-color:#059669;padding:12px 8px;border-radius:8px;color:#fff;text-decoration:none;font-weight:bold;font-size:14px;">
+												زيارة المتجر
+											</a>
+											<button type="button"
+												class="yaamama-auto-login-btn"
+												data-subscription-id="<?php echo esc_attr( $sub['id'] ); ?>"
+												style="flex:1;display:block;text-align:center;background:#1e40af;border:none;padding:12px 8px;border-radius:8px;color:#fff;cursor:pointer;font-weight:bold;font-size:14px;">
+												لوحة تحكم المتجر
+											</button>
+										</div>
+									</div>
+								<?php elseif ( $job_id && ! $store_url && $store_status !== 'failed' ) : ?>
+									<div class="yaamama-provision-status y-u-m-b-16 y-u-p-20 y-u-rounded-s" style="background:#f0f9ff;border:1px solid #bae6fd;" data-subscription-id="<?php echo esc_attr( $sub['id'] ); ?>">
+										<div class="provision-header" style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+											<div class="provision-spinner" style="flex-shrink:0;width:28px;height:28px;border:3px solid #e5e7eb;border-top-color:#3b82f6;border-radius:50%;animation:yaamama-spin 1s linear infinite;"></div>
+											<div>
+												<p class="y-u-text-s y-u-font-bold y-u-m-0" style="color:#1e40af;">جاري تجهيز متجرك</p>
+												<p class="provision-step-label y-u-text-xs y-u-text-muted y-u-m-0" style="margin-top:2px;"></p>
 											</div>
 										</div>
-
-										<div class="y-u-text-center y-u-m-b-16">
-											<h3 class="y-u-text-l y-u-font-bold primary-color y-u-m-b-4"><?php echo esc_html( $store_name ?: ( $product ? $product->post_title : '#' . $sub['product_id'] ) ); ?></h3>
-											<p class="y-u-text-muted y-u-text-s">الباقة: <?php echo esc_html( $plan['name'] ?? '-' ); ?></p>
+										<div class="provision-bar-track" style="width:100%;height:8px;background:#e0e7ff;border-radius:4px;overflow:hidden;margin-bottom:4px;">
+											<div class="provision-bar-fill" style="width:0%;height:100%;background:linear-gradient(90deg,#3b82f6,#6366f1);border-radius:4px;transition:width .6s ease;"></div>
 										</div>
+										<p class="provision-percent y-u-text-xs y-u-text-muted y-u-m-0" style="text-align:left;direction:ltr;">0%</p>
+									</div>
+								<?php elseif ( $store_status === 'failed' ) : ?>
+									<div class="y-u-m-b-16 y-u-text-center y-u-p-16 y-u-rounded-s" style="background:#fef2f2;border:1px solid #fecaca;">
+										<p class="y-u-text-s y-u-font-bold y-u-m-0" style="color:#dc2626;">فشل إنشاء المتجر</p>
+										<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" style="margin-top:8px;">
+											<?php wp_nonce_field( 'yaamama_retry_provision', 'yaamama_retry_nonce' ); ?>
+											<input type="hidden" name="action" value="yaamama_retry_provision">
+											<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
+											<button type="submit" class="btn black-outline-button y-u-p-8 y-u-px-16 y-u-text-xs">إعادة المحاولة</button>
+										</form>
+									</div>
+								<?php elseif ( in_array( $sub['status'], array( 'active', 'pending' ), true ) && ! $store_url ) : ?>
+									<div class="y-u-m-b-16 y-u-text-center y-u-p-16 y-u-rounded-s" style="background:#fffbeb;border:1px solid #fde68a;">
+										<p class="y-u-text-s y-u-font-bold y-u-m-0" style="color:#d97706;">جاري تجهيز المتجر...</p>
+										<p class="y-u-text-xs y-u-text-muted y-u-m-0" style="margin-top:4px;">سيكون متجرك جاهزًا قريبًا</p>
+									</div>
+								<?php endif; ?>
 
-										<div class="y-u-flex y-u-justify-between y-u-items-center y-u-m-b-16">
-											<span class="package-badge y-u-p-12 y-u-py-4 y-u-rounded-m y-u-text-xs y-u-font-bold">باقة اليمامة</span>
-											<?php if ( $start_date ) : ?>
-												<p class="y-u-text-s y-u-font-medium y-u-m-0">بدأ في : <?php echo esc_html( $start_date ); ?></p>
-											<?php endif; ?>
-										</div>
+								<?php if ( ! $is_suspended ) : ?>
+									<div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
+										<?php if ( $pay_url ) : ?>
+											<a class="btn main-button y-u-w-full" href="<?php echo esc_url( $pay_url ); ?>">إتمام الدفع</a>
+										<?php endif; ?>
 
-										<div class="divider y-u-m-b-24"></div>
-
-										<div class="store-actions y-u-flex y-u-flex-col y-u-gap-12">
-											<?php if ( $pay_url ) : ?>
-												<a class="btn main-button y-u-w-full" href="<?php echo esc_url( $pay_url ); ?>">إتمام الدفع</a>
-											<?php endif; ?>
-
-											<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="y-u-flex y-u-flex-col y-u-gap-12">
+									<?php if ( $has_custom_name ) : ?>
+										<div class="yaamama-rename-wrap">
+											<button type="button" class="yaamama-rename-toggle btn black-outline-button y-u-p-8 y-u-px-16 y-u-text-xs y-u-w-full" style="display:flex;align-items:center;justify-content:center;gap:6px;">
+												<i class="fa-solid fa-pen" style="font-size:11px;"></i> تعديل اسم المتجر
+											</button>
+											<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="yaamama-rename-form" style="display:none;margin-top:8px;">
 												<?php wp_nonce_field( 'yaamama_rename_store', 'yaamama_rename_store_nonce' ); ?>
 												<input type="hidden" name="action" value="yaamama_rename_store">
 												<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
-												<input type="text" name="store_name" class="y-u-w-full y-u-p-12 y-u-rounded-s y-u-border" value="<?php echo esc_attr( $store_name ); ?>" placeholder="اسم المتجر">
-												<button type="submit" class="btn black-outline-button y-u-p-8 y-u-px-16 y-u-text-xs">تعديل الاسم</button>
+												<div style="display:flex;gap:8px;">
+													<input type="text" name="store_name" class="y-u-p-8 y-u-rounded-s y-u-border" style="flex:1;font-size:13px;" value="<?php echo esc_attr( $store_name ); ?>" placeholder="اسم المتجر الجديد" required>
+													<button type="submit" class="btn main-button y-u-p-8 y-u-px-12 y-u-text-xs" style="white-space:nowrap;">حفظ</button>
+												</div>
+											</form>
+										</div>
+									<?php else : ?>
+										<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="y-u-flex y-u-flex-col y-u-gap-8" style="background:#fffbeb;padding:12px;border-radius:8px;border:1px solid #fde68a;">
+											<?php wp_nonce_field( 'yaamama_rename_store', 'yaamama_rename_store_nonce' ); ?>
+											<input type="hidden" name="action" value="yaamama_rename_store">
+											<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
+											<label class="y-u-text-xs y-u-font-bold" style="color:#d97706;">أدخل اسم متجرك</label>
+											<input type="text" name="store_name" class="y-u-w-full y-u-p-10 y-u-rounded-s y-u-border" placeholder="اسم المتجر" required>
+											<button type="submit" class="btn main-button y-u-p-8 y-u-px-16 y-u-text-xs">حفظ اسم المتجر</button>
+										</form>
+									<?php endif; ?>
+
+									<?php if ( $plan_prices ) : ?>
+										<div class="store-actions-row">
+											<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="y-u-flex y-u-flex-col y-u-gap-12">
+												<?php wp_nonce_field( 'yaamama_switch_subscription', 'yaamama_switch_subscription_nonce' ); ?>
+												<input type="hidden" name="action" value="yaamama_switch_subscription">
+												<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
+												<select name="plan_price_id" class="y-u-w-full y-u-p-8 y-u-rounded-s y-u-border">
+													<?php foreach ( $plan_prices as $pprice ) : ?>
+														<option value="<?php echo esc_attr( $pprice['id'] ); ?>" <?php selected( $pprice['id'], $sub['plan_price_id'] ); ?>>
+															<?php echo esc_html( $pprice['period'] ); ?> - <?php echo esc_html( number_format( (float) $pprice['price'], 2 ) ); ?>
+														</option>
+													<?php endforeach; ?>
+												</select>
+												<button type="submit" class="btn main-button y-u-p-8 y-u-px-16 y-u-text-xs">تغيير الخطة</button>
 											</form>
 
-										<?php if ( $plan_prices ) : ?>
-											<div class="store-actions-row">
-												<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="y-u-flex y-u-flex-col y-u-gap-12">
-													<?php wp_nonce_field( 'yaamama_switch_subscription', 'yaamama_switch_subscription_nonce' ); ?>
-													<input type="hidden" name="action" value="yaamama_switch_subscription">
-													<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
-													<select name="plan_price_id" class="y-u-w-full y-u-p-8 y-u-rounded-s y-u-border">
-														<?php foreach ( $plan_prices as $pprice ) : ?>
-															<option value="<?php echo esc_attr( $pprice['id'] ); ?>" <?php selected( $pprice['id'], $sub['plan_price_id'] ); ?>>
-																<?php echo esc_html( $pprice['period'] ); ?> - <?php echo esc_html( number_format( (float) $pprice['price'], 2 ) ); ?>
-															</option>
-														<?php endforeach; ?>
-													</select>
-													<button type="submit" class="btn main-button y-u-p-8 y-u-px-16 y-u-text-xs">تغيير الخطة</button>
-												</form>
-
-												<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
-													<?php wp_nonce_field( 'yaamama_cancel_subscription', 'yaamama_cancel_subscription_nonce' ); ?>
-													<input type="hidden" name="action" value="yaamama_cancel_subscription">
-													<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
-													<button type="submit" class="btn y-u-w-full" style="background-color:#ef4444;color:#ffffff;border:1px solid #ef4444;">إلغاء الاشتراك</button>
-												</form>
-											</div>
-										<?php else : ?>
-											<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>">
+											<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="yaamama-cancel-form">
 												<?php wp_nonce_field( 'yaamama_cancel_subscription', 'yaamama_cancel_subscription_nonce' ); ?>
 												<input type="hidden" name="action" value="yaamama_cancel_subscription">
 												<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
 												<button type="submit" class="btn y-u-w-full" style="background-color:#ef4444;color:#ffffff;border:1px solid #ef4444;">إلغاء الاشتراك</button>
 											</form>
-										<?php endif; ?>
 										</div>
+									<?php else : ?>
+										<form method="post" action="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>" class="yaamama-cancel-form">
+											<?php wp_nonce_field( 'yaamama_cancel_subscription', 'yaamama_cancel_subscription_nonce' ); ?>
+											<input type="hidden" name="action" value="yaamama_cancel_subscription">
+											<input type="hidden" name="subscription_id" value="<?php echo esc_attr( $sub['id'] ); ?>">
+											<button type="submit" class="btn y-u-w-full" style="background-color:#ef4444;color:#ffffff;border:1px solid #ef4444;">إلغاء الاشتراك</button>
+										</form>
+									<?php endif; ?>
 									</div>
-								<?php endforeach; ?>
+								<?php endif; ?>
+								</div>
+							<?php endforeach; ?>
 							<?php endif; ?>
 						</div>
 					<?php endif; ?>
@@ -714,6 +858,161 @@ $updated      = isset( $_GET['profile_updated'] );
 		</div>
 	</section>
 </main>
+
+<style>
+	@keyframes yaamama-spin { to { transform: rotate(360deg); } }
+	.yaamama-store-ready-dynamic {
+		text-align: center; animation: yaamama-fadeIn .5s ease;
+	}
+	@keyframes yaamama-fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+	.status-badge.suspended {
+		background: #fef3c7;
+		color: #92400e;
+	}
+	.status-badge.suspended .status-dot {
+		background: #f59e0b;
+	}
+	.store-card.is-suspended {
+		opacity: 0.85;
+		border: 2px dashed #f59e0b;
+	}
+</style>
+<script>
+(function(){
+	var boxes = document.querySelectorAll('.yaamama-provision-status');
+	if (!boxes.length) return;
+	var ajaxUrl = '<?php echo esc_url( admin_url( 'admin-ajax.php' ) ); ?>';
+
+	function showReady(box, storeUrl) {
+		var card = box.closest('.store-card');
+		var badge = card ? card.querySelector('.status-badge') : null;
+		if (badge) {
+			badge.className = badge.className.replace('preparing', 'ready');
+			badge.innerHTML = '<span class="status-dot"></span> جاهز';
+		}
+		var subId = box.getAttribute('data-subscription-id');
+		box.className = 'yaamama-store-ready-dynamic y-u-m-b-16';
+		box.style.cssText = 'text-align:center;padding:24px;border-radius:8px;background:linear-gradient(135deg,#f0fdf4 0%,#ecfdf5 100%);border:2px solid #86efac;';
+		box.innerHTML = '<div style="font-size:36px;margin-bottom:8px;">🎉</div>' +
+			'<p style="color:#059669;font-weight:bold;margin:0 0 12px;">متجرك جاهز ويعمل!</p>' +
+			(storeUrl ? '<div style="display:flex;gap:8px;margin-top:12px;">' +
+			'<a href="' + storeUrl + '" target="_blank" style="flex:1;display:block;text-align:center;background:#059669;padding:12px 8px;border-radius:8px;color:#fff;text-decoration:none;font-weight:bold;font-size:14px;">زيارة المتجر</a>' +
+			'<button type="button" class="yaamama-auto-login-btn" data-subscription-id="' + subId + '" style="flex:1;display:block;text-align:center;background:#1e40af;border:none;padding:12px 8px;border-radius:8px;color:#fff;cursor:pointer;font-weight:bold;font-size:14px;">لوحة تحكم المتجر</button>' +
+			'</div>' : '');
+	}
+
+	function showFailed(box) {
+		box.style.background = '#fef2f2';
+		box.style.borderColor = '#fecaca';
+		box.innerHTML = '<p style="color:#dc2626;font-weight:bold;margin:0;">فشل إنشاء المتجر</p>' +
+			'<p style="color:#6b7280;font-size:12px;margin:8px 0 0;">يرجى إعادة تحميل الصفحة للمحاولة مرة أخرى.</p>';
+	}
+
+	boxes.forEach(function(box) {
+		var subId = box.getAttribute('data-subscription-id');
+		if (!subId) return;
+
+		var poll = function() {
+			var data = new FormData();
+			data.append('action', 'yaamama_check_provision_status');
+			data.append('subscription_id', subId);
+
+			fetch(ajaxUrl, { method: 'POST', credentials: 'same-origin', body: data })
+			.then(function(r) { return r.json(); })
+			.then(function(res) {
+				if (!res.success || !res.data) { setTimeout(poll, 5000); return; }
+				var d = res.data;
+
+				if (d.status === 'completed' || d.status === 'active') {
+					var bar = box.querySelector('.provision-bar-fill');
+					var pct = box.querySelector('.provision-percent');
+					if (bar) bar.style.width = '100%';
+					if (pct) pct.textContent = '100%';
+					setTimeout(function() { showReady(box, d.store_url); }, 800);
+					return;
+				}
+
+				if (d.status === 'failed') {
+					showFailed(box);
+					return;
+				}
+
+				var progress = d.progress || 0;
+				var bar = box.querySelector('.provision-bar-fill');
+				var pct = box.querySelector('.provision-percent');
+				var label = box.querySelector('.provision-step-label');
+				if (bar) bar.style.width = progress + '%';
+				if (pct) pct.textContent = progress + '%';
+				if (label && d.step_label) label.textContent = d.step_label + '...';
+
+				setTimeout(poll, 4000);
+			})
+			.catch(function() { setTimeout(poll, 8000); });
+		};
+
+		setTimeout(poll, 2000);
+	});
+})();
+
+document.addEventListener('click', function(e) {
+	var btn = e.target.closest('.yaamama-auto-login-btn');
+	if (!btn) return;
+	e.preventDefault();
+
+	var subId = btn.getAttribute('data-subscription-id');
+	if (!subId) return;
+
+	var origText = btn.textContent;
+	btn.textContent = 'جاري فتح لوحة التحكم...';
+	btn.disabled = true;
+
+	var formData = new FormData();
+	formData.append('action', 'yaamama_store_auto_login');
+	formData.append('subscription_id', subId);
+
+	fetch('<?php echo esc_url( admin_url("admin-ajax.php") ); ?>', {
+		method: 'POST',
+		credentials: 'same-origin',
+		body: formData
+	})
+	.then(function(r) { return r.json(); })
+	.then(function(resp) {
+		if (resp.success && resp.data && resp.data.login_url) {
+			window.open(resp.data.login_url, '_blank');
+		} else {
+			alert(resp.data || 'فشل فتح لوحة التحكم');
+		}
+		btn.textContent = origText;
+		btn.disabled = false;
+	})
+	.catch(function() {
+		alert('حدث خطأ في الاتصال');
+		btn.textContent = origText;
+		btn.disabled = false;
+	});
+});
+
+document.querySelectorAll('.yaamama-cancel-form').forEach(function(form) {
+	form.addEventListener('submit', function(e) {
+		var confirmed = confirm('هل أنت متأكد من إلغاء الاشتراك؟\n\nسيتم تعليق متجرك فوراً ولن يتمكن الزوار من الوصول إليه.\nيمكنك تجديد اشتراكك لاحقاً لإعادة تفعيله.');
+		if (!confirmed) {
+			e.preventDefault();
+		}
+	});
+});
+
+document.querySelectorAll('.yaamama-rename-toggle').forEach(function(btn) {
+	btn.addEventListener('click', function() {
+		var wrap = btn.closest('.yaamama-rename-wrap');
+		var form = wrap.querySelector('.yaamama-rename-form');
+		var isHidden = form.style.display === 'none';
+		form.style.display = isHidden ? 'block' : 'none';
+		if (isHidden) {
+			form.querySelector('input[name="store_name"]').focus();
+		}
+	});
+});
+</script>
 
 <?php
 get_footer();

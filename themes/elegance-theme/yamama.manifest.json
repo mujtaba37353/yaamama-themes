@@ -1,0 +1,23 @@
+{
+  "theme_slug": "elegance-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "logo_footer": {"source": "option", "key": "elegance_footer_logo"},
+    "footer_phone": {"source": "option", "key": "elegance_footer_phone"},
+    "footer_whatsapp": {"source": "option", "key": "elegance_footer_whatsapp"},
+    "contact_phones": {"source": "option", "key": "elegance_contact_phones"},
+    "contact_address": {"source": "option", "key": "elegance_contact_address"},
+    "smtp_host": {"source": "option", "key": "elegance_contact_smtp_host"},
+    "hero_title": {"source": "option", "key": "elegance_home_hero_title"},
+    "hero_description": {"source": "option", "key": "elegance_home_hero_desc"},
+    "hero_button_text": {"source": "option", "key": "elegance_home_hero_btn_text"},
+    "hero_button_link": {"source": "option", "key": "elegance_home_hero_btn_url"},
+    "hero_image": {"source": "option", "key": "elegance_home_hero_image_1"},
+    "home_banner_1_text": {"source": "option", "key": "elegance_home_banner_1_text"},
+    "home_banner_2_text": {"source": "option", "key": "elegance_home_banner_2_text"}
+  },
+  "supported_sections": ["logo", "hero", "banners", "contact", "footer", "about", "social", "policies"],
+  "missing_fields": ["logo_header", "contact_email", "contact_whatsapp", "footer_paragraph", "about_content", "privacy_content", "color_*", "smtp_port", "smtp_user", "smtp_pass", "mid_banner", "contact_*_url", "working_hours"],
+  "notes": "Flat option keys. Contact mail: elegance_contact_mail_type, elegance_contact_gmail_email."
+}

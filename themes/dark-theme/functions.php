@@ -1,6 +1,10 @@
 <?php
 
+defined( 'ABSPATH' ) || exit;
+
 define( 'DARK_THEME_VERSION', '1.0.0' );
+
+require_once get_template_directory() . '/inc/ydash-bridge.php';
 
 function dark_theme_asset_base_uri() {
 	return get_template_directory_uri() . '/dark';

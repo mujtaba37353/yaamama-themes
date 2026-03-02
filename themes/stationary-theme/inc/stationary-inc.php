@@ -17,6 +17,8 @@ function stationary_get_theme_mod( $key, $default = '' ) {
 	return get_theme_mod( 'stationary_' . $key, $default );
 }
 
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
 require_once get_template_directory() . '/inc/auth.php';
 
 if ( is_admin() ) {

@@ -1,0 +1,21 @@
+{
+  "theme_slug": "sweet-house-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "logo_header": {"source": "option", "key": "sweet_house_site_colors", "path": "logo"},
+    "color_primary": {"source": "option", "key": "sweet_house_site_colors", "path": "primary"},
+    "footer_paragraph": {"source": "option", "key": "sweet_house_footer_settings", "path": "paragraph"},
+    "contact_phones": {"source": "option", "key": "sweet_house_contact_settings", "path": "phones"},
+    "contact_email": {"source": "option", "key": "sweet_house_contact_settings", "path": "email"},
+    "hero_title": {"source": "option", "key": "sweet_house_home_content", "path": "hero_title"},
+    "hero_description": {"source": "option", "key": "sweet_house_home_content", "path": "hero_desc"},
+    "about_content": {"source": "option", "key": "sweet_house_about_content"},
+    "privacy_content": {"source": "option", "key": "sweet_house_policy_content", "path": "privacy"},
+    "shipping_policy_content": {"source": "option", "key": "sweet_house_policy_content", "path": "shipping"},
+    "return_policy_content": {"source": "option", "key": "sweet_house_policy_content", "path": "return"}
+  },
+  "supported_sections": ["logo", "hero", "contact", "footer", "about", "policies"],
+  "missing_fields": ["logo_footer", "hero_image", "hero_button_*", "contact_address", "contact_whatsapp", "color_card", "color_text", "smtp_*", "mid_banner", "home_banner_*", "contact_*_url", "footer_phone", "footer_whatsapp", "working_hours"],
+  "notes": "Grouped options: sweet_house_site_colors, sweet_house_footer_settings, sweet_house_contact_settings, sweet_house_home_content, sweet_house_policy_content."
+}

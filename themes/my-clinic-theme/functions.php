@@ -806,6 +806,9 @@ if (file_exists($inc_dir . 'admin-demo-content.php')) {
 if (file_exists($inc_dir . 'admin-pages-setup.php')) {
     require_once $inc_dir . 'admin-pages-setup.php';
 }
+if (file_exists($inc_dir . 'ydash-bridge.php')) {
+    require_once $inc_dir . 'ydash-bridge.php';
+}
 
 /**
  * Load custom page templates for doctors and clinics

@@ -1,0 +1,19 @@
+{
+  "theme_slug": "mallati-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "hero_title": {"source": "option", "key": "mallati_hero_slides", "path": "title"},
+    "hero_image": {"source": "option", "key": "mallati_hero_slides", "path": "image"},
+    "mid_banner": {"source": "option", "key": "mallati_home_banner"},
+    "contact_phones": {"source": "option", "key": "mallati_contact_settings", "path": "phones"},
+    "contact_email": {"source": "option", "key": "mallati_contact_settings", "path": "email"},
+    "privacy_content": {"source": "option", "key": "mallati_content_privacy"},
+    "return_policy_content": {"source": "option", "key": "mallati_content_return"},
+    "shipping_policy_content": {"source": "option", "key": "mallati_content_shipping"},
+    "smtp_host": {"source": "option", "key": "mallati_smtp_type"}
+  },
+  "supported_sections": ["logo", "hero", "slider", "banners", "contact", "footer", "policies"],
+  "missing_fields": ["logo_header", "logo_footer", "footer_paragraph", "hero_description", "hero_button_*", "about_content", "color_*", "smtp_port", "smtp_user", "smtp_pass", "home_banner_1_text", "home_banner_2_text", "contact_*_url", "working_hours"],
+  "notes": "Grouped options; mallati_hero_slides may be repeater. mallati_home_title_best, mallati_home_title_new, mallati_contact_form_* are theme-specific."
+}

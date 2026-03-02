@@ -27,16 +27,6 @@ if ( $billing_phone === '' && is_user_logged_in() ) {
 }
 $button_text   = $order_button_text;
 $button_text   = strtolower( trim( (string) $button_text ) ) === 'pay for order' ? 'إتمام الدفع' : $order_button_text;
-$store_name    = (string) $order->get_meta( 'yaamama_store_name' );
-$store_name_en = (string) $order->get_meta( 'yaamama_store_name_en' );
-if ( $store_name === '' ) {
-	$subscription_id = (int) $order->get_meta( 'yaamama_subscription_id' );
-	if ( $subscription_id ) {
-		global $wpdb;
-		$table = $wpdb->prefix . 'yaamama_subscriptions';
-		$store_name = (string) $wpdb->get_var( $wpdb->prepare( "SELECT store_name FROM {$table} WHERE id = %d", $subscription_id ) );
-	}
-}
 
 function yaamama_translate_total_label( $label ) {
 	$translations = array(
@@ -68,19 +58,12 @@ $phone_readonly = is_user_logged_in() && $billing_phone !== '';
 				<label class="form-label" for="billing-phone">رقم الجوال</label>
 				<input type="tel" class="form-input" id="billing-phone" name="billing_phone" value="<?php echo esc_attr( $billing_phone ); ?>" placeholder="05XXXXXXXX" <?php echo $phone_readonly ? 'readonly' : ''; ?>>
 			</div>
-			<div class="form-group">
-				<label class="form-label" for="yaamama-store-name">اسم المتجر</label>
-				<input type="text" class="form-input" id="yaamama-store-name" name="yaamama_store_name" value="<?php echo esc_attr( $store_name ); ?>" placeholder="اسم المتجر">
-			</div>
-			<div class="form-group">
-				<label class="form-label" for="yaamama-store-name-en">اسم المتجر بالإنجليزي</label>
-				<input type="text" class="form-input" id="yaamama-store-name-en" name="yaamama_store_name_en" value="<?php echo esc_attr( $store_name_en ); ?>" placeholder="Store name">
-			</div>
 		</div>
 
 		<div class="border-card">
 			<h3 class="card-title y-u-m-b-24">طريقة الدفع</h3>
 			<form id="order_review" method="post">
+				<input type="hidden" name="billing_phone" id="billing-phone-hidden" value="<?php echo esc_attr( $billing_phone ); ?>">
 				<?php
 				/**
 				 * Triggered from within the checkout/form-pay.php template, immediately before the payment section.
@@ -149,12 +132,8 @@ $phone_readonly = is_user_logged_in() && $billing_phone !== '';
 							if (!orderForm) return;
 
 							var phoneInput = document.getElementById('billing-phone');
-							var storeNameInput = document.getElementById('yaamama-store-name');
-							var storeNameEnInput = document.getElementById('yaamama-store-name-en');
 
-							var phonePattern = /^05\d{8}$/;
-							var arabicPattern = /^[\u0600-\u06FF\s]+$/;
-							var englishPattern = /^[A-Za-z\s]+$/;
+							var phonePattern = /^(?:\+?966|0)5\d{8}$/;
 
 							var setValidity = function (input, message) {
 								if (!input) return true;
@@ -164,7 +143,6 @@ $phone_readonly = is_user_logged_in() && $billing_phone !== '';
 
 							var validateInputs = function () {
 								var isValid = true;
-
 								if (phoneInput) {
 									var phoneValue = phoneInput.value.trim();
 									if (phoneValue === '') {
@@ -175,29 +153,6 @@ $phone_readonly = is_user_logged_in() && $billing_phone !== '';
 										setValidity(phoneInput, '');
 									}
 								}
-
-								if (storeNameInput) {
-									var storeValue = storeNameInput.value.trim();
-									if (storeValue === '') {
-										isValid = setValidity(storeNameInput, 'اسم المتجر مطلوب') && isValid;
-									} else if (!arabicPattern.test(storeValue)) {
-										isValid = setValidity(storeNameInput, 'اسم المتجر يجب أن يكون أحرف عربية فقط') && isValid;
-									} else {
-										setValidity(storeNameInput, '');
-									}
-								}
-
-								if (storeNameEnInput) {
-									var storeEnValue = storeNameEnInput.value.trim();
-									if (storeEnValue === '') {
-										isValid = setValidity(storeNameEnInput, 'اسم المتجر بالإنجليزي مطلوب') && isValid;
-									} else if (!englishPattern.test(storeEnValue)) {
-										isValid = setValidity(storeNameEnInput, 'اسم المتجر بالإنجليزي يجب أن يكون أحرف إنجليزية فقط') && isValid;
-									} else {
-										setValidity(storeNameEnInput, '');
-									}
-								}
-
 								return isValid;
 							};
 
@@ -205,23 +160,16 @@ $phone_readonly = is_user_logged_in() && $billing_phone !== '';
 								phoneInput.addEventListener('input', validateInputs);
 								phoneInput.addEventListener('blur', validateInputs);
 							}
-							if (storeNameInput) {
-								storeNameInput.addEventListener('input', validateInputs);
-								storeNameInput.addEventListener('blur', validateInputs);
-							}
-							if (storeNameEnInput) {
-								storeNameEnInput.addEventListener('input', validateInputs);
-								storeNameEnInput.addEventListener('blur', validateInputs);
-							}
 
 							orderForm.addEventListener('submit', function (event) {
-								if (!validateInputs()) {
-									event.preventDefault();
-									if (phoneInput) phoneInput.reportValidity();
-									if (storeNameInput) storeNameInput.reportValidity();
-									if (storeNameEnInput) storeNameEnInput.reportValidity();
-								}
-							});
+							if (!validateInputs()) {
+								event.preventDefault();
+								if (phoneInput) phoneInput.reportValidity();
+								return;
+							}
+
+							var hiddenPhone = document.getElementById('billing-phone-hidden');
+							if (hiddenPhone && phoneInput) hiddenPhone.value = phoneInput.value;
 						});
 					</script>
 				</div>

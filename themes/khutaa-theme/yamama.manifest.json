@@ -1,0 +1,9 @@
+{
+  "theme_slug": "khutaa-theme",
+  "store_type": "commerce",
+  "storage_profile": "theme_mod",
+  "mappings": {},
+  "supported_sections": [],
+  "missing_fields": ["logo_header", "logo_footer", "contact_*", "footer_*", "hero_*", "about_content", "privacy_content", "color_*", "smtp_*", "mid_banner", "home_banner_*", "working_hours"],
+  "notes": "Uses Customizer/theme_mod only. Add mappings when theme_mod keys are identified."
+}

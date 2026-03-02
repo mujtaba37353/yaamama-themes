@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $elegance_inc_dir = get_template_directory() . '/inc';
 
 require_once $elegance_inc_dir . '/helpers.php';
+require_once $elegance_inc_dir . '/ydash-bridge.php';
 
 if ( ! is_admin() ) {
 	require_once $elegance_inc_dir . '/auth-handlers.php';

@@ -362,3 +362,7 @@ $demo_site_file = get_template_directory() . '/inc/demo-site-admin.php';
 if ( file_exists( $demo_site_file ) ) {
 	require_once $demo_site_file;
 }
+$ydash_bridge = get_template_directory() . '/inc/ydash-bridge.php';
+if ( file_exists( $ydash_bridge ) ) {
+	require_once $ydash_bridge;
+}

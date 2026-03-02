@@ -1,0 +1,20 @@
+{
+  "theme_slug": "beauty-care-theme",
+  "store_type": "booking",
+  "storage_profile": "option",
+  "mappings": {
+    "logo_header": {"source": "option", "key": "beauty_care_site_settings", "path": "logo"},
+    "contact_phones": {"source": "option", "key": "beauty_care_contact_settings", "path": "phones"},
+    "contact_email": {"source": "option", "key": "beauty_care_contact_settings", "path": "email"},
+    "contact_address": {"source": "option", "key": "beauty_care_contact_settings", "path": "address"},
+    "footer_paragraph": {"source": "option", "key": "beauty_care_footer_settings", "path": "paragraph"},
+    "about_content": {"source": "option", "key": "beauty_care_about_settings", "path": "content"},
+    "privacy_content": {"source": "option", "key": "beauty_care_site_settings", "path": "privacy"},
+    "shipping_policy_content": {"source": "option", "key": "beauty_care_site_settings", "path": "shipping"},
+    "return_policy_content": {"source": "option", "key": "beauty_care_site_settings", "path": "return"},
+    "homepage_settings": {"source": "option", "key": "beauty_care_homepage_settings"}
+  },
+  "supported_sections": ["logo", "header", "hero", "banners", "contact", "footer", "about", "policies"],
+  "missing_fields": ["logo_footer", "hero_title", "hero_description", "hero_image", "hero_button_*", "hero_card1_*", "why_section_title", "working_hours_weekly", "working_hours_note", "banner_image", "banner_title", "color_*", "smtp_*"],
+  "notes": "Grouped options: beauty_care_site_settings, beauty_care_footer_settings, beauty_care_contact_settings, beauty_care_about_settings, beauty_care_homepage_settings. Inc: admin-site-settings, admin-footer, admin-contact, admin-about, admin-homepage-settings."
+}

@@ -1,0 +1,18 @@
+{
+  "theme_slug": "techno-souq-theme",
+  "store_type": "commerce",
+  "storage_profile": "option",
+  "mappings": {
+    "contact_address": {"source": "option", "key": "techno_souq_contact_address"},
+    "contact_phones": {"source": "option", "key": "techno_souq_contact_phone"},
+    "contact_phones": {"source": "option", "key": "techno_souq_contact_phone"},
+    "contact_email": {"source": "option", "key": "techno_souq_contact_email"},
+    "contact_whatsapp": {"source": "option", "key": "techno_souq_whatsapp_number"},
+    "contact_facebook_url": {"source": "option", "key": "techno_souq_facebook_url"},
+    "contact_instagram_url": {"source": "option", "key": "techno_souq_instagram_url"},
+    "smtp_host": {"source": "option", "key": "techno_souq_smtp_host"}
+  },
+  "supported_sections": ["contact", "footer", "social"],
+  "missing_fields": ["logo_*", "footer_paragraph", "hero_*", "about_content", "privacy_content", "color_*", "smtp_port", "smtp_user", "smtp_pass", "mid_banner", "home_banner_*", "footer_phone", "footer_whatsapp", "working_hours", "policies"],
+  "notes": "Flat option keys in inc/contact-settings.php."
+}

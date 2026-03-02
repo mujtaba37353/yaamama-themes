@@ -11,6 +11,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
 // Include homepage settings
 require_once get_template_directory() . '/inc/homepage-settings.php';
 

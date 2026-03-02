@@ -343,6 +343,11 @@ function mallati_output_dynamic_colors() {
 add_action('wp_head', 'mallati_output_dynamic_colors');
 
 /**
+ * Yaamama Dashboard Bridge
+ */
+require_once get_template_directory() . '/inc/ydash-bridge.php';
+
+/**
  * Admin Content Panel
  */
 require_once get_template_directory() . '/inc/admin/admin-content.php';

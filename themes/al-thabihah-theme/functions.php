@@ -6,6 +6,7 @@ if (!defined('ABSPATH')) {
 
 define('AL_THABIHAH_THEME_VERSION', '1.0.0');
 require_once trailingslashit(get_template_directory()) . 'inc/admin-content.php';
+require_once get_template_directory() . '/inc/ydash-bridge.php';
 
 function al_thabihah_theme_setup() {
     add_theme_support('title-tag');
